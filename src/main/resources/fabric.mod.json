@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "peculia",
+  "version": "${version}",
+
+  "name": "Peculia",
+  "description": "A mod that adds many extra things into the world of minecraft to add more overall fun content!",
+  "authors": [
+    "LunarLuned"
+  ],
+  "contact": {
+    "homepage": "https://www.twitter.com/lunarluned"
+  },
+
+  "license": "MIT",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.lunarluned.peculia.Peculia"
+    ]
+  },
+  "mixins": [
+    "peculia.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "1.19.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
