@@ -1,9 +1,7 @@
-# Fabric Example Mod
+# Peculia!!
 
-## Setup
+# ok so
+listen uh. i dont actually have anything to write here. if you encounter any bugs feel free to spam dm me on twitter @lunarluned
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+# ill eventually write some type of like. guide on the mod but yknow. its nowhere near done so
 
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
