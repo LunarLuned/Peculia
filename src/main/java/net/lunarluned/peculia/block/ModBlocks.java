@@ -15,7 +15,7 @@ import net.minecraft.util.registry.Registry;
 public class ModBlocks {
 
     public static final Block MYHTRIL_BLOCK = registerBlock("mythril_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(2f).requiresTool()), ModItemGroup.PECULIA);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(1.25f).requiresTool()), ModItemGroup.PECULIA);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
