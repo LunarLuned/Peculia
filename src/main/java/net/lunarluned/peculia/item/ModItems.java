@@ -8,10 +8,13 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems {
+    public static final Item MYTHRIL_SHARD = registerItem("mythril_shard",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA)));
     public static final Item MYTHRIL_NUGGET = registerItem("mythril_nugget",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA)));
     public static final Item MYTHRIL_INGOT = registerItem("mythril_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA)));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Peculia.MOD_ID, name), item);
