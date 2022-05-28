@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "peculia:mythril_nugget"
+      "item": "peculia:mythril_fragment"
     },
     {
-      "item": "peculia:mythril_nugget"
+      "item": "peculia:mythril_fragment"
     },
     {
-      "item": "peculia:mythril_nugget"
+      "item": "peculia:mythril_fragment"
     },
     {
-      "item": "peculia:mythril_nugget"
+      "item": "peculia:mythril_fragment"
     },
     {
       "item": "minecraft:ender_pearl"

@@ -1,6 +1,0 @@
-{
-  "parent": "peculia:block/pointed_mythril",
-  "textures": {
-    "cross": "peculia:block/pointed_mythril_up_frustum"
-  }
-}

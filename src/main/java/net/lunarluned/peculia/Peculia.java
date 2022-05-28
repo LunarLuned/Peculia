@@ -1,8 +1,10 @@
 package net.lunarluned.peculia;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.item.ModItems;
+import net.minecraft.client.render.RenderLayer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,6 +17,7 @@ public class Peculia implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
 		LOGGER.info("Peculiar Berries will eat your child!");
 	}
 }

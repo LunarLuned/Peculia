@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "peculia:mythril_block"
+    "peculia:mythril_block",
+    "peculia:mythril_crystal"
   ]
 }

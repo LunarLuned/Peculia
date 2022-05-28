@@ -1,10 +1,14 @@
 {
   "item.peculia.mythril_shard": "Mythril Shard",
-  "item.peculia.mythril_nugget": "Mythril Nugget",
+  "item.peculia.mythril_fragment": "Mythril Fragment",
   "item.peculia.mythril_ingot": "Mythril Ingot",
+  "item.peculia.mythril_claymore": "Mythril Claymore",
+  "item.peculia.mythril_scythe": "Mythril Scythe",
+  "item.peculia.mythril_halberd": "Mythril Halberd",
 
   "block.peculia.mythril_block": "Mythril Block",
   "block.peculia.pointed_mythril": "Pointed Mythril",
+  "block.peculia.mythril_crystal": "Mythril Crystal",
 
   "itemGroup.peculia.peculia": "Peculia"
 }
