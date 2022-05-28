@@ -1,6 +1,7 @@
 package net.lunarluned.peculia;
 
 import net.fabricmc.api.ModInitializer;
+import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +14,7 @@ public class Peculia implements ModInitializer {
 	public void onInitialize() {
 
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 		LOGGER.info("Peculiar Berries will eat your child!");
 	}
 }

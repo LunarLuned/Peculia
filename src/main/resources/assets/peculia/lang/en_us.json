@@ -1,4 +1,6 @@
 {
   "item.peculia.mythril_nugget": "Mythril Nugget",
-  "item.peculia.mythril_ingot": "Mythril Ingot"
+  "item.peculia.mythril_ingot": "Mythril Ingot",
+
+  "block.peculia.mythril_block": "Mythril Block"
 }
