@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "peculia:mythril_block"
+    }
+  ],
+  "result": {
+    "item": "peculia:mythril_ingot",
+    "count": 9
+  }
+}

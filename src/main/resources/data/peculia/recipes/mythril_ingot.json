@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "peculia:mythril_nugget"
+    },
+    {
+      "item": "peculia:mythril_nugget"
+    },
+    {
+      "item": "peculia:mythril_nugget"
+    },
+    {
+      "item": "peculia:mythril_nugget"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    }
+  ],
+  "result": {
+    "item": "peculia:mythril_ingot",
+    "count": 1
+  }
+}
