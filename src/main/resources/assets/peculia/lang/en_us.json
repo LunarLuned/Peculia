@@ -2,5 +2,7 @@
   "item.peculia.mythril_nugget": "Mythril Nugget",
   "item.peculia.mythril_ingot": "Mythril Ingot",
 
-  "block.peculia.mythril_block": "Mythril Block"
+  "block.peculia.mythril_block": "Mythril Block",
+
+  "itemGroup.peculia.peculia": "Peculia"
 }
