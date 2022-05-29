@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "peculia:mythril_block",
-    "peculia:mythril_crystal"
+    "peculia:mythril_crystal",
+    "peculia:awakened_cobblestone"
   ]
 }

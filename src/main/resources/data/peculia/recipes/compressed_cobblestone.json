@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "result": {
+    "item": "peculia:compressed_cobblestone",
+    "count": 1
+  }
+}

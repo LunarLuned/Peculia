@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "peculia:anomalaic_cobblestone"
+    }
+  },
+  "result": {
+    "item": "peculia:awakened_cobblestone",
+    "count": 1
+  }
+}

@@ -20,6 +20,16 @@ public class ModBlocks {
     //either make a custom block type or just lazy out and do the other idea, but please. stop torturing yourself anne
     public static final Block MYTHRIL_CRYSTAL = registerBlock("mythril_crystal",
             new MythrilCrystalBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER)), ModItemGroup.PECULIA);
+    public static final Block COMPRESSED_COBBLESTONE = registerBlock("compressed_cobblestone",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.METAL)), ModItemGroup.PECULIA);
+    public static final Block CONTAINED_COBBLESTONE = registerBlock("contained_cobblestone",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(2f).requiresTool().sounds(BlockSoundGroup.METAL)), ModItemGroup.PECULIA);
+    public static final Block CONTINENTAL_COBBLESTONE = registerBlock("continental_cobblestone",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.METAL)), ModItemGroup.PECULIA);
+    public static final Block ANOMALAIC_COBBLESTONE = registerBlock("anomalaic_cobblestone",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(3f).requiresTool().sounds(BlockSoundGroup.METAL)), ModItemGroup.PECULIA);
+    public static final Block AWAKENED_COBBLESTONE = registerBlock("awakened_cobblestone",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(3.5f).requiresTool().sounds(BlockSoundGroup.METAL)), ModItemGroup.PECULIA);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

@@ -1,5 +1,7 @@
 {
   "replace": false,
   "values": [
+    "peculia:compressed_cobblestone",
+    "peculia:contained_cobblestone"
   ]
 }
