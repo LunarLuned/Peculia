@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.block.custom.MythrilCrystalBlock;
+import net.lunarluned.peculia.block.custom.PointedMythrilBlock;
 import net.lunarluned.peculia.item.ModItemGroup;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -17,9 +18,10 @@ public class ModBlocks {
 
     public static final Block MYHTRIL_BLOCK = registerBlock("mythril_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(2f).requiresTool().sounds(BlockSoundGroup.METAL)), ModItemGroup.PECULIA);
-    //either make a custom block type or just lazy out and do the other idea, but please. stop torturing yourself anne
     public static final Block MYTHRIL_CRYSTAL = registerBlock("mythril_crystal",
             new MythrilCrystalBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER)), ModItemGroup.PECULIA);
+    public static final Block POINTED_MYTHRIL = registerBlock("pointed_mythril",
+            new PointedMythrilBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool()), ModItemGroup.PECULIA);
     public static final Block COMPRESSED_COBBLESTONE = registerBlock("compressed_cobblestone",
             new Block(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.METAL)), ModItemGroup.PECULIA);
     public static final Block CONTAINED_COBBLESTONE = registerBlock("contained_cobblestone",
