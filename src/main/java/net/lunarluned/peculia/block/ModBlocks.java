@@ -12,6 +12,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
@@ -19,7 +20,8 @@ public class ModBlocks {
     public static final Block MYTHRIL_BLOCK = registerBlock("mythril_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(2f).requiresTool().sounds(BlockSoundGroup.METAL)), ModItemGroup.PECULIA);
     public static final Block MYTHRIL_CRYSTAL = registerBlock("mythril_crystal",
-            new MythrilCrystalBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER)), ModItemGroup.PECULIA);
+            new MythrilCrystalBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER), UniformIntProvider.create(3, 8)), ModItemGroup.PECULIA);
+
     public static final Block COMPRESSED_COBBLESTONE = registerBlock("compressed_cobblestone",
             new Block(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.METAL)), ModItemGroup.PECULIA);
     public static final Block CONTAINED_COBBLESTONE = registerBlock("contained_cobblestone",

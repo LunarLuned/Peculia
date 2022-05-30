@@ -3,6 +3,7 @@ package net.lunarluned.peculia;
 import net.fabricmc.api.ModInitializer;
 import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.enchantment.ModEnchantments;
+import net.lunarluned.peculia.entity.ModEntities;
 import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.world.feature.ModConfiguredFeatures;
 import net.lunarluned.peculia.world.feature.gen.ModWorldGen;

@@ -10,7 +10,7 @@ public class ModOreGeneration {
     public static void generateOres() {
 
 
-// Generation End Diamond Ore:
+// Generation Mythril Ore:
 
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ORE_MYTHRIL_CRYSTAL_PLACED.getKey().get());

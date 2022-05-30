@@ -1,11 +1,12 @@
 package net.lunarluned.peculia.block.custom;
 
-import net.minecraft.block.TransparentBlock;
+import net.minecraft.block.OreBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 
-public class MythrilCrystalBlock extends TransparentBlock {
-    public MythrilCrystalBlock(Settings settings) {
+public class MythrilCrystalBlock extends OreBlock {
+    public MythrilCrystalBlock(Settings settings, UniformIntProvider uniformIntProvider) {
         super(settings);
     }
 
