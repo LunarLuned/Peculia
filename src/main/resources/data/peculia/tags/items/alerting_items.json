@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "peculia:mythril_ingot",
+    "peculia:mythril_fragment",
+    "peculia:mythril_shard",
+    "peculia:mythril_block",
+    "peculia:mythril_crystal",
+    "peculia:mythril_halberd",
+    "peculia:mythril_claymore",
+    "peculia:mythril_scythe"
+  ]
+}

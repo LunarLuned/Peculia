@@ -1,11 +1,11 @@
 package net.lunarluned.peculia;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.enchantment.ModEnchantments;
 import net.lunarluned.peculia.item.ModItems;
-import net.minecraft.client.render.RenderLayer;
+import net.lunarluned.peculia.world.feature.ModConfiguredFeatures;
+import net.lunarluned.peculia.world.feature.gen.ModWorldGen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,6 +19,9 @@ public class Peculia implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModEnchantments.registerModEnchantMents();
+		ModConfiguredFeatures.registerConfiguredFeatures();
+		ModWorldGen.generateModWorldGen();
+
 
 
 		LOGGER.info("You have 5 days until the piss droplets hit your minecraft house.");
