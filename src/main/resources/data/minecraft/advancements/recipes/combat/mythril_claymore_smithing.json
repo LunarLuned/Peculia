@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "peculia:mythil_claymore"
+    ]
+  },
+  "criteria": {
+    "has_mythril_shard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:mythril_shard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "peculia:mythril_claymore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "obtain_mythril_shard",
+      "has_the_recipe"
+    ]
+  ]
+}

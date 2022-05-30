@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:end/obtain_mythril_shard",
+  "display": {
+    "icon": {
+      "item": "peculia:mythril_spearel"
+    },
+    "title": {
+      "translate": "advancements.end.obtain_mythril_spearel.title"
+    },
+    "description": {
+      "translate": "advancements.end.obtain_mythril_spearel.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "mythril_shard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:mythril_spearel"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mythril_spearel"
+    ]
+  ]
+}

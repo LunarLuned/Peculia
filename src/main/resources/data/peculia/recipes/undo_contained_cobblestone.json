@@ -1,0 +1,13 @@
+
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "peculia:contained_cobblestone"
+    }
+  ],
+  "result": {
+    "item": "peculia:compressed_cobblestone",
+    "count": 9
+  }
+}

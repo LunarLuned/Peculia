@@ -6,6 +6,7 @@
   "item.peculia.mythril_scythe": "Mythril Scythe",
   "item.peculia.mythril_halberd": "Mythril Halberd",
   "item.peculia.mythril_hammer": "Mythril Hammer",
+  "item.peculia.mythril_spearel": "Mythril Spearel",
   "item.peculia.coalgeode_spawn_egg": "Coal Geode Spawn Egg",
 
   "item.peculia.mythril_helmet": "Mythril Helmet",
@@ -16,8 +17,18 @@
   "block.peculia.mythril_block": "Mythril Block",
   "block.peculia.pointed_mythril": "Pointed Mythril",
   "block.peculia.mythril_crystal": "Mythril Crystal",
+  "block.peculia.compressed_cobblestone": "Compressed Cobblestone",
+  "block.peculia.contained_cobblestone": "Contained Cobblestone",
+  "block.peculia.continental_cobblestone": "Continental Cobblestone",
+  "block.peculia.anomalaic_cobblestone": "Anomalaic Cobblestone",
+  "block.peculia.awakened_cobblestone": "Awakened Cobblestone",
 
   "itemGroup.peculia.peculia": "Peculia",
+
+  "advancements.end.obtain_mythril_shard.title": "Shard of Myths",
+  "advancements.end.obtain_mythril_shard.description": "Obtain a Mythril Shard, a piece of the Void.",
+  "advancements.end.obtain_mythril_spearel.title": "Only a Spoonful",
+  "advancements.end.obtain_mythril_spearel.description": "Waste a Mythril Ingot for an inside joke.",
 
   "enchantment.peculia.thundering": "Thundering",
   "enchantment.peculia.echo": "Echo"

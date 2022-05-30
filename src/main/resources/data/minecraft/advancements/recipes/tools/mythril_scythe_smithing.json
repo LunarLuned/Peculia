@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "peculia:mythil_scythe"
+    ]
+  },
+  "criteria": {
+    "has_mythril_shard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:mythril_shard"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "peculia:mythil_scythe"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "obtain_mythril_shard",
+      "has_the_recipe"
+    ]
+  ]
+}

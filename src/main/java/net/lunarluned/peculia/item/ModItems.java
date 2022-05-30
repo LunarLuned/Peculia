@@ -6,6 +6,7 @@ import net.lunarluned.peculia.entity.ModEntities;
 import net.lunarluned.peculia.item.custom.ModAxeItem;
 import net.lunarluned.peculia.item.custom.ModHoeItem;
 import net.lunarluned.peculia.item.custom.ModPickaxeItem;
+import net.lunarluned.peculia.item.custom.ModShovelItem;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
@@ -26,6 +27,8 @@ public class ModItems {
             new ModAxeItem(ModToolMaterials.MYTHRIL,7, -3.2f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item MYTHRIL_HAMMER = registerItem("mythril_hammer",
             new ModPickaxeItem(ModToolMaterials.MYTHRIL, 1, -2.5f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
+    public static final Item MYTHRIL_SPEAREL = registerItem("mythril_spearel",
+            new ModShovelItem(ModToolMaterials.MYTHRIL, 1, -2.4f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item COALGEODE_SPAWN_EGG = registerItem("coalgeode_spawn_egg",
             new SpawnEggItem(ModEntities.COALGEODE, 0, 0, new FabricItemSettings().group(ModItemGroup.PECULIA)));
 

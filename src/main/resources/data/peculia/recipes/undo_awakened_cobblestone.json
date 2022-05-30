@@ -1,0 +1,13 @@
+
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "peculia:awakened_cobblestone"
+    }
+  ],
+  "result": {
+    "item": "peculia:anomalaic_cobblestone",
+    "count": 9
+  }
+}
