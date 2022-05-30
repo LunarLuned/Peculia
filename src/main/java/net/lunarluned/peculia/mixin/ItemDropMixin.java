@@ -28,7 +28,6 @@ public abstract class ItemDropMixin extends Entity {
         // Detects if an item is in the tag to increase pickup range & make it glow
         if (getStack().isIn(PeculiaTags.ALERTING_ITEMS)) {
             setGlowing(true);
-            setBoundingBox(new Box(-2.25, -2.25, -2.25, 2.25, 2.25, 2.25));
             this.setVelocity(this.getVelocity().multiply(0.96D, 0.96D, 0.96D));
         }
     }

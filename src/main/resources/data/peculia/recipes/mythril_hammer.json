@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:diamond_pickaxe"
+  },
+  "addition": {
+    "item": "peculia:mythril_ingot"
+  },
+  "result": {
+    "item": "peculia:mythril_hammer"
+  }
+}

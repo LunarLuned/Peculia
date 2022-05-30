@@ -15,7 +15,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     MYTHRIL("mythril", 33, new int[]{3, 6, 8, 3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3.0F, 0.0F, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{ModItems.MYTHRIL_FRAGMENT});
     }),
-    NETHERITE("netherite", 35, new int[]{3, 6, 8, 3}, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.0F, () -> {
+    NETHERITE("netherite", 35, new int[]{3, 5, 7, 3}, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.0F, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{Items.NETHERITE_INGOT});
     });
 
