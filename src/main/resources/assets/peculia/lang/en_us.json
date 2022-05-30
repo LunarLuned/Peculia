@@ -14,14 +14,17 @@
   "item.peculia.mythril_leggings": "Mythril Leggings",
   "item.peculia.mythril_boots": "Mythril Boots",
 
-  "block.peculia.mythril_block": "Mythril Block",
-  "block.peculia.pointed_mythril": "Pointed Mythril",
+  "block.peculia.mythril_block": "Block of Mythril",
   "block.peculia.mythril_crystal": "Mythril Crystal",
   "block.peculia.compressed_cobblestone": "Compressed Cobblestone",
   "block.peculia.contained_cobblestone": "Contained Cobblestone",
   "block.peculia.continental_cobblestone": "Continental Cobblestone",
   "block.peculia.anomalaic_cobblestone": "Anomalaic Cobblestone",
   "block.peculia.awakened_cobblestone": "Awakened Cobblestone",
+  "block.peculia.mythril_bricks": "Mythril Bricks",
+  "block.peculia.mythril_brick_stairs": "Mythril Brick Stairs",
+  "block.peculia.mythril_brick_slab": "Mythril Brick Slab",
+  "block.peculia.mythril_brick_wall": "Mythril Brick Wall",
 
   "itemGroup.peculia.peculia": "Peculia",
 

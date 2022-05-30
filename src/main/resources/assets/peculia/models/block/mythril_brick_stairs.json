@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "peculia:block/mythril_bricks",
+    "top": "peculia:block/mythril_bricks",
+    "side": "peculia:block/mythril_bricks"
+  }
+}

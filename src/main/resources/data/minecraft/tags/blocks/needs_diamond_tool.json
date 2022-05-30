@@ -3,6 +3,9 @@
   "values": [
     "peculia:mythril_block",
     "peculia:mythril_crystal",
-    "peculia:awakened_cobblestone"
+    "peculia:awakened_cobblestone",
+    "peculia:mythril_bricks",
+    "peculia:mythril_brick_slab",
+    "peculia:mythril_brick_stairs"
   ]
 }
