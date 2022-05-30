@@ -2,6 +2,7 @@ package net.lunarluned.peculia;
 
 import net.fabricmc.api.ModInitializer;
 import net.lunarluned.peculia.block.ModBlocks;
+import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.enchantment.ModEnchantments;
 import net.lunarluned.peculia.entity.ModEntities;
 import net.lunarluned.peculia.item.ModItems;
@@ -22,6 +23,7 @@ public class Peculia implements ModInitializer {
 		ModEnchantments.registerModEnchantMents();
 		ModConfiguredFeatures.registerConfiguredFeatures();
 		ModWorldGen.generateModWorldGen();
+		ModEffects.registerEffects();
 
 
 

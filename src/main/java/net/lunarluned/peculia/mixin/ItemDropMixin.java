@@ -4,6 +4,7 @@ import net.lunarluned.peculia.misc.PeculiaTags;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
@@ -28,7 +29,10 @@ public abstract class ItemDropMixin extends Entity {
         // Detects if an item is in the tag to increase pickup range & make it glow
         if (getStack().isIn(PeculiaTags.ALERTING_ITEMS)) {
             setGlowing(true);
-            this.setVelocity(this.getVelocity().multiply(0.96D, 0.96D, 0.96D));
+            isImmuneToExplosion();
+            isInvulnerableTo(DamageSource.CACTUS);
+            isInvulnerableTo(DamageSource.OUT_OF_WORLD);
+            this.setVelocity(this.getVelocity().multiply(0.96D, -1D, 0.96D));
         }
     }
 }
