@@ -1,11 +1,13 @@
 package net.lunarluned.peculia.mixin;
 
 import net.lunarluned.peculia.enchantment.ConcussEnchantment;
+import net.lunarluned.peculia.enchantment.EchoEnchantment;
 import net.lunarluned.peculia.enchantment.ThunderingEnchantment;
+import net.lunarluned.peculia.item.custom.ModHoeItem;
 import net.lunarluned.peculia.item.custom.ModPickaxeItem;
 import net.lunarluned.peculia.item.custom.ModScytheItem;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentTarget;
+import net.minecraft.enchantment.*;
+import net.minecraft.item.HoeItem;
 import net.minecraft.item.ItemStack;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -27,12 +29,21 @@ public abstract class ScytheModification {
     @Inject(method = "isAcceptableItem", at = @At("HEAD"), cancellable = true)
     public void isAcceptableItem(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         Enchantment enchantment = (Enchantment) (Object) this;
-        if (enchantment instanceof ConcussEnchantment) {
-            if (type != EnchantmentTarget.DIGGER || !(stack.getItem() instanceof ModScytheItem)) return;
-            if (enchantment instanceof ThunderingEnchantment) {
-                if (type != EnchantmentTarget.TRIDENT || !(stack.getItem() instanceof ModScytheItem)) return;
-                cir.setReturnValue(true);
-            }
+        if (enchantment instanceof EchoEnchantment) {
+            if (type != EnchantmentTarget.WEAPON || !(stack.getItem() instanceof ModHoeItem)) return;
+        }
+        if (enchantment instanceof KnockbackEnchantment) {
+            if (type != EnchantmentTarget.WEAPON || !(stack.getItem() instanceof ModHoeItem)) return;
+            cir.setReturnValue(true);
+        }
+        if (enchantment instanceof DamageEnchantment) {
+            if (type != EnchantmentTarget.WEAPON || !(stack.getItem() instanceof ModHoeItem)) return;
+            cir.setReturnValue(true);
+        }
+        if (enchantment instanceof FireAspectEnchantment) {
+            if (type != EnchantmentTarget.WEAPON || !(stack.getItem() instanceof ModHoeItem)) return;
+            cir.setReturnValue(true);
+        }
+
         }
     }
-}

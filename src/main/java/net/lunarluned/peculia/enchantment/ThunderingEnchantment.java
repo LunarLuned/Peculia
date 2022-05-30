@@ -19,16 +19,22 @@ public class ThunderingEnchantment extends Enchantment {
             BlockPos position = target.getBlockPos();
 
             if(level == 1) {
-                EntityType.LIGHTNING_BOLT.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                if(world.isRaining()) {
+                    EntityType.LIGHTNING_BOLT.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
+                }
             }
             if(level == 2) {
-                EntityType.LIGHTNING_BOLT.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                if(world.isRaining()) {
+                    EntityType.LIGHTNING_BOLT.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
+                }
             }
             if(level == 3) {
-                EntityType.LIGHTNING_BOLT.spawn(world, null, null, null, position,
-                        SpawnReason.TRIGGERED, true, true);
+                if(world.isRaining()) {
+                    EntityType.LIGHTNING_BOLT.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
+                }
             }
 
         }

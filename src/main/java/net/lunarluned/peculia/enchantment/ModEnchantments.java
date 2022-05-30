@@ -13,7 +13,9 @@ public class ModEnchantments {
     public static Enchantment ECHO = register("echo",
             new EchoEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentTarget.WEAPON));
     public static Enchantment CONCUSS = register("concuss",
-            new EchoEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentTarget.DIGGER));
+            new ConcussEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentTarget.DIGGER));
+    public static Enchantment EVOKE = register("evoke",
+            new EvokeEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.WEAPON));
 
     private static Enchantment register(String name, Enchantment enchantment) {
         return Registry.register(Registry.ENCHANTMENT, new Identifier(Peculia.MOD_ID, name), enchantment);

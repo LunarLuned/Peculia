@@ -7,20 +7,23 @@
   "description": "A mod that adds many extra things into the world of minecraft to add more overall fun content!",
   "authors": [
     "LunarLuned",
-    "Sydokiddo for code help",
-    "Ambient_ for texture help!"
+    "Sydokiddo (Coding Help)",
+    "Ambient_ (Texture Help)"
   ],
   "contact": {
     "homepage": "https://www.twitter.com/lunarluned"
   },
 
-  "license": "MIT",
+  "license": "CC0-1.0",
   "icon": "assets/peculia/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
       "net.lunarluned.peculia.Peculia"
+    ],
+    "client": [
+      "net.lunarluned.peculia.PeculiaClientMod"
     ]
   },
   "mixins": [
