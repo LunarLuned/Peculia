@@ -31,6 +31,7 @@ public abstract class ScytheModification {
         Enchantment enchantment = (Enchantment) (Object) this;
         if (enchantment instanceof EchoEnchantment) {
             if (type != EnchantmentTarget.WEAPON || !(stack.getItem() instanceof ModHoeItem)) return;
+            cir.setReturnValue(true);
         }
         if (enchantment instanceof KnockbackEnchantment) {
             if (type != EnchantmentTarget.WEAPON || !(stack.getItem() instanceof ModHoeItem)) return;
