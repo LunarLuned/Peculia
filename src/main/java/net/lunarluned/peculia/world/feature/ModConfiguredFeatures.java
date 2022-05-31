@@ -22,7 +22,7 @@ public class ModConfiguredFeatures {
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> MYTHRIL_CRYSTAL =
             ConfiguredFeatures.register("mythril_crystal", Feature.ORE,
-                    new OreFeatureConfig(ORE_MYTHRIL_CRYSTAL, 5));
+                    new OreFeatureConfig(ORE_MYTHRIL_CRYSTAL, 2));
 
 
 // Registry for Configured Features:
