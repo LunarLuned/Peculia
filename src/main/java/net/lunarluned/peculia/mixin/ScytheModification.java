@@ -37,6 +37,10 @@ public abstract class ScytheModification {
             if (type != EnchantmentTarget.WEAPON || !(stack.getItem() instanceof ModHoeItem)) return;
             cir.setReturnValue(true);
         }
+        if (enchantment instanceof SweepingEnchantment) {
+            if (type != EnchantmentTarget.WEAPON || !(stack.getItem() instanceof ModHoeItem)) return;
+            cir.setReturnValue(true);
+        }
         if (enchantment instanceof DamageEnchantment) {
             if (type != EnchantmentTarget.WEAPON || !(stack.getItem() instanceof ModHoeItem)) return;
             cir.setReturnValue(true);

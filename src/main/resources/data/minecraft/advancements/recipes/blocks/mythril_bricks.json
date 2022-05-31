@@ -1,0 +1,41 @@
+
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mythril_shard": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:mythril_shard"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "peculia:mythil_bricks",
+        "recipe": "peculia:mythil_brick_wall",
+        "recipe": "peculia:mythil_brick_slab",
+        "recipe": "peculia:mythil_brick_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_mythril_shard",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "peculia:mythil_bricks",
+      "peculia:mythil_brick_wall",
+      "peculia:mythil_brick_slab",
+      "peculia:mythil_brick_stairs"
+    ]
+  }
+}

@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "peculia:mythril_crystal"
+      "item": "peculia:mythril_shard"
     }
   },
   "result": {
-    "item": "peculia:mythril_bricks",
-    "count": 4
+    "item": "peculia:mythril_crystal",
+    "count": 1
   }
 }

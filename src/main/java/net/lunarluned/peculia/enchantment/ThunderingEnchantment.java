@@ -34,6 +34,8 @@ public class ThunderingEnchantment extends Enchantment {
                 if(world.isRaining()) {
                     EntityType.LIGHTNING_BOLT.spawn(world, null, null, null, position,
                             SpawnReason.TRIGGERED, true, true);
+                    EntityType.LIGHTNING_BOLT.spawn(world, null, null, null, position,
+                            SpawnReason.TRIGGERED, true, true);
                 }
             }
 

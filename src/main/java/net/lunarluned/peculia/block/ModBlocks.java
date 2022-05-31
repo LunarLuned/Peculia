@@ -24,14 +24,14 @@ public class ModBlocks {
     public static final Block MYTHRIL_CRYSTAL = registerBlock("mythril_crystal",
             new MythrilCrystalBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER), UniformIntProvider.create(3, 8)), ModItemGroup.PECULIA);
     public static final Block MYTHRIL_BRICKS = registerBlock("mythril_bricks",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(2f).requiresTool().nonOpaque().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
     public static final Block MYTHRIL_BRICK_STAIRS = registerBlock("mythril_brick_stairs",
-            new ModStairsBlock(ModBlocks.MYTHRIL_BRICKS.getDefaultState(),FabricBlockSettings.of(Material.AMETHYST) .mapColor(MapColor.PURPLE).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+            new ModStairsBlock(ModBlocks.MYTHRIL_BRICKS.getDefaultState(),FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.LIGHT_BLUE_GRAY).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
     public static final Block MYTHRIL_BRICK_SLAB = registerBlock("mythril_brick_slab",
-            new SlabBlock(FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.PURPLE).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+            new SlabBlock(FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.LIGHT_BLUE_GRAY).strength(2f).nonOpaque().requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
     public static final Block MYTHRIL_BRICK_WALL = registerBlock("mythril_brick_wall",
             new WallBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)
-                    .mapColor(MapColor.PURPLE).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+                    .mapColor(MapColor.LIGHT_BLUE_GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque()), ModItemGroup.PECULIA);
 
     public static final Block COMPRESSED_COBBLESTONE = registerBlock("compressed_cobblestone",
             new Block(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(6)), ModItemGroup.PECULIA);

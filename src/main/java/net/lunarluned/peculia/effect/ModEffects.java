@@ -10,17 +10,16 @@ import net.minecraft.util.registry.Registry;
 
 public class ModEffects {
     public static StatusEffect ECHO;
-    public static StatusEffect SLICED;
 
     public static StatusEffect registerStatusEffect(String name) {
         return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name),
                 new EchoEffect(StatusEffectCategory.HARMFUL, 15774719));
+
     }
 
 
 
     public static void registerEffects() {
         ECHO = registerStatusEffect("echo");
-        SLICED = registerStatusEffect("sliced");
     }
 }

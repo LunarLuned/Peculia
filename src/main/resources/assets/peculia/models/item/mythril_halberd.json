@@ -580,7 +580,8 @@
 			"scale": [2, 2, 2]
 		},
 		"gui": {
-			"rotation": [0, -90, 0]
+			"rotation": [-180, -67, -161.25],
+			"translation": [-2.75, 2.25, 0]
 		},
 		"head": {
 			"rotation": [0, -90, 0],

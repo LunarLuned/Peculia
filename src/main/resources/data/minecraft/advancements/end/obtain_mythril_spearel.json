@@ -16,7 +16,7 @@
     "hidden": false
   },
   "criteria": {
-    "mythril_shard": {
+    "mythril_spearel": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [

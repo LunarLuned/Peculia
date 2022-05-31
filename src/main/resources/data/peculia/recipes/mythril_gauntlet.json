@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "pp",
+    "pp",
+    "LL"
+  ],
+  "key": {
+    "p": {
+      "item": "peculia:mythril_ingot"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "peculia:mythril_gauntlet",
+    "count": 1
+  }
+}

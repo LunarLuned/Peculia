@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "obtain_mythril_shard"
+      "has_mythril_shard"
     ]
   ]
 }
