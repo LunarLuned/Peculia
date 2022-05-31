@@ -17,7 +17,7 @@ public class ModConfiguredFeatures {
 // List of Configured Features:
 
     public static final List<OreFeatureConfig.Target> ORE_MYTHRIL_CRYSTAL = List.of(
-            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE),
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.AIR),
                     ModBlocks.MYTHRIL_CRYSTAL.getDefaultState()));
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> MYTHRIL_CRYSTAL =
