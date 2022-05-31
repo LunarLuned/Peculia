@@ -21,7 +21,7 @@ public class ModConfiguredFeatures {
                     ModBlocks.MYTHRIL_CRYSTAL.getDefaultState()));
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> MYTHRIL_CRYSTAL =
-            ConfiguredFeatures.register("mythril_crystal", Feature.ORE,
+            ConfiguredFeatures.register("mythril_crystal", Feature.SCATTERED_ORE,
                     new OreFeatureConfig(ORE_MYTHRIL_CRYSTAL, 2));
 
 
