@@ -22,7 +22,8 @@ public class PeculiaClientMod implements ClientModInitializer {
                 ModBlocks.MYTHRIL_BRICKS,
                 ModBlocks.MYTHRIL_BRICK_SLAB,
                 ModBlocks.MYTHRIL_BRICK_STAIRS,
-                ModBlocks.MYTHRIL_BRICK_WALL
+                ModBlocks.MYTHRIL_BRICK_WALL,
+                ModBlocks.POPROCK_CRYSTAL
 
         );
     }

@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "peculia:continental_cobblestone",
-    "peculia:anomalaic_cobblestone"
+    "peculia:anomalaic_cobblestone",
+    "peculia:poprock_crystal"
+
   ]
 }

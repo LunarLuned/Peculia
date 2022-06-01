@@ -24,6 +24,14 @@ public class ModConfiguredFeatures {
             ConfiguredFeatures.register("mythril_crystal", Feature.SCATTERED_ORE,
                     new OreFeatureConfig(ORE_MYTHRIL_CRYSTAL, 4));
 
+    public static final List<OreFeatureConfig.Target> ORE_POPROCK_CRYSTAL = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE),
+                    ModBlocks.POPROCK_CRYSTAL.getDefaultState()));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> POPROCK_CRYSTAL =
+            ConfiguredFeatures.register("poprock_crystal", Feature.ORE,
+                    new OreFeatureConfig(ORE_POPROCK_CRYSTAL, 4));
+
 
 // Registry for Configured Features:
 

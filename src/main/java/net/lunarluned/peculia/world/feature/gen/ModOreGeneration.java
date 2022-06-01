@@ -15,5 +15,8 @@ public class ModOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ORE_MYTHRIL_CRYSTAL_PLACED.getKey().get());
 
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ORE_POPROCK_CRYSTAL_PLACED.getKey().get());
+
     }
 }

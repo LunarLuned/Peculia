@@ -21,6 +21,8 @@ public class ModBlocks {
 
     public static final Block MYTHRIL_BLOCK = registerBlock("mythril_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(2f).requiresTool().sounds(BlockSoundGroup.METAL)), ModItemGroup.PECULIA);
+    public static final Block POPROCK_CRYSTAL = registerBlock("poprock_crystal",
+            new Block(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(1f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
     public static final Block MYTHRIL_CRYSTAL = registerBlock("mythril_crystal",
             new MythrilCrystalBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER), UniformIntProvider.create(3, 8)), ModItemGroup.PECULIA);
     public static final Block MYTHRIL_BRICKS = registerBlock("mythril_bricks",

@@ -29,5 +29,10 @@
     [
       "has_mythril_shard"
     ]
-  ]
+  ],
+  "rewards": {
+    "recipes": [
+      "peculia:mythril_crystal"
+    ]
+  }
 }

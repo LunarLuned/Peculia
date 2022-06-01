@@ -26,7 +26,9 @@ public class ModItems {
     public static final Item MYTHRIL_SPEAREL = registerItem("mythril_spearel",
             new ModShovelItem(ModToolMaterials.MYTHRIL, 1, -2.4f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item MYTHRIL_GAUNTLET = registerItem("mythril_gauntlet",
-            new ModGauntletItem(ModToolMaterials.MYTHRIL, 2, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
+            new ModGauntletItem(ModToolMaterials.MYTHRIL, 2, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
+    public static final Item POPROCKS = registerItem("poprocks",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA).food(ModFoodComponents.POPROCKS)));
 
 
 
