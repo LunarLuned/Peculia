@@ -3,6 +3,7 @@ package net.lunarluned.peculia.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.lunarluned.peculia.Peculia;
+import net.lunarluned.peculia.block.custom.CrumblingBlock;
 import net.lunarluned.peculia.block.custom.ModStairsBlock;
 import net.lunarluned.peculia.block.custom.MythrilCrystalBlock;
 
@@ -34,6 +35,8 @@ public class ModBlocks {
     public static final Block MYTHRIL_BRICK_WALL = registerBlock("mythril_brick_wall",
             new WallBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)
                     .mapColor(MapColor.LIGHT_BLUE_GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque()), ModItemGroup.PECULIA);
+
+    public static final Block CRUMBLING_STONE = registerBlock("crumbling_stone", new CrumblingBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).resistance(6)), ModItemGroup.PECULIA);
 
     public static final Block COMPRESSED_COBBLESTONE = registerBlock("compressed_cobblestone",
             new Block(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(6)), ModItemGroup.PECULIA);

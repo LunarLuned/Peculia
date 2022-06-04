@@ -12,8 +12,8 @@ public class ModEffects {
     public static StatusEffect ECHO;
 
     public static StatusEffect registerStatusEffect(String name) {
-        return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name),
-                new EchoEffect(StatusEffectCategory.HARMFUL, 15774719));
+        return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new EchoEffect(StatusEffectCategory.HARMFUL, 15774719));
+
 
     }
 

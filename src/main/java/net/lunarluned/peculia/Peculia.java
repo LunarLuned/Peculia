@@ -19,7 +19,7 @@ public class Peculia implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
-		ModEnchantments.registerModEnchantMents();
+		ModEnchantments.registerModEnchantments();
 		ModConfiguredFeatures.registerConfiguredFeatures();
 		ModWorldGen.generateModWorldGen();
 		ModEffects.registerEffects();

@@ -28,6 +28,7 @@
   "block.peculia.mythril_brick_slab": "Mythril Brick Slab",
   "block.peculia.mythril_brick_wall": "Mythril Brick Wall",
   "block.peculia.poprock_crystal": "Poprock Crystal",
+  "block.peculia.crumbling_stone": "Crumbling Stone",
 
   "itemGroup.peculia.peculia": "Peculia",
 
@@ -39,6 +40,7 @@
   "enchantment.peculia.thundering": "Thundering",
   "enchantment.peculia.echo": "Echo",
   "enchantment.peculia.concuss": "Concuss",
+  "enchantment.peculia.panicked": "Panicked",
 
   "effect.peculia.echo": "Echo"
 
