@@ -1,6 +1,7 @@
 package net.lunarluned.peculia.enchantment;
 
 import net.lunarluned.peculia.Peculia;
+import net.lunarluned.peculia.item.custom.ModGauntletItem;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.item.AxeItem;
@@ -18,6 +19,8 @@ public class ModEnchantments {
             new PanickedEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentTarget.ARMOR_CHEST));
     public static Enchantment MOMENTUM = register("momentum",
             new PanickedEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_LEGS));
+    public static Enchantment SHORYUKEN = register("shoryuken",
+            new ShoryukenEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.FISHING_ROD));
 
     private static Enchantment register(String name, Enchantment enchantment) {
         return Registry.register(Registry.ENCHANTMENT, new Identifier(Peculia.MOD_ID, name), enchantment);

@@ -1,9 +1,12 @@
 package net.lunarluned.peculia.enchantment;
 
+import net.lunarluned.peculia.item.custom.ModAxeItem;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.enchantment.LuckEnchantment;
 import net.minecraft.entity.*;
+import net.minecraft.item.AxeItem;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 
@@ -46,5 +49,9 @@ public class ThunderingEnchantment extends Enchantment {
     @Override
     public int getMaxLevel() {
         return 3;
+    }
+
+    public boolean isAcceptableItem(ItemStack stack) {
+        return stack.getItem() instanceof ModAxeItem;
     }
 }
