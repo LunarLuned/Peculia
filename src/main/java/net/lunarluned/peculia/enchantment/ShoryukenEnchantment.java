@@ -21,9 +21,7 @@ public class ShoryukenEnchantment extends Enchantment {
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         if (target instanceof LivingEntity) {
-            if (user.isSprinting()) {
                 ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 20 * 2 * level, level - 3));
-            }
         }
         super.onTargetDamaged(user, target, level);
     }
