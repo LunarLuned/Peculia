@@ -33,7 +33,9 @@
   "itemGroup.peculia.peculia": "Peculia",
 
   "advancements.end.obtain_mythril_shard.title": "Shard of Myths",
-  "advancements.end.obtain_mythril_shard.description": "Obtain a Mythril Shard, a piece of the Void.",
+  "advancements.end.obtain_mythril_shard.description": "Obtain a Mythril Shard, pieces of a comet floating above the Void.",
+  "advancements.end.mythril_gear.title": "Cover me in Comets",
+  "advancements.end.mythril_gear.description": "Get a full suit of Mythril Armor, quite shiny!",
   "advancements.end.obtain_mythril_spearel.title": "Only a Spoonful",
   "advancements.end.obtain_mythril_spearel.description": "Waste a Mythril Ingot for an inside joke.",
 

@@ -1,0 +1,77 @@
+{
+  "parent": "minecraft:end/obtain_mythril_shard",
+  "criteria": {
+    "mythril_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:mythril_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "mythril_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:mythril_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "mythril_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:mythril_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "mythril_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:mythril_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.end.mythril_gear.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "peculia:mythril_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.end.mythril_gear.title"
+    }
+  },
+  "requirements": [
+    [
+      "mythril_helmet",
+      "mythril_chestplate",
+      "mythril_leggings",
+      "mythril_boots"
+    ]
+  ]
+}
