@@ -26,4 +26,8 @@ public class PanickedEnchantment extends Enchantment {
 
     }
     public int getMaxLevel() { return 2; }
+
+    public boolean isTreasure() {
+        return true;
+    }
 }

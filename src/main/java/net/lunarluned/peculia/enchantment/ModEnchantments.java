@@ -17,8 +17,10 @@ public class ModEnchantments {
             new ConcussEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.DIGGER));
     public static Enchantment PANICKED = register("panicked",
             new PanickedEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentTarget.ARMOR_CHEST));
-    public static Enchantment MOMENTUM = register("momentum",
-            new MomentumEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_LEGS));
+    // public static Enchantment MOMENTUM = register("momentum",
+       //     new MomentumEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_LEGS));
+    //postponed due to lack of knowledge on mixins & might just be physically impossible rn
+
     public static Enchantment SHORYUKEN = register("shoryuken",
             new ShoryukenEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.FISHING_ROD));
 

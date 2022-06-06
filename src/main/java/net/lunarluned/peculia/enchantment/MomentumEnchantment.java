@@ -10,8 +10,19 @@ public class MomentumEnchantment extends Enchantment {
 
 
 
+
+    }
+    public boolean isTreasure() {
+        return true;
     }
 
+    public boolean isAvailableForEnchantedBookOffer() {
+        return false;
+    }
+
+    public boolean isAvailableForRandomSelection() {
+        return false;
+    }
 
 
     public int getMaxLevel() { return 1; }

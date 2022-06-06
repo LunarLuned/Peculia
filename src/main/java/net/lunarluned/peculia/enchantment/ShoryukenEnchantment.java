@@ -31,6 +31,10 @@ public class ShoryukenEnchantment extends Enchantment {
         return 1;
     }
 
+    public boolean isAvailableForRandomSelection() {
+        return false;
+    }
+
     public boolean isAcceptableItem(ItemStack stack) {
         return stack.getItem() instanceof ModGauntletItem;
     }

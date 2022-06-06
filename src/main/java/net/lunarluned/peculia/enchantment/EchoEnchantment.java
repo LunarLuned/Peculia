@@ -1,12 +1,15 @@
 package net.lunarluned.peculia.enchantment;
 
 import net.lunarluned.peculia.effect.ModEffects;
+import net.lunarluned.peculia.item.custom.ModGauntletItem;
+import net.lunarluned.peculia.item.custom.ModScytheItem;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.*;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.ItemStack;
 
 public class EchoEnchantment extends Enchantment {
     public EchoEnchantment(Rarity weight, EnchantmentTarget type, EquipmentSlot... slotTypes) {
@@ -32,4 +35,5 @@ public class EchoEnchantment extends Enchantment {
     public int getMaxLevel() {
         return 3;
     }
+
 }

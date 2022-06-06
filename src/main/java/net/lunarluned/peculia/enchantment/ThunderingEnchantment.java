@@ -51,6 +51,15 @@ public class ThunderingEnchantment extends Enchantment {
         return 3;
     }
 
+    public boolean isTreasure() {
+        return true;
+    }
+
+    public boolean isAvailableForEnchantedBookOffer() {
+        return true;
+    }
+
+
     public boolean isAcceptableItem(ItemStack stack) {
         return stack.getItem() instanceof ModAxeItem;
     }
