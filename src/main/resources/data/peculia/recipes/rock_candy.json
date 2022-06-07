@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "peculia:poprocks"
+    },
+    {
+      "item": "peculia:mythril_shard"
+    },
+    {
+      "item": "peculia:mythril_shard"
+    },
+    {
+      "item": "peculia:poprocks"
+    }
+  ],
+  "result": {
+    "item": "peculia:rock_candy",
+    "count": 1
+  }
+}

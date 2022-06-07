@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "peculia:dragonglass"
+    }
+  },
+  "result": {
+    "item": "peculia:dragonglass_pane",
+    "count": 16
+  }
+}

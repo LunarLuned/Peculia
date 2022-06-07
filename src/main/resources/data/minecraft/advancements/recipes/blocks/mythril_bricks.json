@@ -19,7 +19,8 @@
         "recipe": "peculia:mythil_bricks",
         "recipe": "peculia:mythil_brick_wall",
         "recipe": "peculia:mythil_brick_slab",
-        "recipe": "peculia:mythil_brick_stairs"
+        "recipe": "peculia:mythil_brick_stairs",
+        "recipe": "peculia:mythil_gauntlet"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

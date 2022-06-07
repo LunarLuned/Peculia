@@ -10,6 +10,7 @@
   "item.peculia.mythril_gauntlet": "Mythril Gauntlet",
   "item.peculia.coalgeode_spawn_egg": "Coal Geode Spawn Egg",
   "item.peculia.poprocks": "Poprocks",
+  "item.peculia.rock_candy": "Rock Candy",
 
   "item.peculia.mythril_helmet": "Mythril Helmet",
   "item.peculia.mythril_chestplate": "Mythril Chestplate",
@@ -29,6 +30,9 @@
   "block.peculia.mythril_brick_wall": "Mythril Brick Wall",
   "block.peculia.poprock_crystal": "Poprock Crystal",
   "block.peculia.crumbling_stone": "Crumbling Stone",
+  "block.peculia.eroded_end_stone": "Eroded End Stone",
+  "block.peculia.dragonglass": "Dragonglass",
+  "block.peculia.dragonglass_pane": "Dragonglass Pane",
 
   "itemGroup.peculia.peculia": "Peculia",
 

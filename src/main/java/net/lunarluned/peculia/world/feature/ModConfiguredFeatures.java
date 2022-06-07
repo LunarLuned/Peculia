@@ -21,8 +21,8 @@ public class ModConfiguredFeatures {
                     ModBlocks.MYTHRIL_CRYSTAL.getDefaultState()));
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> MYTHRIL_CRYSTAL =
-            ConfiguredFeatures.register("mythril_crystal", Feature.SCATTERED_ORE,
-                    new OreFeatureConfig(ORE_MYTHRIL_CRYSTAL, 4));
+            ConfiguredFeatures.register("mythril_crystal", Feature.ORE,
+                    new OreFeatureConfig(ORE_MYTHRIL_CRYSTAL, 6));
 
     public static final List<OreFeatureConfig.Target> ORE_POPROCK_CRYSTAL = List.of(
             OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE),
@@ -30,7 +30,15 @@ public class ModConfiguredFeatures {
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> POPROCK_CRYSTAL =
             ConfiguredFeatures.register("poprock_crystal", Feature.ORE,
-                    new OreFeatureConfig(ORE_POPROCK_CRYSTAL, 4));
+                    new OreFeatureConfig(ORE_POPROCK_CRYSTAL, 12));
+
+    public static final List<OreFeatureConfig.Target> ORE_ERODED_END_STONE = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE),
+                    ModBlocks.ERODED_END_STONE.getDefaultState()));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ERODED_END_STONE =
+            ConfiguredFeatures.register("eroded_end_stone", Feature.ORE,
+                    new OreFeatureConfig(ORE_ERODED_END_STONE, 20));
 
 
 // Registry for Configured Features:

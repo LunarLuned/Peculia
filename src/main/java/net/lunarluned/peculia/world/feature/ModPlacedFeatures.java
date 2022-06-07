@@ -13,6 +13,10 @@ public class ModPlacedFeatures {
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-100), YOffset.aboveBottom(20))));
 
     public static final RegistryEntry<PlacedFeature> ORE_POPROCK_CRYSTAL_PLACED = PlacedFeatures.register("poprock_crystal",
-            ModConfiguredFeatures.POPROCK_CRYSTAL, ModOreFeatures.modifiersWithCount(1,
-                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-70), YOffset.aboveBottom(120))));
+            ModConfiguredFeatures.POPROCK_CRYSTAL, ModOreFeatures.modifiersWithCount(4,
+                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(50), YOffset.aboveBottom(120))));
+
+    public static final RegistryEntry<PlacedFeature> ORE_ERODED_END_STONE_PLACED = PlacedFeatures.register("eroded_end_stone",
+            ModConfiguredFeatures.ERODED_END_STONE, ModOreFeatures.modifiersWithCount(4,
+                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(50), YOffset.aboveBottom(120))));
 }

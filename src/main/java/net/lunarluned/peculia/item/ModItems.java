@@ -29,6 +29,8 @@ public class ModItems {
             new ModGauntletItem(ModToolMaterials.MYTHRIL, 2, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
     public static final Item POPROCKS = registerItem("poprocks",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA).food(ModFoodComponents.POPROCKS)));
+    public static final Item ROCK_CANDY = registerItem("rock_candy",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA).food(ModFoodComponents.ROCK_CANDY)));
 
 
 

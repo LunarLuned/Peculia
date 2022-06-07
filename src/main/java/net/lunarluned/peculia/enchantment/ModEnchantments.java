@@ -20,7 +20,6 @@ public class ModEnchantments {
     // public static Enchantment MOMENTUM = register("momentum",
        //     new MomentumEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.ARMOR_LEGS));
     //postponed due to lack of knowledge on mixins & might just be physically impossible rn
-
     public static Enchantment SHORYUKEN = register("shoryuken",
             new ShoryukenEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.FISHING_ROD));
 
