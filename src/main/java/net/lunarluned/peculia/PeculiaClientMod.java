@@ -2,9 +2,11 @@ package net.lunarluned.peculia;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.lunarluned.peculia.block.ModBlocks;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.util.ModelIdentifier;
 
 @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
 public class PeculiaClientMod implements ClientModInitializer {
@@ -12,6 +14,7 @@ public class PeculiaClientMod implements ClientModInitializer {
     public void onInitializeClient() {
 
 
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) -> out.accept(MODEL));
 
         // Renders Blocks in List as Transparent (With Translucency)
 
@@ -29,4 +32,6 @@ public class PeculiaClientMod implements ClientModInitializer {
 
         );
     }
+    public static final ModelIdentifier MODEL = new ModelIdentifier("modid:alternate_model#inventory");
+
 }
