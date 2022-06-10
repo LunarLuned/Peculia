@@ -1,10 +1,8 @@
 package net.lunarluned.peculia.enchantment;
 
 import net.lunarluned.peculia.Peculia;
-import net.lunarluned.peculia.item.custom.ModGauntletItem;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
-import net.minecraft.item.AxeItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -22,6 +20,9 @@ public class ModEnchantments {
     //postponed due to lack of knowledge on mixins & might just be physically impossible rn
     public static Enchantment SHORYUKEN = register("shoryuken",
             new ShoryukenEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.FISHING_ROD));
+
+    public static Enchantment LEECHING = register("leeching",
+            new LeechingEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.FISHING_ROD));
 
     private static Enchantment register(String name, Enchantment enchantment) {
         return Registry.register(Registry.ENCHANTMENT, new Identifier(Peculia.MOD_ID, name), enchantment);

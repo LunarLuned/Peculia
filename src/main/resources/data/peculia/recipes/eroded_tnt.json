@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#P#",
+    "P#P",
+    "#P#"
+  ],
+  "key": {
+    "#": {
+      "item": "peculia:eroded_end_stone"
+    },
+    "P": {
+      "item": "minecraft:gunpowder"
+    }
+  },
+  "result": {
+    "item": "minecraft:tnt",
+    "count": 1
+  }
+}
