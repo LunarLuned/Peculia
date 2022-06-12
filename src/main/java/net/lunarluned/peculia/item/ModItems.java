@@ -9,6 +9,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems {
+
+    //end
     public static final Item MYTHRIL_SHARD = registerItem("mythril_shard",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA)));
     public static final Item MYTHRIL_FRAGMENT = registerItem("mythril_fragment",
@@ -31,6 +33,10 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA).food(ModFoodComponents.POPROCKS)));
     public static final Item ROCK_CANDY = registerItem("rock_candy",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA).food(ModFoodComponents.ROCK_CANDY)));
+
+    //overworld
+    public static final Item DIAMOND_GAUNTLET = registerItem("diamond_gauntlet",
+            new ModGauntletItem(ToolMaterials.DIAMOND, 1, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
 
 
 
