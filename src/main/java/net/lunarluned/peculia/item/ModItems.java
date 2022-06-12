@@ -37,8 +37,10 @@ public class ModItems {
     //overworld
     public static final Item DIAMOND_GAUNTLET = registerItem("diamond_gauntlet",
             new ModGauntletItem(ToolMaterials.DIAMOND, 1, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
-
-
+    public static final Item IRON_GAUNTLET = registerItem("iron_gauntlet",
+            new ModGauntletItem(ToolMaterials.IRON, 0, -2.3f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
+    public static final Item GOLDEN_GAUNTLET = registerItem("golden_gauntlet",
+            new ModGauntletItem(ToolMaterials.GOLD, 1, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
 
     public static final Item MYTHRIL_HELMET = registerItem("mythril_helmet",
             new ArmorItem(ModArmorMaterials.MYTHRIL, EquipmentSlot.HEAD,

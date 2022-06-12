@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "pp",
+    "pp",
+    "LL"
+  ],
+  "key": {
+    "p": {
+      "item": "minecraft:diamond"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "peculia:diamond_gauntlet",
+    "count": 1
+  }
+}
