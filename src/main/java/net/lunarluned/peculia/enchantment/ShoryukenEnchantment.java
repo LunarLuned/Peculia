@@ -13,6 +13,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.network.ServerPlayerEntity;
 
 public class ShoryukenEnchantment extends Enchantment {
     public ShoryukenEnchantment(Rarity weight, EnchantmentTarget type, EquipmentSlot... slotTypes) {
@@ -24,8 +25,8 @@ public class ShoryukenEnchantment extends Enchantment {
         if (target instanceof LivingEntity) {
                 ((LivingEntity) target).setVelocity(0,.6,0);
         }
-        if (target instanceof PlayerEntity) {
-            ((PlayerEntity) target).setVelocity(0,.6,0);
+        if (target instanceof ServerPlayerEntity) {
+            (target).addVelocity(0,.6,0);
         }
         super.onTargetDamaged(user, target, level);
     }

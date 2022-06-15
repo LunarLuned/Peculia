@@ -20,7 +20,9 @@ public class ModEnchantments {
     //postponed due to lack of knowledge on mixins & might just be physically impossible rn
     public static Enchantment SHORYUKEN = register("shoryuken",
             new ShoryukenEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.FISHING_ROD));
-
+   // public static Enchantment JETSTREAM = register("jetstream",
+     //       new JetstreamEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.WEAPON));
+    // not done yet
     public static Enchantment LEECHING = register("leeching",
             new LeechingEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.FISHING_ROD));
 

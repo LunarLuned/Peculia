@@ -18,7 +18,7 @@ public class ModItems {
     public static final Item MYTHRIL_INGOT = registerItem("mythril_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA)));
     public static final Item MYTHRIL_CLAYMORE = registerItem("mythril_claymore",
-            new SwordItem(ModToolMaterials.MYTHRIL,5, -2.7f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
+            new ModSwordItem(ModToolMaterials.MYTHRIL,5, -2.7f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item MYTHRIL_SCYTHE = registerItem("mythril_scythe",
             new ModHoeItem(ModToolMaterials.MYTHRIL, 2, -2.5f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item MYTHRIL_HALBERD = registerItem("mythril_halberd",
@@ -34,14 +34,6 @@ public class ModItems {
     public static final Item ROCK_CANDY = registerItem("rock_candy",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA).food(ModFoodComponents.ROCK_CANDY)));
 
-    //overworld
-    public static final Item DIAMOND_GAUNTLET = registerItem("diamond_gauntlet",
-            new ModGauntletItem(ToolMaterials.DIAMOND, 1, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
-    public static final Item IRON_GAUNTLET = registerItem("iron_gauntlet",
-            new ModGauntletItem(ToolMaterials.IRON, 0, -2.3f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
-    public static final Item GOLDEN_GAUNTLET = registerItem("golden_gauntlet",
-            new ModGauntletItem(ToolMaterials.GOLD, 1, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
-
     public static final Item MYTHRIL_HELMET = registerItem("mythril_helmet",
             new ArmorItem(ModArmorMaterials.MYTHRIL, EquipmentSlot.HEAD,
                     new FabricItemSettings().group(ModItemGroup.PECULIA)));
@@ -54,6 +46,15 @@ public class ModItems {
     public static final Item MYTHRIL_BOOTS = registerItem("mythril_boots",
             new ArmorItem(ModArmorMaterials.MYTHRIL, EquipmentSlot.FEET,
                     new FabricItemSettings().group(ModItemGroup.PECULIA)));
+
+    //overworld
+    public static final Item DIAMOND_GAUNTLET = registerItem("diamond_gauntlet",
+            new ModGauntletItem(ToolMaterials.DIAMOND, 1, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
+    public static final Item IRON_GAUNTLET = registerItem("iron_gauntlet",
+            new ModGauntletItem(ToolMaterials.IRON, 0, -2.3f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
+    public static final Item GOLDEN_GAUNTLET = registerItem("golden_gauntlet",
+            new ModGauntletItem(ToolMaterials.GOLD, 1, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Peculia.MOD_ID, name), item);

@@ -1,8 +1,10 @@
 package net.lunarluned.peculia.enchantment;
 
 import net.lunarluned.peculia.effect.ModEffects;
+import net.lunarluned.peculia.item.custom.ModAxeItem;
 import net.lunarluned.peculia.item.custom.ModGauntletItem;
 import net.lunarluned.peculia.item.custom.ModScytheItem;
+import net.lunarluned.peculia.item.custom.ModSwordItem;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.*;
@@ -34,6 +36,10 @@ public class EchoEnchantment extends Enchantment {
     @Override
     public int getMaxLevel() {
         return 3;
+    }
+
+    public boolean isAcceptableItem(ItemStack stack) {
+        return stack.getItem() instanceof ModSwordItem;
     }
 
 }
