@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "peculia:block/poprock_brick_slab"
+    },
+    "type=double": {
+      "model": "peculia:block/poprock_bricks"
+    },
+    "type=top": {
+      "model": "peculia:block/poprock_brick_slab_top"
+    }
+  }
+}

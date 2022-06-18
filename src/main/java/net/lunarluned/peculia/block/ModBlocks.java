@@ -3,10 +3,9 @@ package net.lunarluned.peculia.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.lunarluned.peculia.Peculia;
-import net.lunarluned.peculia.block.custom.CrumblingBlock;
-import net.lunarluned.peculia.block.custom.ModStairsBlock;
-import net.lunarluned.peculia.block.custom.MythrilCrystalBlock;
+import net.lunarluned.peculia.block.custom.*;
 
+import net.lunarluned.peculia.fluid.ModFluids;
 import net.lunarluned.peculia.item.ModItemGroup;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -20,10 +19,23 @@ import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
 
+    //endded
+
     public static final Block MYTHRIL_BLOCK = registerBlock("mythril_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(2f).requiresTool().sounds(BlockSoundGroup.METAL)), ModItemGroup.PECULIA);
     public static final Block POPROCK_CRYSTAL = registerBlock("poprock_crystal",
-            new Block(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(1f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+            new Block(FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.PINK).nonOpaque().strength(1f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+    public static final Block POPROCK_BRICKS = registerBlock("poprock_bricks",
+            new Block(FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.PINK).nonOpaque().strength(1.5f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+    public static final Block CHISELED_POPROCK_BRICKS = registerBlock("chiseled_poprock_bricks",
+            new Block(FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.PINK).nonOpaque().strength(1.5f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+    public static final Block POPROCK_BRICK_STAIRS = registerBlock("poprock_brick_stairs",
+            new ModStairsBlock(ModBlocks.POPROCK_BRICKS.getDefaultState(),FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.PINK).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+    public static final Block POPROCK_BRICK_SLAB = registerBlock("poprock_brick_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.PINK).strength(2f).nonOpaque().requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+    public static final Block POPROCK_BRICK_WALL = registerBlock("poprock_brick_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)
+                    .mapColor(MapColor.PINK).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque()), ModItemGroup.PECULIA);
     public static final Block MYTHRIL_CRYSTAL = registerBlock("mythril_crystal",
             new MythrilCrystalBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER), UniformIntProvider.create(3, 8)), ModItemGroup.PECULIA);
     public static final Block MYTHRIL_BRICKS = registerBlock("mythril_bricks",
@@ -36,6 +48,25 @@ public class ModBlocks {
             new WallBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)
                     .mapColor(MapColor.LIGHT_BLUE_GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque()), ModItemGroup.PECULIA);
 
+    public static final Block SILL = registerBlock("sill",
+            new SillBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.MUD).resistance(1)), ModItemGroup.PECULIA);
+    public static final Block SILL_BRICKS = registerBlock("sill_bricks",
+            new SillBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.MUD_BRICKS).resistance(1)), ModItemGroup.PECULIA);
+    public static final Block CHISELED_SILL_BRICKS = registerBlock("chiseled_sill_bricks",
+            new SillBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.MUD_BRICKS).resistance(1)), ModItemGroup.PECULIA);
+    public static final Block SILL_BRICK_STAIRS = registerBlock("sill_brick_stairs",
+            new ModStairsBlock(ModBlocks.MYTHRIL_BRICKS.getDefaultState(),FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+    public static final Block SILL_BRICK_SLAB = registerBlock("sill_brick_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).strength(2f).nonOpaque().requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+    public static final Block SILL_BRICK_WALL = registerBlock("sill_brick_wall",
+            new WallBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque()), ModItemGroup.PECULIA);
+
+
+    public static final Block SILLTAR_FLUID_BLOCK = registerBlockWithoutBlockItem("silltar_fluid",
+            new ModFluidBlock(ModFluids.SILLTAR_STILL, FabricBlockSettings.of(Material.WATER).nonOpaque().noCollision().dropsNothing()), ModItemGroup.PECULIA);
+
+
+
     public static final Block ERODED_END_STONE = registerBlock("eroded_end_stone",
             new FallingBlock(FabricBlockSettings.copyOf(Blocks.SAND).strength(1f)), ModItemGroup.PECULIA);
     public static final Block DRAGONGLASS = registerBlock("dragonglass",
@@ -43,8 +74,8 @@ public class ModBlocks {
     public static final Block DRAGONGLASS_PANE = registerBlock("dragonglass_pane",
             new PaneBlock(FabricBlockSettings.copyOf(Blocks.GLASS).strength(1f).nonOpaque().requiresTool()), ModItemGroup.PECULIA);
 
+    //oveer world
     public static final Block CRUMBLING_STONE = registerBlock("crumbling_stone", new CrumblingBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).resistance(6)), ModItemGroup.PECULIA);
-
     public static final Block COMPRESSED_COBBLESTONE = registerBlock("compressed_cobblestone",
             new Block(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(6)), ModItemGroup.PECULIA);
     public static final Block CONTAINED_COBBLESTONE = registerBlock("contained_cobblestone",
@@ -56,6 +87,9 @@ public class ModBlocks {
     public static final Block AWAKENED_COBBLESTONE = registerBlock("awakened_cobblestone",
             new Block(FabricBlockSettings.of(Material.STONE).strength(3.5f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(30)), ModItemGroup.PECULIA);
 
+
+
+
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new Identifier(Peculia.MOD_ID, name), block);
@@ -64,6 +98,10 @@ public class ModBlocks {
     private static Item registerBlockItem(String name, Block block, ItemGroup group) {
         return Registry.register(Registry.ITEM, new Identifier(Peculia.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings().group(group)));
+    }
+
+    private static Block registerBlockWithoutBlockItem(String name, Block block, ItemGroup group) {
+        return Registry.register(Registry.BLOCK, new Identifier(Peculia.MOD_ID, name), block);
     }
 
     public static void registerModBlocks() {

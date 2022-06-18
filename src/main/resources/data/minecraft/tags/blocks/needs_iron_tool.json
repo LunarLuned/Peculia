@@ -3,7 +3,10 @@
   "values": [
     "peculia:continental_cobblestone",
     "peculia:anomalaic_cobblestone",
-    "peculia:poprock_crystal"
+    "peculia:poprock_crystal",
+    "peculia:poprock_bricks",
+    "peculia:chiseled_poprock_bricks"
+
 
   ]
 }

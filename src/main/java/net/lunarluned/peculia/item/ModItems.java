@@ -2,6 +2,7 @@ package net.lunarluned.peculia.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.lunarluned.peculia.Peculia;
+import net.lunarluned.peculia.fluid.ModFluids;
 import net.lunarluned.peculia.item.custom.*;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
@@ -22,9 +23,9 @@ public class ModItems {
     public static final Item MYTHRIL_SCYTHE = registerItem("mythril_scythe",
             new ModHoeItem(ModToolMaterials.MYTHRIL, 2, -2.5f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item MYTHRIL_HALBERD = registerItem("mythril_halberd",
-            new ModAxeItem(ModToolMaterials.MYTHRIL,7, -3.1f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
+            new ModAxeItem(ModToolMaterials.MYTHRIL,8, -3.1f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item MYTHRIL_HAMMER = registerItem("mythril_hammer",
-            new ModPickaxeItem(ModToolMaterials.MYTHRIL, 8, -3.4f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
+            new ModPickaxeItem(ModToolMaterials.MYTHRIL, 9, -3.4f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item MYTHRIL_SPEAREL = registerItem("mythril_spearel",
             new ModShovelItem(ModToolMaterials.MYTHRIL, 1, -2.4f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item MYTHRIL_GAUNTLET = registerItem("mythril_gauntlet",
@@ -33,6 +34,11 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA).food(ModFoodComponents.POPROCKS)));
     public static final Item ROCK_CANDY = registerItem("rock_candy",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA).food(ModFoodComponents.ROCK_CANDY)));
+
+    public static final Item SILLTAR_BUCKET = registerItem("silltar_bucket",
+            new BucketItem(ModFluids.SILLTAR_STILL, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
+
+
 
     public static final Item MYTHRIL_HELMET = registerItem("mythril_helmet",
             new ArmorItem(ModArmorMaterials.MYTHRIL, EquipmentSlot.HEAD,

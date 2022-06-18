@@ -8,6 +8,7 @@
   "item.peculia.mythril_hammer": "Mythril Hammer",
   "item.peculia.mythril_spearel": "Mythril Spearel",
   "item.peculia.mythril_gauntlet": "Mythril Gauntlet",
+  "item.peculia.silltar_bucket": "Siltar Bucket",
   "item.peculia.coalgeode_spawn_egg": "Coal Geode Spawn Egg",
   "item.peculia.poprocks": "Poprocks",
   "item.peculia.rock_candy": "Rock Candy",
@@ -23,6 +24,18 @@
 
   "block.peculia.mythril_block": "Block of Mythril",
   "block.peculia.mythril_crystal": "Mythril Crystal",
+  "block.peculia.chiseled_mythril_bricks": "Chiseled Mythril Bricks",
+  "block.peculia.sill": "Sill",
+  "block.peculia.sill_bricks": "Sill Bricks",
+  "block.peculia.sill_brick_stairs": "Sill Brick Stairs",
+  "block.peculia.sill_brick_slab": "Sill Brick Slab",
+  "block.peculia.sill_brick_wall": "Sill Brick Wall",
+  "block.peculia.chiseled_sill_bricks": "Chiseled Sill Bricks",
+  "block.peculia.poprock_bricks": "Poprock Bricks",
+  "block.peculia.poprock_brick_stairs": "Poprock Brick Stairs",
+  "block.peculia.poprock_brick_slab": "Poprock Brick Slab",
+  "block.peculia.poprock_brick_wall": "Poprock Brick Wall",
+  "block.peculia.chiseled_poprock_bricks": "Chiseled Poprock Bricks",
   "block.peculia.compressed_cobblestone": "Compressed Cobblestone",
   "block.peculia.contained_cobblestone": "Contained Cobblestone",
   "block.peculia.continental_cobblestone": "Continental Cobblestone",
@@ -55,6 +68,7 @@
   "enchantment.peculia.momentum": "Momentum",
   "enchantment.peculia.leeching": "Leeching",
 
-  "effect.peculia.echo": "Echo"
+  "effect.peculia.echo": "Echo",
+  "effect.peculia.ichor": "Ichor"
 
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "peculia:block/sill_bricks",
+    "top": "peculia:block/sill_bricks",
+    "side": "peculia:block/sill_bricks"
+  }
+}

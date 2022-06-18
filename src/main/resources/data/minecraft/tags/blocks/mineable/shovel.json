@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "peculia:eroded_end_stone"
+    "peculia:eroded_end_stone",
+    "peculia:sill"
   ]
 }
