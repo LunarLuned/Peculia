@@ -60,6 +60,16 @@
   "advancements.end.obtain_mythril_spearel.title": "Only a Spoonful",
   "advancements.end.obtain_mythril_spearel.description": "Waste a Mythril Ingot for an inside joke.",
 
+  "item.minecraft.potion.effect.ichor_potion": "Potion of Ichor",
+  "item.minecraft.splash_potion.effect.ichor_potion": "Splash Potion of Ichor",
+  "item.minecraft.lingering_potion.effect.ichor_potion": "Lingering Potion of Ichor",
+  "item.minecraft.tipped_arrow.effect.ichor_potion": "Arrow of Ichor",
+  "item.minecraft.potion.effect.extichor_potion": "Potion of Ichor",
+  "item.minecraft.splash_potion.effect.extichor_potion": "Splash Potion of Ichor",
+  "item.minecraft.lingering_potion.effect.extichor_potion": "Lingering Potion of Ichor",
+  "item.minecraft.tipped_arrow.effect.extichor_potion": "Arrow of Ichor",
+
+
   "enchantment.peculia.thundering": "Thundering",
   "enchantment.peculia.echo": "Echo",
   "enchantment.peculia.concuss": "Concuss",

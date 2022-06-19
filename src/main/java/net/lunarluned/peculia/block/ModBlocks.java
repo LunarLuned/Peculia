@@ -55,11 +55,11 @@ public class ModBlocks {
     public static final Block CHISELED_SILL_BRICKS = registerBlock("chiseled_sill_bricks",
             new SillBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.MUD_BRICKS).resistance(1)), ModItemGroup.PECULIA);
     public static final Block SILL_BRICK_STAIRS = registerBlock("sill_brick_stairs",
-            new ModStairsBlock(ModBlocks.MYTHRIL_BRICKS.getDefaultState(),FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+            new ModStairsBlock(ModBlocks.SILL_BRICKS.getDefaultState(),FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.MUD_BRICKS)), ModItemGroup.PECULIA);
     public static final Block SILL_BRICK_SLAB = registerBlock("sill_brick_slab",
-            new SlabBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).strength(2f).nonOpaque().requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+            new SlabBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).strength(2f).nonOpaque().requiresTool().sounds(BlockSoundGroup.MUD_BRICKS)), ModItemGroup.PECULIA);
     public static final Block SILL_BRICK_WALL = registerBlock("sill_brick_wall",
-            new WallBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque()), ModItemGroup.PECULIA);
+            new WallBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.MUD_BRICKS).nonOpaque()), ModItemGroup.PECULIA);
 
 
     public static final Block SILLTAR_FLUID_BLOCK = registerBlockWithoutBlockItem("silltar_fluid",

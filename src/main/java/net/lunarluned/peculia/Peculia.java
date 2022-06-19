@@ -7,6 +7,7 @@ import net.lunarluned.peculia.effect.IchorEffect;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.enchantment.ModEnchantments;
 import net.lunarluned.peculia.item.ModItems;
+import net.lunarluned.peculia.potion.ModPotions;
 import net.lunarluned.peculia.world.feature.ModConfiguredFeatures;
 import net.lunarluned.peculia.world.feature.gen.ModWorldGen;
 import net.minecraft.entity.effect.StatusEffect;
@@ -28,8 +29,13 @@ public class Peculia implements ModInitializer {
 		ModEnchantments.registerModEnchantments();
 		ModConfiguredFeatures.registerConfiguredFeatures();
 		ModWorldGen.generateModWorldGen();
-		ModEffects.registerEffects();
+
+		//disclaimer. i do not know why effects and potions calls for you to register each effect like this. it just does. idk why.
+		ModEffects.registerEchoEffect();
 		ModEffects.registerIchorEffect();
+		ModPotions.registerIchorPotion();
+		ModPotions.registerextIchorPotion();
+
 
 		LOGGER.info("You have 5 days until the piss droplets hit your minecraft house.");
 	}

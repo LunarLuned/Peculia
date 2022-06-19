@@ -31,6 +31,9 @@ public class PeculiaClientMod implements ClientModInitializer {
                 ModBlocks.MYTHRIL_BRICK_WALL,
                 ModBlocks.POPROCK_CRYSTAL,
                 ModBlocks.POPROCK_BRICKS,
+                ModBlocks.POPROCK_BRICK_SLAB,
+                ModBlocks.POPROCK_BRICK_STAIRS,
+                ModBlocks.POPROCK_BRICK_WALL,
                 ModBlocks.CHISELED_POPROCK_BRICKS,
                 ModBlocks.DRAGONGLASS,
                 ModBlocks.DRAGONGLASS_PANE
@@ -48,5 +51,6 @@ public class PeculiaClientMod implements ClientModInitializer {
             registry.register(new Identifier("peculia:block/siltar_still"));
             registry.register(new Identifier("peculia:block/siltar_flowing"));
     });
+        //hello acikek.
     }
 }

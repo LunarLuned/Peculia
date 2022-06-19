@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "peculia:mythril_bricks"
+      "item": "peculia:poprock_bricks"
     }
   },
   "result": {
-    "item": "peculia:mythril_brick_stairs",
+    "item": "peculia:poprock_brick_stairs",
     "count": 4
   }
 }

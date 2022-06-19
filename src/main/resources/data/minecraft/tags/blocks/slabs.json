@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "peculia:mythril_brick_slab"
+    "peculia:mythril_brick_slab",
+    "peculia:poprock_brick_slab",
+    "peculia:sill_brick_slab"
     ]
 }
