@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "peculia:block/dark_purpur_slab"
+    },
+    "type=double": {
+      "model": "peculia:block/dark_purpur"
+    },
+    "type=top": {
+      "model": "peculia:block/dark_purpur_slab_top"
+    }
+  }
+}

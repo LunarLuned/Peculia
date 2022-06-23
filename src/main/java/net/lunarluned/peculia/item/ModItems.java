@@ -29,7 +29,7 @@ public class ModItems {
     public static final Item MYTHRIL_SPEAREL = registerItem("mythril_spearel",
             new ModShovelItem(ModToolMaterials.MYTHRIL, 1, -2.4f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item MYTHRIL_GAUNTLET = registerItem("mythril_gauntlet",
-            new ModGauntletItem(ModToolMaterials.MYTHRIL, 2, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
+            new ModGauntletItem(ModToolMaterials.MYTHRIL, 3, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
     public static final Item POPROCKS = registerItem("poprocks",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA).food(ModFoodComponents.POPROCKS)));
     public static final Item ROCK_CANDY = registerItem("rock_candy",
@@ -55,9 +55,9 @@ public class ModItems {
 
     //overworld
     public static final Item DIAMOND_GAUNTLET = registerItem("diamond_gauntlet",
-            new ModGauntletItem(ToolMaterials.DIAMOND, 1, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
+            new ModGauntletItem(ToolMaterials.DIAMOND, 2, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
     public static final Item IRON_GAUNTLET = registerItem("iron_gauntlet",
-            new ModGauntletItem(ToolMaterials.IRON, 0, -2.3f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
+            new ModGauntletItem(ToolMaterials.IRON, 1, -2.3f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
     public static final Item GOLDEN_GAUNTLET = registerItem("golden_gauntlet",
             new ModGauntletItem(ToolMaterials.GOLD, 1, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
 

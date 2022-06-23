@@ -2,6 +2,12 @@
   "replace": false,
   "values": [
     "peculia:compressed_cobblestone",
-    "peculia:contained_cobblestone"
+    "peculia:contained_cobblestone",
+    "peculia:dark_purpur_pillar",
+    "peculia:dark_purpur",
+    "peculia:dark_purpur_slab",
+    "peculia:dark_purpur_stairs",
+    "peculia:dark_purpur_wall",
+    "peculia:chiseled_dark_purpur"
   ]
 }

@@ -61,6 +61,20 @@ public class ModBlocks {
     public static final Block SILL_BRICK_WALL = registerBlock("sill_brick_wall",
             new WallBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.MUD_BRICKS).nonOpaque()), ModItemGroup.PECULIA);
 
+    public static final Block DARK_PURPUR = registerBlock("dark_purpur",
+            new Block(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).sounds(BlockSoundGroup.STONE).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA);
+    public static final Block DARK_PURPUR_PILLAR = registerBlock("dark_purpur_pillar",
+            new PillarBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).sounds(BlockSoundGroup.STONE).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA);
+    public static final Block CHISELED_DARK_PURPUR = registerBlock("chiseled_dark_purpur",
+            new Block(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).sounds(BlockSoundGroup.STONE).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA);
+    public static final Block DARK_PURPUR_STAIRS = registerBlock("dark_purpur_stairs",
+            new ModStairsBlock(ModBlocks.DARK_PURPUR.getDefaultState(),FabricBlockSettings.of(Material.STONE).mapColor(MapColor.GRAY).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.STONE)), ModItemGroup.PECULIA);
+    public static final Block DARK_PURPUR_SLAB = registerBlock("dark_purpur_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).strength(2f).nonOpaque().requiresTool().sounds(BlockSoundGroup.STONE)), ModItemGroup.PECULIA);
+    public static final Block DARK_PURPUR_WALL = registerBlock("dark_purpur_wall",
+            new WallBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).strength(2f).requiresTool().sounds(BlockSoundGroup.STONE).nonOpaque()), ModItemGroup.PECULIA);
+
+
 
     public static final Block SILLTAR_FLUID_BLOCK = registerBlockWithoutBlockItem("silltar_fluid",
             new ModFluidBlock(ModFluids.SILLTAR_STILL, FabricBlockSettings.of(Material.WATER).nonOpaque().noCollision().dropsNothing()), ModItemGroup.PECULIA);
