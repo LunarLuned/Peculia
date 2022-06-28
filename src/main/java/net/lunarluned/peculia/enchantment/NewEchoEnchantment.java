@@ -28,7 +28,7 @@ public class NewEchoEnchantment extends Enchantment {
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         if (user instanceof PlayerEntity player && player.getRandom().nextInt(100) <= PeculiaConfig.getIntValue("echo_chance")) {
-            target.damage(DamageSource.player(player), player.getStackInHand(Hand.MAIN_HAND).getDamage() * 2);
+            target.damage(DamageSource.player(player), player.getStackInHand(Hand.MAIN_HAND).getDamage());
             player.world.playSound(null, player.getBlockPos(), ModSoundEvents.ECHO_ATTACK_HIT, SoundCategory.NEUTRAL, 1.0F, 1.0F);
             // AAAAAAAAAAAAAAAAAAAAAAAAAAA I FUCKING HATE THIS STUPID FUCKING GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
             // im gonna deal with this tomorrow fuck this stupid ass enchantment. kill yourself echo
