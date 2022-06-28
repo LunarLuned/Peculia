@@ -1,10 +1,13 @@
 package net.lunarluned.peculia.enchantment;
 
+import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.item.custom.ModAxeItem;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.enchantment.LuckEnchantment;
 import net.minecraft.entity.*;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
@@ -23,20 +26,17 @@ public class ThunderingEnchantment extends Enchantment {
 
             if(level == 1) {
                 if(world.isRaining()) {
-                    EntityType.LIGHTNING_BOLT.spawn(world, null, null, null, position,
-                            SpawnReason.TRIGGERED, true, true);
+                    ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(ModEffects.ELECTROCUTED, 20 * 2 * level, level - 1));
                 }
             }
             if(level == 2) {
                 if(world.isRaining()) {
-                    EntityType.LIGHTNING_BOLT.spawn(world, null, null, null, position,
-                            SpawnReason.TRIGGERED, true, true);
+                    ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(ModEffects.ELECTROCUTED, 20 * 2 * level, level - 1));
                 }
             }
             if(level == 3) {
                 if(world.isRaining()) {
-                    EntityType.LIGHTNING_BOLT.spawn(world, null, null, null, position,
-                            SpawnReason.TRIGGERED, true, true);
+                    ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(ModEffects.ELECTROCUTED, 20 * 2 * level, level - 1));
                     EntityType.LIGHTNING_BOLT.spawn(world, null, null, null, position,
                             SpawnReason.TRIGGERED, true, true);
                 }

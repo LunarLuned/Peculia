@@ -12,6 +12,9 @@ import net.lunarluned.peculia.potion.ModPotions;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.lunarluned.peculia.world.feature.ModConfiguredFeatures;
 import net.lunarluned.peculia.world.feature.gen.ModWorldGen;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.damage.EntityDamageSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -51,6 +54,14 @@ public class Peculia implements ModInitializer {
 		ModPotions.registerextIchorPotion();
 
 
+
 		LOGGER.info("You have 5 days until the piss droplets hit your minecraft house.");
+	}
+	public static class ElectrocutionDamageSource extends EntityDamageSource {
+
+		public ElectrocutionDamageSource(Entity source) {
+			super("electrocution", source);
+			setBypassesArmor();
+		}
 	}
 }

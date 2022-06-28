@@ -108,6 +108,7 @@
   "effect.peculia.echo": "Echo",
   "effect.peculia.ichor": "Ichor",
 
-  "peculia.echo_attack_hit": "Strong Echo Attack"
+  "peculia.echo_attack_hit": "Strong Echo Attack",
 
+  "death.attack.electrocution": "%1$s was electrocuted to death"
 }

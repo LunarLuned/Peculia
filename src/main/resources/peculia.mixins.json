@@ -8,7 +8,8 @@
     "ScytheModification",
     "GauntletModification",
     "PickaxeModification",
-    "ItemDropMixin"
+    "ItemDropMixin",
+    "PlayerManagerMixin"
   ],
   "client": [
 

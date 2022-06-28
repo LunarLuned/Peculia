@@ -21,26 +21,24 @@ public class NewEchoEnchantment extends Enchantment {
     }
 
     @Override
+    public int getMaxLevel() {
+        return 1;
+    }
+
+    @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
-        if (user.isOnGround()) {
             if (user instanceof PlayerEntity player && player.getRandom().nextInt(100) <= PeculiaConfig.getIntValue("echo_chance")) {
                 target.damage(DamageSource.player(player), player.getStackInHand(Hand.MAIN_HAND).getDamage());
                 player.world.playSound(null, player.getBlockPos(), ModSoundEvents.ECHO_ATTACK_HIT, SoundCategory.NEUTRAL, 1.0F, 1.0F);
                 // AAAAAAAAAAAAAAAAAAAAAAAAAAA I FUCKING HATE THIS STUPID FUCKING GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
-                // i want to die so bad im gonna deal with this tomorrow fuck this stupid ass enchantment. kill yourself echo
+                // im gonna deal with this tomorrow fuck this stupid ass enchantment. kill yourself echo
                 // its the fucking target.damage, but i have no clue how else to do this. no fucking idea. ill deal with it tmrw
                 // THE WORST PART IS???? IT WAS WORKING???? WHAT MADE IT SUDDENLY NOT?????? ? ?? ?? ?? ?>????
             }
-        }
         super.onTargetDamaged(user, target, level);
     }
 
 
-
-    @Override
-    public int getMaxLevel() {
-        return 1;
-    }
 
     @Override
     public boolean canAccept(Enchantment other) {

@@ -1,6 +1,8 @@
 package net.lunarluned.peculia.effect;
 
+import net.lunarluned.peculia.Peculia;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
@@ -15,7 +17,7 @@ public class ElectrocutedEffect extends StatusEffect {
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 250, 1));
-        entity.damage(DamageSource.LIGHTNING_BOLT, 1);
+        entity.damage(new Peculia.ElectrocutionDamageSource(entity), 1);
         super.applyUpdateEffect(entity, amplifier);
     }
     @Override
