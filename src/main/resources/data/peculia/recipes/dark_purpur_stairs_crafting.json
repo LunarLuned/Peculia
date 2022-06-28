@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "peculia:dark_purpur"
+        }
+    },
+    "result": {
+        "item": "peculia:dark_purpur_stairs",
+        "count": 6
+    },
+    "group": "dark_purpur_stairs"
+}

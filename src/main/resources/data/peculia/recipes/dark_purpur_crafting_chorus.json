@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "#B#",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:popped_chorus_fruit"
+        },
+        "B": {
+            "item": "minecraft:black_dye"
+        }
+    },
+    "result": {
+        "item": "peculia:dark_purpur",
+        "count": 4
+    },
+    "group": "dark_purpur"
+}

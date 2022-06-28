@@ -53,6 +53,27 @@ public class ModItems {
             new ArmorItem(ModArmorMaterials.MYTHRIL, EquipmentSlot.FEET,
                     new FabricItemSettings().group(ModItemGroup.PECULIA)));
 
+    //nether
+    public static final Item HOGLIN_TUSK = registerItem("hoglin_tusk",
+            new HoglinTuskItem(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER)));
+    public static final Item CRIMSON_STEW = registerItem("crimson_stew",
+            new HoglinTuskItem(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).food(ModFoodComponents.CRIMSON_STEW).maxCount(1)));
+    public static final Item WARPED_STEW = registerItem("warped_stew",
+            new HoglinTuskItem(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).food(ModFoodComponents.WARPED_STEW).maxCount(1)));
+    public static final Item FUNGAL_STEW = registerItem("fungal_stew",
+            new HoglinTuskItem(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).food(ModFoodComponents.FUNGAL_STEW).maxCount(1)));
+    public static final Item MUSHROOM_STEW_TUSK = registerItem("mushroom_stew_tusk",
+            new HoglinTuskItem(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).food(ModFoodComponents.MUSHROOM_STEW_TUSK).maxCount(1)));
+
+    public static final Item SACRIFICIAL_DAGGER = registerItem("sacrificial_dagger",
+            new ModSwordItem(ModToolMaterials.SCRAP,1, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
+    public static final Item GILDED_SACRIFICIAL_DAGGER = registerItem("gilded_sacrificial_dagger",
+            new ModSwordItem(ModToolMaterials.SCRAP,2, -2.0f, new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
+    public static final Item DIPPED_SACRIFICIAL_DAGGER = registerItem("dipped_sacrificial_dagger",
+            new ModDippedItem(ModToolMaterials.SCRAP,1, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
+    public static final Item DIPPED_GILDED_SACRIFICIAL_DAGGER = registerItem("dipped_gilded_sacrificial_dagger",
+            new ModDippedItem(ModToolMaterials.SCRAP,2, -2.0f, new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
+
     //overworld
     public static final Item DIAMOND_GAUNTLET = registerItem("diamond_gauntlet",
             new ModGauntletItem(ToolMaterials.DIAMOND, 2, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA)));

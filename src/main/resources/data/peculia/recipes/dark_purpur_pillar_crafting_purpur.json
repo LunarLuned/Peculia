@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#B#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:purpur_pillar"
+        },
+        "B": {
+            "item": "minecraft:black_dye"
+        }
+    },
+    "result": {
+        "item": "peculia:dark_purpur_pillar",
+        "count": 8
+    },
+    "group": "dark_purpur_pillar"
+}

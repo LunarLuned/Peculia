@@ -1,7 +1,6 @@
 package net.lunarluned.peculia.mixin;
 
 import net.lunarluned.peculia.enchantment.ConcussEnchantment;
-import net.lunarluned.peculia.enchantment.EchoEnchantment;
 import net.lunarluned.peculia.item.custom.ModGauntletItem;
 import net.lunarluned.peculia.item.custom.ModHoeItem;
 import net.minecraft.enchantment.*;

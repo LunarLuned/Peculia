@@ -19,4 +19,8 @@ public class ModPlacedFeatures {
     public static final RegistryEntry<PlacedFeature> ORE_ERODED_END_STONE_PLACED = PlacedFeatures.register("eroded_end_stone",
             ModConfiguredFeatures.ERODED_END_STONE, ModOreFeatures.modifiersWithCount(4,
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(50), YOffset.aboveBottom(120))));
+
+    public static final RegistryEntry<PlacedFeature> ORE_SILL_PLACED = PlacedFeatures.register("sill",
+            ModConfiguredFeatures.SILL, ModOreFeatures.modifiersWithCount(1,
+                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(50), YOffset.aboveBottom(120))));
 }

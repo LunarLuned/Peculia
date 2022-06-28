@@ -1,7 +1,7 @@
 package net.lunarluned.peculia.mixin;
 
 import net.lunarluned.peculia.enchantment.ConcussEnchantment;
-import net.lunarluned.peculia.enchantment.EchoEnchantment;
+import net.lunarluned.peculia.enchantment.NewEchoEnchantment;
 import net.lunarluned.peculia.enchantment.ThunderingEnchantment;
 import net.lunarluned.peculia.item.custom.ModHoeItem;
 import net.lunarluned.peculia.item.custom.ModPickaxeItem;
@@ -29,7 +29,7 @@ public abstract class ScytheModification {
     @Inject(method = "isAcceptableItem", at = @At("HEAD"), cancellable = true)
     public void isAcceptableItem(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         Enchantment enchantment = (Enchantment) (Object) this;
-        if (enchantment instanceof EchoEnchantment) {
+        if (enchantment instanceof NewEchoEnchantment) {
             if (type != EnchantmentTarget.WEAPON || !(stack.getItem() instanceof ModHoeItem)) return;
             cir.setReturnValue(true);
         }

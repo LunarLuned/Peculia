@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "___",
+        "_B_",
+        "___"
+    ],
+    "key": {
+        "_": {
+            "item": "minecraft:purpur_slab"
+        },
+        "B": {
+            "item": "minecraft:black_dye"
+        }
+    },
+    "result": {
+        "item": "peculia:dark_purpur_slab",
+        "count": 8
+    },
+    "group": "dark_purpur_slab"
+}

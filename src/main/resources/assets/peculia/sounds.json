@@ -1,0 +1,8 @@
+{
+  "echo_attack_hit": {
+    "subtitle": "peculia.echo_attack_hit",
+    "sounds": [
+      "peculia:echo_attack_hit"
+    ]
+  }
+}

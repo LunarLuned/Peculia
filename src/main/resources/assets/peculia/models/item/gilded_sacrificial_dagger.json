@@ -1,0 +1,223 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "peculia:item/gilded_sacrificial_dagger",
+		"particle": "peculia:item/gilded_sacrificial_dagger"
+	},
+	"elements": [
+		{
+			"name": "gilded_sacrificial_dagger_0",
+			"from": [3, 13, 0],
+			"to": [9, 14, 1],
+			"faces": {
+				"north": {"uv": [7, 2, 13, 3], "texture": "#0"},
+				"east": {"uv": [7, 2, 8, 3], "texture": "#0"},
+				"south": {"uv": [7, 3, 13, 2], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [12, 2, 13, 3], "texture": "#0"},
+				"up": {"uv": [13, 2, 7, 3], "texture": "#0"},
+				"down": {"uv": [7, 2, 13, 3], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "gilded_sacrificial_dagger_1",
+			"from": [3, 12, 0],
+			"to": [8, 13, 1],
+			"faces": {
+				"north": {"uv": [8, 3, 13, 4], "texture": "#0"},
+				"east": {"uv": [8, 3, 9, 4], "texture": "#0"},
+				"south": {"uv": [8, 4, 13, 3], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [12, 3, 13, 4], "texture": "#0"},
+				"up": {"uv": [13, 3, 8, 4], "texture": "#0"},
+				"down": {"uv": [8, 3, 13, 4], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "gilded_sacrificial_dagger_2",
+			"from": [3, 7, 0],
+			"to": [7, 12, 1],
+			"faces": {
+				"north": {"uv": [9, 4, 13, 9], "texture": "#0"},
+				"east": {"uv": [9, 4, 10, 9], "texture": "#0"},
+				"south": {"uv": [9, 9, 13, 4], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [12, 4, 13, 9], "texture": "#0"},
+				"up": {"uv": [13, 4, 9, 5], "texture": "#0"},
+				"down": {"uv": [9, 8, 13, 9], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "gilded_sacrificial_dagger_3",
+			"from": [7, 4, 0],
+			"to": [9, 11, 1],
+			"faces": {
+				"north": {"uv": [7, 5, 9, 12], "texture": "#0"},
+				"east": {"uv": [7, 5, 8, 12], "texture": "#0"},
+				"south": {"uv": [7, 12, 9, 5], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [8, 5, 9, 12], "texture": "#0"},
+				"up": {"uv": [9, 5, 7, 6], "texture": "#0"},
+				"down": {"uv": [7, 11, 9, 12], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "gilded_sacrificial_dagger_4",
+			"from": [9, 2, 0],
+			"to": [11, 9, 1],
+			"faces": {
+				"north": {"uv": [5, 7, 7, 14], "texture": "#0"},
+				"east": {"uv": [5, 7, 6, 14], "texture": "#0"},
+				"south": {"uv": [5, 14, 7, 7], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [6, 7, 7, 14], "texture": "#0"},
+				"up": {"uv": [7, 7, 5, 8], "texture": "#0"},
+				"down": {"uv": [5, 13, 7, 14], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "gilded_sacrificial_dagger_5",
+			"from": [12, 0, 0],
+			"to": [13, 7, 1],
+			"faces": {
+				"north": {"uv": [3, 9, 4, 16], "texture": "#0"},
+				"east": {"uv": [3, 9, 4, 16], "texture": "#0"},
+				"south": {"uv": [3, 16, 4, 9], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [3, 9, 4, 16], "texture": "#0"},
+				"up": {"uv": [4, 9, 3, 10], "texture": "#0"},
+				"down": {"uv": [3, 15, 4, 16], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "gilded_sacrificial_dagger_6",
+			"from": [5, 5, 0],
+			"to": [7, 7, 1],
+			"faces": {
+				"north": {"uv": [9, 9, 11, 11], "texture": "#0"},
+				"east": {"uv": [9, 9, 10, 11], "texture": "#0"},
+				"south": {"uv": [9, 11, 11, 9], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [10, 9, 11, 11], "texture": "#0"},
+				"up": {"uv": [11, 9, 9, 10], "texture": "#0"},
+				"down": {"uv": [9, 10, 11, 11], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "gilded_sacrificial_dagger_7",
+			"from": [13, 5, 0],
+			"to": [14, 6, 1],
+			"faces": {
+				"north": {"uv": [2, 10, 3, 11], "texture": "#0"},
+				"east": {"uv": [2, 10, 3, 11], "texture": "#0"},
+				"south": {"uv": [2, 11, 3, 10], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [2, 10, 3, 11], "texture": "#0"},
+				"up": {"uv": [3, 10, 2, 11], "texture": "#0"},
+				"down": {"uv": [2, 10, 3, 11], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "gilded_sacrificial_dagger_8",
+			"from": [11, 1, 0],
+			"to": [12, 6, 1],
+			"faces": {
+				"north": {"uv": [4, 10, 5, 15], "texture": "#0"},
+				"east": {"uv": [4, 10, 5, 15], "texture": "#0"},
+				"south": {"uv": [4, 15, 5, 10], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [4, 10, 5, 15], "texture": "#0"},
+				"up": {"uv": [5, 10, 4, 11], "texture": "#0"},
+				"down": {"uv": [4, 14, 5, 15], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "gilded_sacrificial_dagger_9",
+			"from": [8, 1, 0],
+			"to": [9, 4, 1],
+			"faces": {
+				"north": {"uv": [7, 12, 8, 15], "texture": "#0"},
+				"east": {"uv": [7, 12, 8, 15], "texture": "#0"},
+				"south": {"uv": [7, 15, 8, 12], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [7, 12, 8, 15], "texture": "#0"},
+				"up": {"uv": [8, 12, 7, 13], "texture": "#0"},
+				"down": {"uv": [7, 14, 8, 15], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "gilded_sacrificial_dagger_10",
+			"from": [13, 0, 0],
+			"to": [14, 3, 1],
+			"faces": {
+				"north": {"uv": [2, 13, 3, 16], "texture": "#0"},
+				"east": {"uv": [2, 13, 3, 16], "texture": "#0"},
+				"south": {"uv": [2, 16, 3, 13], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [2, 13, 3, 16], "texture": "#0"},
+				"up": {"uv": [3, 13, 2, 14], "texture": "#0"},
+				"down": {"uv": [2, 15, 3, 16], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "gilded_sacrificial_dagger_11",
+			"from": [7, 2, 0],
+			"to": [8, 3, 1],
+			"faces": {
+				"north": {"uv": [8, 13, 9, 14], "texture": "#0"},
+				"east": {"uv": [8, 13, 9, 14], "texture": "#0"},
+				"south": {"uv": [8, 14, 9, 13], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [8, 13, 9, 14], "texture": "#0"},
+				"up": {"uv": [9, 13, 8, 14], "texture": "#0"},
+				"down": {"uv": [8, 13, 9, 14], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "gilded_sacrificial_dagger_12",
+			"from": [14, 0, 0],
+			"to": [15, 2, 1],
+			"faces": {
+				"north": {"uv": [1, 14, 2, 16], "texture": "#0"},
+				"east": {"uv": [1, 14, 2, 16], "texture": "#0"},
+				"south": {"uv": [1, 16, 2, 14], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [1, 14, 2, 16], "texture": "#0"},
+				"up": {"uv": [2, 14, 1, 15], "texture": "#0"},
+				"down": {"uv": [1, 15, 2, 16], "rotation": 180, "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [174.75, 82.25, -28.12],
+			"translation": [6.25, -9, 0.75],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [174.75, 82.25, 28.2],
+			"translation": [6.25, -9, 2.25],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"firstperson_righthand": {
+			"rotation": [114, 89, 90],
+			"translation": [7.25, 3.25, 1],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-77.25, -89, 90],
+			"translation": [-2.5, 3.5, -0.25],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"ground": {
+			"rotation": [90, 0, 0],
+			"translation": [0, -8.5, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"gui": {
+			"translation": [-0.5, 1, 0]
+		},
+		"head": {
+			"rotation": [-122.25, -84.5, 90],
+			"translation": [-8, 7, -8]
+		},
+		"fixed": {
+			"translation": [-0.5, 2, 7]
+		}
+	},
+	"groups": [
+		{
+			"name": "gilded_sacrificial_dagger",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+		}
+	]
+}

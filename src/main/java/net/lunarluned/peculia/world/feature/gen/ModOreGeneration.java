@@ -21,5 +21,8 @@ public class ModOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ORE_ERODED_END_STONE_PLACED.getKey().get());
 
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ORE_SILL_PLACED.getKey().get());
+
     }
 }

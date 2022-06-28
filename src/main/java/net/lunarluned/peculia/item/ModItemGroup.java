@@ -9,4 +9,6 @@ import net.minecraft.util.Identifier;
 public class ModItemGroup {
     public static final ItemGroup PECULIA = FabricItemGroupBuilder.build(new Identifier(Peculia.MOD_ID, "peculia"),
             () -> new ItemStack(ModItems.MYTHRIL_INGOT));
+    public static final ItemGroup PECULIA_NETHER = FabricItemGroupBuilder.build(new Identifier(Peculia.MOD_ID, "peculia_nether"),
+            () -> new ItemStack(ModItems.HOGLIN_TUSK));
 }

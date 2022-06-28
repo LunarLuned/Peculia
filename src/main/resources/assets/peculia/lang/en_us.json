@@ -10,6 +10,18 @@
   "item.peculia.mythril_gauntlet": "Mythril Gauntlet",
   "item.peculia.silltar_bucket": "Siltar Bucket",
   "item.peculia.coalgeode_spawn_egg": "Coal Geode Spawn Egg",
+
+
+
+  "item.peculia.sacrificial_dagger": "Sacrificial Dagger",
+  "item.peculia.gilded_sacrificial_dagger": "Gilded Sacrificial Dagger",
+  "item.peculia.dipped_sacrificial_dagger": "Dipped Sacrificial Dagger",
+  "item.peculia.dipped_gilded_sacrificial_dagger": "Dipped Gilded Sacrificial Dagger",
+  "item.peculia.hoglin_tusk": "Hoglin Tusk",
+  "item.peculia.crimson_stew": "Crimson Stew",
+  "item.peculia.warped_stew": "Warped Stew",
+  "item.peculia.fungal_stew": "Fungal Stew",
+  "item.peculia.mushroom_stew_tusk": "Mushroom Stew",
   "item.peculia.poprocks": "Poprocks",
   "item.peculia.rock_candy": "Rock Candy",
 
@@ -58,7 +70,8 @@
   "block.peculia.dragonglass": "Dragonglass",
   "block.peculia.dragonglass_pane": "Dragonglass Pane",
 
-  "itemGroup.peculia.peculia": "Peculia",
+  "itemGroup.peculia.peculia": "Peculia End",
+  "itemGroup.peculia.peculia_nether": "Peculia Nether",
 
   "advancements.end.obtain_mythril_shard.title": "Shard of Myths",
   "advancements.end.obtain_mythril_shard.description": "Obtain a Mythril Shard, pieces of a comet floating above the Void.",
@@ -93,6 +106,8 @@
   "enchantment.peculia.leeching.desc": "Gives the user regeneration at the cost of less attack damage and a debuff on use.",
 
   "effect.peculia.echo": "Echo",
-  "effect.peculia.ichor": "Ichor"
+  "effect.peculia.ichor": "Ichor",
+
+  "peculia.echo_attack_hit": "Strong Echo Attack"
 
 }

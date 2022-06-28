@@ -40,6 +40,14 @@ public class ModConfiguredFeatures {
             ConfiguredFeatures.register("eroded_end_stone", Feature.ORE,
                     new OreFeatureConfig(ORE_ERODED_END_STONE, 20));
 
+    public static final List<OreFeatureConfig.Target> ORE_SILL = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE),
+                    ModBlocks.SILL.getDefaultState()));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> SILL =
+            ConfiguredFeatures.register("sill", Feature.ORE,
+                    new OreFeatureConfig(ORE_SILL, 60));
+
 
 // Registry for Configured Features:
 

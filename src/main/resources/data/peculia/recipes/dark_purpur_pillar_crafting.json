@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "_",
+        "_"
+    ],
+    "key": {
+        "_": {
+            "item": "peculia:dark_purpur_slab"
+        }
+    },
+    "result": {
+        "item": "peculia:dark_purpur_pillar",
+        "count": 2
+    },
+    "group": "dark_purpur_pillar"
+}

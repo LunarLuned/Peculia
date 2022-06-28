@@ -109,7 +109,7 @@ public class SilltarFluid extends FlowableFluid {
     @Override
 
     public int getTickRate(WorldView world) {
-        return 5;
+        return 20;
     }
 
     public boolean canBeReplacedWith(FluidState state, BlockView world, BlockPos pos, Fluid fluid, Direction direction) {

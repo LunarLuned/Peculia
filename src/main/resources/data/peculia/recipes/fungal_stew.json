@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:warped_fungus"
+    },
+    {
+      "item": "minecraft:crimson_fungus"
+    },
+    {
+      "item": "peculia:hoglin_tusk"
+    }
+  ],
+  "result": {
+    "item": "peculia:fungal_stew",
+    "count": 1
+  }
+}

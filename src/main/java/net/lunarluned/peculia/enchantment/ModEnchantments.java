@@ -10,7 +10,7 @@ public class ModEnchantments {
     public static Enchantment THUNDERING = register("thundering",
             new ThunderingEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.TRIDENT));
     public static Enchantment ECHO = register("echo",
-            new EchoEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON));
+            new NewEchoEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON));
     public static Enchantment CONCUSS = register("concuss",
             new ConcussEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.DIGGER));
     public static Enchantment PANICKED = register("panicked",

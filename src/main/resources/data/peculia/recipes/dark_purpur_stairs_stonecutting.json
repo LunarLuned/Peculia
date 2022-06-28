@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "peculia:dark_purpur"
+    },
+    "result": "peculia:dark_purpur_stairs",
+    "group": "dark_purpur_stairs",
+    "count": 1
+}
