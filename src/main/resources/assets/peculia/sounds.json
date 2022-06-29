@@ -4,5 +4,47 @@
     "sounds": [
       "peculia:echo_attack_hit"
     ]
+  },
+  "block.mythril.place": {
+    "sounds": [
+      "peculia:block/mythril/place1",
+      "peculia:block/mythril/place2",
+      "peculia:block/mythril/place3",
+      "peculia:block/mythril/place4",
+      "peculia:block/mythril/place5"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.mythril.break": {
+    "sounds": [
+      "peculia:block/mythril/break1"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.mythril.hit": {
+    "sounds": [
+      "peculia:block/mythril/hit1"
+
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.mythril.step": {
+    "sounds": [
+      "peculia:block/mythril/step1",
+      "peculia:block/mythril/step2",
+      "peculia:block/mythril/step3",
+      "peculia:block/mythril/step4",
+      "peculia:block/mythril/step5"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.mythril.fall": {
+    "sounds": [
+      "peculia:block/mythril/place1",
+      "peculia:block/mythril/place2",
+      "peculia:block/mythril/place3",
+      "peculia:block/mythril/place4",
+      "peculia:block/mythril/place5"
+    ]
   }
 }

@@ -7,6 +7,7 @@ import net.lunarluned.peculia.block.custom.*;
 
 import net.lunarluned.peculia.fluid.ModFluids;
 import net.lunarluned.peculia.item.ModItemGroup;
+import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -37,16 +38,16 @@ public class ModBlocks {
             new WallBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)
                     .mapColor(MapColor.PINK).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque()), ModItemGroup.PECULIA);
     public static final Block MYTHRIL_CRYSTAL = registerBlock("mythril_crystal",
-            new MythrilCrystalBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER), UniformIntProvider.create(3, 8)), ModItemGroup.PECULIA);
+            new MythrilCrystalBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(ModSoundEvents.MYTHRIL), UniformIntProvider.create(3, 8)), ModItemGroup.PECULIA);
     public static final Block MYTHRIL_BRICKS = registerBlock("mythril_bricks",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(2f).requiresTool().nonOpaque().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(2f).requiresTool().nonOpaque().sounds(ModSoundEvents.MYTHRIL)), ModItemGroup.PECULIA);
     public static final Block MYTHRIL_BRICK_STAIRS = registerBlock("mythril_brick_stairs",
-            new ModStairsBlock(ModBlocks.MYTHRIL_BRICKS.getDefaultState(),FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.LIGHT_BLUE_GRAY).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+            new ModStairsBlock(ModBlocks.MYTHRIL_BRICKS.getDefaultState(),FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.LIGHT_BLUE_GRAY).nonOpaque().strength(2f).requiresTool().sounds(ModSoundEvents.MYTHRIL)), ModItemGroup.PECULIA);
     public static final Block MYTHRIL_BRICK_SLAB = registerBlock("mythril_brick_slab",
-            new SlabBlock(FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.LIGHT_BLUE_GRAY).strength(2f).nonOpaque().requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+            new SlabBlock(FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.LIGHT_BLUE_GRAY).strength(2f).nonOpaque().requiresTool().sounds(ModSoundEvents.MYTHRIL)), ModItemGroup.PECULIA);
     public static final Block MYTHRIL_BRICK_WALL = registerBlock("mythril_brick_wall",
             new WallBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)
-                    .mapColor(MapColor.LIGHT_BLUE_GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque()), ModItemGroup.PECULIA);
+                    .mapColor(MapColor.LIGHT_BLUE_GRAY).strength(2f).requiresTool().sounds(ModSoundEvents.MYTHRIL).nonOpaque()), ModItemGroup.PECULIA);
 
     public static final Block SILL = registerBlock("sill",
             new SillBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.MUD).resistance(1)), ModItemGroup.PECULIA);
