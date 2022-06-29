@@ -7,13 +7,18 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttribute;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.Hand;
+
+import java.util.Collection;
 
 public class NewEchoEnchantment extends Enchantment {
     public NewEchoEnchantment(Rarity weight, EnchantmentTarget type, EquipmentSlot... slotTypes) {
@@ -28,17 +33,12 @@ public class NewEchoEnchantment extends Enchantment {
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         if (user instanceof PlayerEntity player && player.getRandom().nextInt(100) <= PeculiaConfig.getIntValue("echo_chance")) {
-            target.damage(DamageSource.player(player), player.getStackInHand(Hand.MAIN_HAND).getDamage() * 2);
-            player.world.playSound(null, player.getBlockPos(), ModSoundEvents.ECHO_ATTACK_HIT, SoundCategory.NEUTRAL, 1.0F, 1.0F);
-            // AAAAAAAAAAAAAAAAAAAAAAAAAAA I FUCKING HATE THIS STUPID FUCKING GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
-            // im gonna deal with this tomorrow fuck this stupid ass enchantment. kill yourself echo
-            // its the fucking target.damage, but i have no clue how else to do this. no fucking idea. ill deal with it tmrw
-            // THE WORST PART IS???? IT WAS WORKING???? WHAT MADE IT SUDDENLY NOT?????? ? ?? ?? ?? ?>????
+            player.world.playSound(null, player.getBlockPos(), ModSoundEvents.ECHO_ATTACK_HIT, SoundCategory.PLAYERS, 1.0F, 1.0F);
+            ItemStack item = player.getStackInHand(Hand.MAIN_HAND);
+            EquipmentSlot hand = EquipmentSlot.MAINHAND;
+            //target.damage(DamageSource.GENERIC, item.getAttributeModifiers(hand).get(getAttackDamage()));
         }
     }
-
-
-
     @Override
     public boolean canAccept(Enchantment other) {
         return super.canAccept(other) && other != Enchantments.SHARPNESS;
