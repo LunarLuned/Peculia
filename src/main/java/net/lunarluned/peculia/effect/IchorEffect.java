@@ -1,5 +1,6 @@
 package net.lunarluned.peculia.effect;
 
+import net.lunarluned.peculia.Peculia;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
@@ -14,7 +15,7 @@ public class IchorEffect extends StatusEffect {
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (!entity.isFrozen()) {
-            entity.damage(DamageSource.ON_FIRE, 1.0F);
+            entity.damage(new Peculia.IchorDamageSource(entity), 2.0F + amplifier);
             entity.setMovementSpeed(-1f);
         }
         if (entity.isFrozen()) {
@@ -22,6 +23,7 @@ public class IchorEffect extends StatusEffect {
         }
         if (entity.hasStatusEffect(StatusEffects.FIRE_RESISTANCE)) {
             entity.removeStatusEffect(ModEffects.ICHOR);
+            entity.removeStatusEffect(StatusEffects.FIRE_RESISTANCE);
         }
         super.applyUpdateEffect(entity, amplifier);
     }
