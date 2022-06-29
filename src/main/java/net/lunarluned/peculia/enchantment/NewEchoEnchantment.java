@@ -36,7 +36,7 @@ public class NewEchoEnchantment extends Enchantment {
             player.world.playSound(null, player.getBlockPos(), ModSoundEvents.ECHO_ATTACK_HIT, SoundCategory.PLAYERS, 1.0F, 1.0F);
             ItemStack item = player.getStackInHand(Hand.MAIN_HAND);
             EquipmentSlot hand = EquipmentSlot.MAINHAND;
-            //target.damage(DamageSource.GENERIC, item.getAttributeModifiers(hand).get(getAttackDamage()));
+//            target.damage(DamageSource.GENERIC, item.getAttributeModifiers(hand).get(getAttackDamage()));
         }
     }
     @Override
