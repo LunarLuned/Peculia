@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "peculia:mythril_bricks",
+    "peculia:mythril_brick_slab",
+    "peculia:mythril_brick_stairs",
+    "peculia:mythril_brick_wall",
+    "peculia:mythril_block",
+    "peculia:mythril_crystal",
+    "peculia:poprock_crystal",
+    "peculia:poprock_bricks",
+    "peculia:poprock_brick_slab",
+    "peculia:poprock_brick_stairs",
+    "peculia:poprock_brick_wall",
+    "peculia:chiseled_poprock_bricks"
+  ]
+}

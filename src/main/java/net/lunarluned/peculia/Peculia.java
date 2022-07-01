@@ -72,4 +72,13 @@ public class Peculia implements ModInitializer {
 			setUnblockable();
 		}
 	}
+	public static class CondensedVoidDamageSource extends DamageSource {
+
+		public CondensedVoidDamageSource(Entity name) {
+			super("condensed");
+			setUsesMagic();
+			setBypassesArmor();
+			setBypassesProtection();
+		}
+	}
 }

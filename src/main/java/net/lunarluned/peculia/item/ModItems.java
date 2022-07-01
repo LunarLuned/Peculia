@@ -10,7 +10,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems {
-
+//bottle_of_condensed_void
     //end
     public static final Item MYTHRIL_SHARD = registerItem("mythril_shard",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA)));
@@ -34,6 +34,8 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA).food(ModFoodComponents.POPROCKS)));
     public static final Item ROCK_CANDY = registerItem("rock_candy",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA).food(ModFoodComponents.ROCK_CANDY)));
+    public static final Item BOTTLE_OF_CONDENSED_VOID = registerItem("bottle_of_condensed_void",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA)));
 
     public static final Item SILLTAR_BUCKET = registerItem("silltar_bucket",
             new BucketItem(ModFluids.SILLTAR_STILL, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));

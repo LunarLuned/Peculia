@@ -25,18 +25,19 @@ public class ModBlocks {
     public static final Block MYTHRIL_BLOCK = registerBlock("mythril_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(2f).requiresTool().sounds(BlockSoundGroup.METAL)), ModItemGroup.PECULIA);
     public static final Block POPROCK_CRYSTAL = registerBlock("poprock_crystal",
-            new Block(FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.PINK).nonOpaque().strength(1f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+            new Block(FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.PINK).nonOpaque().strength(1f).requiresTool().sounds(ModSoundEvents.POPROCKS)), ModItemGroup.PECULIA);
     public static final Block POPROCK_BRICKS = registerBlock("poprock_bricks",
-            new Block(FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.PINK).nonOpaque().strength(1.5f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+            new Block(FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.PINK).nonOpaque().strength(1.5f).requiresTool().sounds(ModSoundEvents.POPROCKS)), ModItemGroup.PECULIA);
     public static final Block CHISELED_POPROCK_BRICKS = registerBlock("chiseled_poprock_bricks",
-            new Block(FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.PINK).nonOpaque().strength(1.5f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+            new Block(FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.PINK).nonOpaque().strength(1.5f).requiresTool().sounds(ModSoundEvents.POPROCKS)), ModItemGroup.PECULIA);
     public static final Block POPROCK_BRICK_STAIRS = registerBlock("poprock_brick_stairs",
-            new ModStairsBlock(ModBlocks.POPROCK_BRICKS.getDefaultState(),FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.PINK).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+            new ModStairsBlock(ModBlocks.POPROCK_BRICKS.getDefaultState(),FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.PINK).nonOpaque().strength(2f).requiresTool().sounds(ModSoundEvents.POPROCKS)), ModItemGroup.PECULIA);
     public static final Block POPROCK_BRICK_SLAB = registerBlock("poprock_brick_slab",
-            new SlabBlock(FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.PINK).strength(2f).nonOpaque().requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)), ModItemGroup.PECULIA);
+            new SlabBlock(FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.PINK).strength(2f).nonOpaque().requiresTool().sounds(ModSoundEvents.POPROCKS)), ModItemGroup.PECULIA);
     public static final Block POPROCK_BRICK_WALL = registerBlock("poprock_brick_wall",
             new WallBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)
-                    .mapColor(MapColor.PINK).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK).nonOpaque()), ModItemGroup.PECULIA);
+                    .mapColor(MapColor.PINK).strength(2f).requiresTool().sounds(ModSoundEvents.POPROCKS).nonOpaque()), ModItemGroup.PECULIA);
+
     public static final Block MYTHRIL_CRYSTAL = registerBlock("mythril_crystal",
             new MythrilCrystalBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(ModSoundEvents.MYTHRIL), UniformIntProvider.create(3, 8)), ModItemGroup.PECULIA);
     public static final Block MYTHRIL_BRICKS = registerBlock("mythril_bricks",
@@ -74,6 +75,11 @@ public class ModBlocks {
             new SlabBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).strength(2f).nonOpaque().requiresTool().sounds(BlockSoundGroup.STONE)), ModItemGroup.PECULIA);
     public static final Block DARK_PURPUR_WALL = registerBlock("dark_purpur_wall",
             new WallBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).strength(2f).requiresTool().sounds(BlockSoundGroup.STONE).nonOpaque()), ModItemGroup.PECULIA);
+
+    public static final Block VOID_LAMP = registerBlock("void_lamp",
+            new VoidLampBlock(FabricBlockSettings.of(Material.REDSTONE_LAMP, MapColor.PALE_PURPLE).sounds(BlockSoundGroup.GLASS).luminance(12).requiresTool().hardness(0.3f).strength(0.3f)), ModItemGroup.PECULIA);
+    public static final Block CONDENSED_VOID = registerBlock("condensed_void",
+            new CondensedVoidBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).resistance(9999).hardness(9999).noCollision().luminance(12).dropsNothing()), ModItemGroup.PECULIA);
 
 
 

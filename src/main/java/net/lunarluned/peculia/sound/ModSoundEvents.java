@@ -22,9 +22,19 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_MYTHRIL_HIT = registerSoundEvent("block.mythril.hit");
     public static final SoundEvent BLOCK_MYTHRIL_FALL = registerSoundEvent("block.mythril.fall");
 
+    public static final SoundEvent BLOCK_POPROCKS_BREAK = registerSoundEvent("block.poprocks.break");
+    public static final SoundEvent BLOCK_POPROCKS_STEP = registerSoundEvent("block.poprocks.step");
+    public static final SoundEvent BLOCK_POPROCKS_PLACE = registerSoundEvent("block.poprocks.place");
+    public static final SoundEvent BLOCK_POPROCKS_HIT = registerSoundEvent("block.poprocks.hit");
+    public static final SoundEvent BLOCK_POPROCKS_FALL = registerSoundEvent("block.poprocks.fall");
+
     public static final BlockSoundGroup MYTHRIL = new BlockSoundGroup(1f, 1f,
             ModSoundEvents.BLOCK_MYTHRIL_BREAK, ModSoundEvents.BLOCK_MYTHRIL_STEP, ModSoundEvents.BLOCK_MYTHRIL_PLACE,
             ModSoundEvents.BLOCK_MYTHRIL_HIT, ModSoundEvents.BLOCK_MYTHRIL_FALL);
+
+    public static final BlockSoundGroup POPROCKS = new BlockSoundGroup(1f, 1f,
+            ModSoundEvents.BLOCK_POPROCKS_BREAK, ModSoundEvents.BLOCK_POPROCKS_STEP, ModSoundEvents.BLOCK_POPROCKS_PLACE,
+            ModSoundEvents.BLOCK_POPROCKS_HIT, ModSoundEvents.BLOCK_POPROCKS_FALL);
 
     public static void registerSounds() {
         System.out.println("Registering Sounds for " + Peculia.MOD_ID);

@@ -69,9 +69,13 @@
   "block.peculia.eroded_end_stone": "Eroded End Stone",
   "block.peculia.dragonglass": "Dragonglass",
   "block.peculia.dragonglass_pane": "Dragonglass Pane",
+  "block.peculia.void_lamp": "Void Lamp",
+  "block.peculia.condensed_void": "Condensed Void",
+
 
   "itemGroup.peculia.peculia": "Peculia End",
   "itemGroup.peculia.peculia_nether": "Peculia Nether",
+
 
   "advancements.end.obtain_mythril_shard.title": "Shard of Myths",
   "advancements.end.obtain_mythril_shard.description": "Obtain a Mythril Shard, pieces of a comet floating above the Void.",
@@ -111,5 +115,6 @@
   "peculia.echo_attack_hit": "Strong Echo Attack",
 
   "death.attack.electrocution": "%1$s was electrocuted to death",
+  "death.attack.condensed": "%1$s was swallowed by the Void",
   "death.attack.ichor": "%1$s burnt to death via Ichor"
 }

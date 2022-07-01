@@ -47,4 +47,5 @@ public class NewEchoEnchantment extends Enchantment {
     public boolean isAcceptableItem(ItemStack stack) {
         return stack.getItem() instanceof ModSwordItem;
     }
-    }
+
+}

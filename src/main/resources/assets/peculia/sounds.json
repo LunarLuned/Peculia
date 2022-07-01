@@ -46,5 +46,48 @@
       "peculia:block/mythril/place4",
       "peculia:block/mythril/place5"
     ]
+  },
+  "block.poprocks.place": {
+    "sounds": [
+      "peculia:block/poprocks/place1",
+      "peculia:block/poprocks/place2",
+      "peculia:block/poprocks/place3",
+      "peculia:block/poprocks/place4"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.poprocks.break": {
+    "sounds": [
+      "peculia:block/poprocks/break1",
+      "peculia:block/poprocks/break2",
+      "peculia:block/poprocks/break3",
+      "peculia:block/poprocks/break4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.poprocks.step": {
+    "sounds": [
+      "peculia:block/poprocks/step1",
+      "peculia:block/poprocks/step2",
+      "peculia:block/poprocks/step3",
+      "peculia:block/poprocks/step4"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.poprocks.fall": {
+    "sounds": [
+      "peculia:block/poprocks/place1",
+      "peculia:block/poprocks/place2",
+      "peculia:block/poprocks/place3",
+      "peculia:block/poprocks/place4"
+    ]
+  },
+  "block.poprocks.hit": {
+    "sounds": [
+      "peculia:block/poprocks/hit1",
+      "peculia:block/poprocks/hit2",
+      "peculia:block/poprocks/hit3",
+      "peculia:block/poprocks/hit4"
+    ]
   }
 }
