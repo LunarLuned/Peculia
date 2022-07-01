@@ -29,7 +29,7 @@ public class Peculia implements ModInitializer {
 		// ඞ
 		PeculiaConfig.init();
 
-		String defaultConfig = "{\n" + "  \"regen_enchantment_config_file\": false\n" + "}";
+		String defaultConfig = "{\n" + "  \"defaultconfig_file\": false\n" + "}";
 
 		File configFile = Config.createFile("config/peculia/backupconfig.json", defaultConfig, false);
 		JsonObject json = Config.getJsonObject(Config.readFile(configFile));

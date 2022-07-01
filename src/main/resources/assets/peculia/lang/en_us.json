@@ -28,6 +28,7 @@
   "item.peculia.diamond_gauntlet": "Diamond Gauntlet",
   "item.peculia.iron_gauntlet": "Iron Gauntlet",
   "item.peculia.golden_gauntlet": "Golden Gauntlet",
+  "item.peculia.sweet_roll": "Sweet Roll",
 
   "item.peculia.mythril_helmet": "Mythril Helmet",
   "item.peculia.mythril_chestplate": "Mythril Chestplate",
@@ -76,6 +77,7 @@
 
   "itemGroup.peculia.peculia": "Peculia End",
   "itemGroup.peculia.peculia_nether": "Peculia Nether",
+  "itemGroup.peculia.peculia_overworld": "Peculia Overworld",
 
 
   "advancements.end.obtain_mythril_shard.title": "Shard of Myth",

@@ -95,18 +95,18 @@ public class ModBlocks {
     public static final Block DRAGONGLASS_PANE = registerBlock("dragonglass_pane",
             new PaneBlock(FabricBlockSettings.copyOf(Blocks.GLASS).strength(1f).nonOpaque().requiresTool()), ModItemGroup.PECULIA);
 
-    //oveer world
-    public static final Block CRUMBLING_STONE = registerBlock("crumbling_stone", new CrumblingBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).resistance(6)), ModItemGroup.PECULIA);
+    //overworld
+    public static final Block CRUMBLING_STONE = registerBlock("crumbling_stone", new CrumblingBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).resistance(6)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block COMPRESSED_COBBLESTONE = registerBlock("compressed_cobblestone",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(6)), ModItemGroup.PECULIA);
+            new Block(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(6)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block CONTAINED_COBBLESTONE = registerBlock("contained_cobblestone",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(2f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(12)), ModItemGroup.PECULIA);
+            new Block(FabricBlockSettings.of(Material.STONE).strength(2f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(12)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block CONTINENTAL_COBBLESTONE = registerBlock("continental_cobblestone",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(18)), ModItemGroup.PECULIA);
+            new Block(FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(18)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block ANOMALAIC_COBBLESTONE = registerBlock("anomalaic_cobblestone",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(3f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(24)), ModItemGroup.PECULIA);
+            new Block(FabricBlockSettings.of(Material.STONE).strength(3f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(24)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block AWAKENED_COBBLESTONE = registerBlock("awakened_cobblestone",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(3.5f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(30)), ModItemGroup.PECULIA);
+            new Block(FabricBlockSettings.of(Material.STONE).strength(3.5f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(30)), ModItemGroup.PECULIA_OVERWORLD);
 
 
 

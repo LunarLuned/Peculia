@@ -83,6 +83,8 @@ public class ModItems {
             new ModGauntletItem(ToolMaterials.IRON, 1, -2.3f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
     public static final Item GOLDEN_GAUNTLET = registerItem("golden_gauntlet",
             new ModGauntletItem(ToolMaterials.GOLD, 1, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
+    public static final Item SWEET_ROLL = registerItem("sweet_roll",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.SWEET_ROLL)));
 
 
     private static Item registerItem(String name, Item item) {
