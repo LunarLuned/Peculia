@@ -8,7 +8,7 @@
   "item.peculia.mythril_hammer": "Mythril Hammer",
   "item.peculia.mythril_spearel": "Mythril Spearel",
   "item.peculia.mythril_gauntlet": "Mythril Gauntlet",
-  "item.peculia.silltar_bucket": "Siltar Bucket",
+  "item.peculia.silltar_bucket": "work in progress",
   "item.peculia.coalgeode_spawn_egg": "Coal Geode Spawn Egg",
 
 
@@ -71,13 +71,14 @@
   "block.peculia.dragonglass_pane": "Dragonglass Pane",
   "block.peculia.void_lamp": "Void Lamp",
   "block.peculia.condensed_void": "Condensed Void",
+  "item.peculia.bottle_of_condensed_void": "Bottle of Condensed Void",
 
 
   "itemGroup.peculia.peculia": "Peculia End",
   "itemGroup.peculia.peculia_nether": "Peculia Nether",
 
 
-  "advancements.end.obtain_mythril_shard.title": "Shard of Myths",
+  "advancements.end.obtain_mythril_shard.title": "Shard of Myth",
   "advancements.end.obtain_mythril_shard.description": "Obtain a Mythril Shard, pieces of a comet floating above the Void.",
   "advancements.end.mythril_gear.title": "Cover me in Comets",
   "advancements.end.mythril_gear.description": "Get a full suit of Mythril Armor, quite shiny!",
@@ -109,8 +110,9 @@
   "enchantment.peculia.panicked.desc": "Gives the user speed, hunger & strength after getting to 5 hearts while in combat.",
   "enchantment.peculia.leeching.desc": "Gives the user regeneration at the cost of less attack damage and a debuff on use.",
 
-  "effect.peculia.echo": "Echo",
+  "effect.peculia.electrocuted": "Electrocuted",
   "effect.peculia.ichor": "Ichor",
+  "effect.peculia.void_touched": "Void Touched",
 
   "peculia.echo_attack_hit": "Strong Echo Attack",
 

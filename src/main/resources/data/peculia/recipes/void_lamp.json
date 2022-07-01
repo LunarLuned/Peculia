@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#G#",
+    "GPG",
+    "#G#"
+  ],
+  "key": {
+    "#": {
+      "item": "peculia:dark_purpur"
+    },
+    "G": {
+      "item": "peculia:dragonglass"
+    },
+    "P": {
+      "item": "peculia:bottle_of_condensed_void"
+    }
+  },
+  "result": {
+    "item": "peculia:void_lamp",
+    "count": 4
+  }
+}

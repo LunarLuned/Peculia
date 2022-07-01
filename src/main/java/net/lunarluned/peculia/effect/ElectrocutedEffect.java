@@ -10,7 +10,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 
 public class ElectrocutedEffect extends StatusEffect {
-    protected ElectrocutedEffect(StatusEffectCategory statusEffectCategory, int color) {
+    public ElectrocutedEffect(StatusEffectCategory statusEffectCategory, int color) {
         super(statusEffectCategory, color);
     }
 
