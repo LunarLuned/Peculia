@@ -23,18 +23,14 @@ public abstract class LivingEntityMixin {
     public abstract boolean hasStatusEffect(StatusEffect effect);
 
 
+    @ModifyVariable(at = @At(value = "INVOKE", target = "Ljava/lang/Math;max(FF)F"), ordinal = 0,
+            method = "applyDamage")
 
-        @ModifyVariable(at = @At(value = "INVOKE", target = "Ljava/lang/Math;max(FF)F"), ordinal = 0,
-                method = "applyDamage")
-
-        private float applyVoidTouchedModifier (float amount) {
-            if (this.hasStatusEffect(ModEffects.VOID_TOUCHED))
-            {
-                int level = (this.getStatusEffect(ModEffects.VOID_TOUCHED).getAmplifier() + 1) * 5;
-                return amount * 2 - Math.max((amount * (float) (25 - level)) / 25.0f, 0.0f);
-            }
-                return amount;
+    private float applyVoidTouchedModifier(float amount) {
+        if (this.hasStatusEffect(ModEffects.VOID_TOUCHED)) {
+            int level = (this.getStatusEffect(ModEffects.VOID_TOUCHED).getAmplifier() + 1) * 5;
+            return amount * 2 - Math.max((amount * (float) (25 - level)) / 25.0f, 0.0f);
+        }
+        return amount;
     }
-
-
 }
