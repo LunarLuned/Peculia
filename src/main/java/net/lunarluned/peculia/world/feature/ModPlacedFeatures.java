@@ -23,4 +23,8 @@ public class ModPlacedFeatures {
     public static final RegistryEntry<PlacedFeature> ORE_SILL_PLACED = PlacedFeatures.register("sill",
             ModConfiguredFeatures.SILL, ModOreFeatures.modifiersWithCount(1,
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(50), YOffset.aboveBottom(120))));
+
+    public static final RegistryEntry<PlacedFeature> ORE_CONDENSED_VOID = PlacedFeatures.register("condensed_void",
+            ModConfiguredFeatures.CONDENSED_VOID, ModOreFeatures.modifiersWithCount(1,
+                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-1), YOffset.aboveBottom(19))));
 }

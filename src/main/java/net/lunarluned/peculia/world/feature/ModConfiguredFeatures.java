@@ -48,6 +48,14 @@ public class ModConfiguredFeatures {
             ConfiguredFeatures.register("sill", Feature.ORE,
                     new OreFeatureConfig(ORE_SILL, 60));
 
+    public static final List<OreFeatureConfig.Target> ORE_CONDENSED_VOID = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE),
+                    ModBlocks.CONDENSED_VOID.getDefaultState()));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> CONDENSED_VOID =
+            ConfiguredFeatures.register("condensed_void", Feature.ORE,
+                    new OreFeatureConfig(ORE_CONDENSED_VOID, 60));
+
 
 // Registry for Configured Features:
 
