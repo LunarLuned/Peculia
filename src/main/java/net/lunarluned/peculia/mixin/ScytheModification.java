@@ -20,7 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @SuppressWarnings("ConstantConditions")
 public abstract class ScytheModification {
 
-    // Mixin to allow Concuss & Thundering to work on the Scythe
+    // Mixin to allow Sword Enchants to work on the Scythe
 
     @Shadow
     @Final
@@ -29,10 +29,6 @@ public abstract class ScytheModification {
     @Inject(method = "isAcceptableItem", at = @At("HEAD"), cancellable = true)
     public void isAcceptableItem(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         Enchantment enchantment = (Enchantment) (Object) this;
-        if (enchantment instanceof NewEchoEnchantment) {
-            if (type != EnchantmentTarget.WEAPON || !(stack.getItem() instanceof ModHoeItem)) return;
-            cir.setReturnValue(true);
-        }
         if (enchantment instanceof KnockbackEnchantment) {
             if (type != EnchantmentTarget.WEAPON || !(stack.getItem() instanceof ModHoeItem)) return;
             cir.setReturnValue(true);

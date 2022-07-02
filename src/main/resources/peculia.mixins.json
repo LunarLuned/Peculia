@@ -5,12 +5,12 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "AxeModification",
-    "ScytheModification",
     "GauntletModification",
-    "PickaxeModification",
     "ItemDropMixin",
     "LivingEntityMixin",
-    "PlayerManagerMixin"
+    "PickaxeModification",
+    "PlayerManagerMixin",
+    "ScytheModification"
   ],
   "client": [
 

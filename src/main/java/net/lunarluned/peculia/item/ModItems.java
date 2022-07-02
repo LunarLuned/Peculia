@@ -78,11 +78,11 @@ public class ModItems {
 
     //overworld
     public static final Item DIAMOND_GAUNTLET = registerItem("diamond_gauntlet",
-            new ModGauntletItem(ToolMaterials.DIAMOND, 2, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
+            new ModGauntletItem(ToolMaterials.DIAMOND, 2, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD)));
     public static final Item IRON_GAUNTLET = registerItem("iron_gauntlet",
-            new ModGauntletItem(ToolMaterials.IRON, 1, -2.3f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
+            new ModGauntletItem(ToolMaterials.IRON, 1, -2.3f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD)));
     public static final Item GOLDEN_GAUNTLET = registerItem("golden_gauntlet",
-            new ModGauntletItem(ToolMaterials.GOLD, 1, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
+            new ModGauntletItem(ToolMaterials.GOLD, 1, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD)));
     public static final Item SWEET_ROLL = registerItem("sweet_roll",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.SWEET_ROLL)));
 
