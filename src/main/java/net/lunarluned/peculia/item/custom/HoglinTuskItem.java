@@ -14,8 +14,8 @@ public class HoglinTuskItem extends Item {
         super(settings);
     }
 
-    public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        ItemStack itemStack = super.finishUsing(stack, world, user);
-        return user instanceof PlayerEntity && ((PlayerEntity) user).getAbilities().creativeMode ? itemStack : new ItemStack(ModItems.HOGLIN_TUSK);
-    }
+  //  public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
+  //      ItemStack itemStack = super.finishUsing(stack, world, user);
+  //      return user instanceof PlayerEntity && ((PlayerEntity) user).getAbilities().creativeMode ? itemStack : new ItemStack(ModItems.HOGLIN_TUSK);
+  //  }
 }

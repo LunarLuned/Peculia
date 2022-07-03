@@ -20,4 +20,5 @@ public class ModFoodComponents {
 
     //overworld
     public static final FoodComponent SWEET_ROLL = (new FoodComponent.Builder().hunger(3).saturationModifier(2f).snack().statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 40, 0), 0.9F).statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 500, 0), 0.9F).build());
+    public static final FoodComponent HARD_BOILED_EGG = (new FoodComponent.Builder().hunger(2).saturationModifier(4f).snack().build());
 }

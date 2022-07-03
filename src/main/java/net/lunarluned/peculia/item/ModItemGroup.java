@@ -12,5 +12,5 @@ public class ModItemGroup {
     public static final ItemGroup PECULIA_NETHER = FabricItemGroupBuilder.build(new Identifier(Peculia.MOD_ID, "peculia_nether"),
             () -> new ItemStack(ModItems.HOGLIN_TUSK));
     public static final ItemGroup PECULIA_OVERWORLD = FabricItemGroupBuilder.build(new Identifier(Peculia.MOD_ID, "peculia_overworld"),
-            () -> new ItemStack(ModItems.SWEET_ROLL));
+            () -> new ItemStack(ModItems.DIAMOND_GAUNTLET));
 }

@@ -10,7 +10,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems {
-//bottle_of_condensed_void
     //end
     public static final Item MYTHRIL_SHARD = registerItem("mythril_shard",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA)));
@@ -72,7 +71,7 @@ public class ModItems {
     public static final Item GILDED_SACRIFICIAL_DAGGER = registerItem("gilded_sacrificial_dagger",
             new ModSwordItem(ModToolMaterials.SCRAP,2, -2.0f, new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
     public static final Item DIPPED_SACRIFICIAL_DAGGER = registerItem("dipped_sacrificial_dagger",
-            new ModDippedItem(ModToolMaterials.SCRAP,1, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
+             new ModDippedItem(ModToolMaterials.SCRAP,1, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
     public static final Item DIPPED_GILDED_SACRIFICIAL_DAGGER = registerItem("dipped_gilded_sacrificial_dagger",
             new ModDippedItem(ModToolMaterials.SCRAP,2, -2.0f, new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
 
@@ -85,7 +84,8 @@ public class ModItems {
             new ModGauntletItem(ToolMaterials.GOLD, 1, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD)));
     public static final Item SWEET_ROLL = registerItem("sweet_roll",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.SWEET_ROLL)));
-
+    public static final Item HARD_BOILED_EGG = registerItem("hard_boiled_egg",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.HARD_BOILED_EGG).maxCount(16)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Peculia.MOD_ID, name), item);

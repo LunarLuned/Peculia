@@ -7,7 +7,6 @@
     "AxeModification",
     "GauntletModification",
     "ItemDropMixin",
-    "LivingEntityMixin",
     "PickaxeModification",
     "PlayerManagerMixin",
     "ScytheModification"
