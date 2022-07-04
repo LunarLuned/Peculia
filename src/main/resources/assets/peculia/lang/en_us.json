@@ -1,15 +1,11 @@
 {
-  "item.peculia.mythril_shard": "Mythril Shard",
-  "item.peculia.mythril_fragment": "Mythril Fragment",
-  "item.peculia.mythril_ingot": "Mythril Ingot",
-  "item.peculia.mythril_claymore": "Mythril Claymore",
-  "item.peculia.mythril_scythe": "Mythril Scythe",
-  "item.peculia.mythril_halberd": "Mythril Halberd",
-  "item.peculia.mythril_hammer": "Mythril Hammer",
-  "item.peculia.mythril_spearel": "Mythril Spearel",
-  "item.peculia.mythril_gauntlet": "Mythril Gauntlet",
-  "item.peculia.silltar_bucket": "work in progress",
-  "item.peculia.coalgeode_spawn_egg": "Coal Geode Spawn Egg",
+  "item.peculia.diamond_gauntlet": "Diamond Gauntlet",
+  "item.peculia.iron_gauntlet": "Iron Gauntlet",
+  "item.peculia.golden_gauntlet": "Golden Gauntlet",
+  "item.peculia.sweet_roll": "Sweet Roll",
+  "item.peculia.hard_boiled_egg": "Hard Boiled Egg",
+  "item.peculia.egg_bowl": "Bowl of Eggs",
+  "item.peculia.scrambled_eggs": "Scrambled Eggs",
 
 
 
@@ -22,19 +18,11 @@
   "item.peculia.warped_stew": "Warped Stew",
   "item.peculia.fungal_stew": "Fungal Stew",
   "item.peculia.mushroom_stew_tusk": "Mushroom Stew",
-  "item.peculia.poprocks": "Poprocks",
-  "item.peculia.rock_candy": "Rock Candy",
+  "item.peculia.scrambled_eggs_tusk": "Scrambled Eggs",
 
-  "item.peculia.diamond_gauntlet": "Diamond Gauntlet",
-  "item.peculia.iron_gauntlet": "Iron Gauntlet",
-  "item.peculia.golden_gauntlet": "Golden Gauntlet",
-  "item.peculia.sweet_roll": "Sweet Roll",
-  "item.peculia.hard_boiled_egg": "Hard Boiled Egg",
 
-  "item.peculia.mythril_helmet": "Mythril Helmet",
-  "item.peculia.mythril_chestplate": "Mythril Chestplate",
-  "item.peculia.mythril_leggings": "Mythril Leggings",
-  "item.peculia.mythril_boots": "Mythril Boots",
+
+
 
   "block.peculia.dark_purpur": "Dark Purpur Block",
   "block.peculia.dark_purpur_pillar": "Dark Purpur Pillar",
@@ -42,7 +30,6 @@
   "block.peculia.dark_purpur_stairs": "Dark Purpur Stairs",
   "block.peculia.dark_purpur_slab": "Dark Purpur Slab",
   "block.peculia.dark_purpur_wall": "Dark Purpur Wall",
-
   "block.peculia.mythril_block": "Block of Mythril",
   "block.peculia.mythril_crystal": "Mythril Crystal",
   "block.peculia.chiseled_mythril_bricks": "Chiseled Mythril Bricks",
@@ -73,7 +60,25 @@
   "block.peculia.dragonglass_pane": "Dragonglass Pane",
   "block.peculia.void_lamp": "Void Lamp",
   "block.peculia.condensed_void": "Condensed Void",
+
+  "item.peculia.mythril_helmet": "Mythril Helmet",
+  "item.peculia.mythril_chestplate": "Mythril Chestplate",
+  "item.peculia.mythril_leggings": "Mythril Leggings",
+  "item.peculia.mythril_boots": "Mythril Boots",
   "item.peculia.bottle_of_condensed_void": "Bottle of Condensed Void",
+  "item.peculia.poprocks": "Poprocks",
+  "item.peculia.rock_candy": "Rock Candy",
+  "item.peculia.mythril_shard": "Mythril Shard",
+  "item.peculia.mythril_fragment": "Mythril Fragment",
+  "item.peculia.mythril_ingot": "Mythril Ingot",
+  "item.peculia.mythril_claymore": "Mythril Claymore",
+  "item.peculia.mythril_scythe": "Mythril Scythe",
+  "item.peculia.mythril_halberd": "Mythril Halberd",
+  "item.peculia.mythril_hammer": "Mythril Hammer",
+  "item.peculia.mythril_spearel": "Mythril Spearel",
+  "item.peculia.mythril_gauntlet": "Mythril Gauntlet",
+  "item.peculia.silltar_bucket": "work in progress",
+  "item.peculia.coalgeode_spawn_egg": "Coal Geode Spawn Egg",
 
 
   "itemGroup.peculia.peculia": "Peculia End",

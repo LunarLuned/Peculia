@@ -65,6 +65,8 @@ public class ModItems {
             new HoglinTuskItem(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).food(ModFoodComponents.FUNGAL_STEW).maxCount(1)));
     public static final Item MUSHROOM_STEW_TUSK = registerItem("mushroom_stew_tusk",
             new HoglinTuskItem(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).food(ModFoodComponents.MUSHROOM_STEW_TUSK).maxCount(1)));
+    public static final Item SCRAMBLED_EGGS_TUSK = registerItem("scrambled_eggs_tusk",
+            new HoglinTuskItem(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).food(ModFoodComponents.SCRAMBLED_EGGS_TUSK).maxCount(1)));
 
     public static final Item SACRIFICIAL_DAGGER = registerItem("sacrificial_dagger",
             new ModSwordItem(ModToolMaterials.SCRAP,1, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
@@ -86,6 +88,10 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.SWEET_ROLL)));
     public static final Item HARD_BOILED_EGG = registerItem("hard_boiled_egg",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.HARD_BOILED_EGG).maxCount(16)));
+    public static final Item EGG_BOWL = registerItem("egg_bowl",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).maxCount(16)));
+    public static final Item SCRAMBLED_EGGS = registerItem("scrambled_eggs",
+            new BowlFoodItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.SCRAMBLED_EGGS).maxCount(16)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Peculia.MOD_ID, name), item);

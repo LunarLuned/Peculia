@@ -8,14 +8,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.world.World;
 
-public class HoglinTuskItem extends Item {
+public class BowlFoodItem extends Item {
 
-    public HoglinTuskItem(Settings settings) {
+    public BowlFoodItem(Settings settings) {
         super(settings);
     }
 
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         ItemStack itemStack = super.finishUsing(stack, world, user);
-        return user instanceof PlayerEntity && ((PlayerEntity) user).getAbilities().creativeMode ? itemStack : new ItemStack(ModItems.HOGLIN_TUSK);
+        return user instanceof PlayerEntity && ((PlayerEntity) user).getAbilities().creativeMode ? itemStack : new ItemStack(Items.BOWL);
     }
 }
