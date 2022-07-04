@@ -104,6 +104,9 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.COOKED_BEEF_PATTY).maxCount(64)));
     public static final Item BURGER = registerItem("burger",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.BURGER).maxCount(64)));
+    public static final Item BACON_BURGER = registerItem("bacon_burger",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.BACON_BURGER).maxCount(64)));
+
     public static final Item SWEET_BERRY_JAM = registerItem("sweet_berry_jam",
             new JamBottleItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.SWEET_BERRY_JAM).maxCount(1)));
     public static final Item APPLE_JAM = registerItem("apple_jam",
@@ -119,6 +122,20 @@ public class ModItems {
 
     public static final Item TOASTED_BREAD = registerItem("toasted_bread",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.BURGER).maxCount(64)));
+    public static final Item TOAST = registerItem("toast",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.BURGER).maxCount(64)));
+    public static final Item BERRY_SPREAD_TOAST = registerItem("berry_spread_toast",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.BERRY_SPREAD_TOAST).maxCount(64)));
+    public static final Item APPLE_SPREAD_TOAST = registerItem("apple_spread_toast",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.APPLE_SPREAD_TOAST).maxCount(64)));
+    public static final Item CACTUS_SPREAD_TOAST = registerItem("cactus_spread_toast",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.CACTUS_SPREAD_TOAST).maxCount(64)));
+    public static final Item COCOA_SPREAD_TOAST = registerItem("cocoa_spread_toast",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.COCOA_SPREAD_TOAST).maxCount(64)));
+    public static final Item MUSHROOM_SPREAD_TOAST = registerItem("mushroom_spread_toast",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.MUSHROOM_SPREAD_TOAST).maxCount(64)));
+    public static final Item PORK_SPREAD_TOAST = registerItem("pork_spread_toast",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.PORK_SPREAD_TOAST).maxCount(64)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Peculia.MOD_ID, name), item);

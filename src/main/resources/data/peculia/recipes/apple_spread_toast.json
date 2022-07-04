@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#H#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "peculia:toast"
+    },
+    "H": {
+      "item": "peculia:apple_jam"
+    }
+  },
+  "result": {
+    "item": "peculia:apple_spread_toast",
+    "count": 8
+  }
+}
