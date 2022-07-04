@@ -147,12 +147,12 @@
           "functions": [
             {
               "add": false,
-              "count": 1.0,
+              "count": 3.0,
               "function": "minecraft:set_count"
             }
           ],
           "name": "peculia:hoglin_tusk",
-          "weight": 7
+          "weight": 15
         },
         {
           "type": "minecraft:item",
