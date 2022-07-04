@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "peculia:raw_bacon_strip"
+  },
+  "result": "peculia:cooked_bacon_strip",
+  "experience": 0.1,
+  "cookingtime": 40
+}

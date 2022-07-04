@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "C",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bread"
+    },
+    "C": {
+      "item": "peculia:cooked_beef_patty"
+    }
+  },
+  "result": {
+    "item": "peculia:burger",
+    "count": 1
+  }
+}

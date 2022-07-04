@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "peculia:egg_tusk"
+  },
+  "result": "peculia:scrambled_eggs_tusk",
+  "experience": 0.1,
+  "cookingtime": 100
+}

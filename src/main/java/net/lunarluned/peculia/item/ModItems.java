@@ -65,6 +65,8 @@ public class ModItems {
             new HoglinTuskItem(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).food(ModFoodComponents.FUNGAL_STEW).maxCount(1)));
     public static final Item MUSHROOM_STEW_TUSK = registerItem("mushroom_stew_tusk",
             new HoglinTuskItem(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).food(ModFoodComponents.MUSHROOM_STEW_TUSK).maxCount(1)));
+    public static final Item EGG_TUSK = registerItem("egg_tusk",
+            new HoglinTuskItem(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER)));
     public static final Item SCRAMBLED_EGGS_TUSK = registerItem("scrambled_eggs_tusk",
             new HoglinTuskItem(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).food(ModFoodComponents.SCRAMBLED_EGGS_TUSK).maxCount(1)));
 
@@ -91,7 +93,32 @@ public class ModItems {
     public static final Item EGG_BOWL = registerItem("egg_bowl",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).maxCount(16)));
     public static final Item SCRAMBLED_EGGS = registerItem("scrambled_eggs",
-            new BowlFoodItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.SCRAMBLED_EGGS).maxCount(16)));
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.SCRAMBLED_EGGS).maxCount(16)));
+    public static final Item RAW_BACON_STRIP = registerItem("raw_bacon_strip",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.RAW_BACON).maxCount(64)));
+    public static final Item COOKED_BACON_STRIP = registerItem("cooked_bacon_strip",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.COOKED_BACON).maxCount(64)));
+    public static final Item RAW_BEEF_PATTY = registerItem("raw_beef_patty",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.BEEF_PATTY).maxCount(64)));
+    public static final Item COOKED_BEEF_PATTY = registerItem("cooked_beef_patty",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.COOKED_BEEF_PATTY).maxCount(64)));
+    public static final Item BURGER = registerItem("burger",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.BURGER).maxCount(64)));
+    public static final Item SWEET_BERRY_JAM = registerItem("sweet_berry_jam",
+            new JamBottleItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.SWEET_BERRY_JAM).maxCount(1)));
+    public static final Item APPLE_JAM = registerItem("apple_jam",
+            new JamBottleItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.APPLE_JAM).maxCount(1)));
+    public static final Item CACTUS_JAM = registerItem("cactus_jam",
+            new JamBottleItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.CACTUS_JAM).maxCount(1)));
+    public static final Item COCOA_SPREAD = registerItem("cocoa_spread",
+            new JamBottleItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.COCOA_SPREAD).maxCount(1)));
+    public static final Item MUSHROOM_PUREE = registerItem("mushroom_puree",
+            new JamBottleItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.MUSHROOM_PUREE).maxCount(1)));
+    public static final Item PORK_PATE = registerItem("pork_pate",
+            new JamBottleItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.PORK_PATE).maxCount(1)));
+
+    public static final Item TOASTED_BREAD = registerItem("toasted_bread",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.BURGER).maxCount(64)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Peculia.MOD_ID, name), item);

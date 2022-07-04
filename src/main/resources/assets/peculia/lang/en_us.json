@@ -6,8 +6,18 @@
   "item.peculia.hard_boiled_egg": "Hard Boiled Egg",
   "item.peculia.egg_bowl": "Bowl of Eggs",
   "item.peculia.scrambled_eggs": "Scrambled Eggs",
-
-
+  "item.peculia.raw_bacon_strip": "Raw Bacon Strip",
+  "item.peculia.cooked_bacon_strip": "Cooked Bacon Strip",
+  "item.peculia.raw_beef_patty": "Raw Beef Patty",
+  "item.peculia.cooked_beef_patty": "Cooked Beef Patty",
+  "item.peculia.burger": "Burger",
+  "item.peculia.toasted_bread": "Toasted Bread",
+  "item.peculia.sweet_berry_jam": "Sweet Berry Jam",
+  "item.peculia.apple_jam": "Apple Jam",
+  "item.peculia.cactus_jam": "Cactus Jam",
+  "item.peculia.cocoa_spread": "Cocoa Spread",
+  "item.peculia.mushroom_puree": "Mushroom Puree",
+  "item.peculia.pork_pate": "Pork Paté",
 
   "item.peculia.sacrificial_dagger": "Sacrificial Dagger",
   "item.peculia.gilded_sacrificial_dagger": "Gilded Sacrificial Dagger",
@@ -18,6 +28,7 @@
   "item.peculia.warped_stew": "Warped Stew",
   "item.peculia.fungal_stew": "Fungal Stew",
   "item.peculia.mushroom_stew_tusk": "Mushroom Stew",
+  "item.peculia.egg_tusk": "Eggs in a Tusk",
   "item.peculia.scrambled_eggs_tusk": "Scrambled Eggs",
 
 

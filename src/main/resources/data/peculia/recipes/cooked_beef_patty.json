@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "peculia:raw_beef_patty"
+  },
+  "result": "peculia:cooked_beef_patty",
+  "experience": 0.4,
+  "cookingtime": 400
+}

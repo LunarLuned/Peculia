@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:beef"
+    },
+    {
+      "item": "minecraft:beef"
+    },
+    {
+      "item": "minecraft:beef"
+    },
+    {
+      "item": "minecraft:beef"
+    }
+  ],
+  "result": {
+    "item": "peculia:raw_beef_patty",
+    "count": 8
+  }
+}
