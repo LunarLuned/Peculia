@@ -6,6 +6,7 @@ import net.lunarluned.peculia.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
@@ -41,9 +42,11 @@ public class CondensedVoidBlock extends Block {
         return super.onUse(state, world, pos, player, hand, hit);
     }
 
-    public void onEntityCollision(BlockState state, World world, BlockPos pos, LivingEntity livingEntity) {
-        super.onEntityCollision(state, world, pos, livingEntity);
-        livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.VOID_TOUCHED, 200));
-        livingEntity.slowMovement(state, new Vec3d(0.8999999761581421D, 3.5D, 0.8999999761581421D));
+    @Override
+    public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+        super.onEntityCollision(state, world, pos, entity);
+        LivingEntity livingEntity = ((LivingEntity) entity);
+            livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.VOID_TOUCHED, 200));
+            entity.slowMovement(state, new Vec3d(0.8999999761581421D, 3.5D, 0.8999999761581421D));
     }
 }
