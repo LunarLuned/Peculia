@@ -30,6 +30,9 @@ public class ModFoodComponents {
     public static final FoodComponent BURGER = (new FoodComponent.Builder().hunger(8).saturationModifier(8f).statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 40, 0), 0.9F).build());
     public static final FoodComponent BACON_BURGER = (new FoodComponent.Builder().hunger(10).saturationModifier(10f).statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 80, 0), 1F).build());
 
+    public static final FoodComponent TOAST = (new FoodComponent.Builder().hunger(2).saturationModifier(1f).snack().build());
+
+    public static final FoodComponent TOASTED_BREAD = (new FoodComponent.Builder().hunger(5).saturationModifier(1f).build());
 
     public static final FoodComponent SWEET_BERRY_JAM = (new FoodComponent.Builder().hunger(6).saturationModifier(3f).snack().statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 40, 0), 1F).build());
     public static final FoodComponent APPLE_JAM = (new FoodComponent.Builder().hunger(6).saturationModifier(4f).snack().statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 40, 0), 1F).build());

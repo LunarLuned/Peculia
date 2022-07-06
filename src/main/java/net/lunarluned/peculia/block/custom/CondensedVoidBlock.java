@@ -1,10 +1,13 @@
 package net.lunarluned.peculia.block.custom;
 
 import net.lunarluned.peculia.Peculia;
+import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -40,7 +43,8 @@ public class CondensedVoidBlock extends Block {
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         super.onEntityCollision(state, world, pos, entity);
-        entity.damage(new Peculia.CondensedVoidDamageSource(entity), 4);
+        LivingEntity livingEntity = ((LivingEntity) entity);
+        livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.VOID_TOUCHED, 200));
         entity.slowMovement(state, new Vec3d(0.8999999761581421D, 3.5D, 0.8999999761581421D));
     }
 }

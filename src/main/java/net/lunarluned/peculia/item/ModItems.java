@@ -121,9 +121,9 @@ public class ModItems {
             new JamBottleItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.PORK_PATE).maxCount(1)));
 
     public static final Item TOASTED_BREAD = registerItem("toasted_bread",
-            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.BURGER).maxCount(64)));
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.TOASTED_BREAD).maxCount(64)));
     public static final Item TOAST = registerItem("toast",
-            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.BURGER).maxCount(64)));
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.TOAST).maxCount(64)));
     public static final Item BERRY_SPREAD_TOAST = registerItem("berry_spread_toast",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.BERRY_SPREAD_TOAST).maxCount(64)));
     public static final Item APPLE_SPREAD_TOAST = registerItem("apple_spread_toast",

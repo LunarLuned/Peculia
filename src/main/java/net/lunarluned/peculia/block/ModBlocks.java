@@ -70,7 +70,7 @@ public class ModBlocks {
     public static final Block CHISELED_DARK_PURPUR = registerBlock("chiseled_dark_purpur",
             new Block(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).sounds(BlockSoundGroup.STONE).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA);
     public static final Block DARK_PURPUR_STAIRS = registerBlock("dark_purpur_stairs",
-            new ModStairsBlock(ModBlocks.DARK_PURPUR.getDefaultState(),FabricBlockSettings.of(Material.STONE).mapColor(MapColor.GRAY).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.STONE)), ModItemGroup.PECULIA);
+            new ModStairsBlock(ModBlocks.DARK_PURPUR.getDefaultState(),FabricBlockSettings.of(Material.STONE).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.STONE)), ModItemGroup.PECULIA);
     public static final Block DARK_PURPUR_SLAB = registerBlock("dark_purpur_slab",
             new SlabBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).strength(2f).nonOpaque().requiresTool().sounds(BlockSoundGroup.STONE)), ModItemGroup.PECULIA);
     public static final Block DARK_PURPUR_WALL = registerBlock("dark_purpur_wall",
@@ -108,7 +108,16 @@ public class ModBlocks {
     public static final Block AWAKENED_COBBLESTONE = registerBlock("awakened_cobblestone",
             new Block(FabricBlockSettings.of(Material.STONE).strength(3.5f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(30)), ModItemGroup.PECULIA_OVERWORLD);
 
-
+    public static final Block SNOW_BRICKS = registerBlock("snow_bricks",
+            new Block(FabricBlockSettings.of(Material.SNOW_BLOCK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SNOW).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block SNOW_BRICK_PILLAR = registerBlock("snow_brick_pillar",
+            new PillarBlock(FabricBlockSettings.of(Material.SNOW_BLOCK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SNOW).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block SNOW_BRICK_STAIRS = registerBlock("snow_brick_stairs",
+            new ModStairsBlock(Blocks.SNOW_BLOCK.getDefaultState(),FabricBlockSettings.of(Material.SNOW_BLOCK).mapColor(MapColor.OFF_WHITE).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.SNOW)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block SNOW_BRICK_SLAB = registerBlock("snow_brick_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.SNOW_BLOCK).mapColor(MapColor.OFF_WHITE).strength(2f).nonOpaque().requiresTool().sounds(BlockSoundGroup.SNOW)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block SNOW_BRICK_WALL = registerBlock("snow_brick_wall",
+            new WallBlock(FabricBlockSettings.of(Material.SNOW_BLOCK).mapColor(MapColor.OFF_WHITE).strength(2f).requiresTool().sounds(BlockSoundGroup.SNOW).nonOpaque()), ModItemGroup.PECULIA_OVERWORLD);
 
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {

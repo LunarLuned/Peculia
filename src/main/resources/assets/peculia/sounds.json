@@ -1,8 +1,15 @@
 {
-  "echo_attack_hit": {
-    "subtitle": "peculia.echo_attack_hit",
+  "effect.echo.attack.hit": {
+    "subtitle": "effect.echo.attack.hit",
     "sounds": [
       "peculia:echo_attack_hit"
+    ]
+  },
+  "effect.anchored_teleport_fail": {
+    "subtitle": "effect.anchored_teleport_fail",
+    "sounds": [
+      "peculia:anchored_teleport_fail1",
+      "peculia:anchored_teleport_fail2"
     ]
   },
   "block.mythril.place": {

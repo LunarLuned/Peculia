@@ -49,7 +49,8 @@ public class Peculia implements ModInitializer {
 		//disclaimer. i do not know why effects and potions calls for you to register each effect like this. it just does. idk why.
 		ModEffects.registerIchorEffect();
 		ModEffects.registerElectrocutedEffect();
-		//ModEffects.registerVoidTouchedEffect();
+		ModEffects.registerVoidTouchedEffect();
+		ModEffects.registerAnchoredEffect();
 
 		ModPotions.registerIchorPotion();
 		ModPotions.registerextIchorPotion();

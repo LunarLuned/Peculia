@@ -1,0 +1,67 @@
+{
+  "parent": "minecraft:husbandry/safely_harvest_honey",
+  "criteria": {
+    "jams": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:sweet_berry_jam"
+            ]
+          },
+          {
+            "items": [
+              "peculia:apple_jam"
+            ]
+          },
+          {
+            "items": [
+              "peculia:cactus_jam"
+            ]
+          },
+          {
+            "items": [
+              "peculia:cocoa_spread"
+            ]
+          },
+          {
+            "items": [
+              "peculia:mushroom_puree"
+            ]
+          },
+          {
+            "items": [
+              "peculia:apple_jam"
+            ]
+          },
+          {
+            "items": [
+              "peculia:pork_pure"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.husbandry.jams.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "peculia:apple_jam"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.husbandry.jams.title"
+    }
+  },
+  "requirements": [
+    [
+      "jams"
+    ]
+  ]
+}

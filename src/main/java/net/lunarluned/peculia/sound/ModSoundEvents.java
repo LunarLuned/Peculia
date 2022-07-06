@@ -8,7 +8,7 @@ import net.minecraft.util.registry.Registry;
 
 public class ModSoundEvents {
 
-    public static final SoundEvent ECHO_ATTACK_HIT = registerSoundEvent("echo_attack_hit");
+    public static final SoundEvent ECHO_ATTACK_HIT = registerSoundEvent("effect.echo.attack.hit");
 
 
     private static SoundEvent registerSoundEvent(String name) {
@@ -27,6 +27,8 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_POPROCKS_PLACE = registerSoundEvent("block.poprocks.place");
     public static final SoundEvent BLOCK_POPROCKS_HIT = registerSoundEvent("block.poprocks.hit");
     public static final SoundEvent BLOCK_POPROCKS_FALL = registerSoundEvent("block.poprocks.fall");
+
+    public static final SoundEvent EFFECT_ANCHORED_TELEPORT_FAIL = registerSoundEvent("effect.anchored_teleport_fail");
 
     public static final BlockSoundGroup MYTHRIL = new BlockSoundGroup(1f, 1f,
             ModSoundEvents.BLOCK_MYTHRIL_BREAK, ModSoundEvents.BLOCK_MYTHRIL_STEP, ModSoundEvents.BLOCK_MYTHRIL_PLACE,

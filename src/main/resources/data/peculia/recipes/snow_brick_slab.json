@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "peculia:snow_bricks"
+    }
+  },
+  "result": {
+    "item": "peculia:snow_brick_slab",
+    "count": 6
+  }
+}

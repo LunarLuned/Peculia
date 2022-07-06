@@ -9,7 +9,9 @@
     "ItemDropMixin",
     "PickaxeModification",
     "PlayerManagerMixin",
-    "ScytheModification"
+    "ScytheModification",
+    "EnderPearlEntityMixin",
+    "VoidTouchedEffectMixin"
   ],
   "client": [
 

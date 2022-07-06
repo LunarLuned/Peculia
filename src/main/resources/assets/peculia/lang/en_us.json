@@ -10,6 +10,7 @@
   "item.peculia.cooked_bacon_strip": "Cooked Bacon Strip",
   "item.peculia.raw_beef_patty": "Raw Beef Patty",
   "item.peculia.cooked_beef_patty": "Cooked Beef Patty",
+  "item.peculia.bacon_burger": "Bacon Burger",
   "item.peculia.burger": "Burger",
   "item.peculia.toasted_bread": "Toasted Bread",
   "item.peculia.toast": "Toast",
@@ -40,6 +41,18 @@
   "item.peculia.scrambled_eggs_tusk": "Scrambled Eggs",
 
 
+  "block.peculia.compressed_cobblestone": "Compressed Cobblestone",
+  "block.peculia.contained_cobblestone": "Contained Cobblestone",
+  "block.peculia.continental_cobblestone": "Continental Cobblestone",
+  "block.peculia.anomalaic_cobblestone": "Anomalaic Cobblestone",
+  "block.peculia.awakened_cobblestone": "Awakened Cobblestone",
+  "block.peculia.snow_bricks": "Snow Bricks",
+  "block.peculia.snow_brick_pillar": "Snow Brick Pillar",
+  "block.peculia.snow_brick_stairs": "Snow Brick Stairs",
+  "block.peculia.snow_brick_slab": "Snow Brick Slab",
+  "block.peculia.snow_brick_wall": "Snow Brick Wall",
+  "block.peculia.crumbling_stone": "Crumbling Stone",
+
 
 
 
@@ -63,17 +76,11 @@
   "block.peculia.poprock_brick_slab": "Poprock Brick Slab",
   "block.peculia.poprock_brick_wall": "Poprock Brick Wall",
   "block.peculia.chiseled_poprock_bricks": "Chiseled Poprock Bricks",
-  "block.peculia.compressed_cobblestone": "Compressed Cobblestone",
-  "block.peculia.contained_cobblestone": "Contained Cobblestone",
-  "block.peculia.continental_cobblestone": "Continental Cobblestone",
-  "block.peculia.anomalaic_cobblestone": "Anomalaic Cobblestone",
-  "block.peculia.awakened_cobblestone": "Awakened Cobblestone",
   "block.peculia.mythril_bricks": "Mythril Bricks",
   "block.peculia.mythril_brick_stairs": "Mythril Brick Stairs",
   "block.peculia.mythril_brick_slab": "Mythril Brick Slab",
   "block.peculia.mythril_brick_wall": "Mythril Brick Wall",
   "block.peculia.poprock_crystal": "Poprock Crystal",
-  "block.peculia.crumbling_stone": "Crumbling Stone",
   "block.peculia.eroded_end_stone": "Eroded End Stone",
   "block.peculia.dragonglass": "Dragonglass",
   "block.peculia.dragonglass_pane": "Dragonglass Pane",
@@ -101,6 +108,7 @@
 
 
   "itemGroup.peculia.peculia": "Peculia End",
+  "itemGroup.peculia.peculia_void_depths": "Peculia Void Depths",
   "itemGroup.peculia.peculia_nether": "Peculia Nether",
   "itemGroup.peculia.peculia_overworld": "Peculia Overworld",
 
@@ -111,6 +119,9 @@
   "advancements.end.mythril_gear.description": "Get a full suit of Mythril Armor, quite shiny!",
   "advancements.end.obtain_mythril_spearel.title": "Only a Spoonful",
   "advancements.end.obtain_mythril_spearel.description": "Waste a Mythril Ingot for an inside joke.",
+
+  "advancements.husbandry.jams.title": "Thats my Jam!",
+  "advancements.husbandry.jams.description": "Have all Jams in your inventory",
 
   "item.minecraft.potion.effect.ichor_potion": "Potion of Ichor",
   "item.minecraft.splash_potion.effect.ichor_potion": "Splash Potion of Ichor",
@@ -132,7 +143,7 @@
 
   "enchantment.peculia.shoryuken.desc": "Uppercuts mobs, launching them 3 blocks in the air.",
   "enchantment.peculia.echo.desc": "Does extra damage to the target that has been hit--does not work w/ critical hits.",
-  "enchantment.peculia.thundering.desc": "Allows you to strike lightning, as long as it's raining.",
+  "enchantment.peculia.thundering.desc": "Allows you to electrocute enemies, as long as it's raining.",
   "enchantment.peculia.concuss.desc": "Gives the target slowness & blindness after being hit. (Must be crouching to use.)",
   "enchantment.peculia.panicked.desc": "Gives the user speed, hunger & strength after getting to 5 hearts while in combat.",
   "enchantment.peculia.leeching.desc": "Gives the user regeneration at the cost of less attack damage and a debuff on use.",
@@ -140,8 +151,10 @@
   "effect.peculia.electrocuted": "Electrocuted",
   "effect.peculia.ichor": "Ichor",
   "effect.peculia.void_touched": "Void Touched",
+  "effect.peculia.anchored": "Anchored",
 
-  "peculia.echo_attack_hit": "Strong Echo Attack",
+  "effect.echo.attack.hit": "Strong Echo attack",
+  "effect.anchored_teleport_fail": "Ender Pearl fails",
 
   "death.attack.electrocution": "%1$s was electrocuted to death",
   "death.attack.condensed": "%1$s was swallowed by the Void",

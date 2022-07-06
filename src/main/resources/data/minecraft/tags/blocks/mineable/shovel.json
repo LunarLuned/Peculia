@@ -2,6 +2,11 @@
   "replace": false,
   "values": [
     "peculia:eroded_end_stone",
-    "peculia:sill"
+    "peculia:sill",
+    "peculia:snow_brick_pillar",
+    "peculia:snow_bricks",
+    "peculia:snow_brick_slab",
+    "peculia:snow_brick_stairs",
+    "peculia:snow_brick_wall"
   ]
 }
