@@ -25,6 +25,7 @@ public class ShoryukenEnchantment extends Enchantment {
         if (target instanceof LivingEntity) {
                 ((LivingEntity) target).setVelocity(0,.6,0);
         }
+        else
         if (target instanceof ServerPlayerEntity) {
             (target).addVelocity(0,.6,0);
         }

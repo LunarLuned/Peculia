@@ -95,6 +95,14 @@ public class ModBlocks {
     public static final Block DRAGONGLASS_PANE = registerBlock("dragonglass_pane",
             new PaneBlock(FabricBlockSettings.copyOf(Blocks.GLASS).strength(1f).nonOpaque().requiresTool()), ModItemGroup.PECULIA);
 
+    //nether
+    public static final Block ICHOR_MOLD_VEIN = registerBlock("ichor_mold_vein",
+            new IchorMoldVeinBlock(FabricBlockSettings.of(Material.PLANT).nonOpaque().strength(0.1f)), ModItemGroup.PECULIA_NETHER);
+    public static final Block ICHOR_MOLD = registerBlock("ichor_mold",
+            new Block(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.NETHER_WART).strength(1f)), ModItemGroup.PECULIA_NETHER);
+    public static final Block ICHOR_NYLIUM = registerBlock("ichor_nylium",
+            new Block(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.NETHERRACK).strength(1f)), ModItemGroup.PECULIA_NETHER);
+
     //overworld
     public static final Block CRUMBLING_STONE = registerBlock("crumbling_stone", new CrumblingBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).resistance(6)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block COMPRESSED_COBBLESTONE = registerBlock("compressed_cobblestone",

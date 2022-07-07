@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "peculia:ichor_nylium",
+    "peculia:ichor_mold",
     "peculia:mythril_block",
     "peculia:mythril_crystal",
     "peculia:compressed_cobblestone",

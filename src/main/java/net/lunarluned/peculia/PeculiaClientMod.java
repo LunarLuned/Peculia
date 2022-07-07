@@ -25,6 +25,7 @@ public class PeculiaClientMod implements ClientModInitializer {
                 RenderLayer.getTranslucent(),
 
                 ModBlocks.MYTHRIL_CRYSTAL,
+                ModBlocks.ICHOR_MOLD_VEIN,
                 ModBlocks.MYTHRIL_BRICKS,
                 ModBlocks.MYTHRIL_BRICK_SLAB,
                 ModBlocks.MYTHRIL_BRICK_STAIRS,
