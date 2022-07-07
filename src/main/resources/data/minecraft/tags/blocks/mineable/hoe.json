@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "peculia:ichor_mold"
+    "peculia:ichor_mold",
+    "peculia:ichor_sticker"
   ]
 }

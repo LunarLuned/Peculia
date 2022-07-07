@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_hoglin_husk": {
+    "has_hoglin_tusk": {
       "conditions": {
         "items": [
           {
             "items": [
-              "peculia:hoglin_husk"
+              "peculia:hoglin_tusk"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_hoglin_husk",
+      "has_hoglin_tusk",
       "has_the_recipe"
     ]
   ],

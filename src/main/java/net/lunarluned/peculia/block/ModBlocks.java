@@ -102,6 +102,8 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.NETHER_WART).strength(1f)), ModItemGroup.PECULIA_NETHER);
     public static final Block ICHOR_NYLIUM = registerBlock("ichor_nylium",
             new Block(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.NETHERRACK).strength(1f)), ModItemGroup.PECULIA_NETHER);
+    public static final Block ICHOR_STICKER = registerBlock("ichor_sticker",
+            new Block(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.NETHER_WART).nonOpaque().luminance(15).strength(1f)), ModItemGroup.PECULIA_NETHER);
 
     //overworld
     public static final Block CRUMBLING_STONE = registerBlock("crumbling_stone", new CrumblingBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).resistance(6)), ModItemGroup.PECULIA_OVERWORLD);
