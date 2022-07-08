@@ -51,11 +51,12 @@ public class Peculia implements ModInitializer {
 		ModEffects.registerElectrocutedEffect();
 		ModEffects.registerVoidTouchedEffect();
 		ModEffects.registerAnchoredEffect();
+		ModEffects.registerIchorResistanceEffect();
 
 		ModPotions.registerIchorPotion();
 		ModPotions.registerextIchorPotion();
-
-
+		ModPotions.registerIchorResistancePotion();
+		ModPotions.registerextIchorResistancePotion();
 
 		LOGGER.info("You have 5 days until the piss droplets hit your minecraft house.");
 	}

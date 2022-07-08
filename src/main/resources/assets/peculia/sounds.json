@@ -12,6 +12,13 @@
       "peculia:anchored_teleport_fail2"
     ]
   },
+  "block.ichor_sticker.release": {
+    "subtitle": "block.ichor_sticker.release",
+    "sounds": [
+      "peculia:block/ichor_sticker/release"
+    ]
+  },
+
   "block.mythril.place": {
     "sounds": [
       "peculia:block/mythril/place1",

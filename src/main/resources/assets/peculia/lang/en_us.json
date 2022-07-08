@@ -39,6 +39,7 @@
   "item.peculia.mushroom_stew_tusk": "Mushroom Stew",
   "item.peculia.egg_tusk": "Eggs in a Tusk",
   "item.peculia.scrambled_eggs_tusk": "Scrambled Eggs",
+  "item.peculia.ichor": "Ichor",
 
 
   "block.peculia.compressed_cobblestone": "Compressed Cobblestone",
@@ -59,7 +60,6 @@
   "block.peculia.ichor_mold": "Ichor Mold",
   "block.peculia.ichor_nylium": "Ichor Nylium",
   "block.peculia.ichor_sticker": "Ichor Sticker",
-
 
 
 
@@ -139,6 +139,15 @@
   "item.minecraft.lingering_potion.effect.extichor_potion": "Lingering Potion of Ichor",
   "item.minecraft.tipped_arrow.effect.extichor_potion": "Arrow of Ichor",
 
+  "item.minecraft.potion.effect.ichor_resistance_potion": "Potion of Ichor Resistance",
+  "item.minecraft.splash_potion.effect.ichor_resistance_potion": "Splash Potion of Ichor Resistance",
+  "item.minecraft.lingering_potion.effect.ichor_resistance_potion": "Lingering Potion of Ichor Resistance",
+  "item.minecraft.tipped_arrow.effect.ichor_resistance_potion": "Arrow of Ichor Resistance",
+  "item.minecraft.potion.effect.extichor_resistance_potion": "Potion of Ichor Resistance",
+  "item.minecraft.splash_potion.effect.extichor_resistance_potion": "Splash Potion of Ichor Resistance",
+  "item.minecraft.lingering_potion.effect.extichor_resistance_potion": "Lingering Potion of Ichor Resistance",
+  "item.minecraft.tipped_arrow.effect.extichor_resistance_potion": "Arrow of Ichor Resistance",
+
 
   "enchantment.peculia.thundering": "Thundering",
   "enchantment.peculia.echo": "Echo",
@@ -159,9 +168,11 @@
   "effect.peculia.ichor": "Ichor",
   "effect.peculia.void_touched": "Void Touched",
   "effect.peculia.anchored": "Anchored",
+  "effect.peculia.ichor_resistance": "Ichor Resistance",
 
   "effect.echo.attack.hit": "Strong Echo attack",
   "effect.anchored_teleport_fail": "Ender Pearl fails",
+  "block.ichor_sticker.release": "Ichor Sticker Bulb Breaks",
 
   "death.attack.electrocution": "%1$s was electrocuted to death",
   "death.attack.condensed": "%1$s was swallowed by the Void",

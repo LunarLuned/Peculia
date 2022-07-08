@@ -4,7 +4,7 @@
       "model": "peculia:block/snow_brick_slab"
     },
     "type=double": {
-      "model": "peculia:block/snow_brick"
+      "model": "peculia:block/snow_bricks"
     },
     "type=top": {
       "model": "peculia:block/snow_brick_slab_top"

@@ -11,7 +11,9 @@
     "PlayerManagerMixin",
     "ScytheModification",
     "EnderPearlEntityMixin",
-    "VoidTouchedEffectMixin"
+    "VoidTouchedEffectMixin",
+    "IchorResistanceEffectMixin",
+    "BrewingRecipeRegistryMixin"
   ],
   "client": [
 

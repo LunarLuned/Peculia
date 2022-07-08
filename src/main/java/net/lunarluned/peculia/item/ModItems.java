@@ -71,13 +71,18 @@ public class ModItems {
             new HoglinTuskItem(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).food(ModFoodComponents.SCRAMBLED_EGGS_TUSK).maxCount(1)));
 
     public static final Item SACRIFICIAL_DAGGER = registerItem("sacrificial_dagger",
-            new ModSwordItem(ModToolMaterials.SCRAP,1, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
+            new ModSwordItem(ModToolMaterials.SCRAP,1, -2.2f, new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
     public static final Item GILDED_SACRIFICIAL_DAGGER = registerItem("gilded_sacrificial_dagger",
-            new ModSwordItem(ModToolMaterials.SCRAP,2, -2.0f, new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
+            new ModSwordItem(ModToolMaterials.SCRAP,2, -2.0f, new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
     public static final Item DIPPED_SACRIFICIAL_DAGGER = registerItem("dipped_sacrificial_dagger",
-             new ModDippedItem(ModToolMaterials.SCRAP,1, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
+             new ModDippedItem(ModToolMaterials.SCRAP,1, -2.2f, new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
     public static final Item DIPPED_GILDED_SACRIFICIAL_DAGGER = registerItem("dipped_gilded_sacrificial_dagger",
-            new ModDippedItem(ModToolMaterials.SCRAP,2, -2.0f, new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
+            new ModDippedItem(ModToolMaterials.SCRAP,2, -2.0f, new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
+    public static final Item ICHOR = registerItem("ichor",
+            new Item(new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER)));
+    public static final Item SPORODINE = registerItem("sporodine",
+            new Item(new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER)));
+
 
     //overworld
     public static final Item DIAMOND_GAUNTLET = registerItem("diamond_gauntlet",

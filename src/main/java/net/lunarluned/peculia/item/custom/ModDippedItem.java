@@ -15,7 +15,7 @@ public class ModDippedItem extends SwordItem {
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         super.postHit(stack, target, attacker);
-        target.addStatusEffect(new StatusEffectInstance(ModEffects.ICHOR, 100, 1));
+        target.addStatusEffect(new StatusEffectInstance(ModEffects.ICHOR, 100, 0));
         return true;
     }
 }
