@@ -54,6 +54,10 @@
   "block.peculia.snow_brick_slab": "Snow Brick Slab",
   "block.peculia.snow_brick_wall": "Snow Brick Wall",
   "block.peculia.crumbling_stone": "Crumbling Stone",
+  "block.peculia.crumbling_deepslate": "Crumbling Deepslate",
+  "block.peculia.sculk_spine": "Sculk Spine",
+  "block.peculia.spinal_bricks": "Spinal Bricks",
+  "block.peculia.spinal_tiles": "Spinal Tiles",
 
 
 
@@ -61,9 +65,10 @@
   "block.peculia.ichor_mold": "Ichor Mold",
   "block.peculia.ichor_nylium": "Ichor Nylium",
   "block.peculia.ichor_sticker": "Ichor Sticker",
+  "block.peculia.crumbling_netherrack": "Crumbling Netherrack",
 
 
-
+  "block.peculia.crumbling_end_stone": "Crumbling End Stone",
   "block.peculia.dark_purpur": "Dark Purpur Block",
   "block.peculia.dark_purpur_pillar": "Dark Purpur Pillar",
   "block.peculia.chiseled_dark_purpur": "Chiseled Dark Purpur",

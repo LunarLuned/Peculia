@@ -10,7 +10,7 @@ public class ModOreGeneration {
     public static void generateOres() {
 
 
-// Generation Mythril Ore:
+// Generation
 
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ORE_MYTHRIL_CRYSTAL_PLACED.getKey().get());
@@ -26,6 +26,18 @@ public class ModOreGeneration {
 
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ORE_CONDENSED_VOID.getKey().get());
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ORE_CRUMBLING_STONE.getKey().get());
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ORE_CRUMBLING_DEEPSLATE.getKey().get());
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ORE_CRUMBLING_NETHERRACK.getKey().get());
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ORE_CRUMBLING_END_STONE.getKey().get());
 
     }
 }

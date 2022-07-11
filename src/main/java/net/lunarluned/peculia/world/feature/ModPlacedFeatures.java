@@ -27,4 +27,21 @@ public class ModPlacedFeatures {
     public static final RegistryEntry<PlacedFeature> ORE_CONDENSED_VOID = PlacedFeatures.register("condensed_void",
             ModConfiguredFeatures.CONDENSED_VOID, ModOreFeatures.modifiersWithCount(1,
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-1), YOffset.aboveBottom(19))));
+
+    public static final RegistryEntry<PlacedFeature> ORE_CRUMBLING_STONE = PlacedFeatures.register("crumbling_stone",
+            ModConfiguredFeatures.CRUMBLING_STONE, ModOreFeatures.modifiersWithCount(2,
+                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(2), YOffset.aboveBottom(84))));
+
+    public static final RegistryEntry<PlacedFeature> ORE_CRUMBLING_DEEPSLATE = PlacedFeatures.register("crumbling_deepslate",
+            ModConfiguredFeatures.CRUMBLING_DEEPSLATE, ModOreFeatures.modifiersWithCount(2,
+                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(-64), YOffset.aboveBottom(0))));
+
+    public static final RegistryEntry<PlacedFeature> ORE_CRUMBLING_NETHERRACK = PlacedFeatures.register("crumbling_netherrack",
+            ModConfiguredFeatures.CRUMBLING_NETHERRACK, ModOreFeatures.modifiersWithCount(3,
+                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.aboveBottom(100))));
+
+    public static final RegistryEntry<PlacedFeature> ORE_CRUMBLING_END_STONE = PlacedFeatures.register("crumbling_end_stone",
+            ModConfiguredFeatures.CRUMBLING_END_STONE, ModOreFeatures.modifiersWithCount(4,
+                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.aboveBottom(100))));
+
 }

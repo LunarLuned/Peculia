@@ -13,6 +13,9 @@
     "peculia:snow_bricks",
     "peculia:snow_brick_slab",
     "peculia:snow_brick_stairs",
-    "peculia:snow_brick_wall"
+    "peculia:snow_brick_wall",
+    "peculia:sculk_spine",
+    "peculia:spinal_tiles",
+    "peculia:spinal_bricks"
   ]
 }

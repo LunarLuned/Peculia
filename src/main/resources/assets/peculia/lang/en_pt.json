@@ -51,10 +51,12 @@
   "block.peculia.snow_brick_slab": "Slab o' Slush",
   "block.peculia.snow_brick_wall": "Wall o' Slush",
   "block.peculia.crumbling_stone": "Fallin' Rock",
+  "block.peculia.sculk_spine": "Portrudin' Spine",
+  "block.peculia.spinal_bricks": "Brick o' Spines",
+  "block.peculia.spinal_tiles": "Tile o' Spines",
 
 
-
-
+  "block.peculia.crumbling_end_stone": "Fallin' End stone",
   "block.peculia.dark_purpur": "Block o' Dark Purpur",
   "block.peculia.dark_purpur_pillar": "Post o' Dark Purpur",
   "block.peculia.chiseled_dark_purpur": "Carv'd Dark Purpur",

@@ -56,6 +56,38 @@ public class ModConfiguredFeatures {
             ConfiguredFeatures.register("condensed_void", Feature.ORE,
                     new OreFeatureConfig(ORE_CONDENSED_VOID, 60));
 
+    public static final List<OreFeatureConfig.Target> ORE_CRUMBLING_STONE = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.STONE),
+                    ModBlocks.CRUMBLING_STONE.getDefaultState()));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> CRUMBLING_STONE =
+            ConfiguredFeatures.register("crumbling_stone", Feature.ORE,
+                    new OreFeatureConfig(ORE_CRUMBLING_STONE, 40));
+
+    public static final List<OreFeatureConfig.Target> ORE_CRUMBLING_DEEPSLATE = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.DEEPSLATE),
+                    ModBlocks.CRUMBLING_DEEPSLATE.getDefaultState()));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> CRUMBLING_DEEPSLATE =
+            ConfiguredFeatures.register("crumbling_deepslate", Feature.ORE,
+                    new OreFeatureConfig(ORE_CRUMBLING_DEEPSLATE, 30));
+
+    public static final List<OreFeatureConfig.Target> ORE_CRUMBLING_NETHERRACK = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.NETHERRACK),
+                    ModBlocks.CRUMBLING_NETHERRACK.getDefaultState()));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> CRUMBLING_NETHERRACK =
+            ConfiguredFeatures.register("crumbling_netherrack", Feature.ORE,
+                    new OreFeatureConfig(ORE_CRUMBLING_NETHERRACK, 45));
+
+    public static final List<OreFeatureConfig.Target> ORE_CRUMBLING_END_STONE = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE),
+                    ModBlocks.CRUMBLING_END_STONE.getDefaultState()));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> CRUMBLING_END_STONE =
+            ConfiguredFeatures.register("crumbling_endstone", Feature.ORE,
+                    new OreFeatureConfig(ORE_CRUMBLING_END_STONE, 30));
+
 
 // Registry for Configured Features:
 

@@ -81,8 +81,6 @@ public class ModBlocks {
     public static final Block CONDENSED_VOID = registerBlock("condensed_void",
             new CondensedVoidBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).resistance(9999).hardness(9999).noCollision().luminance(12).dropsNothing()), ModItemGroup.PECULIA);
 
-
-
     public static final Block SILLTAR_FLUID_BLOCK = registerBlockWithoutBlockItem("silltar_fluid",
             new ModFluidBlock(ModFluids.SILLTAR_STILL, FabricBlockSettings.of(Material.WATER).nonOpaque().noCollision().dropsNothing()), ModItemGroup.PECULIA);
 
@@ -90,12 +88,14 @@ public class ModBlocks {
 
     public static final Block ERODED_END_STONE = registerBlock("eroded_end_stone",
             new FallingBlock(FabricBlockSettings.copyOf(Blocks.SAND).strength(1f)), ModItemGroup.PECULIA);
+    public static final Block CRUMBLING_END_STONE = registerBlock("crumbling_end_stone", new CrumblingBlock(FabricBlockSettings.of(Material.STONE).strength(0f).resistance(0)), ModItemGroup.PECULIA);
     public static final Block DRAGONGLASS = registerBlock("dragonglass",
     new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).strength(1f).nonOpaque().requiresTool()), ModItemGroup.PECULIA);
     public static final Block DRAGONGLASS_PANE = registerBlock("dragonglass_pane",
             new PaneBlock(FabricBlockSettings.copyOf(Blocks.GLASS).strength(1f).nonOpaque().requiresTool()), ModItemGroup.PECULIA);
 
     //nether
+    public static final Block CRUMBLING_NETHERRACK = registerBlock("crumbling_netherrack", new CrumblingBlock(FabricBlockSettings.of(Material.STONE).strength(0f).resistance(0)), ModItemGroup.PECULIA_NETHER);
     public static final Block ICHOR_MOLD_VEIN = registerBlock("ichor_mold_vein",
             new IchorMoldVeinBlock(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.NETHER_WART).nonOpaque().strength(0.1f)), ModItemGroup.PECULIA_NETHER);
     public static final Block ICHOR_MOLD = registerBlock("ichor_mold",
@@ -105,7 +105,15 @@ public class ModBlocks {
     public static final Block ICHOR_STICKER = registerBlock("ichor_sticker",
             new IchorStickerBlock(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.NETHER_WART).nonOpaque().luminance(15).strength(1f)), ModItemGroup.PECULIA_NETHER);
     //overworld
-    public static final Block CRUMBLING_STONE = registerBlock("crumbling_stone", new CrumblingBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).resistance(6)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block SCULK_SPINE = registerBlock("sculk_spine",
+            new PillarBlock(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SCULK_CATALYST).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block SPINAL_BRICKS = registerBlock("spinal_bricks",
+            new Block(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SCULK_CATALYST).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block SPINAL_TILES = registerBlock("spinal_tiles",
+            new Block(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SCULK_CATALYST).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block CRUMBLING_STONE = registerBlock("crumbling_stone", new CrumblingBlock(FabricBlockSettings.of(Material.STONE).strength(0.0f).resistance(0)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block CRUMBLING_DEEPSLATE = registerBlock("crumbling_deepslate", new CrumblingBlock(FabricBlockSettings.of(Material.STONE).strength(0.1f).resistance(0)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block COMPRESSED_COBBLESTONE = registerBlock("compressed_cobblestone",
             new Block(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(6)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block CONTAINED_COBBLESTONE = registerBlock("contained_cobblestone",
