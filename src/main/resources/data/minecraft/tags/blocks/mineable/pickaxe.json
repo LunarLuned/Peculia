@@ -34,6 +34,12 @@
     "peculia:dark_purpur_stairs",
     "peculia:dark_purpur_wall",
     "peculia:chiseled_dark_purpur",
-    "peculia:void_lamp"
+    "peculia:void_lamp",
+    "peculia:spinal_brick_slab",
+    "peculia:spinal_tile_slab",
+    "peculia:spinal_brick_stairs",
+    "peculia:spinal_tile_stairs",
+    "peculia:spinal_brick_wall",
+    "peculia:spinal_tile_wall"
   ]
 }

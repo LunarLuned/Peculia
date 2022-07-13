@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "peculia:spinal_tiles"
+        }
+    },
+    "result": {
+        "item": "peculia:spinal_tile_stairs",
+        "count": 4
+    }
+}

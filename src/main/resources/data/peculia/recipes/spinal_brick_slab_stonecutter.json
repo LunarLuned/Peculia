@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "peculia:spinal_bricks"
+    },
+    "result": "peculia:spinal_brick_slab",
+    "count": 2
+}

@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "peculia:spinal_tiles"
+    },
+    "result": "peculia:spinal_tile_wall",
+    "count": 1
+}
