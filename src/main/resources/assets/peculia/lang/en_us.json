@@ -70,7 +70,12 @@
   "block.peculia.sculk_spine": "Sculk Spine",
   "block.peculia.spinal_bricks": "Spinal Bricks",
   "block.peculia.spinal_tiles": "Spinal Tiles",
-
+  "block.peculia.spinal_brick_stairs": "Spinal Brick Stairs",
+  "block.peculia.spinal_brick_slab": "Spinal Brick Slab",
+  "block.peculia.spinal_brick_wall": "Spinal Brick Wall",
+  "block.peculia.spinal_tile_stairs": "Spinal Tile Stairs",
+  "block.peculia.spinal_tile_slab": "Spinal Tile Slab",
+  "block.peculia.spinal_tile_wall": "Spinal Tile Wall",
 
 
   "block.peculia.ichor_mold_vein": "Ichor Mold Vein",

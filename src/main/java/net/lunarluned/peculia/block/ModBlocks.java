@@ -110,8 +110,21 @@ public class ModBlocks {
             new PillarBlock(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SCULK_CATALYST).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block SPINAL_BRICKS = registerBlock("spinal_bricks",
             new Block(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SCULK_CATALYST).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block SPINAL_BRICK_STAIRS = registerBlock("spinal_brick_stairs",
+            new ModStairsBlock(ModBlocks.SPINAL_BRICKS.getDefaultState(),FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).strength(1f).strength(2f).requiresTool().sounds(BlockSoundGroup.SCULK_CATALYST)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block SPINAL_BRICK_SLAB = registerBlock("spinal_brick_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).strength(1f).strength(2f).nonOpaque().requiresTool().sounds(BlockSoundGroup.SCULK_CATALYST)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block SPINAL_BRICK_WALL = registerBlock("spinal_brick_wall",
+            new WallBlock(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).strength(1f).strength(2f).requiresTool().sounds(BlockSoundGroup.SCULK_CATALYST).nonOpaque()), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block SPINAL_TILES = registerBlock("spinal_tiles",
             new Block(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SCULK_CATALYST).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block SPINAL_TILE_STAIRS = registerBlock("spinal_tile_stairs",
+            new ModStairsBlock(ModBlocks.SPINAL_TILES.getDefaultState(),FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).strength(1f).strength(2f).requiresTool().sounds(BlockSoundGroup.SCULK_CATALYST)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block SPINAL_TILE_SLAB = registerBlock("spinal_tile_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).strength(1f).strength(2f).nonOpaque().requiresTool().sounds(BlockSoundGroup.SCULK_CATALYST)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block SPINAL_TILE_WALL = registerBlock("spinal_tile_wall",
+            new WallBlock(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).strength(1f).strength(2f).requiresTool().sounds(BlockSoundGroup.SCULK_CATALYST).nonOpaque()), ModItemGroup.PECULIA_OVERWORLD);
+
     public static final Block CRUMBLING_STONE = registerBlock("crumbling_stone", new CrumblingBlock(FabricBlockSettings.of(Material.STONE).strength(0.0f).resistance(0)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block CRUMBLING_DEEPSLATE = registerBlock("crumbling_deepslate", new CrumblingBlock(FabricBlockSettings.of(Material.STONE).strength(0.1f).resistance(0)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block COMPRESSED_COBBLESTONE = registerBlock("compressed_cobblestone",
