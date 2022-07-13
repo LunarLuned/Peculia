@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:adventure/upgrade_dagger",
+  "criteria": {
+    "triple_trouble": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:charged_gilded_copper_cleaver"
+            ]
+          },
+          {
+            "items": [
+              "peculia:dipped_gilded_sacrificial_dagger"
+            ]
+          },
+          {
+            "items": [
+              "peculia:void_touched_gilded_mythical_blade"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.adventure.triple_trouble.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "peculia:void_touched_gilded_mythical_blade"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.adventure.triple_trouble.title"
+    }
+  },
+  "requirements": [
+    [
+      "triple_trouble"
+    ]
+  ]
+}

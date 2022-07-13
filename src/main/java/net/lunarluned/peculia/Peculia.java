@@ -67,10 +67,10 @@ public class Peculia implements ModInitializer {
 			setBypassesArmor();
 		}
 	}
-	public static class IchorDamageSource extends EntityDamageSource {
+	public static class IchorDamageSource extends DamageSource {
 
-		public IchorDamageSource(Entity source) {
-			super("ichor", source);
+		public IchorDamageSource(Entity name) {
+			super("ichor");
 			setBypassesArmor();
 			setUnblockable();
 		}

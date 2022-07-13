@@ -1,0 +1,102 @@
+{
+  "parent": "minecraft:adventure/obtain_dagger",
+  "display": {
+    "icon": {
+      "item": "peculia:gilded_sacrificial_dagger"
+    },
+    "title": {
+      "translate": "advancements.adventure.upgrade_dagger.title"
+    },
+    "description": {
+      "translate": "advancements.adventure.upgrade_dagger.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "dipped_sacrificial_dagger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:dipped_sacrificial_dagger"
+            ]
+          }
+        ]
+      }
+    },
+    "void_touched_mythical_blade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:void_touched_mythical_blade"
+            ]
+          }
+        ]
+      }
+    },
+    "charged_copper_cleaver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:charged_copper_cleaver"
+            ]
+          }
+        ]
+      }
+    },
+    "gilded_sacrificial_dagger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:gilded_sacrificial_dagger"
+            ]
+          }
+        ]
+      }
+    },
+    "gilded_mythical_blade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:gilded_mythical_blade"
+            ]
+          }
+        ]
+      }
+    },
+    "gilded_copper_cleaver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:gilded_copper_cleaver"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "gilded_copper_cleaver",
+      "gilded_mythical_blade",
+      "gilded_sacrificial_dagger",
+      "charged_copper_cleaver",
+      "void_touched_mythical_blade",
+      "dipped_sacrificial_dagger"
+    ]
+  ]
+}

@@ -15,15 +15,15 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class ModDippedItem extends SwordItem {
-    public ModDippedItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
+public class ElectrocutedItem extends SwordItem {
+    public ElectrocutedItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         super.postHit(stack, target, attacker);
-        target.addStatusEffect(new StatusEffectInstance(ModEffects.ICHOR, 40, 0));
+        target.addStatusEffect(new StatusEffectInstance(ModEffects.ELECTROCUTED, 60, 0));
         return true;
     }
 

@@ -1,0 +1,63 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "item": "peculia:copper_cleaver"
+    },
+    "title": {
+      "translate": "advancements.adventure.obtain_dagger.title"
+    },
+    "description": {
+      "translate": "advancements.adventure.obtain_dagger.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "sacrificial_dagger": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:sacrificial_dagger"
+            ]
+          }
+        ]
+      }
+    },
+    "mythical_blade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:mythical_blade"
+            ]
+          }
+        ]
+      }
+    },
+    "copper_cleaver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:copper_cleaver"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "copper_cleaver",
+      "mythical_blade",
+      "sacrificial_dagger"
+    ]
+  ]
+}

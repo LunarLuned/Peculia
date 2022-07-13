@@ -4,9 +4,11 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.fluid.ModFluids;
 import net.lunarluned.peculia.item.custom.*;
+import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems {
@@ -35,11 +37,24 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA).food(ModFoodComponents.ROCK_CANDY)));
     public static final Item BOTTLE_OF_CONDENSED_VOID = registerItem("bottle_of_condensed_void",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA)));
+    public static final Item MYTHICAL_BLADE = registerItem("mythical_blade",
+            new ModDaggerItem(ModToolMaterials.SHARD,2, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
+    public static final Item GILDED_MYTHICAL_BLADE = registerItem("gilded_mythical_blade",
+            new ModDaggerItem(ModToolMaterials.SHARD,3, -2.0f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
+    public static final Item VOID_TOUCHED_MYTHICAL_BLADE = registerItem("void_touched_mythical_blade",
+            new VoidTouchedItem(ModToolMaterials.SHARD,0, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
+    public static final Item DIPPED_GILDED_MYTHICAL_BLADE = registerItem("void_touched_gilded_mythical_blade",
+            new VoidTouchedItem(ModToolMaterials.SHARD,1, -2.0f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
+
 
     public static final Item SILLTAR_BUCKET = registerItem("silltar_bucket",
             new BucketItem(ModFluids.SILLTAR_STILL, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
 
-
+    public static final Item MUSIC_DISC_LULLA = registerItem("music_disc_lulla",
+            new ModMusicDiscItem(7, ModSoundEvents.MUSIC_DISC_LULLA,
+                    new FabricItemSettings().rarity(Rarity.RARE).maxCount(1).group(ModItemGroup.PECULIA)));
+    public static final Item DISC_FRAGMENT_LULLA = registerItem("disc_fragment_lulla",
+            new DiscFragmentItem(new FabricItemSettings().group(ModItemGroup.PECULIA)));
 
     public static final Item MYTHRIL_HELMET = registerItem("mythril_helmet",
             new ArmorItem(ModArmorMaterials.MYTHRIL, EquipmentSlot.HEAD,
@@ -71,13 +86,13 @@ public class ModItems {
             new HoglinTuskItem(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).food(ModFoodComponents.SCRAMBLED_EGGS_TUSK).maxCount(1)));
 
     public static final Item SACRIFICIAL_DAGGER = registerItem("sacrificial_dagger",
-            new ModSwordItem(ModToolMaterials.SCRAP,1, -2.2f, new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
+            new ModDaggerItem(ModToolMaterials.SCRAP,1, -2.2f, new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
     public static final Item GILDED_SACRIFICIAL_DAGGER = registerItem("gilded_sacrificial_dagger",
-            new ModSwordItem(ModToolMaterials.SCRAP,2, -2.0f, new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
+            new ModDaggerItem(ModToolMaterials.SCRAP,2, -2.0f, new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
     public static final Item DIPPED_SACRIFICIAL_DAGGER = registerItem("dipped_sacrificial_dagger",
-             new ModDippedItem(ModToolMaterials.SCRAP,1, -2.2f, new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
+             new ModDippedItem(ModToolMaterials.SCRAP,-1, -2.2f, new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
     public static final Item DIPPED_GILDED_SACRIFICIAL_DAGGER = registerItem("dipped_gilded_sacrificial_dagger",
-            new ModDippedItem(ModToolMaterials.SCRAP,2, -2.0f, new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
+            new ModDippedItem(ModToolMaterials.SCRAP,0, -2.0f, new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
     public static final Item ICHOR = registerItem("ichor",
             new Item(new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER)));
     public static final Item SPORODINE = registerItem("sporodine",
@@ -88,9 +103,19 @@ public class ModItems {
     public static final Item DIAMOND_GAUNTLET = registerItem("diamond_gauntlet",
             new ModGauntletItem(ToolMaterials.DIAMOND, 2, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD)));
     public static final Item IRON_GAUNTLET = registerItem("iron_gauntlet",
-            new ModGauntletItem(ToolMaterials.IRON, 1, -2.3f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD)));
+            new ModGauntletItem(ToolMaterials.IRON, 2, -2.3f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD)));
     public static final Item GOLDEN_GAUNTLET = registerItem("golden_gauntlet",
-            new ModGauntletItem(ToolMaterials.GOLD, 1, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD)));
+            new ModGauntletItem(ToolMaterials.GOLD, 3, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD)));
+    public static final Item COPPER_CLEAVER = registerItem("copper_cleaver",
+            new ModDaggerItem(ModToolMaterials.COPPER,1, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).maxCount(1)));
+    public static final Item GILDED_COPPER_CLEAVER = registerItem("gilded_copper_cleaver",
+            new ModDaggerItem(ModToolMaterials.COPPER,2, -2.0f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).maxCount(1)));
+    public static final Item CHARGED_COPPER_CLEAVER = registerItem("charged_copper_cleaver",
+            new ElectrocutedItem(ModToolMaterials.COPPER,0, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).maxCount(1)));
+    public static final Item CHARGED_GILDED_COPPER_CLEAVER = registerItem("charged_gilded_copper_cleaver",
+            new ElectrocutedItem(ModToolMaterials.COPPER,1, -2.0f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).maxCount(1)));
+
+
     public static final Item SWEET_ROLL = registerItem("sweet_roll",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.SWEET_ROLL)));
     public static final Item HARD_BOILED_EGG = registerItem("hard_boiled_egg",

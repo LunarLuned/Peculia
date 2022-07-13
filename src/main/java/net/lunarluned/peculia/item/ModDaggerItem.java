@@ -1,12 +1,13 @@
-package net.lunarluned.peculia.item.custom;
+package net.lunarluned.peculia.item;
 
-import net.lunarluned.peculia.effect.ModEffects;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.Material;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.tag.BlockTags;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
@@ -15,16 +16,18 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class ModDippedItem extends SwordItem {
-    public ModDippedItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
+public class ModDaggerItem extends SwordItem {
+    public ModDaggerItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
-    @Override
-    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        super.postHit(stack, target, attacker);
-        target.addStatusEffect(new StatusEffectInstance(ModEffects.ICHOR, 40, 0));
-        return true;
+    public float getMiningSpeedMultiplier(ItemStack stack, BlockState state) {
+        if (state.isOf(Blocks.COBWEB)) {
+            return 25.0F;
+        } else {
+            Material material = state.getMaterial();
+            return material != Material.PLANT && material != Material.REPLACEABLE_PLANT && !state.isIn(BlockTags.LEAVES) && material != Material.GOURD ? 1.0F : 1.5F;
+        }
     }
 
     @Override
@@ -40,3 +43,4 @@ public class ModDippedItem extends SwordItem {
         return Text.translatable(this.getTranslationKey() + ".desc");
     }
 }
+

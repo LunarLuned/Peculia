@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "peculia:item/charged_copper_cleaver"
+  }
+}

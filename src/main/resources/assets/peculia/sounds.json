@@ -103,5 +103,13 @@
       "peculia:block/poprocks/hit3",
       "peculia:block/poprocks/hit4"
     ]
+  },
+  "music_disc.lulla": {
+    "sounds": [
+      {
+        "name": "peculia:music_disc/lulla",
+        "stream": true
+      }
+    ]
   }
 }

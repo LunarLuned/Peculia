@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "peculia:item/gilded_mythical_blade"
+  }
+}

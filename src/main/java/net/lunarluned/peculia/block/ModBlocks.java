@@ -51,11 +51,11 @@ public class ModBlocks {
                     .mapColor(MapColor.LIGHT_BLUE_GRAY).strength(2f).requiresTool().sounds(ModSoundEvents.MYTHRIL).nonOpaque()), ModItemGroup.PECULIA);
 
     public static final Block SILL = registerBlock("sill",
-            new SillBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.MUD).resistance(1)), ModItemGroup.PECULIA);
+            new SillBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.MUD).strength(2f).resistance(1)), ModItemGroup.PECULIA);
     public static final Block SILL_BRICKS = registerBlock("sill_bricks",
-            new SillBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.MUD_BRICKS).resistance(1)), ModItemGroup.PECULIA);
+            new SillBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.MUD_BRICKS).strength(2f).resistance(1)), ModItemGroup.PECULIA);
     public static final Block CHISELED_SILL_BRICKS = registerBlock("chiseled_sill_bricks",
-            new SillBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.MUD_BRICKS).resistance(1)), ModItemGroup.PECULIA);
+            new SillBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.MUD_BRICKS).strength(2f).resistance(1)), ModItemGroup.PECULIA);
     public static final Block SILL_BRICK_STAIRS = registerBlock("sill_brick_stairs",
             new ModStairsBlock(ModBlocks.SILL_BRICKS.getDefaultState(),FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).nonOpaque().strength(2f).requiresTool().sounds(BlockSoundGroup.MUD_BRICKS)), ModItemGroup.PECULIA);
     public static final Block SILL_BRICK_SLAB = registerBlock("sill_brick_slab",

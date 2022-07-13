@@ -28,6 +28,8 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_POPROCKS_HIT = registerSoundEvent("block.poprocks.hit");
     public static final SoundEvent BLOCK_POPROCKS_FALL = registerSoundEvent("block.poprocks.fall");
 
+    public static final SoundEvent MUSIC_DISC_LULLA = registerSoundEvent("music_disc.lulla");
+
     public static final SoundEvent EFFECT_ANCHORED_TELEPORT_FAIL = registerSoundEvent("effect.anchored_teleport_fail");
 
     public static final SoundEvent BLOCK_ICHOR_STICKER_RELEASE = registerSoundEvent("block.ichor_sticker.release");

@@ -13,8 +13,15 @@ public enum ModToolMaterials implements ToolMaterial {
     MYTHRIL(4, 1967, 10.0F, 3.0F, 20, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{ModItems.MYTHRIL_INGOT});
     }),
+    SHARD(4, 1469, 9.0F, 2.0F, 1, () -> {
+        return Ingredient.ofItems(new ItemConvertible[]{ModItems.MYTHRIL_FRAGMENT});
+    }),
+    COPPER(4, 456, 9.0F, 2.0F, 1, () -> {
+        return Ingredient.ofItems(new ItemConvertible[]{Items.COPPER_INGOT});
+    }),
     SCRAP(4, 890, 9.0F, 4.0F, 1, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{Items.NETHERITE_SCRAP});
+
     });
 
     private final int miningLevel;
