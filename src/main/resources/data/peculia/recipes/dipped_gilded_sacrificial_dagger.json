@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "peculia:gilded_sacrificial_dagger"
+  },
+  "addition": {
+    "item": "peculia:ichor"
+  },
+  "result": {
+    "item": "peculia:dipped_gilded_sacrificial_dagger"
+  }
+}

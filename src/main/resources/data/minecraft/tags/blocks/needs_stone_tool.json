@@ -22,6 +22,8 @@
     "peculia:spinal_brick_stairs",
     "peculia:spinal_tile_stairs",
     "peculia:spinal_brick_wall",
-    "peculia:spinal_tile_wall"
+    "peculia:spinal_tile_wall",
+    "peculia:spinal_pillar",
+    "peculia:chiseled_spinal_bricks"
   ]
 }

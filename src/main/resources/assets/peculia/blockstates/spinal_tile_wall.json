@@ -71,7 +71,7 @@
         "south": "tall"
       },
       "apply": {
-        "model": "peculia:block/spinal_tile_side_tall",
+        "model": "peculia:block/spinal_tile_wall_side_tall",
         "y": 180,
         "uvlock": true
       }
@@ -81,7 +81,7 @@
         "west": "tall"
       },
       "apply": {
-        "model": "peculia:block/spinal_tile_side_tall",
+        "model": "peculia:block/spinal_tile_wall_side_tall",
         "y": 270,
         "uvlock": true
       }

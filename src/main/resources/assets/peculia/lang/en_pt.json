@@ -1,4 +1,5 @@
 {
+  "item.peculia.coalgeode_spawn_egg": "Coal Geode Spawn Egg",
   "item.peculia.diamond_gauntlet": "Gauntlet o' Diamond",
   "item.peculia.iron_gauntlet": "Gauntlet o' Steel",
   "item.peculia.golden_gauntlet": "Gauntlet o' Gold",
@@ -26,12 +27,24 @@
   "item.peculia.cocoa_spread_toast": "Cocoa o' Burn't",
   "item.peculia.mushroom_spread_toast": "Mushroom o' Spread Burn't",
   "item.peculia.pork_spread_toast": "Pork Mush o' Spread Burn't",
+  "item.peculia.copper_cleaver": "Copper Cleaver",
+  "item.peculia.copper_cleaver.desc": "Blank",
+  "item.peculia.gilded_copper_cleaver": "Copper Cleaver",
+  "item.peculia.gilded_copper_cleaver.desc": "Treasured",
+  "item.peculia.charged_copper_cleaver": "Copper Cleaver",
+  "item.peculia.charged_copper_cleaver.desc": "Charged",
+  "item.peculia.charged_gilded_copper_cleaver": "Copper Cleaver",
+  "item.peculia.charged_gilded_copper_cleaver.desc": "Charged, Treasured",
 
 
   "item.peculia.sacrificial_dagger": "Dagger o' Sacrificin'",
-  "item.peculia.gilded_sacrificial_dagger": "Treasured Dagger o' Sacrificin'",
-  "item.peculia.dipped_sacrificial_dagger": "Dagger o' Sacrificin' Dipped In Davy Jones' Stench",
-  "item.peculia.dipped_gilded_sacrificial_dagger": "Treasured Dagger o' Sacrificin' Dipped In Davy Jones' Stench",
+  "item.peculia.sacrificial_dagger.desc": "Blank",
+  "item.peculia.gilded_sacrificial_dagger": "Dagger o' Sacrificin'",
+  "item.peculia.gilded_sacrificial_dagger.desc": "Treasured",
+  "item.peculia.dipped_sacrificial_dagger": "Dagger o' Sacrificin'",
+  "item.peculia.dipped_sacrificial_dagger.desc": "Davy Jones' Stench",
+  "item.peculia.dipped_gilded_sacrificial_dagger": "Dagger o' Sacrificin'",
+  "item.peculia.dipped_gilded_sacrificial_dagger.desc": "Davy Jones' Stench, Treasured",
   "item.peculia.hoglin_tusk": "Beast's Tusk",
   "item.peculia.crimson_stew": "Stew o' Fungus",
   "item.peculia.warped_stew": "Stew o' Unearthly",
@@ -39,6 +52,8 @@
   "item.peculia.mushroom_stew_tusk": "Shroom Goulash",
   "item.peculia.egg_tusk": "Cackle in a Tusk",
   "item.peculia.scrambled_eggs_tusk": "Scramble",
+  "item.peculia.ichor": "Davy Jones' Stench",
+  "item.peculia.sporodine": "Soap o' Toxin",
 
   "block.peculia.compressed_cobblestone": "Box o' Pebbles",
   "block.peculia.contained_cobblestone": "Crate o' Pebbles",
@@ -54,6 +69,20 @@
   "block.peculia.sculk_spine": "Portrudin' Spine",
   "block.peculia.spinal_bricks": "Brick o' Spines",
   "block.peculia.spinal_tiles": "Tile o' Spines",
+  "block.peculia.spinal_brick_stairs": "Stairs o' Spine",
+  "block.peculia.spinal_brick_slab": "Slabs o' Spine",
+  "block.peculia.spinal_brick_wall": "Wall o' Spine",
+  "block.peculia.spinal_tile_stairs": "Stairs o' Tiled Spine",
+  "block.peculia.spinal_tile_slab": "Slab o' Tiled Spine",
+  "block.peculia.spinal_tile_wall": "Wall o' Tiled Spine",
+  "block.peculia.spinal_pillar": "Pillar o' Spine",
+  "block.peculia.chiseled_spinal_bricks": "Carv'd Spinely Bricks",
+
+  "block.peculia.ichor_mold_vein": "Ichor Mold Vein",
+  "block.peculia.ichor_mold": "Ichor Mold",
+  "block.peculia.ichor_nylium": "Ichor Nylium",
+  "block.peculia.ichor_sticker": "Ichor Sticker",
+  "block.peculia.crumbling_netherrack": "Crumbling Netherrack",
 
 
   "block.peculia.crumbling_end_stone": "Fallin' End stone",
@@ -76,7 +105,7 @@
   "block.peculia.poprock_brick_stairs": "Stairs o' Edible Gems",
   "block.peculia.poprock_brick_slab": "Slab o' Edible Gems",
   "block.peculia.poprock_brick_wall": "Wall o' Edible Gems",
-  "block.peculia.chiseled_poprock_bricks": "Chiseled Poprock Bricks",
+  "block.peculia.chiseled_poprock_bricks": "Carv'd Edible Gems",
   "block.peculia.mythril_bricks": "Brick o' Mythical Gems",
   "block.peculia.mythril_brick_stairs": "Stairs o' Mythical Gems",
   "block.peculia.mythril_brick_slab": "Slab o' Mythical Gems",
@@ -87,6 +116,11 @@
   "block.peculia.dragonglass_pane": "Porthole o' The Wyvern",
   "block.peculia.void_lamp": "Lamp o' Darkn'",
   "block.peculia.condensed_void": "Deepest Darkn'",
+
+  "item.peculia.music_disc_lulla": "Music Disc",
+  "item.peculia.music_disc_lulla.desc": "Amber Gray - Lulla",
+  "item.peculia.disc_fragment_lulla": "Disc Fragment",
+  "item.peculia.disc_fragment_lulla.desc": "Amber Gray - Lulla",
 
   "item.peculia.mythril_helmet": "Flyin Dutchman's Mythical Helmet",
   "item.peculia.mythril_chestplate": "Flyin Dutchman's Mythical Doublet",
@@ -105,7 +139,14 @@
   "item.peculia.mythril_spearel": "The Oversized Spoo'n",
   "item.peculia.mythril_gauntlet": "Gauntlets of The Fallen One",
   "item.peculia.silltar_bucket": "work in progress",
-  "item.peculia.coalgeode_spawn_egg": "Coal Geode Spawn Egg",
+  "item.peculia.mythical_blade": "Blade o' Myth",
+  "item.peculia.mythical_blade.desc": "Blank",
+  "item.peculia.gilded_mythical_blade": "Blade o' Myth",
+  "item.peculia.gilded_mythical_blade.desc": "Treasured",
+  "item.peculia.void_touched_mythical_blade": "Blade o' Myth",
+  "item.peculia.void_touched_mythical_blade.desc": "Touch of the Deep",
+  "item.peculia.void_touched_gilded_mythical_blade": "Blade o' Myth",
+  "item.peculia.void_touched_gilded_mythical_blade.desc": "Touch of the Deep, Treasured",
 
 
   "itemGroup.peculia.peculia": "Peculiar Dark Sea",
@@ -149,13 +190,26 @@
   "enchantment.peculia.panicked.desc": "Kicks ye senses in after takin' too much damage",
   "enchantment.peculia.leeching.desc": "Leeches from the blood of ye enemies.",
 
+  "advancements.adventure.obtain_dagger.title": "Thats me knife!",
+  "advancements.adventure.obtain_dagger.description": "Get ye self a dagger from one of the worlds.",
+  "advancements.adventure.upgrade_dagger.title": "I've got wooden fingers!",
+  "advancements.adventure.upgrade_dagger.description": "Not lose a finger while upgrading ye Dagger",
+  "advancements.adventure.triple_trouble.title": "Theres three of ye?",
+  "advancements.adventure.triple_trouble.description": "Have every fully upgraded Dagger",
+
   "effect.peculia.electrocuted": "Wrath of 'de Sky",
   "effect.peculia.ichor": "Davy Jones' Stench",
   "effect.peculia.void_touched": "Touch of the Deep",
+  "effect.peculia.anchored": "Anchored in Place",
+  "effect.peculia.ichor_resistance": "Resistance o' the Stench",
 
   "effect.echo.attack.hit": "Strong Echoed Attack",
+  "effect.anchored_teleport_fail": "Ender Pearl fails",
+  "block.ichor_sticker.release": "Ichor Sticker Bulb Breaks",
 
-  "death.attack.electrocution": "%1$s faced the Wrath of 'de Sky",
+  "death.attack.electrocution": "%1$s faced the wrath of 'de sky",
   "death.attack.condensed": "%1$s was swallowed by The Dark",
-  "death.attack.ichor": "%1$s faced the waving fog o' Davy Jones' Stench"
+  "death.attack.ichor": "%1$s faced the waving fog o' Davy Jones' Stench",
+  "death.attack.ichor.player": "%1$s faced the waving fog while fighting %2$s",
+  "death.attack.electrocuted.player": "%1$s faced the wrath of 'de sky while fighting %2$s"
 }

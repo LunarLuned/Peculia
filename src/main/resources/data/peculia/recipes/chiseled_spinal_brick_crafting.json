@@ -6,12 +6,12 @@
     ],
     "key": {
         "#": {
-            "item": "peculia:dark_purpur_slab"
+            "item": "peculia:spinal_brick_slab"
         }
     },
     "result": {
-        "item": "peculia:chiseled_dark_purpur",
+        "item": "peculia:chiseled_spinal_brick",
         "count": 1
     },
-    "group": "chiseled_dark_purpur"
+    "group": "chiseled_spinal_brick"
 }

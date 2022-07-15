@@ -1,4 +1,5 @@
 {
+  "item.peculia.coalgeode_spawn_egg": "Coal Geode Spawn Egg",
   "item.peculia.diamond_gauntlet": "Diamond Gauntlet",
   "item.peculia.iron_gauntlet": "Iron Gauntlet",
   "item.peculia.golden_gauntlet": "Golden Gauntlet",
@@ -140,7 +141,6 @@
   "item.peculia.mythril_spearel": "Mythril Spearel",
   "item.peculia.mythril_gauntlet": "Mythril Gauntlet",
   "item.peculia.silltar_bucket": "work in progress",
-  "item.peculia.coalgeode_spawn_egg": "Coal Geode Spawn Egg",
   "item.peculia.mythical_blade": "Mythical Blade",
   "item.peculia.mythical_blade.desc": "Blank",
   "item.peculia.gilded_mythical_blade": "Mythical Blade",
@@ -219,6 +219,8 @@
   "block.ichor_sticker.release": "Ichor Sticker Bulb Breaks",
 
   "death.attack.electrocution": "%1$s was electrocuted to death",
-  "death.attack.condensed": "%1$s was swallowed by the Void",
-  "death.attack.ichor": "%1$s burnt to death via Ichor"
+  "death.attack.condensed": "%1$s was engulfed by the void",
+  "death.attack.ichor": "%1$s was scorched",
+  "death.attack.ichor.player": "%1$s was scorched whilst fighting %2$s",
+  "death.attack.electrocuted.player": "%1$s electrocuted to death whilst fighting %2$s"
 }

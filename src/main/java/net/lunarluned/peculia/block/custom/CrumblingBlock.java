@@ -26,7 +26,7 @@ public class CrumblingBlock extends Block {
         setToAir(state, world, pos);
         super.onSteppedOn(world, pos, state, entity);
 
-        world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_STONE_BREAK, SoundCategory.BLOCKS, 1F, 1.0F);
+        world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_NETHERRACK_BREAK, SoundCategory.BLOCKS, 1F, 1.0F);
         world.addBlockBreakParticles(pos, state);
     }
 

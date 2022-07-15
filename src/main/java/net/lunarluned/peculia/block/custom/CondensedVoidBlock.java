@@ -40,6 +40,24 @@ public class CondensedVoidBlock extends Block {
                 player.damage(new Peculia.CondensedVoidDamageSource(player), 2);
             }
         }
+        if (itemStack.isOf(ModItems.GILDED_MYTHICAL_BLADE)) {
+            itemStack.decrement(1);
+            //add a custom sound later asnne
+            world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.BLOCK_POINTED_DRIPSTONE_DRIP_WATER_INTO_CAULDRON, SoundCategory.NEUTRAL, 1.0F, 1.0F);
+            if (itemStack.isEmpty()) {
+                player.setStackInHand(hand, new ItemStack(ModItems.VOID_TOUCHED_GILDED_MYTHICAL_BLADE));
+                player.damage(new Peculia.CondensedVoidDamageSource(player), 1);
+            }
+        }
+        if (itemStack.isOf(ModItems.MYTHICAL_BLADE)) {
+            itemStack.decrement(1);
+            //add a custom sound later asnne
+            world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.BLOCK_POINTED_DRIPSTONE_DRIP_WATER_INTO_CAULDRON, SoundCategory.NEUTRAL, 1.0F, 1.0F);
+            if (itemStack.isEmpty()) {
+                player.setStackInHand(hand, new ItemStack(ModItems.VOID_TOUCHED_MYTHICAL_BLADE));
+                player.damage(new Peculia.CondensedVoidDamageSource(player), 1);
+            }
+        }
         return super.onUse(state, world, pos, player, hand, hit);
     }
     @Override

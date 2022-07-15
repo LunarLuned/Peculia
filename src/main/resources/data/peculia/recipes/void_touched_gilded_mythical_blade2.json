@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "peculia:void_touched_mythical_blade"
+  },
+  "addition": {
+    "item": "minecraft:gold_ingot"
+  },
+  "result": {
+    "item": "peculia:void_touched_gilded_mythical_blade"
+  }
+}

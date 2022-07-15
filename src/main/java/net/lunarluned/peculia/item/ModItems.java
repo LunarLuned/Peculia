@@ -43,7 +43,7 @@ public class ModItems {
             new ModDaggerItem(ModToolMaterials.SHARD,3, -2.0f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item VOID_TOUCHED_MYTHICAL_BLADE = registerItem("void_touched_mythical_blade",
             new VoidTouchedItem(ModToolMaterials.SHARD,0, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
-    public static final Item DIPPED_GILDED_MYTHICAL_BLADE = registerItem("void_touched_gilded_mythical_blade",
+    public static final Item VOID_TOUCHED_GILDED_MYTHICAL_BLADE = registerItem("void_touched_gilded_mythical_blade",
             new VoidTouchedItem(ModToolMaterials.SHARD,1, -2.0f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
 
 

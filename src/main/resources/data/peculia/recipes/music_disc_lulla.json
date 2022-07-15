@@ -7,14 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:bone_block"
+      "item": "peculia:disc_fragment_lulla"
     },
     "E": {
-      "item": "minecraft:sculk_vein"
+      "item": "peculia:bottle_of_condensed_void"
     }
   },
   "result": {
-    "item": "peculia:sculk_spine",
-    "count": 8
+    "item": "peculia:music_disc_lulla",
+    "count": 1
   }
 }
