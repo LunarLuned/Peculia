@@ -13,6 +13,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
@@ -105,9 +106,13 @@ public class ModBlocks {
     public static final Block ICHOR_STICKER = registerBlock("ichor_sticker",
             new IchorStickerBlock(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.NETHER_WART).nonOpaque().luminance(15).strength(1f)), ModItemGroup.PECULIA_NETHER);
     //overworld
-
     public static final Block SCULK_SPINE = registerBlock("sculk_spine",
+            new SculkPillarBlock(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SCULK_CATALYST).requiresTool().resistance(1).strength(2f),
+            UniformIntProvider.create(2, 12)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block SPINAL_PILLAR = registerBlock("spinal_pillar",
             new PillarBlock(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SCULK_CATALYST).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block CHISELED_SPINAL_BRICKS = registerBlock("chiseled_spinal_bricks",
+            new Block(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SCULK_CATALYST).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block SPINAL_BRICKS = registerBlock("spinal_bricks",
             new Block(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SCULK_CATALYST).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block SPINAL_BRICK_STAIRS = registerBlock("spinal_brick_stairs",

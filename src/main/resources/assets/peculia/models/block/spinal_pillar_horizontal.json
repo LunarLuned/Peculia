@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_column_horizontal",
+  "textures": {
+    "end": "peculia:block/spinal_pillar_top",
+    "side": "peculia:block/spinal_pillar"
+  }
+}
+

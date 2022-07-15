@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "peculia:spinal_bricks"
+    },
+    "result": "peculia:spinal_pillar",
+    "count": 1
+}
