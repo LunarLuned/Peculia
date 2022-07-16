@@ -22,6 +22,19 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_MYTHRIL_HIT = registerSoundEvent("block.mythril.hit");
     public static final SoundEvent BLOCK_MYTHRIL_FALL = registerSoundEvent("block.mythril.fall");
 
+    public static final SoundEvent BLOCK_CONDENSED_VOID_BREAK = registerSoundEvent("block.condensed_void.break");
+    public static final SoundEvent BLOCK_CONDENSED_VOID_STEP = registerSoundEvent("block.condensed_void.step");
+    public static final SoundEvent BLOCK_CONDENSED_VOID_PLACE = registerSoundEvent("block.condensed_void.place");
+    public static final SoundEvent BLOCK_CONDENSED_VOID_HIT = registerSoundEvent("block.condensed_void.hit");
+    public static final SoundEvent BLOCK_CONDENSED_VOID_FALL = registerSoundEvent("block.condensed_void.fall");
+
+    public static final SoundEvent BLOCK_VOID_LAMP_BREAK = registerSoundEvent("block.void_lamp.break");
+    public static final SoundEvent BLOCK_VOID_LAMP_STEP = registerSoundEvent("block.void_lamp.step");
+    public static final SoundEvent BLOCK_VOID_LAMP_PLACE = registerSoundEvent("block.void_lamp.place");
+    public static final SoundEvent BLOCK_VOID_LAMP_HIT = registerSoundEvent("block.void_lamp.hit");
+    public static final SoundEvent BLOCK_VOID_LAMP_FALL = registerSoundEvent("block.void_lamp.fall");
+
+
     public static final SoundEvent BLOCK_POPROCKS_BREAK = registerSoundEvent("block.poprocks.break");
     public static final SoundEvent BLOCK_POPROCKS_STEP = registerSoundEvent("block.poprocks.step");
     public static final SoundEvent BLOCK_POPROCKS_PLACE = registerSoundEvent("block.poprocks.place");
@@ -37,6 +50,14 @@ public class ModSoundEvents {
     public static final BlockSoundGroup MYTHRIL = new BlockSoundGroup(1f, 1f,
             ModSoundEvents.BLOCK_MYTHRIL_BREAK, ModSoundEvents.BLOCK_MYTHRIL_STEP, ModSoundEvents.BLOCK_MYTHRIL_PLACE,
             ModSoundEvents.BLOCK_MYTHRIL_HIT, ModSoundEvents.BLOCK_MYTHRIL_FALL);
+
+    public static final BlockSoundGroup CONDENSED_VOID = new BlockSoundGroup(1f, 1f,
+            ModSoundEvents.BLOCK_CONDENSED_VOID_BREAK, ModSoundEvents.BLOCK_CONDENSED_VOID_STEP, ModSoundEvents.BLOCK_CONDENSED_VOID_PLACE,
+            ModSoundEvents.BLOCK_CONDENSED_VOID_HIT, ModSoundEvents.BLOCK_CONDENSED_VOID_FALL);
+
+    public static final BlockSoundGroup VOID_LAMP = new BlockSoundGroup(1f, 1f,
+            ModSoundEvents.BLOCK_VOID_LAMP_BREAK, ModSoundEvents.BLOCK_VOID_LAMP_STEP, ModSoundEvents.BLOCK_VOID_LAMP_PLACE,
+            ModSoundEvents.BLOCK_VOID_LAMP_HIT, ModSoundEvents.BLOCK_VOID_LAMP_FALL);
 
     public static final BlockSoundGroup POPROCKS = new BlockSoundGroup(1f, 1f,
             ModSoundEvents.BLOCK_POPROCKS_BREAK, ModSoundEvents.BLOCK_POPROCKS_STEP, ModSoundEvents.BLOCK_POPROCKS_PLACE,

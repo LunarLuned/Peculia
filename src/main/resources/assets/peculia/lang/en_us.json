@@ -219,8 +219,9 @@
   "block.ichor_sticker.release": "Ichor Sticker Bulb Breaks",
 
   "death.attack.electrocution": "%1$s was electrocuted to death",
+  "death.attack.electrocuted.player": "%1$s electrocuted to death whilst fighting %2$s",
   "death.attack.condensed": "%1$s was engulfed by the void",
-  "death.attack.ichor": "%1$s was scorched",
-  "death.attack.ichor.player": "%1$s was scorched whilst fighting %2$s",
-  "death.attack.electrocuted.player": "%1$s electrocuted to death whilst fighting %2$s"
+  "death.attack.condensed.player": "%1$s was engulfed by the void whilst fighting %2$s",
+  "death.attack.ichor": "%1$s couldn't stop burning",
+  "death.attack.ichor.player": "%1$s couldn't stop burning whilst fighting %2$s"
 }

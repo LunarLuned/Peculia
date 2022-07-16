@@ -78,9 +78,9 @@ public class ModBlocks {
             new WallBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).strength(2f).requiresTool().sounds(BlockSoundGroup.STONE).nonOpaque()), ModItemGroup.PECULIA);
 
     public static final Block VOID_LAMP = registerBlock("void_lamp",
-            new VoidLampBlock(FabricBlockSettings.of(Material.REDSTONE_LAMP, MapColor.PALE_PURPLE).sounds(BlockSoundGroup.GLASS).luminance(12).requiresTool().hardness(0.3f).strength(0.3f)), ModItemGroup.PECULIA);
+            new VoidLampBlock(FabricBlockSettings.of(Material.REDSTONE_LAMP, MapColor.PALE_PURPLE).sounds(ModSoundEvents.VOID_LAMP).luminance(12).requiresTool().hardness(0.3f).strength(0.3f)), ModItemGroup.PECULIA);
     public static final Block CONDENSED_VOID = registerBlock("condensed_void",
-            new CondensedVoidBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).resistance(9999).hardness(9999).noCollision().luminance(12).dropsNothing()), ModItemGroup.PECULIA);
+            new CondensedVoidBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).sounds(ModSoundEvents.CONDENSED_VOID).resistance(9999).hardness(9999).noCollision().luminance(12).dropsNothing()), ModItemGroup.PECULIA);
 
     public static final Block SILLTAR_FLUID_BLOCK = registerBlockWithoutBlockItem("silltar_fluid",
             new ModFluidBlock(ModFluids.SILLTAR_STILL, FabricBlockSettings.of(Material.WATER).nonOpaque().noCollision().dropsNothing()), ModItemGroup.PECULIA);

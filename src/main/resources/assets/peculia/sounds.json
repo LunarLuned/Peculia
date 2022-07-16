@@ -61,6 +61,88 @@
       "peculia:block/mythril/place5"
     ]
   },
+
+
+  "block.void_lamp.place": {
+    "sounds": [
+      "peculia:block/void_lamp/place1",
+      "peculia:block/void_lamp/place2",
+      "peculia:block/void_lamp/place3",
+      "peculia:block/void_lamp/place4",
+      "peculia:block/void_lamp/place5"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.void_lamp.break": {
+    "sounds": [
+      "peculia:block/void_lamp/break1"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.void_lamp.hit": {
+    "sounds": [
+      "peculia:block/void_lamp/hit1"
+
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.void_lamp.step": {
+    "sounds": [
+      "peculia:block/void_lamp/step1",
+      "peculia:block/void_lamp/step2",
+      "peculia:block/void_lamp/step3",
+      "peculia:block/void_lamp/step4",
+      "peculia:block/void_lamp/step5"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.void_lamp.fall": {
+    "sounds": [
+      "peculia:block/void_lamp/fall1"
+    ]
+  },
+
+
+  "block.condensed_void.place": {
+    "sounds": [
+      "peculia:block/condensed_void/place1",
+      "peculia:block/condensed_void/place2",
+      "peculia:block/condensed_void/place3",
+      "peculia:block/condensed_void/place4",
+      "peculia:block/condensed_void/place5"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.condensed_void.break": {
+    "sounds": [
+      "peculia:block/condensed_void/break1"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.condensed_void.hit": {
+    "sounds": [
+      "peculia:block/condensed_void/hit1"
+
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.condensed_void.step": {
+    "sounds": [
+      "peculia:block/condensed_void/step1",
+      "peculia:block/condensed_void/step2",
+      "peculia:block/condensed_void/step3",
+      "peculia:block/condensed_void/step4",
+      "peculia:block/condensed_void/step5"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.condensed_void.fall": {
+    "sounds": [
+      "peculia:block/condensed_void/fall1"
+    ]
+  },
+
+
   "block.poprocks.place": {
     "sounds": [
       "peculia:block/poprocks/place1",
