@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "peculia:block/polished_fluorite_tile_slab"
+    },
+    "type=double": {
+      "model": "peculia:block/polished_fluorite_tiles"
+    },
+    "type=top": {
+      "model": "peculia:block/polished_fluorite_tile_slab_top"
+    }
+  }
+}

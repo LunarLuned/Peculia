@@ -52,6 +52,7 @@ public class Peculia implements ModInitializer {
 		ModEffects.registerVoidTouchedEffect();
 		ModEffects.registerAnchoredEffect();
 		ModEffects.registerIchorResistanceEffect();
+		ModEffects.registerPanickedEffect();
 
 		ModPotions.registerIchorPotion();
 		ModPotions.registerextIchorPotion();

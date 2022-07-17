@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "peculia:block/polished_fluorite_tiles",
+    "top": "peculia:block/polished_fluorite_tiles",
+    "side": "peculia:block/polished_fluorite_tiles"
+  }
+}

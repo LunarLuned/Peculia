@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "peculia:eroded_end_stone",
+    "peculia:crumbling_stone",
+    "peculia:crumbling_end_stone",
+    "peculia:crumbling_netherrack",
+    "peculia:crumbling_deepslate",
+    "peculia:ichor_mold",
+    "peculia:ichor_nylium",
+    "peculia:sill",
+    "peculia:fluorite"
+  ]
+}

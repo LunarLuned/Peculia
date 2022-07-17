@@ -14,6 +14,7 @@ public class ModEffects {
     public static StatusEffect ANCHORED;
     public static StatusEffect ELECTROCUTED;
     public static StatusEffect ICHOR_RESISTANCE;
+    public static StatusEffect PANICKED;
 
     public static StatusEffect registerIchorStatusEffect(String name) {
         return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new IchorEffect(StatusEffectCategory.HARMFUL, 15766579));
@@ -30,6 +31,9 @@ public class ModEffects {
     public static StatusEffect registerIchorResistanceStatusEffect(String name) {
         return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new IchorResistanceEffect(StatusEffectCategory.BENEFICIAL, 1385267));
     }
+    public static StatusEffect registerPanickedStatusEffect(String name) {
+        return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new PanickedEffect(StatusEffectCategory.BENEFICIAL, 16743526));
+    }
 
     public static void registerIchorEffect() { ICHOR = registerIchorStatusEffect("ichor");
     }
@@ -42,4 +46,5 @@ public class ModEffects {
         ELECTROCUTED = registerElectrocutedStatusEffect("electrocuted");
     }
     public static void registerIchorResistanceEffect() { ICHOR_RESISTANCE = registerIchorResistanceStatusEffect("ichor_resistance");}
+    public static void registerPanickedEffect() { PANICKED = registerPanickedStatusEffect("panicked");}
 }

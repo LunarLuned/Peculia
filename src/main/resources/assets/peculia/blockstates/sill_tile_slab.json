@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "peculia:block/sill_tile_slab"
+    },
+    "type=double": {
+      "model": "peculia:block/sill_tiles"
+    },
+    "type=top": {
+      "model": "peculia:block/sill_tile_slab_top"
+    }
+  }
+}

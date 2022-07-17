@@ -4,9 +4,13 @@
     "peculia:mythril_brick_slab",
     "peculia:poprock_brick_slab",
     "peculia:sill_brick_slab",
+    "peculia:sill_tile_slab",
     "peculia:dark_purpur_slab",
     "peculia:snow_brick_slab",
     "peculia:spinal_brick_slab",
-    "peculia:spinal_tile_slab"
-    ]
+    "peculia:spinal_tile_slab",
+    "peculia:polished_fluorite_slab",
+    "peculia:polished_fluorite_brick_slab",
+    "peculia:polished_fluorite_tile_slab"
+  ]
 }

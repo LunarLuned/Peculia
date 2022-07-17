@@ -4,9 +4,13 @@
     "peculia:mythril_brick_stairs",
     "peculia:poprock_brick_stairs",
     "peculia:sill_brick_stairs",
+    "peculia:sill_tile_stairs",
     "peculia:dark_purpur_stairs",
     "peculia:snow_brick_stairs",
     "peculia:spinal_brick_stairs",
-    "peculia:spinal_tile_stairs"
+    "peculia:spinal_tile_stairs",
+    "peculia:polished_fluorite_stairs",
+    "peculia:polished_fluorite_brick_stairs",
+    "peculia:polished_fluorite_tile_stairs"
     ]
 }

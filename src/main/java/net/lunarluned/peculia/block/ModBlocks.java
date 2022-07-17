@@ -64,6 +64,47 @@ public class ModBlocks {
     public static final Block SILL_BRICK_WALL = registerBlock("sill_brick_wall",
             new WallBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.MUD_BRICKS).nonOpaque()), ModItemGroup.PECULIA);
 
+    public static final Block SILL_TILES = registerBlock("sill_tiles",
+            new SillBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.MUD).strength(2f).resistance(1)), ModItemGroup.PECULIA);
+    public static final Block SILL_TILE_STAIRS = registerBlock("sill_tile_stairs",
+            new ModStairsBlock(ModBlocks.SILL_BRICKS.getDefaultState(),FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.MUD_BRICKS)), ModItemGroup.PECULIA);
+    public static final Block SILL_TILE_SLAB = registerBlock("sill_tile_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.MUD_BRICKS)), ModItemGroup.PECULIA);
+    public static final Block SILL_TILE_WALL = registerBlock("sill_tile_wall",
+            new WallBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.MUD_BRICKS)), ModItemGroup.PECULIA);
+
+    public static final Block FLUORITE = registerBlock("fluorite",
+            new Block(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.CYAN).sounds(BlockSoundGroup.AMETHYST_CLUSTER).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA);
+
+    public static final Block POLISHED_FLUORITE = registerBlock("polished_fluorite",
+            new Block(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.CYAN).sounds(BlockSoundGroup.AMETHYST_CLUSTER).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA);
+    public static final Block POLISHED_FLUORITE_STAIRS = registerBlock("polished_fluorite_stairs",
+            new ModStairsBlock(ModBlocks.POLISHED_FLUORITE.getDefaultState(),FabricBlockSettings.of(Material.STONE).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER)), ModItemGroup.PECULIA);
+    public static final Block POLISHED_FLUORITE_SLAB = registerBlock("polished_fluorite_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER)), ModItemGroup.PECULIA);
+    public static final Block POLISHED_FLUORITE_WALL = registerBlock("polished_fluorite_wall",
+            new WallBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER)), ModItemGroup.PECULIA);
+
+
+    public static final Block POLISHED_FLUORITE_BRICKS = registerBlock("polished_fluorite_bricks",
+            new Block(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.CYAN).sounds(BlockSoundGroup.AMETHYST_CLUSTER).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA);
+    public static final Block POLISHED_FLUORITE_BRICK_STAIRS = registerBlock("polished_fluorite_brick_stairs",
+            new ModStairsBlock(ModBlocks.POLISHED_FLUORITE_BRICKS.getDefaultState(),FabricBlockSettings.of(Material.STONE).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER)), ModItemGroup.PECULIA);
+    public static final Block POLISHED_FLUORITE_BRICK_SLAB = registerBlock("polished_fluorite_brick_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER)), ModItemGroup.PECULIA);
+    public static final Block POLISHED_FLUORITE_BRICK_WALL = registerBlock("polished_fluorite_brick_wall",
+            new WallBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER)), ModItemGroup.PECULIA);
+
+    public static final Block POLISHED_FLUORITE_TILES = registerBlock("polished_fluorite_tiles",
+            new Block(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.CYAN).sounds(BlockSoundGroup.AMETHYST_CLUSTER).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA);
+    public static final Block POLISHED_FLUORITE_TILE_STAIRS = registerBlock("polished_fluorite_tile_stairs",
+            new ModStairsBlock(ModBlocks.SILL_BRICKS.getDefaultState(),FabricBlockSettings.of(Material.STONE).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER)), ModItemGroup.PECULIA);
+    public static final Block POLISHED_FLUORITE_TILE_SLAB = registerBlock("polished_fluorite_tile_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER)), ModItemGroup.PECULIA);
+    public static final Block POLISHED_FLUORITE_TILE_WALL = registerBlock("polished_fluorite_tile_wall",
+            new WallBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER)), ModItemGroup.PECULIA);
+
+
     public static final Block DARK_PURPUR = registerBlock("dark_purpur",
             new Block(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).sounds(BlockSoundGroup.STONE).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA);
     public static final Block DARK_PURPUR_PILLAR = registerBlock("dark_purpur_pillar",
@@ -78,7 +119,7 @@ public class ModBlocks {
             new WallBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).strength(2f).requiresTool().sounds(BlockSoundGroup.STONE).nonOpaque()), ModItemGroup.PECULIA);
 
     public static final Block VOID_LAMP = registerBlock("void_lamp",
-            new VoidLampBlock(FabricBlockSettings.of(Material.REDSTONE_LAMP, MapColor.PALE_PURPLE).sounds(ModSoundEvents.VOID_LAMP).luminance(12).requiresTool().hardness(0.3f).strength(0.3f)), ModItemGroup.PECULIA);
+            new VoidLampBlock(FabricBlockSettings.of(Material.REDSTONE_LAMP, MapColor.PALE_PURPLE).sounds(ModSoundEvents.VOID_LAMP).luminance(12).requiresTool().hardness(2f).strength(2f)), ModItemGroup.PECULIA);
     public static final Block CONDENSED_VOID = registerBlock("condensed_void",
             new CondensedVoidBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).sounds(ModSoundEvents.CONDENSED_VOID).resistance(9999).hardness(9999).noCollision().luminance(12).dropsNothing()), ModItemGroup.PECULIA);
 

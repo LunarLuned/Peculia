@@ -1,5 +1,6 @@
 package net.lunarluned.peculia.enchantment;
 
+import net.lunarluned.peculia.effect.ModEffects;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
@@ -18,9 +19,7 @@ public class PanickedEnchantment extends Enchantment {
     public void onUserDamaged(LivingEntity user, Entity target, int level) {
         if (user instanceof PlayerEntity) {
             if (user.getHealth() < 10.0F) {
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 20 * 2 * level, level - 1));
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 20 * 2 * level));
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 20 * 2 * level, level - 1));
+            user.addStatusEffect(new StatusEffectInstance(ModEffects.PANICKED, 10 * 2 * level, level - 1));
     }
             super.onUserDamaged(user, target, level);
 }
