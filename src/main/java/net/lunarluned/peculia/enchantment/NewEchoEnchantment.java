@@ -33,10 +33,7 @@ public class NewEchoEnchantment extends Enchantment {
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         if (user instanceof PlayerEntity player && player.getRandom().nextInt(100) <= PeculiaConfig.getIntValue("echo_chance")) {
-            player.world.playSound(null, player.getBlockPos(), ModSoundEvents.ECHO_ATTACK_HIT, SoundCategory.PLAYERS, 1.0F, 1.0F);
-            ItemStack item = player.getStackInHand(Hand.MAIN_HAND);
-            EquipmentSlot hand = EquipmentSlot.MAINHAND;
-            //target.damage(DamageSource.GENERIC, item.getAttributeModifiers(hand).get(getAttackDamage()));
+
         }
     }
     @Override

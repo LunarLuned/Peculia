@@ -22,6 +22,18 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_MYTHRIL_HIT = registerSoundEvent("block.mythril.hit");
     public static final SoundEvent BLOCK_MYTHRIL_FALL = registerSoundEvent("block.mythril.fall");
 
+    public static final SoundEvent BLOCK_FLUORITE_BREAK = registerSoundEvent("block.fluorite.break");
+    public static final SoundEvent BLOCK_FLUORITE_STEP = registerSoundEvent("block.fluorite.step");
+    public static final SoundEvent BLOCK_FLUORITE_PLACE = registerSoundEvent("block.fluorite.place");
+    public static final SoundEvent BLOCK_FLUORITE_HIT = registerSoundEvent("block.fluorite.hit");
+    public static final SoundEvent BLOCK_FLUORITE_FALL = registerSoundEvent("block.fluorite.fall");
+
+    public static final SoundEvent BLOCK_FLUORITE_BRICKS_BREAK = registerSoundEvent("block.fluorite_bricks.break");
+    public static final SoundEvent BLOCK_FLUORITE_BRICKS_STEP = registerSoundEvent("block.fluorite_bricks.step");
+    public static final SoundEvent BLOCK_FLUORITE_BRICKS_PLACE = registerSoundEvent("block.fluorite_bricks.place");
+    public static final SoundEvent BLOCK_FLUORITE_BRICKS_HIT = registerSoundEvent("block.fluorite_bricks.hit");
+    public static final SoundEvent BLOCK_FLUORITE_BRICKS_FALL = registerSoundEvent("block.fluorite_bricks.fall");
+
     public static final SoundEvent BLOCK_CONDENSED_VOID_BREAK = registerSoundEvent("block.condensed_void.break");
     public static final SoundEvent BLOCK_CONDENSED_VOID_STEP = registerSoundEvent("block.condensed_void.step");
     public static final SoundEvent BLOCK_CONDENSED_VOID_PLACE = registerSoundEvent("block.condensed_void.place");
@@ -50,6 +62,14 @@ public class ModSoundEvents {
     public static final BlockSoundGroup MYTHRIL = new BlockSoundGroup(1f, 1f,
             ModSoundEvents.BLOCK_MYTHRIL_BREAK, ModSoundEvents.BLOCK_MYTHRIL_STEP, ModSoundEvents.BLOCK_MYTHRIL_PLACE,
             ModSoundEvents.BLOCK_MYTHRIL_HIT, ModSoundEvents.BLOCK_MYTHRIL_FALL);
+
+    public static final BlockSoundGroup FLUORITE = new BlockSoundGroup(1f, 1f,
+            ModSoundEvents.BLOCK_FLUORITE_BREAK, ModSoundEvents.BLOCK_FLUORITE_STEP, ModSoundEvents.BLOCK_FLUORITE_PLACE,
+            ModSoundEvents.BLOCK_FLUORITE_HIT, ModSoundEvents.BLOCK_FLUORITE_FALL);
+
+    public static final BlockSoundGroup FLUORITE_BRICKS = new BlockSoundGroup(1f, 1f,
+            ModSoundEvents.BLOCK_FLUORITE_BRICKS_BREAK, ModSoundEvents.BLOCK_FLUORITE_BRICKS_STEP, ModSoundEvents.BLOCK_FLUORITE_BRICKS_PLACE,
+            ModSoundEvents.BLOCK_FLUORITE_BRICKS_HIT, ModSoundEvents.BLOCK_FLUORITE_BRICKS_FALL);
 
     public static final BlockSoundGroup CONDENSED_VOID = new BlockSoundGroup(1f, 1f,
             ModSoundEvents.BLOCK_CONDENSED_VOID_BREAK, ModSoundEvents.BLOCK_CONDENSED_VOID_STEP, ModSoundEvents.BLOCK_CONDENSED_VOID_PLACE,

@@ -44,4 +44,8 @@ public class ModPlacedFeatures {
             ModConfiguredFeatures.CRUMBLING_END_STONE, ModOreFeatures.modifiersWithCount(4,
                     HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0), YOffset.aboveBottom(100))));
 
+    public static final RegistryEntry<PlacedFeature> ORE_FLUORITE = PlacedFeatures.register("fluorite",
+            ModConfiguredFeatures.FLUORITE, ModOreFeatures.modifiersWithCount(2,
+                    HeightRangePlacementModifier.uniform(YOffset.aboveBottom(10), YOffset.aboveBottom(40))));
+
 }

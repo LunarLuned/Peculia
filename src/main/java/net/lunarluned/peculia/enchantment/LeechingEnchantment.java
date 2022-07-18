@@ -1,7 +1,6 @@
 package net.lunarluned.peculia.enchantment;
 
 import net.lunarluned.peculia.item.custom.ModHoeItem;
-import net.lunarluned.peculia.item.custom.ModScytheItem;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;

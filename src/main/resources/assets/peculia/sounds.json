@@ -19,6 +19,109 @@
     ]
   },
 
+  "block.fluorite_bricks.place": {
+    "sounds": [
+      "peculia:block/fluorite_bricks/break1",
+      "peculia:block/fluorite_bricks/break2",
+      "peculia:block/fluorite_bricks/break3",
+      "peculia:block/fluorite_bricks/break4"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.fluorite_bricks.break": {
+    "sounds": [
+      "peculia:block/fluorite_bricks/break1",
+      "peculia:block/fluorite_bricks/break2",
+      "peculia:block/fluorite_bricks/break3",
+      "peculia:block/fluorite_bricks/break4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.fluorite_bricks.hit": {
+    "sounds": [
+      "peculia:block/fluorite_bricks/break1",
+      "peculia:block/fluorite_bricks/break2",
+      "peculia:block/fluorite_bricks/break3",
+      "peculia:block/fluorite_bricks/break4"
+
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.fluorite_bricks.step": {
+    "sounds": [
+      "peculia:block/fluorite_bricks/step1",
+      "peculia:block/fluorite_bricks/step2",
+      "peculia:block/fluorite_bricks/step3",
+      "peculia:block/fluorite_bricks/step4",
+      "peculia:block/fluorite_bricks/step5",
+      "peculia:block/fluorite_bricks/step6"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.fluorite_bricks.fall": {
+    "sounds": [
+      "peculia:block/fluorite_bricks/step1",
+      "peculia:block/fluorite_bricks/step2",
+      "peculia:block/fluorite_bricks/step3",
+      "peculia:block/fluorite_bricks/step4",
+      "peculia:block/fluorite_bricks/step5",
+      "peculia:block/fluorite_bricks/step6"
+    ]
+  },
+
+  "block.fluorite.place": {
+    "sounds": [
+      "peculia:block/fluorite/break1",
+      "peculia:block/fluorite/break2",
+      "peculia:block/fluorite/break3",
+      "peculia:block/fluorite/break4"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.fluorite.break": {
+    "sounds": [
+      "peculia:block/fluorite/break1",
+      "peculia:block/fluorite/break2",
+      "peculia:block/fluorite/break3",
+      "peculia:block/fluorite/break4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.fluorite.hit": {
+    "sounds": [
+      "peculia:block/fluorite/break1",
+      "peculia:block/fluorite/break2",
+      "peculia:block/fluorite/break3",
+      "peculia:block/fluorite/break4"
+
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.fluorite.step": {
+    "sounds": [
+      "peculia:block/fluorite/step1",
+      "peculia:block/fluorite/step2",
+      "peculia:block/fluorite/step3",
+      "peculia:block/fluorite/step4",
+      "peculia:block/fluorite/step5",
+      "peculia:block/fluorite/step6"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.fluorite.fall": {
+    "sounds": [
+      "peculia:block/fluorite/step1",
+      "peculia:block/fluorite/step2",
+      "peculia:block/fluorite/step3",
+      "peculia:block/fluorite/step4",
+      "peculia:block/fluorite/step5",
+      "peculia:block/fluorite/step6"
+    ]
+  },
+
+
+
+
   "block.mythril.place": {
     "sounds": [
       "peculia:block/mythril/place1",

@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "peculia:fluorite"
+    },
+    "result": "peculia:polished_fluorite",
+    "count": 1
+}

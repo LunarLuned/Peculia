@@ -48,6 +48,14 @@ public class ModConfiguredFeatures {
             ConfiguredFeatures.register("sill", Feature.ORE,
                     new OreFeatureConfig(ORE_SILL, 60));
 
+    public static final List<OreFeatureConfig.Target> ORE_FLUORITE = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE),
+                    ModBlocks.FLUORITE.getDefaultState()));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> FLUORITE =
+            ConfiguredFeatures.register("fluorite", Feature.ORE,
+                    new OreFeatureConfig(ORE_FLUORITE, 45));
+
     public static final List<OreFeatureConfig.Target> ORE_CONDENSED_VOID = List.of(
             OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE),
                     ModBlocks.CONDENSED_VOID.getDefaultState()));
@@ -87,6 +95,8 @@ public class ModConfiguredFeatures {
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> CRUMBLING_END_STONE =
             ConfiguredFeatures.register("crumbling_endstone", Feature.ORE,
                     new OreFeatureConfig(ORE_CRUMBLING_END_STONE, 30));
+
+
 
 
 // Registry for Configured Features:

@@ -11,7 +11,9 @@ import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(LivingEntity.class)
 public abstract class VoidTouchedEffectMixin extends Entity {
@@ -33,5 +35,12 @@ public abstract class VoidTouchedEffectMixin extends Entity {
             return amount + (amount * (0.45f * (this.getStatusEffect(ModEffects.VOID_TOUCHED).getAmplifier() + 1)));
         }
         return amount;
+    }
+
+    @Inject(at = @At("HEAD"), method = "heal", cancellable = true)
+    private void heal(CallbackInfo ci) {
+        if(this.getStatusEffect(ModEffects.STAGNATED) != null) {
+            ci.cancel();
+        }
     }
 }

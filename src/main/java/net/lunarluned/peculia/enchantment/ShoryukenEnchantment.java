@@ -9,6 +9,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
@@ -23,13 +24,8 @@ public class ShoryukenEnchantment extends Enchantment {
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         if (target instanceof LivingEntity) {
-                ((LivingEntity) target).setVelocity(0,.6,0);
+            target.addVelocity(0, (level / 6.0f) * (1.0D - ((LivingEntity) (target)).getAttributeValue(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE) * 0.5), 0);
         }
-        else
-        if (target instanceof ServerPlayerEntity) {
-            (target).addVelocity(0,.6,0);
-        }
-        super.onTargetDamaged(user, target, level);
     }
 
     @Override

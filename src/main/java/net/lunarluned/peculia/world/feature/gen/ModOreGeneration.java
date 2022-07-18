@@ -39,6 +39,7 @@ public class ModOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ORE_CRUMBLING_END_STONE.getKey().get());
 
-
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ORE_FLUORITE.getKey().get());
     }
 }

@@ -232,6 +232,8 @@
   "effect.peculia.void_touched": "Void Touched",
   "effect.peculia.anchored": "Anchored",
   "effect.peculia.ichor_resistance": "Ichor Resistance",
+  "effect.peculia.panicked": "Panicked",
+  "effect.peculia.stagnated": "Stagnated",
 
   "effect.echo.attack.hit": "Strong Echo attack",
   "effect.anchored_teleport_fail": "Ender Pearl fails",

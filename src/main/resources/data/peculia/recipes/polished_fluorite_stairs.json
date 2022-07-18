@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "peculia:polished_fluorite"
+        }
+    },
+    "result": {
+        "item": "peculia:polished_fluorite_stairs",
+        "count": 4
+    }
+}

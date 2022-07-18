@@ -20,6 +20,8 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 
+import static net.lunarluned.peculia.effect.ModEffects.registerStagnatedEffect;
+
 public class Peculia implements ModInitializer {
 	public static final String MOD_ID = "peculia";
 	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
@@ -53,6 +55,7 @@ public class Peculia implements ModInitializer {
 		ModEffects.registerAnchoredEffect();
 		ModEffects.registerIchorResistanceEffect();
 		ModEffects.registerPanickedEffect();
+		ModEffects.registerStagnatedEffect();
 
 		ModPotions.registerIchorPotion();
 		ModPotions.registerextIchorPotion();

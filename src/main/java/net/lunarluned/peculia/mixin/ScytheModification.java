@@ -1,13 +1,7 @@
 package net.lunarluned.peculia.mixin;
 
-import net.lunarluned.peculia.enchantment.ConcussEnchantment;
-import net.lunarluned.peculia.enchantment.NewEchoEnchantment;
-import net.lunarluned.peculia.enchantment.ThunderingEnchantment;
 import net.lunarluned.peculia.item.custom.ModHoeItem;
-import net.lunarluned.peculia.item.custom.ModPickaxeItem;
-import net.lunarluned.peculia.item.custom.ModScytheItem;
 import net.minecraft.enchantment.*;
-import net.minecraft.item.HoeItem;
 import net.minecraft.item.ItemStack;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
