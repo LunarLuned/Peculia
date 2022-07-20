@@ -15,8 +15,7 @@ public class IchorEffect extends StatusEffect {
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (!entity.hasStatusEffect(ModEffects.ICHOR_RESISTANCE)) {
-            entity.damage(new Peculia.IchorDamageSource(entity), 2.0F + amplifier);
-            entity.setMovementSpeed(-1f);
+            entity.damage(new Peculia.IchorDamageSource(entity), 1.0F + amplifier);
         }
         if (entity.isFrozen() ) {
             entity.removeStatusEffect(ModEffects.ICHOR);

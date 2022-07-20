@@ -19,10 +19,14 @@ public enum ModToolMaterials implements ToolMaterial {
     COPPER(4, 456, 9.0F, 2.0F, 1, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{Items.COPPER_INGOT});
     }),
+    PECULIAR(6, 2452, 13.0F, 5.0F, 25, () -> {
+        return Ingredient.ofItems(new ItemConvertible[]{Items.COPPER_INGOT});
+    }),
     SCRAP(4, 890, 9.0F, 4.0F, 1, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{Items.NETHERITE_SCRAP});
 
     });
+
 
     private final int miningLevel;
     private final int itemDurability;

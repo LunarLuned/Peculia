@@ -13,4 +13,6 @@ public class ModItemGroup {
             () -> new ItemStack(ModItems.ICHOR));
     public static final ItemGroup PECULIA_OVERWORLD = FabricItemGroupBuilder.build(new Identifier(Peculia.MOD_ID, "peculia_overworld"),
             () -> new ItemStack(ModItems.DIAMOND_GAUNTLET));
+    public static final ItemGroup PECULIA_MISC = FabricItemGroupBuilder.build(new Identifier(Peculia.MOD_ID, "peculia_misc"),
+            () -> new ItemStack(ModItems.FALLEN_HERO_DAGGER));
 }

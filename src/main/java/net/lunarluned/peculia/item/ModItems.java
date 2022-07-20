@@ -12,8 +12,12 @@ import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems {
-    //end
+    // misc / not in any dimension
+    public static final Item FALLEN_HERO_DAGGER = registerItem("fallen_hero_dagger",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).rarity(Rarity.UNCOMMON)));
 
+
+    //end
 
     public static final Item MYTHRIL_SHARD = registerItem("mythril_shard",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA)));
@@ -25,6 +29,9 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1).rarity(Rarity.COMMON)));
     public static final Item ECHOING_MIRROR = registerItem("echoing_mirror",
             new EchoingMirrorItem(new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1).rarity(Rarity.RARE).maxDamage(8)));
+    // no texture yet, possibly fully coded??
+    public static final Item ARCANIUM_BOTTLE = registerItem("arcanium_bottle",
+            new EmptyArcaniumBottleItem(new FabricItemSettings().group(ModItemGroup.PECULIA).rarity(Rarity.UNCOMMON)));
     public static final Item MYTHRIL_CLAYMORE = registerItem("mythril_claymore",
             new ModSwordItem(ModToolMaterials.MYTHRIL,5, -2.7f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item MYTHRIL_SCYTHE = registerItem("mythril_scythe",

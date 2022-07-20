@@ -144,6 +144,7 @@
   "item.peculia.disc_fragment_lulla.desc": "Amber Gray - Lulla",
 
   "item.peculia.empty_mirror": "Empty Mirror",
+  "item.peculia.fallen_hero_dagger": "Fallen Hero Dagger",
   "item.peculia.echoing_mirror": "Echoing Mirror",
   "item.peculia.mythril_helmet": "Mythril Helmet",
   "item.peculia.mythril_chestplate": "Mythril Chestplate",
@@ -176,6 +177,7 @@
   "itemGroup.peculia.peculia_void_depths": "Peculia Void Depths",
   "itemGroup.peculia.peculia_nether": "Peculia Nether",
   "itemGroup.peculia.peculia_overworld": "Peculia Overworld",
+  "itemGroup.peculia.peculia_misc": "Peculia Miscellaneous",
 
 
   "advancements.end.obtain_mythril_shard.title": "Shard of Myth",
