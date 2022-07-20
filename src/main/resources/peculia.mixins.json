@@ -12,7 +12,8 @@
     "ScytheModification",
     "VoidTouchedEffectMixin",
     "IchorResistanceEffectMixin",
-    "BrewingRecipeRegistryMixin"
+    "BrewingRecipeRegistryMixin",
+    "WitherSkullEntityMixin"
   ],
   "client": [
 

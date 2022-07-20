@@ -57,6 +57,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent EFFECT_ANCHORED_TELEPORT_FAIL = registerSoundEvent("effect.anchored_teleport_fail");
 
+    public static final SoundEvent ITEM_ECHOING_MIRROR_USE = registerSoundEvent("item.echoing_mirror.use");
+
     public static final SoundEvent BLOCK_ICHOR_STICKER_RELEASE = registerSoundEvent("block.ichor_sticker.release");
 
     public static final BlockSoundGroup MYTHRIL = new BlockSoundGroup(1f, 1f,

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " p ",
+    "pEp",
+    " p "
+  ],
+  "key": {
+    "p": {
+      "item": "peculia:mythril_ingot"
+    },
+    "E": {
+      "item": "minecraft:echo_shard"
+    }
+  },
+  "result": {
+    "item": "peculia:empty_mirror",
+    "count": 1
+  }
+}

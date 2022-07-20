@@ -16,10 +16,12 @@ public class ElectrocutedEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 250, 1));
-        entity.damage(new Peculia.ElectrocutionDamageSource(entity), 1);
-        super.applyUpdateEffect(entity, amplifier);
-        entity.isGlowing();
+        if (!entity.isSneaking()){
+            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 250, 1));
+            entity.damage(new Peculia.ElectrocutionDamageSource(entity), 1);
+            super.applyUpdateEffect(entity, amplifier);
+            entity.isGlowing();
+        }
     }
 
     @Override

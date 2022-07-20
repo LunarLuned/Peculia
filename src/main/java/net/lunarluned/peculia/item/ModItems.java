@@ -13,12 +13,18 @@ import net.minecraft.util.registry.Registry;
 
 public class ModItems {
     //end
+
+
     public static final Item MYTHRIL_SHARD = registerItem("mythril_shard",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA)));
     public static final Item MYTHRIL_FRAGMENT = registerItem("mythril_fragment",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA)));
     public static final Item MYTHRIL_INGOT = registerItem("mythril_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA)));
+    public static final Item EMPTY_MIRROR = registerItem("empty_mirror",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1).rarity(Rarity.COMMON)));
+    public static final Item ECHOING_MIRROR = registerItem("echoing_mirror",
+            new EchoingMirrorItem(new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1).rarity(Rarity.RARE).maxDamage(8)));
     public static final Item MYTHRIL_CLAYMORE = registerItem("mythril_claymore",
             new ModSwordItem(ModToolMaterials.MYTHRIL,5, -2.7f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item MYTHRIL_SCYTHE = registerItem("mythril_scythe",

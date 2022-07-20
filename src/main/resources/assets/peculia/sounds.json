@@ -8,8 +8,15 @@
   "effect.anchored_teleport_fail": {
     "subtitle": "effect.anchored_teleport_fail",
     "sounds": [
-      "peculia:anchored_teleport_fail1",
-      "peculia:anchored_teleport_fail2"
+      "peculia:fx/anchored/anchored_teleport_fail1",
+      "peculia:fx/anchored/anchored_teleport_fail2"
+    ]
+  },
+  "item.echoing_mirror.use": {
+    "subtitle": "item.echoing_mirror.use",
+    "sounds": [
+      "peculia:item/echoing_mirror/echoing_mirror_use1",
+      "peculia:item/echoing_mirror/echoing_mirror_use2"
     ]
   },
   "block.ichor_sticker.release": {

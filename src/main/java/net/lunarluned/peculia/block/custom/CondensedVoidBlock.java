@@ -49,6 +49,15 @@ public class CondensedVoidBlock extends Block {
                 player.damage(new Peculia.CondensedVoidDamageSource(player), 1);
             }
         }
+        if (itemStack.isOf(ModItems.EMPTY_MIRROR)) {
+            itemStack.decrement(1);
+            //add a custom sound later asnne
+            world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.BLOCK_POINTED_DRIPSTONE_DRIP_WATER_INTO_CAULDRON, SoundCategory.NEUTRAL, 1.0F, 1.0F);
+            if (itemStack.isEmpty()) {
+                player.setStackInHand(hand, new ItemStack(ModItems.ECHOING_MIRROR));
+                player.damage(new Peculia.CondensedVoidDamageSource(player), 1);
+            }
+        }
         if (itemStack.isOf(ModItems.MYTHICAL_BLADE)) {
             itemStack.decrement(1);
             //add a custom sound later asnne

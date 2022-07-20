@@ -88,4 +88,13 @@ public class Peculia implements ModInitializer {
 			setBypassesProtection();
 		}
 	}
+	public static class EchoingMirrorDamageSource extends DamageSource {
+
+		public EchoingMirrorDamageSource(Entity name) {
+			super("echomirror");
+			setUsesMagic();
+			setBypassesArmor();
+			setBypassesProtection();
+		}
+	}
 }

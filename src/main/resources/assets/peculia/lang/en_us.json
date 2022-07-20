@@ -143,6 +143,7 @@
   "item.peculia.disc_fragment_lulla": "Disc Fragment",
   "item.peculia.disc_fragment_lulla.desc": "Amber Gray - Lulla",
 
+  "item.peculia.echoing_mirror": "Echoing Mirror",
   "item.peculia.mythril_helmet": "Mythril Helmet",
   "item.peculia.mythril_chestplate": "Mythril Chestplate",
   "item.peculia.mythril_leggings": "Mythril Leggings",
@@ -236,7 +237,8 @@
   "effect.peculia.stagnated": "Stagnated",
 
   "effect.echo.attack.hit": "Strong Echo attack",
-  "effect.anchored_teleport_fail": "Ender Pearl fails",
+  "item.echoing_mirror.use": "Echoing Mirror is used",
+  "effect.anchored_teleport_fail": "Teleport fails",
   "block.ichor_sticker.release": "Ichor Sticker Bulb Breaks",
 
   "death.attack.electrocution": "%1$s was electrocuted to death",
@@ -244,5 +246,7 @@
   "death.attack.condensed": "%1$s was engulfed by the void",
   "death.attack.condensed.player": "%1$s was engulfed by the void whilst fighting %2$s",
   "death.attack.ichor": "%1$s couldn't stop burning",
-  "death.attack.ichor.player": "%1$s couldn't stop burning whilst fighting %2$s"
+  "death.attack.ichor.player": "%1$s couldn't stop burning whilst fighting %2$s",
+  "death.attack.echomirror": "%1$s's mirror shattered in their hands",
+  "death.attack.echomirror.player": "%1$s's mirror shattered in their hands whilst fighting %2$s"
 }
