@@ -20,7 +20,7 @@ public class WitherSkullEntityMixin {
     @Inject(method = "onEntityHit", locals = LocalCapture.CAPTURE_FAILHARD, at =  @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;addStatusEffect(Lnet/minecraft/entity/effect/StatusEffectInstance;Lnet/minecraft/entity/Entity;)Z"))
 
     private void stagnatedEffectOnHit(EntityHitResult entityHitResult, CallbackInfo ci, Entity entity, Entity entity2, boolean bl, int i) {
-        ((LivingEntity)entity).addStatusEffect(new StatusEffectInstance(ModEffects.STAGNATED, 60, 0), ((ProjectileEntity) (Object) this).getEffectCause());
+        ((LivingEntity)entity).addStatusEffect(new StatusEffectInstance(ModEffects.STAGNATED, 120, 0), ((ProjectileEntity) (Object) this).getEffectCause());
     }
 
 

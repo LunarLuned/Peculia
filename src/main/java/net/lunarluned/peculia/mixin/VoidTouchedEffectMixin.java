@@ -4,6 +4,7 @@ import net.lunarluned.peculia.effect.ModEffects;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.world.World;
@@ -43,4 +44,8 @@ public abstract class VoidTouchedEffectMixin extends Entity {
             ci.cancel();
         }
     }
+
+
+
+
 }
