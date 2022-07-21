@@ -29,9 +29,6 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1).rarity(Rarity.COMMON)));
     public static final Item ECHOING_MIRROR = registerItem("echoing_mirror",
             new EchoingMirrorItem(new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1).rarity(Rarity.RARE).maxDamage(16)));
-    // no texture yet, possibly fully coded??
-    public static final Item ARCANIUM_BOTTLE = registerItem("arcanium_bottle",
-            new EmptyArcaniumBottleItem(new FabricItemSettings().group(ModItemGroup.PECULIA).rarity(Rarity.UNCOMMON)));
     public static final Item MYTHRIL_CLAYMORE = registerItem("mythril_claymore",
             new ModSwordItem(ModToolMaterials.MYTHRIL,5, -2.7f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item MYTHRIL_SCYTHE = registerItem("mythril_scythe",
@@ -128,6 +125,10 @@ public class ModItems {
     public static final Item CHARGED_GILDED_COPPER_CLEAVER = registerItem("charged_gilded_copper_cleaver",
             new ElectrocutedItem(ModToolMaterials.COPPER,1, -2.0f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).maxCount(1)));
 
+    public static final Item SCULK_SAC = registerItem("sculk_sac",
+            new SculkSacItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).rarity(Rarity.UNCOMMON)));
+    public static final Item FULL_SCULK_SAC = registerItem("full_sculk_sac",
+            new FullSculkSacItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).rarity(Rarity.UNCOMMON)));
 
     public static final Item SWEET_ROLL = registerItem("sweet_roll",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.SWEET_ROLL)));

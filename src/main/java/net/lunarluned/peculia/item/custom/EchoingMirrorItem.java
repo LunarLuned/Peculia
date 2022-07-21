@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.item.ModItems;
+import net.lunarluned.peculia.misc.ModGameEvents;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.client.util.telemetry.TelemetrySender;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -21,8 +22,9 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import net.minecraft.world.event.GameEvent;
 
-public class EchoingMirrorItem extends Item{
+public class EchoingMirrorItem extends Item {
 
 
     public EchoingMirrorItem(FabricItemSettings settings){
@@ -37,6 +39,11 @@ public class EchoingMirrorItem extends Item{
     @Override
     public int getEnchantability() {
         return 0;
+    }
+
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return false;
     }
 
     private void teleportToSpawn(MinecraftServer server, ServerPlayerEntity serverUser, Hand hand){
@@ -59,6 +66,7 @@ public class EchoingMirrorItem extends Item{
                 BlockPos pos = serverUser.getSpawnPointPosition();
                     //if user doesnt have anchored, they can use the mirror
                     if (!user.hasStatusEffect(ModEffects.ANCHORED)) {
+                        user.emitGameEvent(GameEvent.BLOCK_PLACE);
                         world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_ECHOING_MIRROR_USE, SoundCategory.NEUTRAL, 1f, 1f);
                         world.sendEntityStatus(user, (byte) 46);
                         user.getItemCooldownManager().set(this, 30);
@@ -66,16 +74,19 @@ public class EchoingMirrorItem extends Item{
                         if (dimension != null && pos != null) {
                             Optional<Vec3d> userSpawn = PlayerEntity.findRespawnPosition(dimension, pos, 0f, false, user.isAlive());
                             if (userSpawn.isPresent()) {
+                                user.emitGameEvent(GameEvent.BLOCK_PLACE);
                                 serverUser.teleport(dimension, userSpawn.get().x, userSpawn.get().y, userSpawn.get().z, 0f, 0f);
                                 dimension.playSound(null, serverUser.getPos().x, serverUser.getPos().y, serverUser.getPos().z, ModSoundEvents.ITEM_ECHOING_MIRROR_USE, SoundCategory.NEUTRAL, 1f, 1f);
                                 dimension.sendEntityStatus(serverUser, (byte) 46);
                                 serverUser.getStackInHand(hand).damage(1, serverUser, p -> p.sendToolBreakStatus(hand));
                                 user.addStatusEffect(new StatusEffectInstance(ModEffects.ANCHORED, 120, 0));
                             } else {
+                                user.emitGameEvent(GameEvent.BLOCK_PLACE);
                                 teleportToSpawn(server, serverUser, hand);
                                 user.addStatusEffect(new StatusEffectInstance(ModEffects.ANCHORED, 120, 0));
                             }
                         } else {
+                            user.emitGameEvent(GameEvent.BLOCK_PLACE);
                             teleportToSpawn(server, serverUser, hand);
                             user.addStatusEffect(new StatusEffectInstance(ModEffects.ANCHORED, 120, 0));
                         }

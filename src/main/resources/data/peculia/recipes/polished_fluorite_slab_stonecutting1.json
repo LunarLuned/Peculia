@@ -1,7 +1,7 @@
 {
     "type": "minecraft:stonecutting",
     "ingredient": {
-        "item": "peculia:fluorite_block"
+        "item": "peculia:fluorite"
     },
     "result": "peculia:polished_fluorite_slab",
     "count": 2

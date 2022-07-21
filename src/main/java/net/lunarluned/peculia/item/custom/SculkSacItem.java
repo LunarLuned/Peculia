@@ -1,5 +1,6 @@
 package net.lunarluned.peculia.item.custom;
 
+import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -10,9 +11,10 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import net.minecraft.world.event.GameEvent;
 
-public class EmptyArcaniumBottleItem extends Item {
-    public EmptyArcaniumBottleItem(Settings settings) {
+public class SculkSacItem extends Item {
+    public SculkSacItem(Settings settings) {
         super(settings);
     }
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
@@ -20,11 +22,13 @@ public class EmptyArcaniumBottleItem extends Item {
 
         if (user.experienceLevel > 0) {
             user.addExperience(-7);
-            user.giveItemStack(new ItemStack(Items.EXPERIENCE_BOTTLE, 1));
-            world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
+            user.emitGameEvent(GameEvent.BLOCK_PLACE);
+            itemStack.decrement(1);
+            user.giveItemStack(new ItemStack(ModItems.FULL_SCULK_SAC, 1));
+            world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, SoundEvents.BLOCK_SCULK_CHARGE, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
         }
         else {
-            world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.BLOCK_CONDENSED_VOID_STEP, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
+
         }
         return TypedActionResult.success(itemStack, world.isClient());
     }

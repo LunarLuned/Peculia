@@ -8,6 +8,7 @@ import net.lunarluned.peculia.config.PeculiaConfig;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.enchantment.ModEnchantments;
 import net.lunarluned.peculia.item.ModItems;
+import net.lunarluned.peculia.misc.ModGameEvents;
 import net.lunarluned.peculia.potion.ModPotions;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.lunarluned.peculia.world.feature.ModConfiguredFeatures;
@@ -42,6 +43,8 @@ public class Peculia implements ModInitializer {
 
 
 		ModItems.registerModItems();
+		ModGameEvents.registerGameEvents();
+		ModGameEvents.init();
 		ModSoundEvents.registerSounds();
 		ModBlocks.registerModBlocks();
 		ModEnchantments.registerModEnchantments();
