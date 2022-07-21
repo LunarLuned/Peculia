@@ -95,6 +95,10 @@ public class ModBlocks {
     public static final Block POLISHED_FLUORITE_BRICK_WALL = registerBlock("polished_fluorite_brick_wall",
             new WallBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(ModSoundEvents.FLUORITE_BRICKS)), ModItemGroup.PECULIA);
 
+    public static final Block POLISHED_FLUORITE_PILLAR = registerBlock("polished_fluorite_pillar",
+            new PillarBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.CYAN).sounds(ModSoundEvents.FLUORITE_BRICKS).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA);
+    public static final Block CHISELED_POLISHED_FLUORITE = registerBlock("chiseled_polished_fluorite",
+            new Block(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.CYAN).sounds(ModSoundEvents.FLUORITE_BRICKS).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA);
     public static final Block POLISHED_FLUORITE_TILES = registerBlock("polished_fluorite_tiles",
             new Block(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.CYAN).sounds(ModSoundEvents.FLUORITE_BRICKS).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA);
     public static final Block POLISHED_FLUORITE_TILE_STAIRS = registerBlock("polished_fluorite_tile_stairs",
