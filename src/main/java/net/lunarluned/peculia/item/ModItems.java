@@ -28,7 +28,7 @@ public class ModItems {
     public static final Item EMPTY_MIRROR = registerItem("empty_mirror",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1).rarity(Rarity.COMMON)));
     public static final Item ECHOING_MIRROR = registerItem("echoing_mirror",
-            new EchoingMirrorItem(new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1).rarity(Rarity.RARE).maxDamage(8)));
+            new EchoingMirrorItem(new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1).rarity(Rarity.RARE).maxDamage(16)));
     // no texture yet, possibly fully coded??
     public static final Item ARCANIUM_BOTTLE = registerItem("arcanium_bottle",
             new EmptyArcaniumBottleItem(new FabricItemSettings().group(ModItemGroup.PECULIA).rarity(Rarity.UNCOMMON)));

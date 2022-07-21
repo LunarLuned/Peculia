@@ -186,6 +186,8 @@
   "advancements.end.mythril_gear.description": "Get a full suit of Mythril Armor, quite shiny!",
   "advancements.end.obtain_mythril_spearel.title": "Only a Spoonful",
   "advancements.end.obtain_mythril_spearel.description": "Waste a Mythril Ingot for an inside joke.",
+  "advancements.end.obtain_mirror.title": "Who's the fairest one of all?",
+  "advancements.end.obtain_mirror.description": "Get an Echoing Mirror, and harness the void's teleportation abilities.",
 
   "advancements.husbandry.jams.title": "Thats my Jam!",
   "advancements.husbandry.jams.description": "Have all Jams in your inventory",
@@ -243,11 +245,12 @@
   "item.echoing_mirror.use": "Echoing Mirror is used",
   "effect.anchored_teleport_fail": "Teleport fails",
   "block.ichor_sticker.release": "Ichor Sticker Bulb Breaks",
+  "block.condensed_void.use": "Item is Void Touched",
 
   "death.attack.electrocution": "%1$s was electrocuted to death",
   "death.attack.electrocuted.player": "%1$s electrocuted to death whilst fighting %2$s",
-  "death.attack.condensed": "%1$s was engulfed by the void",
-  "death.attack.condensed.player": "%1$s was engulfed by the void whilst fighting %2$s",
+  "death.attack.condensed": "%1$s was too greedy with the void",
+  "death.attack.condensed.player": "%1$s was too greedy with the void whilst fighting %2$s",
   "death.attack.ichor": "%1$s couldn't stop burning",
   "death.attack.ichor.player": "%1$s couldn't stop burning whilst fighting %2$s",
   "death.attack.echomirror": "%1$s's mirror shattered in their hands",

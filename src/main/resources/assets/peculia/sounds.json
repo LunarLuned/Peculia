@@ -141,7 +141,9 @@
   },
   "block.mythril.break": {
     "sounds": [
-      "peculia:block/mythril/break1"
+      "peculia:block/mythril/break1",
+      "peculia:block/mythril/place2",
+      "peculia:block/mythril/place4"
     ],
     "subtitle": "subtitles.block.generic.break"
   },
@@ -212,6 +214,12 @@
     ]
   },
 
+  "block.condensed_void.use": {
+    "subtitle": "block.condensed_void.use",
+    "sounds": [
+      "peculia:block/condensed_void/use1"
+    ]
+  },
 
   "block.condensed_void.place": {
     "sounds": [

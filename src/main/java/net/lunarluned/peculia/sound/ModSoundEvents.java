@@ -77,6 +77,8 @@ public class ModSoundEvents {
             ModSoundEvents.BLOCK_CONDENSED_VOID_BREAK, ModSoundEvents.BLOCK_CONDENSED_VOID_STEP, ModSoundEvents.BLOCK_CONDENSED_VOID_PLACE,
             ModSoundEvents.BLOCK_CONDENSED_VOID_HIT, ModSoundEvents.BLOCK_CONDENSED_VOID_FALL);
 
+    public static final SoundEvent BLOCK_CONDENSED_VOID_USE = registerSoundEvent("block.condensed_void.use");
+
     public static final BlockSoundGroup VOID_LAMP = new BlockSoundGroup(1f, 1f,
             ModSoundEvents.BLOCK_VOID_LAMP_BREAK, ModSoundEvents.BLOCK_VOID_LAMP_STEP, ModSoundEvents.BLOCK_VOID_LAMP_PLACE,
             ModSoundEvents.BLOCK_VOID_LAMP_HIT, ModSoundEvents.BLOCK_VOID_LAMP_FALL);

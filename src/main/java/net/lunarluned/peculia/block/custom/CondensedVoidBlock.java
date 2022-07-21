@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.item.ModItems;
+import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
@@ -32,6 +33,7 @@ public class CondensedVoidBlock extends Block {
         if (itemStack.isOf(Items.GLASS_BOTTLE)) {
             itemStack.decrement(1);
             world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.NEUTRAL, 1.0F, 1.0F);
+            player.damage(new Peculia.CondensedVoidDamageSource(player), 2);
             if (itemStack.isEmpty()) {
                 player.setStackInHand(hand, new ItemStack(ModItems.BOTTLE_OF_CONDENSED_VOID));
                 player.damage(new Peculia.CondensedVoidDamageSource(player), 2);
@@ -43,7 +45,7 @@ public class CondensedVoidBlock extends Block {
         if (itemStack.isOf(ModItems.GILDED_MYTHICAL_BLADE)) {
             itemStack.decrement(1);
             //add a custom sound later asnne
-            world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.BLOCK_POINTED_DRIPSTONE_DRIP_WATER_INTO_CAULDRON, SoundCategory.NEUTRAL, 1.0F, 1.0F);
+            world.playSound(player, player.getX(), player.getY(), player.getZ(), ModSoundEvents.BLOCK_CONDENSED_VOID_USE, SoundCategory.NEUTRAL, 1.0F, 1.0F);
             if (itemStack.isEmpty()) {
                 player.setStackInHand(hand, new ItemStack(ModItems.VOID_TOUCHED_GILDED_MYTHICAL_BLADE));
                 player.damage(new Peculia.CondensedVoidDamageSource(player), 1);
@@ -52,7 +54,16 @@ public class CondensedVoidBlock extends Block {
         if (itemStack.isOf(ModItems.EMPTY_MIRROR)) {
             itemStack.decrement(1);
             //add a custom sound later asnne
-            world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.BLOCK_POINTED_DRIPSTONE_DRIP_WATER_INTO_CAULDRON, SoundCategory.NEUTRAL, 1.0F, 1.0F);
+            world.playSound(player, player.getX(), player.getY(), player.getZ(), ModSoundEvents.BLOCK_CONDENSED_VOID_USE, SoundCategory.NEUTRAL, 1.0F, 1.0F);
+            if (itemStack.isEmpty()) {
+                player.setStackInHand(hand, new ItemStack(ModItems.ECHOING_MIRROR));
+                player.damage(new Peculia.CondensedVoidDamageSource(player), 1);
+            }
+        }
+        if (itemStack.isOf(ModItems.ECHOING_MIRROR)) {
+            itemStack.decrement(1);
+            //add a custom sound later asnne
+            world.playSound(player, player.getX(), player.getY(), player.getZ(), ModSoundEvents.BLOCK_CONDENSED_VOID_USE, SoundCategory.NEUTRAL, 1.0F, 1.0F);
             if (itemStack.isEmpty()) {
                 player.setStackInHand(hand, new ItemStack(ModItems.ECHOING_MIRROR));
                 player.damage(new Peculia.CondensedVoidDamageSource(player), 1);
@@ -61,7 +72,7 @@ public class CondensedVoidBlock extends Block {
         if (itemStack.isOf(ModItems.MYTHICAL_BLADE)) {
             itemStack.decrement(1);
             //add a custom sound later asnne
-            world.playSound(player, player.getX(), player.getY(), player.getZ(), SoundEvents.BLOCK_POINTED_DRIPSTONE_DRIP_WATER_INTO_CAULDRON, SoundCategory.NEUTRAL, 1.0F, 1.0F);
+            world.playSound(player, player.getX(), player.getY(), player.getZ(), ModSoundEvents.BLOCK_CONDENSED_VOID_USE, SoundCategory.NEUTRAL, 1.0F, 1.0F);
             if (itemStack.isEmpty()) {
                 player.setStackInHand(hand, new ItemStack(ModItems.VOID_TOUCHED_MYTHICAL_BLADE));
                 player.damage(new Peculia.CondensedVoidDamageSource(player), 1);

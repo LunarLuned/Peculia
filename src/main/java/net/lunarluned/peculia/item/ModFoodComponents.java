@@ -15,7 +15,7 @@ public class ModFoodComponents {
     //nether
     public static final FoodComponent CRIMSON_STEW = (new FoodComponent.Builder().hunger(8).saturationModifier(7.2F).build());
     public static final FoodComponent WARPED_STEW = (new FoodComponent.Builder().hunger(7).saturationModifier(7.5F).build());
-    public static final FoodComponent FUNGAL_STEW = (new FoodComponent.Builder().hunger(14).saturationModifier(8.5F).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 100, 0), 0.1F).build());
+    public static final FoodComponent FUNGAL_STEW = (new FoodComponent.Builder().hunger(12).saturationModifier(8.5F).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 140, 0), 0.5F).build());
     public static final FoodComponent MUSHROOM_STEW_TUSK = (new FoodComponent.Builder().hunger(6).saturationModifier(7.2F).build());
     public static final FoodComponent SCRAMBLED_EGGS_TUSK = (new FoodComponent.Builder().hunger(6).saturationModifier(7.5F).build());
 

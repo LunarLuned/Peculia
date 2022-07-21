@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:end/obtain_mythril_shard",
+  "display": {
+    "icon": {
+      "item": "peculia:echoing_mirror"
+    },
+    "title": {
+      "translate": "advancements.end.obtain_mirror.title"
+    },
+    "description": {
+      "translate": "advancements.end.obtain_mirror.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "echoing_mirror": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "peculia:echoing_mirror"
+            ]
+          }
+        ]
+      }
+    }
+    },
+  "requirements": [
+    [
+      "echoing_mirror"
+    ]
+  ]
+}

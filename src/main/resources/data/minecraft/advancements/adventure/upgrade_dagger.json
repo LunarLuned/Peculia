@@ -10,7 +10,7 @@
     "description": {
       "translate": "advancements.adventure.upgrade_dagger.description"
     },
-    "frame": "goal",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false

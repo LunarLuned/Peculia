@@ -57,37 +57,37 @@ public class EchoingMirrorItem extends Item{
 
                 ServerWorld dimension = server.getWorld(serverUser.getSpawnPointDimension());
                 BlockPos pos = serverUser.getSpawnPointPosition();
-                //if user doesnt have anchored, they can use the mirror
-                if (!user.hasStatusEffect(ModEffects.ANCHORED)) {
-                    world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_ECHOING_MIRROR_USE, SoundCategory.NEUTRAL, 1f, 1f);
-                    world.sendEntityStatus(user, (byte) 46);
-                    user.getItemCooldownManager().set(this, 30);
+                    //if user doesnt have anchored, they can use the mirror
+                    if (!user.hasStatusEffect(ModEffects.ANCHORED)) {
+                        world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_ECHOING_MIRROR_USE, SoundCategory.NEUTRAL, 1f, 1f);
+                        world.sendEntityStatus(user, (byte) 46);
+                        user.getItemCooldownManager().set(this, 30);
 
-                    if (dimension != null && pos != null) {
-                        Optional<Vec3d> userSpawn = PlayerEntity.findRespawnPosition(dimension, pos, 0f, false, user.isAlive());
-                        if (userSpawn.isPresent()) {
-                            serverUser.teleport(dimension, userSpawn.get().x, userSpawn.get().y, userSpawn.get().z, 0f, 0f);
-                            dimension.playSound(null, serverUser.getPos().x, serverUser.getPos().y, serverUser.getPos().z, ModSoundEvents.ITEM_ECHOING_MIRROR_USE, SoundCategory.NEUTRAL, 1f, 1f);
-                            dimension.sendEntityStatus(serverUser, (byte) 46);
-                            serverUser.getStackInHand(hand).damage(1, serverUser, p -> p.sendToolBreakStatus(hand));
-                            user.addStatusEffect(new StatusEffectInstance(ModEffects.ANCHORED, 120, 0));
+                        if (dimension != null && pos != null) {
+                            Optional<Vec3d> userSpawn = PlayerEntity.findRespawnPosition(dimension, pos, 0f, false, user.isAlive());
+                            if (userSpawn.isPresent()) {
+                                serverUser.teleport(dimension, userSpawn.get().x, userSpawn.get().y, userSpawn.get().z, 0f, 0f);
+                                dimension.playSound(null, serverUser.getPos().x, serverUser.getPos().y, serverUser.getPos().z, ModSoundEvents.ITEM_ECHOING_MIRROR_USE, SoundCategory.NEUTRAL, 1f, 1f);
+                                dimension.sendEntityStatus(serverUser, (byte) 46);
+                                serverUser.getStackInHand(hand).damage(1, serverUser, p -> p.sendToolBreakStatus(hand));
+                                user.addStatusEffect(new StatusEffectInstance(ModEffects.ANCHORED, 120, 0));
+                            } else {
+                                teleportToSpawn(server, serverUser, hand);
+                                user.addStatusEffect(new StatusEffectInstance(ModEffects.ANCHORED, 120, 0));
+                            }
                         } else {
                             teleportToSpawn(server, serverUser, hand);
                             user.addStatusEffect(new StatusEffectInstance(ModEffects.ANCHORED, 120, 0));
                         }
                     } else {
-                        teleportToSpawn(server, serverUser, hand);
-                        user.addStatusEffect(new StatusEffectInstance(ModEffects.ANCHORED, 120, 0));
+                        //this should make it so that if you have anchored your mirror will take more damage and give you void touched
+                        user.addStatusEffect(new StatusEffectInstance(ModEffects.VOID_TOUCHED, 360, 0));
+                        serverUser.getStackInHand(hand).damage(3, serverUser, p -> p.sendToolBreakStatus(hand));
+                        world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.EFFECT_ANCHORED_TELEPORT_FAIL, SoundCategory.NEUTRAL, 1f, 1f);
+                        user.getItemCooldownManager().set(this, 300);
+                        user.damage(new Peculia.EchoingMirrorDamageSource(user), 6.0F);
                     }
-                } else {
-                    //this should make it so that if you have anchored your mirror will take more damage and give you void touched
-                    user.addStatusEffect(new StatusEffectInstance(ModEffects.VOID_TOUCHED, 360, 0));
-                    serverUser.getStackInHand(hand).damage(3, serverUser, p -> p.sendToolBreakStatus(hand));
-                    world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.EFFECT_ANCHORED_TELEPORT_FAIL, SoundCategory.NEUTRAL, 1f, 1f);
-                    user.getItemCooldownManager().set(this, 300);
-                    user.damage(new Peculia.EchoingMirrorDamageSource(user), 6.0F);
                 }
-            }
         return TypedActionResult.success(itemStack, world.isClient());
     }
 }
