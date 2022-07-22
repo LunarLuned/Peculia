@@ -3,10 +3,7 @@ package net.lunarluned.peculia.enchantment;
 import net.lunarluned.peculia.item.custom.ModHoeItem;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityGroup;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.*;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
@@ -19,7 +16,7 @@ public class LeechingEnchantment extends Enchantment {
 
     @Override
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
-        if (target instanceof LivingEntity) {
+        if (target instanceof LivingEntity && target.getType() != EntityType.ARMOR_STAND && target.getType() != EntityType.MINECART && target.getType() != EntityType.CHEST_MINECART && target.getType() != EntityType.CHEST_BOAT && target.getType() != EntityType.FURNACE_MINECART && target.getType() != EntityType.HOPPER_MINECART && target.getType() != EntityType.TNT_MINECART && target.getType() != EntityType.WITHER && target.getType() != EntityType.WITHER_SKELETON) {
                 if (user instanceof PlayerEntity player && player.getRandom().nextInt(10) <= 5) {
                     if(level == 1) {
                         player.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 80 * level, 0));
@@ -28,13 +25,12 @@ public class LeechingEnchantment extends Enchantment {
 
                     if(level == 2) {
                         player.addStatusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 60 * level, 0));
-                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 80 * level, 0));
+                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 80 * level, 1));
                     }
 
                     if(level == 3) {
-                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 50 * level, 0));
                         player.addStatusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 100 * level, 0));
-                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 50 * level, 0));
+                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 50 * level, 2));
                     }
                 }
         }
