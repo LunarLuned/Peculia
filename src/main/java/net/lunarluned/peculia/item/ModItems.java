@@ -15,6 +15,8 @@ public class ModItems {
     // misc / not in any dimension
     public static final Item FALLEN_HERO_DAGGER = registerItem("fallen_hero_dagger",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).rarity(Rarity.UNCOMMON)));
+    public static final Item FALLEN_HERO_SWORD = registerItem("fallen_hero_sword",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).rarity(Rarity.UNCOMMON)));
 
 
     //end

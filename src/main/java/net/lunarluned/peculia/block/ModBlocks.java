@@ -188,6 +188,15 @@ public class ModBlocks {
     public static final Block AWAKENED_COBBLESTONE = registerBlock("awakened_cobblestone",
             new Block(FabricBlockSettings.of(Material.STONE).strength(3.5f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(30)), ModItemGroup.PECULIA_OVERWORLD);
 
+    public static final Block FERROCK = registerBlock("ferrock",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool().sounds(BlockSoundGroup.ANCIENT_DEBRIS).resistance(12)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block REFINED_FERROCK = registerBlock("refined_ferrock",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool().sounds(BlockSoundGroup.ANCIENT_DEBRIS).resistance(10)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block REFINED_FERROCK_BRICKS = registerBlock("refined_ferrock_bricks",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().sounds(BlockSoundGroup.ANCIENT_DEBRIS).resistance(10)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block REFINED_FERROCK_TILES = registerBlock("refined_ferrock_tiles",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().sounds(BlockSoundGroup.ANCIENT_DEBRIS).resistance(10)), ModItemGroup.PECULIA_OVERWORLD);
+
     public static final Block SNOW_BRICKS = registerBlock("snow_bricks",
             new Block(FabricBlockSettings.of(Material.SNOW_BLOCK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SNOW).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block SNOW_BRICK_PILLAR = registerBlock("snow_brick_pillar",

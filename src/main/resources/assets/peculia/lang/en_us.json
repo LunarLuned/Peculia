@@ -58,6 +58,10 @@
   "item.peculia.sporodine": "Sporodine",
 
 
+  "block.peculia.ferrock": "Ferrock",
+  "block.peculia.refined_ferrock": "Refined Ferrock",
+  "block.peculia.refined_ferrock_bricks": "Refined Ferrock Bricks",
+  "block.peculia.refined_ferrock_tiles": "Refined Ferrock Tiles",
   "block.peculia.compressed_cobblestone": "Compressed Cobblestone",
   "block.peculia.contained_cobblestone": "Contained Cobblestone",
   "block.peculia.continental_cobblestone": "Continental Cobblestone",
@@ -149,6 +153,7 @@
 
   "item.peculia.empty_mirror": "Empty Mirror",
   "item.peculia.fallen_hero_dagger": "Fallen Hero Dagger",
+  "item.peculia.fallen_hero_sword": "Fallen Hero Sword",
   "item.peculia.echoing_mirror": "Echoing Mirror",
   "item.peculia.mythril_helmet": "Mythril Helmet",
   "item.peculia.mythril_chestplate": "Mythril Chestplate",
