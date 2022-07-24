@@ -12,6 +12,16 @@
       "peculia:fx/anchored/anchored_teleport_fail2"
     ]
   },
+  "armor.mythril.equip": {
+    "subtitle": "armor.mythril.equip",
+    "sounds": [
+      "peculia:armor/mythril/mythril_equip1",
+      "peculia:armor/mythril/mythril_equip2",
+      "peculia:armor/mythril/mythril_equip3",
+      "peculia:armor/mythril/mythril_equip4",
+      "peculia:armor/mythril/mythril_equip5"
+    ]
+  },
   "item.echoing_mirror.use": {
     "subtitle": "item.echoing_mirror.use",
     "sounds": [

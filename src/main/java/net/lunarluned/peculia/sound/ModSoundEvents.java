@@ -16,6 +16,8 @@ public class ModSoundEvents {
         return Registry.register(Registry.SOUND_EVENT, id, new SoundEvent(id));
     }
 
+    public static final SoundEvent ARMOR_MYTHRIL_EQUIP = registerSoundEvent("armor.mythril.equip");
+
     public static final SoundEvent BLOCK_MYTHRIL_BREAK = registerSoundEvent("block.mythril.break");
     public static final SoundEvent BLOCK_MYTHRIL_STEP = registerSoundEvent("block.mythril.step");
     public static final SoundEvent BLOCK_MYTHRIL_PLACE = registerSoundEvent("block.mythril.place");
