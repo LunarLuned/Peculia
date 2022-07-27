@@ -21,8 +21,6 @@ public class ModEnchantments {
             new SwirlingEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentTarget.FISHING_ROD));
     public static Enchantment LEECHING = register("leeching",
             new LeechingEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.FISHING_ROD));
-    public static Enchantment FORTIFICATION = register("fortification",
-            new FortificationEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.ARMOR));
 
     private static Enchantment register(String name, Enchantment enchantment) {
         return Registry.register(Registry.ENCHANTMENT, new Identifier(Peculia.MOD_ID, name), enchantment);
