@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "peculia:block/refined_ferrock_bricks",
+    "top": "peculia:block/refined_ferrock_bricks",
+    "side": "peculia:block/refined_ferrock_bricks"
+  }
+}

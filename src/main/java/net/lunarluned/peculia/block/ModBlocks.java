@@ -153,7 +153,7 @@ public class ModBlocks {
     //overworld
     public static final Block SCULK_SPINE = registerBlock("sculk_spine",
             new SculkPillarBlock(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SCULK_CATALYST).requiresTool().resistance(1).strength(2f),
-            UniformIntProvider.create(2, 12)), ModItemGroup.PECULIA_OVERWORLD);
+            UniformIntProvider.create(2, 8)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block SPINAL_PILLAR = registerBlock("spinal_pillar",
             new PillarBlock(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SCULK_CATALYST).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block CHISELED_SPINAL_BRICKS = registerBlock("chiseled_spinal_bricks",
@@ -189,13 +189,27 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.STONE).strength(3.5f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(30)), ModItemGroup.PECULIA_OVERWORLD);
 
     public static final Block FERROCK = registerBlock("ferrock",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool().sounds(BlockSoundGroup.ANCIENT_DEBRIS).resistance(12)), ModItemGroup.PECULIA_OVERWORLD);
+            new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool().mapColor(MapColor.BROWN).sounds(BlockSoundGroup.ANCIENT_DEBRIS).resistance(12)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block CHARGED_FERROCK = registerBlock("charged_ferrock",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool().luminance(3).mapColor(MapColor.BROWN).sounds(BlockSoundGroup.ANCIENT_DEBRIS).resistance(12)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block REFINED_FERROCK = registerBlock("refined_ferrock",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool().sounds(BlockSoundGroup.ANCIENT_DEBRIS).resistance(10)), ModItemGroup.PECULIA_OVERWORLD);
+            new Block(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool().mapColor(MapColor.BROWN).sounds(BlockSoundGroup.ANCIENT_DEBRIS).resistance(10)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block REFINED_FERROCK_BRICKS = registerBlock("refined_ferrock_bricks",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().sounds(BlockSoundGroup.ANCIENT_DEBRIS).resistance(10)), ModItemGroup.PECULIA_OVERWORLD);
+            new Block(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().mapColor(MapColor.BROWN).sounds(BlockSoundGroup.ANCIENT_DEBRIS).resistance(10)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block REFINED_FERROCK_BRICK_STAIRS = registerBlock("refined_ferrock_brick_stairs",
+            new ModStairsBlock(ModBlocks.REFINED_FERROCK_BRICKS.getDefaultState(),FabricBlockSettings.of(Material.STONE).mapColor(MapColor.BROWN).strength(4f).resistance(10).requiresTool().sounds(BlockSoundGroup.ANCIENT_DEBRIS)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block REFINED_FERROCK_BRICK_SLAB = registerBlock("refined_ferrock_brick_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.BROWN).strength(4f).resistance(10).nonOpaque().requiresTool().sounds(BlockSoundGroup.ANCIENT_DEBRIS)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block REFINED_FERROCK_BRICK_WALL = registerBlock("refined_ferrock_brick_wall",
+            new WallBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.BROWN).strength(4f).resistance(10).requiresTool().sounds(BlockSoundGroup.ANCIENT_DEBRIS).nonOpaque()), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block REFINED_FERROCK_TILES = registerBlock("refined_ferrock_tiles",
             new Block(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().sounds(BlockSoundGroup.ANCIENT_DEBRIS).resistance(10)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block REFINED_FERROCK_TILE_STAIRS = registerBlock("refined_ferrock_tile_stairs",
+            new ModStairsBlock(ModBlocks.REFINED_FERROCK_BRICKS.getDefaultState(),FabricBlockSettings.of(Material.STONE).mapColor(MapColor.BROWN).strength(4f).resistance(10).requiresTool().sounds(BlockSoundGroup.ANCIENT_DEBRIS)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block REFINED_FERROCK_TILE_SLAB = registerBlock("refined_ferrock_tile_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.BROWN).strength(4f).resistance(10).nonOpaque().requiresTool().sounds(BlockSoundGroup.ANCIENT_DEBRIS)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block REFINED_FERROCK_TILE_WALL = registerBlock("refined_ferrock_tile_wall",
+            new WallBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.BROWN).strength(4f).resistance(10).requiresTool().sounds(BlockSoundGroup.ANCIENT_DEBRIS).nonOpaque()), ModItemGroup.PECULIA_OVERWORLD);
 
     public static final Block SNOW_BRICKS = registerBlock("snow_bricks",
             new Block(FabricBlockSettings.of(Material.SNOW_BLOCK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SNOW).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);

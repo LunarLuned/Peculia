@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "peculia:block/refined_ferrock_tile_slab"
+    },
+    "type=double": {
+      "model": "peculia:block/refined_ferrock_tiles"
+    },
+    "type=top": {
+      "model": "peculia:block/refined_ferrock_tile_slab_top"
+    }
+  }
+}

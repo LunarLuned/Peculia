@@ -59,9 +59,16 @@
 
 
   "block.peculia.ferrock": "Ferrock",
+  "block.peculia.charged_ferrock": "Charged Ferrock",
   "block.peculia.refined_ferrock": "Refined Ferrock",
   "block.peculia.refined_ferrock_bricks": "Refined Ferrock Bricks",
   "block.peculia.refined_ferrock_tiles": "Refined Ferrock Tiles",
+  "block.peculia.refined_ferrock_brick_stairs": "Refined Ferrock Brick Stairs",
+  "block.peculia.refined_ferrock_brick_slab": "Refined Ferrock Brick Slab",
+  "block.peculia.refined_ferrock_brick_wall": "Refined Ferrock Brick Wall",
+  "block.peculia.refined_ferrock_tile_stairs": "Refined Ferrock Tile Stairs",
+  "block.peculia.refined_ferrock_tile_slab": "Refined Ferrock Tile Slab",
+  "block.peculia.refined_ferrock_tile_wall": "Refined Ferrock Tile Wall",
   "block.peculia.compressed_cobblestone": "Compressed Cobblestone",
   "block.peculia.contained_cobblestone": "Contained Cobblestone",
   "block.peculia.continental_cobblestone": "Continental Cobblestone",

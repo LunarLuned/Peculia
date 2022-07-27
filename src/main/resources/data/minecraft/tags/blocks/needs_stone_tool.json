@@ -25,6 +25,17 @@
     "peculia:spinal_tile_wall",
     "peculia:spinal_pillar",
     "peculia:chiseled_spinal_bricks",
-    "peculia:void_lamp"
+    "peculia:void_lamp",
+    "peculia:ferrock",
+    "peculia:charged_ferrock",
+    "peculia:refined_ferrock",
+    "peculia:refined_ferrock_bricks",
+    "peculia:refined_ferrock_tiles",
+    "peculia:refined_ferrock_brick_slab",
+    "peculia:refined_ferrock_tile_slab",
+    "peculia:refined_ferrock_brick_stairs",
+    "peculia:refined_ferrock_tile_stairs",
+    "peculia:refined_ferrock_brick_wall",
+    "peculia:refined_ferrock_tile_wall"
   ]
 }

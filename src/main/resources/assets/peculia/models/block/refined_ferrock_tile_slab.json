@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "peculia:block/refined_ferrock_tiles",
+    "top": "peculia:block/refined_ferrock_tiles",
+    "side": "peculia:block/refined_ferrock_tiles"
+  }
+}

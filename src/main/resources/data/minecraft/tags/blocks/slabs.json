@@ -11,6 +11,8 @@
     "peculia:spinal_tile_slab",
     "peculia:polished_fluorite_slab",
     "peculia:polished_fluorite_brick_slab",
-    "peculia:polished_fluorite_tile_slab"
+    "peculia:polished_fluorite_tile_slab",
+    "peculia:refined_ferrock_brick_slab",
+    "peculia:refined_ferrock_tile_slab"
   ]
 }

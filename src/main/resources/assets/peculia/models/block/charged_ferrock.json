@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "peculia:block/charged_ferrock_top",
+    "side": "peculia:block/charged_ferrock"
+  }
+}
