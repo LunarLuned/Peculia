@@ -66,6 +66,8 @@ public class Peculia implements ModInitializer {
 		ModPotions.registerextIchorResistancePotion();
 
 		LOGGER.info("You have 5 days until the piss droplets hit your minecraft house.");
+
+		LOGGER.info("get trolled");
 	}
 	public static class ElectrocutionDamageSource extends EntityDamageSource {
 
