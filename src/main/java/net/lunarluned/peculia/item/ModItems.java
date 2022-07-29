@@ -64,7 +64,7 @@ public class ModItems {
 
     public static final Item MUSIC_DISC_LULLA = registerItem("music_disc_lulla",
             new ModMusicDiscItem(7, ModSoundEvents.MUSIC_DISC_LULLA,
-                    new FabricItemSettings().rarity(Rarity.RARE).maxCount(1).group(ModItemGroup.PECULIA)));
+                    new FabricItemSettings().rarity(Rarity.RARE).maxCount(1).group(ModItemGroup.PECULIA), 194));
     public static final Item DISC_FRAGMENT_LULLA = registerItem("disc_fragment_lulla",
             new DiscFragmentItem(new FabricItemSettings().group(ModItemGroup.PECULIA)));
 
