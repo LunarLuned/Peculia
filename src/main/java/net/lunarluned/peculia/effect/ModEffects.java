@@ -1,8 +1,6 @@
 package net.lunarluned.peculia.effect;
 
 import net.lunarluned.peculia.Peculia;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.util.Identifier;
@@ -14,8 +12,9 @@ public class ModEffects {
     public static StatusEffect ANCHORED;
     public static StatusEffect ELECTROCUTED;
     public static StatusEffect ICHOR_RESISTANCE;
-    public static StatusEffect PANICKED;
+    public static StatusEffect DETERMINED;
     public static StatusEffect STAGNATED;
+    public static StatusEffect LUNAR_SICKNESS;
 
     public static StatusEffect registerIchorStatusEffect(String name) {
         return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new IchorEffect(StatusEffectCategory.HARMFUL, 15766579));
@@ -32,16 +31,20 @@ public class ModEffects {
     public static StatusEffect registerIchorResistanceStatusEffect(String name) {
         return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new IchorResistanceEffect(StatusEffectCategory.BENEFICIAL, 1385267));
     }
-    public static StatusEffect registerPanickedStatusEffect(String name) {
-        return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new PanickedEffect(StatusEffectCategory.BENEFICIAL, 16743526));
+    public static StatusEffect registerLunarSicknessStatusEffect(String name) {
+        return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new LunarSicknessEffect(StatusEffectCategory.HARMFUL, 1385267));
+    }
+    public static StatusEffect registerDeterminedStatusEffect(String name) {
+        return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new DeterminedEffect(StatusEffectCategory.BENEFICIAL, 16743526));
     }
     public static StatusEffect registerStagnatedStatusEffect(String name) {
-        return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new StagnatedEffect(StatusEffectCategory.BENEFICIAL, 16743526));
+        return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new StagnatedEffect(StatusEffectCategory.HARMFUL, 	9426908));
     }
 
     public static void registerIchorEffect() { ICHOR = registerIchorStatusEffect("ichor");
     }
-
+    public static void registerLunarSicknessEffect() { LUNAR_SICKNESS = registerLunarSicknessStatusEffect("lunar_sickness");
+    }
     public static void registerAnchoredEffect() { ANCHORED = registerAnchoredStatusEffect("anchored");
     }
     public static void registerVoidTouchedEffect() { VOID_TOUCHED = registerVoidTouchedStatusEffect("void_touched"); }
@@ -50,6 +53,6 @@ public class ModEffects {
         ELECTROCUTED = registerElectrocutedStatusEffect("electrocuted");
     }
     public static void registerIchorResistanceEffect() { ICHOR_RESISTANCE = registerIchorResistanceStatusEffect("ichor_resistance");}
-    public static void registerPanickedEffect() { PANICKED = registerPanickedStatusEffect("panicked");}
+    public static void registerDeterminedStatusEffect() { DETERMINED = registerDeterminedStatusEffect("determined");}
     public static void registerStagnatedEffect() { STAGNATED = registerStagnatedStatusEffect("stagnated");}
 }

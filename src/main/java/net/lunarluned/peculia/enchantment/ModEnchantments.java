@@ -13,8 +13,8 @@ public class ModEnchantments {
      //       new NewEchoEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentTarget.WEAPON));
     public static Enchantment CONCUSS = register("concuss",
             new ConcussEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.DIGGER));
-    public static Enchantment PANICKED = register("panicked",
-            new PanickedEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentTarget.ARMOR_CHEST));
+    public static Enchantment DETERMINED = register("determined",
+            new DeterminedEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentTarget.ARMOR_CHEST));
     public static Enchantment SHORYUKEN = register("shoryuken",
             new ShoryukenEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.FISHING_ROD));
     public static Enchantment SWIRLING = register("swirling",

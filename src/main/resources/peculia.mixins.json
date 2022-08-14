@@ -10,7 +10,7 @@
     "PickaxeModification",
     "PlayerManagerMixin",
     "ScytheModification",
-    "VoidTouchedEffectMixin",
+    "LivingEntityMixin",
     "IchorResistanceEffectMixin",
     "BrewingRecipeRegistryMixin",
     "WitherSkullEntityMixin"

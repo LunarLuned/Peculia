@@ -17,7 +17,8 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).rarity(Rarity.UNCOMMON)));
     public static final Item FALLEN_HERO_SWORD = registerItem("fallen_hero_sword",
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).rarity(Rarity.UNCOMMON)));
-
+  //  public static final Item PECULIAR_DAGGER = registerItem("peculiar_dagger",
+   //         new PeculiarDaggerItem(ModToolMaterials.PECULIAR,3, -2.0f,new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).rarity(Rarity.EPIC)));
 
     //end
 

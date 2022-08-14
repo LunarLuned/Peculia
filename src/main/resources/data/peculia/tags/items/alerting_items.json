@@ -21,6 +21,11 @@
     "peculia:mythril_bricks",
     "peculia:mythril_gauntlet",
     "peculia:echoing_mirror",
-    "peculia:empty_mirror"
+    "peculia:empty_mirror",
+    "peculia:peculiar_dagger",
+    "peculia:mythical_blade",
+    "peculia:gilded_mythical_blade",
+    "peculia:void_touched_mythical_blade",
+    "peculia:void_touched_gilded_mythical_blade"
   ]
 }

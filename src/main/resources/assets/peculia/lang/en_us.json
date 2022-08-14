@@ -188,6 +188,8 @@
   "item.peculia.void_touched_gilded_mythical_blade": "Mythical Blade",
   "item.peculia.void_touched_gilded_mythical_blade.desc": "Void Touched, Gilded",
 
+  "item.peculia.peculiar_dagger": "Peculiar Dagger",
+  "item.peculia.peculiar_dagger.desc": "Lunar Touched",
 
   "itemGroup.peculia.peculia": "Peculia End",
   "itemGroup.peculia.peculia_void_depths": "Peculia Void Depths",
@@ -230,7 +232,7 @@
   "enchantment.peculia.thundering": "Thundering",
   "enchantment.peculia.echo": "Echo",
   "enchantment.peculia.concuss": "Concuss",
-  "enchantment.peculia.panicked": "Panicked",
+  "enchantment.peculia.determined": "Determined",
   "enchantment.peculia.shoryuken": "Shoryuken",
   "enchantment.peculia.momentum": "Momentum",
   "enchantment.peculia.leeching": "Leeching",
@@ -239,7 +241,7 @@
   "enchantment.peculia.echo.desc": "Does extra damage to the target that has been hit--does not work w/ critical hits.",
   "enchantment.peculia.thundering.desc": "Allows you to electrocute enemies, as long as it's raining.",
   "enchantment.peculia.concuss.desc": "Gives the target slowness & blindness after being hit. (Must be crouching to use.)",
-  "enchantment.peculia.panicked.desc": "Gives the user speed, hunger & strength after getting to 5 hearts while in combat.",
+  "enchantment.peculia.determined.desc": "At under half health, the player will take less damage & can give regeneration while attacking during this state.",
   "enchantment.peculia.leeching.desc": "Gives the user regeneration at the cost of less attack damage and a debuff on use.",
 
   "advancements.adventure.obtain_dagger.title": "Thats Not a Knife!",
@@ -254,8 +256,9 @@
   "effect.peculia.void_touched": "Void Touched",
   "effect.peculia.anchored": "Anchored",
   "effect.peculia.ichor_resistance": "Ichor Resistance",
-  "effect.peculia.panicked": "Panicked",
+  "effect.peculia.determined": "Determined",
   "effect.peculia.stagnated": "Stagnated",
+  "effect.peculia.lunar_sickness": "Lunar Sickness",
 
   "armor.mythril.equip": "Mythril Armor crackles",
   "effect.echo.attack.hit": "Strong Echo attack",

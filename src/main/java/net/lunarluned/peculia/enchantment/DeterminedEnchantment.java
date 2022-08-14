@@ -10,8 +10,8 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 
-public class PanickedEnchantment extends Enchantment {
-    protected PanickedEnchantment(Rarity weight, EnchantmentTarget type, EquipmentSlot... slotTypes) {
+public class DeterminedEnchantment extends Enchantment {
+    protected DeterminedEnchantment(Rarity weight, EnchantmentTarget type, EquipmentSlot... slotTypes) {
         super(weight, type, slotTypes);
     }
 
@@ -19,11 +19,15 @@ public class PanickedEnchantment extends Enchantment {
     public void onUserDamaged(LivingEntity user, Entity target, int level) {
         if (user instanceof PlayerEntity) {
             if (user.getHealth() < 10.0F) {
-            user.addStatusEffect(new StatusEffectInstance(ModEffects.PANICKED, 10 * 2 * level, level - 1));
+            user.addStatusEffect(new StatusEffectInstance(ModEffects.DETERMINED, 50 * 2 * level, level - 1));
     }
             super.onUserDamaged(user, target, level);
 }
-
+        }
+    public void onTargetDamaged(LivingEntity user, Entity target, int level) {
+        if (user.hasStatusEffect(ModEffects.DETERMINED)) {
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 20 * level,  0));
+        }
     }
     public int getMaxLevel() { return 2; }
 

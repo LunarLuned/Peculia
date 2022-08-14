@@ -57,8 +57,9 @@ public class Peculia implements ModInitializer {
 		ModEffects.registerVoidTouchedEffect();
 		ModEffects.registerAnchoredEffect();
 		ModEffects.registerIchorResistanceEffect();
-		ModEffects.registerPanickedEffect();
+		ModEffects.registerDeterminedStatusEffect();
 		ModEffects.registerStagnatedEffect();
+		ModEffects.registerLunarSicknessEffect();
 
 		ModPotions.registerIchorPotion();
 		ModPotions.registerextIchorPotion();
@@ -66,8 +67,7 @@ public class Peculia implements ModInitializer {
 		ModPotions.registerextIchorResistancePotion();
 
 		LOGGER.info("You have 5 days until the piss droplets hit your minecraft house.");
-
-		LOGGER.info("get trolled");
+		LOGGER.info("ඞ");
 	}
 	public static class ElectrocutionDamageSource extends EntityDamageSource {
 
