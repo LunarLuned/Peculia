@@ -11,6 +11,7 @@ import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.misc.ModGameEvents;
 import net.lunarluned.peculia.potion.ModPotions;
 import net.lunarluned.peculia.sound.ModSoundEvents;
+import net.lunarluned.peculia.util.ModLootTableModifiers;
 import net.lunarluned.peculia.world.feature.ModConfiguredFeatures;
 import net.lunarluned.peculia.world.feature.gen.ModWorldGen;
 import net.minecraft.entity.Entity;
@@ -65,6 +66,7 @@ public class Peculia implements ModInitializer {
 		ModPotions.registerextIchorPotion();
 		ModPotions.registerIchorResistancePotion();
 		ModPotions.registerextIchorResistancePotion();
+		ModLootTableModifiers.modifyLootTables();
 
 		LOGGER.info("You have 5 days until the piss droplets hit your minecraft house.");
 		LOGGER.info("ඞ");
