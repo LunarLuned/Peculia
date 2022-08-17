@@ -3,6 +3,7 @@ package net.lunarluned.peculia.util;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.item.ModItems;
+import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
@@ -28,8 +29,47 @@ public class ModLootTableModifiers {
             = new Identifier("minecraft", "chests/bastion_treasure");
     private static final Identifier BASTION_HOGLIN_STABLE_STRUCTURE_CHEST_ID
             = new Identifier("minecraft", "chests/bastion_hoglin_stable");
+    private static final Identifier STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID
+            = new Identifier("minecraft", "chests/stronghold_corridor");
+    private static final Identifier STRONGHOLD_CROSSING_STRUCTURE_CHEST_ID
+            = new Identifier("minecraft", "chests/stronghold_crossing");
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(1.0f)) // Drops 100% of the time
+                        .with(ItemEntry.builder(Items.EMERALD))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 7.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
+            if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.8f)) // Drops 100% of the time
+                        .with(ItemEntry.builder(Items.COPPER_INGOT))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(4.0f, 10.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+
+            }
+            if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.9f)) // Drops 100% of the time
+                        .with(ItemEntry.builder(Items.ARROW))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(4.0f, 24.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+
+            }
+            if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.9f)) // Drops 100% of the time
+                        .with(ItemEntry.builder(Items.ARROW))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(4.0f, 24.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+
+            }
             if(SPAWN_BONUS_CHEST_CHEST_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
