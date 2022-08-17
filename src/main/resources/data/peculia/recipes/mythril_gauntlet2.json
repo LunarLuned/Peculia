@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "peculia:diamond_gauntlet"
+  },
+  "addition": {
+    "item": "peculia:mythril_ingot"
+  },
+  "result": {
+    "item": "peculia:mythril_gauntlet"
+  }
+}

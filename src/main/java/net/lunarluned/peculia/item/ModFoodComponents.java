@@ -20,7 +20,7 @@ public class ModFoodComponents {
     public static final FoodComponent SCRAMBLED_EGGS_TUSK = (new FoodComponent.Builder().hunger(6).saturationModifier(7.5F).build());
 
     //overworld
-    public static final FoodComponent SWEET_ROLL = (new FoodComponent.Builder().hunger(3).saturationModifier(2f).snack().statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 40, 0), 0.9F).statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 100, 0), 0.9F).build());
+    public static final FoodComponent SWEET_ROLL = (new FoodComponent.Builder().hunger(3).saturationModifier(2f).snack().statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 20, 0), 0.8F).statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 100, 0), 0.9F).build());
     public static final FoodComponent HARD_BOILED_EGG = (new FoodComponent.Builder().hunger(2).saturationModifier(4f).snack().build());
     public static final FoodComponent SCRAMBLED_EGGS = (new FoodComponent.Builder().hunger(6).saturationModifier(7.5F).build());
     public static final FoodComponent RAW_BACON = (new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).snack().statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 100, 1), 0.7F).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 200, 1), 0.7F).build());

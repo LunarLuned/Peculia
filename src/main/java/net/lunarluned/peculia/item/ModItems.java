@@ -98,6 +98,8 @@ public class ModItems {
     public static final Item SCRAMBLED_EGGS_TUSK = registerItem("scrambled_eggs_tusk",
             new HoglinTuskItem(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER).food(ModFoodComponents.SCRAMBLED_EGGS_TUSK).maxCount(1)));
 
+    public static final Item NETHERITE_GAUNTLET = registerItem("netherite_gauntlet",
+            new ModGauntletItem(ToolMaterials.NETHERITE, 3, -2.209f, new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER)));
     public static final Item SACRIFICIAL_DAGGER = registerItem("sacrificial_dagger",
             new ModDaggerItem(ModToolMaterials.SCRAP,1, -2.2f, new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER).maxCount(1)));
     public static final Item GILDED_SACRIFICIAL_DAGGER = registerItem("gilded_sacrificial_dagger",

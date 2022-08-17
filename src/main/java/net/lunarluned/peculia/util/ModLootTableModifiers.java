@@ -129,6 +129,15 @@ public class ModLootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
 
             }
+            if(ANCIENT_CITY_STRUCTURE_CHEST_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
+                        .with(ItemEntry.builder(ModItems.FALLEN_HERO_DAGGER))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+
+            }
         });
         }
 }
