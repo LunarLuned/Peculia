@@ -12,6 +12,8 @@ import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class ModLootTableModifiers {
         private static final Identifier END_CITY_STRUCTURE_CHEST_ID
             = new Identifier("minecraft", "chests/end_city_treasure");
@@ -33,6 +35,8 @@ public class ModLootTableModifiers {
             = new Identifier("minecraft", "chests/stronghold_corridor");
     private static final Identifier STRONGHOLD_CROSSING_STRUCTURE_CHEST_ID
             = new Identifier("minecraft", "chests/stronghold_crossing");
+    private static final Identifier ENDER_DRAGON_ENTITY_ID
+            = new Identifier("minecraft", "entities/ender_dragon");
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
             if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
@@ -43,12 +47,28 @@ public class ModLootTableModifiers {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 7.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
+            if (source.isBuiltin() && ENDER_DRAGON_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .with(ItemEntry.builder(ModItems.FALLEN_HERO_SWORD))
+                        .rolls(ConstantLootNumberProvider.create(1));
+
+                tableBuilder.pool(poolBuilder);
+            }
             if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.8f)) // Drops 100% of the time
                         .with(ItemEntry.builder(Items.COPPER_INGOT))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(4.0f, 10.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+
+            }
+            if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
+                        .with(ItemEntry.builder(ModItems.FALLEN_HERO_SWORD))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f, 1f)).build());
                 tableBuilder.pool(poolBuilder.build());
 
             }
@@ -166,6 +186,15 @@ public class ModLootTableModifiers {
                         .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
                         .with(ItemEntry.builder(ModItems.CHARGED_COPPER_CLEAVER))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+
+            }
+            if(ANCIENT_CITY_STRUCTURE_CHEST_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.50f)) // Drops 50% of the time
+                        .with(ItemEntry.builder(ModBlocks.SCULK_SPINE))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 12.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
 
             }

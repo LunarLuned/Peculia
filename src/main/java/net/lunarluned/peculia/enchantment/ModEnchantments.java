@@ -17,8 +17,6 @@ public class ModEnchantments {
             new DeterminedEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentTarget.ARMOR_CHEST));
     public static Enchantment SHORYUKEN = register("shoryuken",
             new ShoryukenEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.FISHING_ROD));
-    public static Enchantment SWIRLING = register("swirling",
-            new SwirlingEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentTarget.FISHING_ROD));
     public static Enchantment LEECHING = register("leeching",
             new LeechingEnchantment(Enchantment.Rarity.RARE, EnchantmentTarget.FISHING_ROD));
 

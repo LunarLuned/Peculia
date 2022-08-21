@@ -7,7 +7,7 @@
       "model": "peculia:block/polished_fluorite"
     },
     "type=top": {
-      "model": "peculia:block/polished_fluorite_brick_top"
+      "model": "peculia:block/polished_fluorite_slab_top"
     }
   }
 }
