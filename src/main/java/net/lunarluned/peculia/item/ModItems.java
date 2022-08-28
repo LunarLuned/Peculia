@@ -130,6 +130,9 @@ public class ModItems {
     public static final Item CHARGED_GILDED_COPPER_CLEAVER = registerItem("charged_gilded_copper_cleaver",
             new ElectrocutedItem(ModToolMaterials.COPPER,1, -2.0f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).maxCount(1)));
 
+    public static final Item SOUL = registerItem("soul",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).rarity(Rarity.UNCOMMON)));
+
     public static final Item SCULK_SAC = registerItem("sculk_sac",
             new SculkSacItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).rarity(Rarity.UNCOMMON)));
     public static final Item FULL_SCULK_SAC = registerItem("full_sculk_sac",
