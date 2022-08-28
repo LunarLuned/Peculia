@@ -5,6 +5,7 @@ import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.mixin.BrewingRecipeRegistryMixin;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.Potions;
@@ -16,14 +17,25 @@ public class ModPotions {
     public static Potion EXTICHOR_POTION;
     public static Potion ICHORRESISTANCE_POTION;
     public static Potion EXTICHORRESISTANCE_POTION;
+    public static Potion DARKNESS_POTION;
+    public static Potion EXTDARKNESS_POTION;
+
+    public static Potion registerDarknessPotion(String name) {
+        return Registry.register(Registry.POTION, new Identifier(Peculia.MOD_ID, name),
+                new Potion(new StatusEffectInstance(StatusEffects.DARKNESS, 250, 0)));
+    }
+    public static Potion registerextDarknessPotion(String name) {
+        return Registry.register(Registry.POTION, new Identifier(Peculia.MOD_ID, name),
+                new Potion(new StatusEffectInstance(StatusEffects.DARKNESS, 525, 0)));
+    }
 
     public static Potion registerIchorPotion(String name) {
         return Registry.register(Registry.POTION, new Identifier(Peculia.MOD_ID, name),
-                new Potion(new StatusEffectInstance(ModEffects.ICHOR, 800, 0)));
+                new Potion(new StatusEffectInstance(ModEffects.ICHOR, 400, 0)));
     }
     public static Potion registerextIchorPotion(String name) {
         return Registry.register(Registry.POTION, new Identifier(Peculia.MOD_ID, name),
-                new Potion(new StatusEffectInstance(ModEffects.ICHOR, 1600, 0)));
+                new Potion(new StatusEffectInstance(ModEffects.ICHOR, 800, 0)));
     }
 
     public static Potion registerIchorResistancePotion(String name) {
@@ -43,6 +55,14 @@ public class ModPotions {
         EXTICHOR_POTION = registerextIchorPotion("extichor_potion");
         registerextIchorPotionRecipe();
     }
+    public static void registerDarknessPotion() {
+        DARKNESS_POTION = registerDarknessPotion("darkness_potion");
+        registerDarknessPotionRecipe();
+    }
+    public static void registerextDarknessPotion() {
+        EXTDARKNESS_POTION = registerextDarknessPotion("extdarkness_potion");
+        registerextDarknessPotionRecipe();
+    }
     public static void registerIchorResistancePotion() {ICHORRESISTANCE_POTION = registerIchorResistancePotion("ichor_resistance_potion");
         registerIchorResistancePotionRecipe();
     }
@@ -57,6 +77,14 @@ public class ModPotions {
     private static void registerextIchorPotionRecipe() {
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.ICHOR_POTION, Items.REDSTONE,
                 ModPotions.EXTICHOR_POTION);
+    }
+    private static void registerDarknessPotionRecipe() {
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.THICK, Items.ECHO_SHARD,
+                ModPotions.DARKNESS_POTION);
+    }
+    private static void registerextDarknessPotionRecipe() {
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.DARKNESS_POTION, Items.REDSTONE,
+                ModPotions.EXTDARKNESS_POTION);
     }
     private static void registerIchorResistancePotionRecipe() {
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, ModItems.SPORODINE,

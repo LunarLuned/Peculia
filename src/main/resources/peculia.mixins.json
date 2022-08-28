@@ -13,7 +13,9 @@
     "LivingEntityMixin",
     "IchorResistanceEffectMixin",
     "BrewingRecipeRegistryMixin",
-    "WitherSkullEntityMixin"
+    "WitherSkullEntityMixin",
+    "EnderPearlMixin",
+    "ChorusFruitMixin"
   ],
   "client": [
 

@@ -64,6 +64,8 @@ public class Peculia implements ModInitializer {
 
 		ModPotions.registerIchorPotion();
 		ModPotions.registerextIchorPotion();
+		ModPotions.registerDarknessPotion();
+		ModPotions.registerextDarknessPotion();
 		ModPotions.registerIchorResistancePotion();
 		ModPotions.registerextIchorResistancePotion();
 		ModLootTableModifiers.modifyLootTables();
