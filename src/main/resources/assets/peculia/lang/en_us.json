@@ -221,6 +221,15 @@
   "item.minecraft.lingering_potion.effect.extichor_potion": "Lingering Potion of Ichor",
   "item.minecraft.tipped_arrow.effect.extichor_potion": "Arrow of Ichor",
 
+  "item.minecraft.potion.effect.darkness_potion": "Potion of Darkness",
+  "item.minecraft.splash_potion.effect.darkness_potion": "Splash Potion of Darkness",
+  "item.minecraft.lingering_potion.effect.darkness_potion": "Lingering Potion of Darkness",
+  "item.minecraft.tipped_arrow.effect.darkness_potion": "Arrow of Darkness",
+  "item.minecraft.potion.effect.extdarkness_potion": "Potion of Darkness",
+  "item.minecraft.splash_potion.effect.extdarkness_potion": "Splash Potion of Darkness",
+  "item.minecraft.lingering_potion.effect.extdarkness_potion": "Lingering Potion of Darkness",
+  "item.minecraft.tipped_arrow.effect.extdarkness_potion": "Arrow of Darkness",
+
   "item.minecraft.potion.effect.ichor_resistance_potion": "Potion of Ichor Resistance",
   "item.minecraft.splash_potion.effect.ichor_resistance_potion": "Splash Potion of Ichor Resistance",
   "item.minecraft.lingering_potion.effect.ichor_resistance_potion": "Lingering Potion of Ichor Resistance",
