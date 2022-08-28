@@ -251,6 +251,9 @@
   "advancements.adventure.upgrade_dagger.description": "Not lose a finger while upgrading a Dimensional Dagger",
   "advancements.adventure.triple_trouble.title": "Triple Trouble",
   "advancements.adventure.triple_trouble.description": "Have every fully upgraded Dimensional Dagger.",
+  "advancements.adventure.kill_warden.title": "Jail Break",
+  "advancements.adventure.kill_warden.description": "There was never just one",
+
 
   "effect.peculia.electrocuted": "Electrocuted",
   "effect.peculia.ichor": "Ichor",
@@ -270,6 +273,8 @@
 
   "death.attack.electrocution": "%1$s was electrocuted to death",
   "death.attack.electrocuted.player": "%1$s electrocuted to death whilst fighting %2$s",
+  "death.attack.anchored": "%1$s forgot to pull anchor",
+  "death.attack.anchored.player": "%1$s forgot to pull anchor whilst fighting %2$s",
   "death.attack.condensed": "%1$s was too greedy with the void",
   "death.attack.condensed.player": "%1$s was too greedy with the void whilst fighting %2$s",
   "death.attack.ichor": "%1$s couldn't stop burning",

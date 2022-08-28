@@ -106,4 +106,14 @@ public class Peculia implements ModInitializer {
 			setBypassesProtection();
 		}
 	}
+	public static class AnchoredDamageSource extends DamageSource {
+
+		public AnchoredDamageSource(Entity name) {
+			super("anchored");
+			setUsesMagic();
+			setBypassesArmor();
+			setBypassesProtection();
+			setUnblockable();
+		}
+	}
 }
