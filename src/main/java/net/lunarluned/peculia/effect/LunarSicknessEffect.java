@@ -16,6 +16,7 @@ public class LunarSicknessEffect extends StatusEffect {
     }
 
 
+
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
             super.applyUpdateEffect(entity, amplifier);
     }

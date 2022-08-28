@@ -35,18 +35,42 @@ public class ModLootTableModifiers {
             = new Identifier("minecraft", "chests/stronghold_corridor");
     private static final Identifier STRONGHOLD_CROSSING_STRUCTURE_CHEST_ID
             = new Identifier("minecraft", "chests/stronghold_crossing");
+
+    //bosses
     private static final Identifier WARDEN_ENTITY_ID
             = new Identifier("minecraft", "entities/warden");
+    private static final Identifier WITHER_ENTITY_ID
+            = new Identifier("minecraft", "entities/wither");
     private static final Identifier ENDER_DRAGON_ENTITY_ID
             = new Identifier("minecraft", "entities/ender_dragon");
+
+    //entities
+    private static final Identifier ZOMBIE_ENTITY_ID
+            = new Identifier("minecraft", "entities/zombie");
+    private static final Identifier DROWNED_ENTITY_ID
+            = new Identifier("minecraft", "entities/drowned");
+    private static final Identifier HUSK_ENTITY_ID
+            = new Identifier("minecraft", "entities/husk");
+    private static final Identifier WITHER_SKELETON_ENTITY_ID
+            = new Identifier("minecraft", "entities/wither_skeleton");
+    private static final Identifier SKELETON_ENTITY_ID
+            = new Identifier("minecraft", "entities/skeleton");
+    private static final Identifier STRAY_ENTITY_ID
+            = new Identifier("minecraft", "entities/stray");
+    private static final Identifier WITCH_ENTITY_ID
+            = new Identifier("minecraft", "entities/witch");
+    private static final Identifier CREEPER_ENTITY_ID
+            = new Identifier("minecraft", "entities/creeper");
+
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
+            //bosses
+            if(WITHER_ENTITY_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(1.0f)) // Drops 100% of the time
-                        .with(ItemEntry.builder(Items.EMERALD))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 7.0f)).build());
+                        .with(ItemEntry.builder(ModItems.SOUL))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(12.0f, 38.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
             if (source.isBuiltin() && WARDEN_ENTITY_ID.equals(id)) {
@@ -72,6 +96,80 @@ public class ModLootTableModifiers {
                         .with(ItemEntry.builder(ModItems.FALLEN_HERO_SWORD))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder);
+            }
+            //entities
+            if (source.isBuiltin() && WITHER_SKELETON_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.4f)) // Drops 40% of the time
+                        .with(ItemEntry.builder(ModItems.SOUL))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f)).build());
+                tableBuilder.pool(poolBuilder);
+            }
+            if (source.isBuiltin() && ZOMBIE_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
+                        .with(ItemEntry.builder(ModItems.SOUL))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                tableBuilder.pool(poolBuilder);
+            }
+            if (source.isBuiltin() && HUSK_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
+                        .with(ItemEntry.builder(ModItems.SOUL))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                tableBuilder.pool(poolBuilder);
+            }
+            if (source.isBuiltin() && DROWNED_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
+                        .with(ItemEntry.builder(ModItems.SOUL))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                tableBuilder.pool(poolBuilder);
+            }
+            if (source.isBuiltin() && CREEPER_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
+                        .with(ItemEntry.builder(ModItems.SOUL))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                tableBuilder.pool(poolBuilder);
+            }
+            if (source.isBuiltin() && SKELETON_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 10% of the time
+                        .with(ItemEntry.builder(ModItems.SOUL))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                tableBuilder.pool(poolBuilder);
+            }
+            if (source.isBuiltin() && STRAY_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
+                        .with(ItemEntry.builder(ModItems.SOUL))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                tableBuilder.pool(poolBuilder);
+            }
+            if (source.isBuiltin() && WITCH_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
+                        .with(ItemEntry.builder(ModItems.SOUL))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                tableBuilder.pool(poolBuilder);
+            }
+            //structures
+            if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(1.0f)) // Drops 100% of the time
+                        .with(ItemEntry.builder(Items.EMERALD))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 7.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
             }
             if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
