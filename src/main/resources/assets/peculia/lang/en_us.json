@@ -160,6 +160,11 @@
   "item.peculia.disc_fragment_lulla.desc": "Amber Gray - Lulla",
 
   "item.peculia.soul": "Soul",
+  "item.peculia.inactive_tome": "Inactive Tome",
+  "item.peculia.inactive_tome.desc": "Empty",
+  "item.peculia.inactive_healing_tome": "Inactive Tome",
+  "item.peculia.inactive_healing_tome.desc": "Healing",
+  "item.peculia.tome_of_healing": "Tome of Healing",
   "item.peculia.empty_mirror": "Empty Mirror",
   "item.peculia.fallen_hero_dagger": "Fallen Hero Dagger",
   "item.peculia.fallen_hero_sword": "Fallen Hero Sword",

@@ -1,8 +1,6 @@
 package net.lunarluned.peculia.item.custom;
 
 import net.lunarluned.peculia.effect.ModEffects;
-import net.lunarluned.peculia.item.ModDaggerItem;
-import net.lunarluned.peculia.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
