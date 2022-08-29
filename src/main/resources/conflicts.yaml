@@ -1,0 +1,6 @@
+assets/minecraft/shaders/core/rendertype_entity_translucent_cull.fsh:
+ - CorePerspectiveModels
+ - VanillaDynamicEmissives
+assets/minecraft/shaders/core/rendertype_entity_translucent_cull.vsh:
+ - CorePerspectiveModels
+ - VanillaDynamicEmissives
