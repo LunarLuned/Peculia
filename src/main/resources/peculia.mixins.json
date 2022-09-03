@@ -13,6 +13,7 @@
     "IchorResistanceEffectMixin",
     "ItemDropMixin",
     "ItemMixin",
+    "LivingEntityMixin",
     "PickaxeModification",
     "PlayerManagerMixin",
     "ScytheModification",
