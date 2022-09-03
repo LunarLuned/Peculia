@@ -1,6 +1,6 @@
 package net.lunarluned.peculia.mixin;
 
-import net.lunarluned.peculia.item.ModDaggerItem;
+import net.lunarluned.peculia.item.custom.ModDaggerItem;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.ItemStack;
 import org.spongepowered.asm.mixin.Final;
