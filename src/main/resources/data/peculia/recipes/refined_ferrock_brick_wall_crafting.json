@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "peculia:refined_ferrock_bricks"
+        }
+    },
+    "result": {
+        "item": "peculia:refined_ferrock_brick_wall",
+        "count": 6
+    },
+    "group": "refined_ferrock_brick_wall"
+}

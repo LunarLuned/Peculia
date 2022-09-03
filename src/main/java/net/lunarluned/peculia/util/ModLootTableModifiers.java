@@ -61,9 +61,20 @@ public class ModLootTableModifiers {
             = new Identifier("minecraft", "entities/witch");
     private static final Identifier CREEPER_ENTITY_ID
             = new Identifier("minecraft", "entities/creeper");
+    private static final Identifier SCULK_SPINE_BLOCK_ID
+            = new Identifier("peculia", "blocks/sculk_spine");
 
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            //blocks
+            if(SCULK_SPINE_BLOCK_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.3f)) // Drops 30% of the time
+                        .with(ItemEntry.builder(ModItems.SCULK_SAC))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(12.0f, 38.0f)).build());
+                tableBuilder.pool(poolBuilder.build());
+            }
             //bosses
             if(WITHER_ENTITY_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()

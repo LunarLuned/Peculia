@@ -137,7 +137,7 @@ public class ModItems {
     public static final Item INACTIVE_HEALING_TOME = registerItem("inactive_healing_tome",
             new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD)));
     public static final Item TOME_OF_HEALING = registerItem("tome_of_healing",
-            new HealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).rarity(Rarity.UNCOMMON)));
+            new HealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).rarity(Rarity.UNCOMMON).maxDamage(128)));
 
     public static final Item SCULK_SAC = registerItem("sculk_sac",
             new SculkSacItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).rarity(Rarity.UNCOMMON)));

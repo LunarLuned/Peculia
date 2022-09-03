@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "peculia:refined_ferrock_bricks"
+    },
+    "result": "peculia:refined_ferrock_brick_slab",
+    "group": "refined_ferrock_brick_slab",
+    "count": 2
+}
