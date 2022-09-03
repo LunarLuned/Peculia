@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "peculia:mythril_bricks"
+    },
+    "result": "peculia:chiseled_mythril",
+    "group": "chiseled_mythril",
+    "count": 1
+}

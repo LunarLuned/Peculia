@@ -50,6 +50,8 @@ public class ModBlocks {
     public static final Block MYTHRIL_BRICK_WALL = registerBlock("mythril_brick_wall",
             new WallBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)
                     .mapColor(MapColor.LIGHT_BLUE_GRAY).strength(2f).requiresTool().sounds(ModSoundEvents.MYTHRIL).nonOpaque()), ModItemGroup.PECULIA);
+    public static final Block CHISELED_MYTHRIL = registerBlock("chiseled_mythril",
+            new Block(FabricBlockSettings.of(Material.AMETHYST).mapColor(MapColor.LIGHT_BLUE_GRAY).nonOpaque().strength(1.5f).requiresTool().sounds(ModSoundEvents.MYTHRIL)), ModItemGroup.PECULIA);
 
     public static final Block SILL = registerBlock("sill",
             new SillBlock(FabricBlockSettings.of(Material.SOIL).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.MUD).strength(2f).resistance(1)), ModItemGroup.PECULIA);

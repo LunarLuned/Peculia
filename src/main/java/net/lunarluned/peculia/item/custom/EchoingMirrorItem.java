@@ -64,7 +64,8 @@ public class EchoingMirrorItem extends Item {
 
                 ServerWorld dimension = server.getWorld(serverUser.getSpawnPointDimension());
                 BlockPos pos = serverUser.getSpawnPointPosition();
-                    //if user doesnt have anchored, they can use the mirror
+                //if user doesnt have anchored, they can use the mirror
+                if (!user.hasStatusEffect(ModEffects.CURSED)) {
                     if (!user.hasStatusEffect(ModEffects.ANCHORED)) {
                         user.emitGameEvent(GameEvent.BLOCK_PLACE);
                         world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_ECHOING_MIRROR_USE, SoundCategory.NEUTRAL, 1f, 1f);
@@ -98,7 +99,9 @@ public class EchoingMirrorItem extends Item {
                         user.getItemCooldownManager().set(this, 300);
                         user.damage(new Peculia.EchoingMirrorDamageSource(user), 6.0F);
                     }
+                    return TypedActionResult.success(itemStack, world.isClient());
                 }
+            }
         return TypedActionResult.success(itemStack, world.isClient());
     }
 }

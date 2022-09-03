@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "_",
+    "_"
+  ],
+  "key": {
+    "_": {
+      "item": "peculia:mythril_brick_slab"
+    }
+  },
+  "result": {
+    "item": "peculia:chiseled_mythril",
+    "count": 1
+  }
+}

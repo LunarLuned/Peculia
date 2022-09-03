@@ -12,7 +12,7 @@
     "GauntletModification",
     "IchorResistanceEffectMixin",
     "ItemDropMixin",
-    "LivingEntityMixin",
+    "ItemMixin",
     "PickaxeModification",
     "PlayerManagerMixin",
     "ScytheModification",

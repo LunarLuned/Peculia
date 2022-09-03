@@ -31,6 +31,7 @@ public abstract class WardenEntityMixin extends HostileEntity {
 
         cir.setReturnValue(HostileEntity.createHostileAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 1000.0D)
         .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.30000001192092896D).add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 1.0D)
+                        .add(EntityAttributes.GENERIC_ATTACK_SPEED, 5)
         .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 1.5D).add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 30.0D).add(EntityAttributes.GENERIC_ARMOR, 10.0D));
 
     }
@@ -46,7 +47,7 @@ public abstract class WardenEntityMixin extends HostileEntity {
 
             // Adds a status effect when an entity is hit by the Warden
 
-            ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(ModEffects.CURSED, 120, 0, false, true, true));
+            ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(ModEffects.STAGNATED, 120, 0, false, true, true));
 
         }
         cir.setReturnValue(super.tryAttack(target));
