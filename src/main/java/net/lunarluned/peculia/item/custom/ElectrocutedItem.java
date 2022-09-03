@@ -1,7 +1,6 @@
 package net.lunarluned.peculia.item.custom;
 
 import net.lunarluned.peculia.effect.ModEffects;
-import net.lunarluned.peculia.item.ModDaggerItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;

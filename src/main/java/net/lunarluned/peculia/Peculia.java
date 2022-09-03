@@ -9,6 +9,7 @@ import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.enchantment.ModEnchantments;
 import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.misc.ModGameEvents;
+import net.lunarluned.peculia.particle.ModParticles;
 import net.lunarluned.peculia.potion.ModPotions;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.lunarluned.peculia.util.ModLootTableModifiers;
@@ -62,6 +63,8 @@ public class Peculia implements ModInitializer {
 		ModEffects.registerDeterminedStatusEffect();
 		ModEffects.registerStagnatedEffect();
 		ModEffects.registerLunarSicknessEffect();
+
+		ModParticles.registerParticles();
 
 		ModPotions.registerIchorPotion();
 		ModPotions.registerextIchorPotion();

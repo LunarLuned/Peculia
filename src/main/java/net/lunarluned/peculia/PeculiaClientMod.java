@@ -3,12 +3,15 @@ package net.lunarluned.peculia;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.fluid.ModFluids;
+import net.lunarluned.peculia.particle.ModParticles;
+import net.lunarluned.peculia.particle.custom.IchorParticle;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.util.ModelIdentifier;
 import net.minecraft.screen.PlayerScreenHandler;
@@ -54,5 +57,7 @@ public class PeculiaClientMod implements ClientModInitializer {
             registry.register(new Identifier("peculia:block/siltar_flowing"));
     });
         //hello acikek.
+
+        ParticleFactoryRegistry.getInstance().register(ModParticles.ICHOR_PARTICLE, IchorParticle.Factory::new);
     }
 }

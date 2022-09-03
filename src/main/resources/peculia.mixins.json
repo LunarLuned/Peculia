@@ -17,6 +17,7 @@
     "PlayerManagerMixin",
     "ScytheModification",
     "WardenEntityMixin",
+    "WitherEntityMixin",
     "WitherSkullEntityMixin"
   ],
   "client": [

@@ -1,6 +1,7 @@
 package net.lunarluned.peculia.block.custom;
 
 import net.lunarluned.peculia.effect.ModEffects;
+import net.lunarluned.peculia.particle.ModParticles;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -19,7 +20,11 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
+import static com.mojang.blaze3d.platform.GlStateManager.Viewport.getX;
+import static com.mojang.blaze3d.platform.GlStateManager.Viewport.getY;
 import static net.lunarluned.peculia.block.custom.CrumblingBlock.setToAir;
+import static org.apache.commons.compress.compressors.CompressorStreamFactory.getZ;
+import static org.apache.commons.lang3.RandomUtils.nextDouble;
 
 public class IchorStickerBlock extends Block {
     public IchorStickerBlock(Settings settings) {
@@ -43,8 +48,6 @@ public class IchorStickerBlock extends Block {
                 );
 
         }
-
-
 
         @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
