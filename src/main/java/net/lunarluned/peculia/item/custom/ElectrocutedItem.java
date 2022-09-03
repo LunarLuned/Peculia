@@ -1,11 +1,11 @@
 package net.lunarluned.peculia.item.custom;
 
 import net.lunarluned.peculia.effect.ModEffects;
+import net.lunarluned.peculia.item.ModDaggerItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
@@ -15,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class ElectrocutedItem extends SwordItem {
+public class ElectrocutedItem extends ModDaggerItem {
     public ElectrocutedItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }

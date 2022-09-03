@@ -5,20 +5,21 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "AxeModification",
+    "BrewingRecipeRegistryMixin",
+    "ChorusFruitMixin",
+    "DaggerEnchantingMixin",
+    "EnderPearlMixin",
     "GauntletModification",
+    "IchorResistanceEffectMixin",
     "ItemDropMixin",
+    "LivingEntityMixin",
     "PickaxeModification",
     "PlayerManagerMixin",
     "ScytheModification",
-    "LivingEntityMixin",
-    "IchorResistanceEffectMixin",
-    "BrewingRecipeRegistryMixin",
-    "WitherSkullEntityMixin",
-    "EnderPearlMixin",
-    "ChorusFruitMixin"
+    "WardenEntityMixin",
+    "WitherSkullEntityMixin"
   ],
   "client": [
-
   ],
   "injectors": {
     "defaultRequire": 1

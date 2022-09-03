@@ -27,9 +27,6 @@ public class SculkSacItem extends Item {
             user.giveItemStack(new ItemStack(ModItems.FULL_SCULK_SAC, 1));
             world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, SoundEvents.BLOCK_SCULK_CHARGE, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
         }
-        else {
-
-        }
         return TypedActionResult.success(itemStack, world.isClient());
     }
 }

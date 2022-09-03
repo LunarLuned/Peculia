@@ -2,7 +2,6 @@ package net.lunarluned.peculia.item.custom;
 
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.item.ModDaggerItem;
-import net.lunarluned.peculia.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
@@ -12,7 +11,7 @@ import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.tag.BlockTags;
 
-public class PeculiarDaggerItem extends SwordItem {
+public class PeculiarDaggerItem extends ModDaggerItem {
 
 
     public PeculiarDaggerItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
