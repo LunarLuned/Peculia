@@ -15,8 +15,12 @@ public class ModEffects {
     public static StatusEffect DETERMINED;
     public static StatusEffect STAGNATED;
     public static StatusEffect LUNAR_SICKNESS;
+    public static StatusEffect CURSED;
 
     public static StatusEffect registerIchorStatusEffect(String name) {
+        return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new IchorEffect(StatusEffectCategory.HARMFUL, 15766579));
+    }
+    public static StatusEffect registerCursedStatusEffect(String name) {
         return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new IchorEffect(StatusEffectCategory.HARMFUL, 15766579));
     }
      public static StatusEffect registerVoidTouchedStatusEffect(String name) {
@@ -41,18 +45,23 @@ public class ModEffects {
         return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new StagnatedEffect(StatusEffectCategory.HARMFUL, 	9426908));
     }
 
-    public static void registerIchorEffect() { ICHOR = registerIchorStatusEffect("ichor");
-    }
-    public static void registerLunarSicknessEffect() { LUNAR_SICKNESS = registerLunarSicknessStatusEffect("lunar_sickness");
-    }
-    public static void registerAnchoredEffect() { ANCHORED = registerAnchoredStatusEffect("anchored");
-    }
+    public static void registerIchorEffect() { ICHOR = registerIchorStatusEffect("ichor");}
+
+    public static void registerLunarSicknessEffect() { LUNAR_SICKNESS = registerLunarSicknessStatusEffect("lunar_sickness");}
+
+    public static void registerAnchoredEffect() { ANCHORED = registerAnchoredStatusEffect("anchored");}
+
+    public static void registerCursedEffect() { CURSED = registerAnchoredStatusEffect("cursed");}
+
     public static void registerVoidTouchedEffect() { VOID_TOUCHED = registerVoidTouchedStatusEffect("void_touched"); }
 
     public static void registerElectrocutedEffect() {
         ELECTROCUTED = registerElectrocutedStatusEffect("electrocuted");
     }
+
     public static void registerIchorResistanceEffect() { ICHOR_RESISTANCE = registerIchorResistanceStatusEffect("ichor_resistance");}
+
     public static void registerDeterminedStatusEffect() { DETERMINED = registerDeterminedStatusEffect("determined");}
+
     public static void registerStagnatedEffect() { STAGNATED = registerStagnatedStatusEffect("stagnated");}
 }

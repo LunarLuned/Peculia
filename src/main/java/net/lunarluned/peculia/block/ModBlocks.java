@@ -191,7 +191,7 @@ public class ModBlocks {
     public static final Block FERROCK = registerBlock("ferrock",
             new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool().mapColor(MapColor.BROWN).sounds(BlockSoundGroup.ANCIENT_DEBRIS).resistance(12)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block CHARGED_FERROCK = registerBlock("charged_ferrock",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool().luminance(3).mapColor(MapColor.BROWN).sounds(BlockSoundGroup.ANCIENT_DEBRIS).resistance(12)), ModItemGroup.PECULIA_OVERWORLD);
+            new ChargedFerrockBlock(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool().luminance(3).mapColor(MapColor.BROWN).sounds(BlockSoundGroup.ANCIENT_DEBRIS).resistance(12)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block REFINED_FERROCK = registerBlock("refined_ferrock",
             new Block(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool().mapColor(MapColor.BROWN).sounds(BlockSoundGroup.ANCIENT_DEBRIS).resistance(10)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block REFINED_FERROCK_BRICKS = registerBlock("refined_ferrock_bricks",

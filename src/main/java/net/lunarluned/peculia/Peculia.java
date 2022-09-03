@@ -57,6 +57,7 @@ public class Peculia implements ModInitializer {
 		ModEffects.registerElectrocutedEffect();
 		ModEffects.registerVoidTouchedEffect();
 		ModEffects.registerAnchoredEffect();
+		ModEffects.registerCursedEffect();
 		ModEffects.registerIchorResistanceEffect();
 		ModEffects.registerDeterminedStatusEffect();
 		ModEffects.registerStagnatedEffect();

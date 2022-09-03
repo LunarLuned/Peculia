@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "peculia:block/crumbling_deepslate"
+    "end": "peculia:block/crumbling_deepslate_top",
+    "side": "peculia:block/crumbling_deepslate"
   }
 }
