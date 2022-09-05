@@ -19,7 +19,7 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 @Mixin(WitherEntity.class)
 public class WitherEntityMixin {
-    // Increases the Warden's health from 500 to 1000
+    // Increases the Wither's health from 300 to 600
 
     @Inject(at = @At("HEAD"), method = "createWitherAttributes", cancellable = true)
     private static void addAttributes(CallbackInfoReturnable<DefaultAttributeContainer.Builder> cir) {
