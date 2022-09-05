@@ -47,7 +47,7 @@ public abstract class WardenEntityMixin extends HostileEntity {
 
             // Adds a status effect when an entity is hit by the Warden
 
-            ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(ModEffects.STAGNATED, 120, 0, false, true, true));
+            ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(ModEffects.CURSED, 120, 0, false, true, true));
 
         }
         cir.setReturnValue(super.tryAttack(target));

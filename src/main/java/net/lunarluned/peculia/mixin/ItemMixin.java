@@ -2,11 +2,11 @@ package net.lunarluned.peculia.mixin;
 
 import net.lunarluned.peculia.effect.ModEffects;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
@@ -44,6 +44,7 @@ public abstract class ItemMixin {
             cir.setReturnValue(TypedActionResult.fail(itemStack));
         }
     }
+
     @Inject(at = @At("HEAD"), method = "canMine", cancellable = true)
     public void canMine(BlockState state, World world, BlockPos pos, PlayerEntity miner, CallbackInfoReturnable<Boolean> cir) {
         if (!miner.hasStatusEffect(ModEffects.CURSED)) {
