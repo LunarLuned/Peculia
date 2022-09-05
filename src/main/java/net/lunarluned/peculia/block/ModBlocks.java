@@ -118,7 +118,7 @@ public class ModBlocks {
     public static final Block CHISELED_DARK_PURPUR = registerBlock("chiseled_dark_purpur",
             new Block(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).sounds(BlockSoundGroup.STONE).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA);
     public static final Block DARK_PURPUR_STAIRS = registerBlock("dark_purpur_stairs",
-            new ModStairsBlock(ModBlocks.DARK_PURPUR.getDefaultState(),FabricBlockSettings.of(Material.STONE).mapColor(MapColor.GRAY).strength(2f).requiresTool().sounds(BlockSoundGroup.STONE)), ModItemGroup.PECULIA);
+            new ModStairsBlock(ModBlocks.DARK_PURPUR.getDefaultState(),FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).strength(2f).requiresTool().sounds(BlockSoundGroup.STONE)), ModItemGroup.PECULIA);
     public static final Block DARK_PURPUR_SLAB = registerBlock("dark_purpur_slab",
             new SlabBlock(FabricBlockSettings.of(Material.STONE).mapColor(MapColor.PURPLE).strength(2f).nonOpaque().requiresTool().sounds(BlockSoundGroup.STONE)), ModItemGroup.PECULIA);
     public static final Block DARK_PURPUR_WALL = registerBlock("dark_purpur_wall",
@@ -145,13 +145,13 @@ public class ModBlocks {
     //nether
     public static final Block CRUMBLING_NETHERRACK = registerBlock("crumbling_netherrack", new CrumblingBlock(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.NETHERRACK).strength(0f).resistance(0)), ModItemGroup.PECULIA_NETHER);
     public static final Block ICHOR_MOLD_VEIN = registerBlock("ichor_mold_vein",
-            new IchorMoldVeinBlock(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.NETHER_WART).nonOpaque().strength(0.1f)), ModItemGroup.PECULIA_NETHER);
+            new IchorMoldVeinBlock(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.WART_BLOCK).nonOpaque().strength(0.1f)), ModItemGroup.PECULIA_NETHER);
     public static final Block ICHOR_MOLD = registerBlock("ichor_mold",
-            new Block(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.NETHER_WART).strength(1f)), ModItemGroup.PECULIA_NETHER);
+            new Block(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.WART_BLOCK).strength(1f)), ModItemGroup.PECULIA_NETHER);
     public static final Block ICHOR_NYLIUM = registerBlock("ichor_nylium",
-            new Block(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.NETHERRACK).strength(1f)), ModItemGroup.PECULIA_NETHER);
+            new Block(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.NYLIUM).strength(1f)), ModItemGroup.PECULIA_NETHER);
     public static final Block ICHOR_STICKER = registerBlock("ichor_sticker",
-            new IchorStickerBlock(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.NETHER_WART).nonOpaque().luminance(15).strength(1f)), ModItemGroup.PECULIA_NETHER);
+            new IchorStickerBlock(FabricBlockSettings.of(Material.PLANT).sounds(BlockSoundGroup.WART_BLOCK).nonOpaque().luminance(15).strength(1f)), ModItemGroup.PECULIA_NETHER);
     //overworld
     public static final Block SCULK_SPINE = registerBlock("sculk_spine",
             new SculkPillarBlock(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SCULK_CATALYST).requiresTool().resistance(1).strength(2f),
@@ -180,15 +180,15 @@ public class ModBlocks {
     public static final Block CRUMBLING_STONE = registerBlock("crumbling_stone", new CrumblingBlock(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.STONE).strength(0.0f).resistance(0)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block CRUMBLING_DEEPSLATE = registerBlock("crumbling_deepslate", new CrumblingBlock(FabricBlockSettings.of(Material.STONE).sounds(BlockSoundGroup.DEEPSLATE).strength(0.1f).resistance(0)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block COMPRESSED_COBBLESTONE = registerBlock("compressed_cobblestone",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(6)), ModItemGroup.PECULIA_OVERWORLD);
+            new Block(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.STONE).resistance(6)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block CONTAINED_COBBLESTONE = registerBlock("contained_cobblestone",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(2f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(12)), ModItemGroup.PECULIA_OVERWORLD);
+            new Block(FabricBlockSettings.of(Material.STONE).strength(2f).requiresTool().sounds(BlockSoundGroup.STONE).resistance(12)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block CONTINENTAL_COBBLESTONE = registerBlock("continental_cobblestone",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(18)), ModItemGroup.PECULIA_OVERWORLD);
+            new Block(FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.STONE).resistance(18)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block ANOMALAIC_COBBLESTONE = registerBlock("anomalaic_cobblestone",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(3f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(24)), ModItemGroup.PECULIA_OVERWORLD);
+            new Block(FabricBlockSettings.of(Material.STONE).strength(3f).requiresTool().sounds(BlockSoundGroup.STONE).resistance(24)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block AWAKENED_COBBLESTONE = registerBlock("awakened_cobblestone",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(3.5f).requiresTool().sounds(BlockSoundGroup.METAL).resistance(30)), ModItemGroup.PECULIA_OVERWORLD);
+            new Block(FabricBlockSettings.of(Material.STONE).strength(3.5f).requiresTool().sounds(BlockSoundGroup.STONE).resistance(30)), ModItemGroup.PECULIA_OVERWORLD);
 
     public static final Block FERROCK = registerBlock("ferrock",
             new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool().mapColor(MapColor.BROWN).sounds(BlockSoundGroup.ANCIENT_DEBRIS).resistance(12)), ModItemGroup.PECULIA_OVERWORLD);
