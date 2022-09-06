@@ -15,6 +15,9 @@ import java.util.function.Supplier;
 public enum ModArmorMaterials implements ArmorMaterial {
     MYTHRIL("mythril", 33, new int[]{3, 6, 8, 3}, 20, ModSoundEvents.ARMOR_MYTHRIL_EQUIP, 3.0F, 0.0F, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{ModItems.MYTHRIL_FRAGMENT});
+    }),
+    CLOAK("cloak", 22, new int[]{1, 4, 4, 2}, 35, ModSoundEvents.ARMOR_MYTHRIL_EQUIP, 0.0F, 0.0F, () -> {
+        return Ingredient.ofItems(new ItemConvertible[]{ModItems.SOUL});
     });
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};

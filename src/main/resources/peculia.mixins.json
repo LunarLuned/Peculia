@@ -7,7 +7,7 @@
     "AxeModification",
     "BrewingRecipeRegistryMixin",
     "ChorusFruitMixin",
-    "DaggerEnchantingMixin",
+    "EnchantingDenialMixin",
     "EnderPearlMixin",
     "GauntletModification",
     "IchorResistanceEffectMixin",
