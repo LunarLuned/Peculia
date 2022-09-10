@@ -1,0 +1,13 @@
+
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "peculia:sculk_sac_block"
+    }
+  ],
+  "result": {
+    "item": "peculia:full_sculk_sac",
+    "count": 9
+  }
+}

@@ -156,6 +156,9 @@ public class ModBlocks {
     public static final Block SCULK_SPINE = registerBlock("sculk_spine",
             new SculkPillarBlock(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SCULK_CATALYST).requiresTool().resistance(1).strength(2f),
             UniformIntProvider.create(2, 8)), ModItemGroup.PECULIA_OVERWORLD);
+    public static final Block SCULK_SAC_BLOCK = registerBlock("sculk_sac_block",
+            new SculkSacBlock(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.BLACK).sounds(BlockSoundGroup.SCULK).requiresTool().resistance(0).strength(.1f),
+                    UniformIntProvider.create(12, 38)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block SPINAL_PILLAR = registerBlock("spinal_pillar",
             new PillarBlock(FabricBlockSettings.of(Material.SCULK).mapColor(MapColor.OFF_WHITE).sounds(BlockSoundGroup.SCULK_CATALYST).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
     public static final Block CHISELED_SPINAL_BRICKS = registerBlock("chiseled_spinal_bricks",

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "peculia:full_sculk_sac"
+    }
+  },
+  "result": {
+    "item": "peculia:sculk_sac_block",
+    "count": 1
+  }
+}

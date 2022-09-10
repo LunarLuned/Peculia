@@ -19,16 +19,26 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).rarity(Rarity.UNCOMMON)));
     public static final Item PECULIAR_DAGGER = registerItem("peculiar_dagger",
             new PeculiarDaggerItem(ModToolMaterials.PECULIAR,3, -2.0f,new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).rarity(Rarity.EPIC)));
+    public static final Item SOUL = registerItem("soul",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON)));
+    public static final Item INACTIVE_TOME = registerItem("inactive_tome",
+            new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    public static final Item INACTIVE_HEALING_TOME = registerItem("inactive_healing_tome",
+            new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    public static final Item TOME_OF_HEALING = registerItem("tome_of_healing",
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(128)));
+
+
 
     public static final Item CLOAK_HELMET = registerItem("cloak_helmet",
             new ArmorItem(ModArmorMaterials.CLOAK, EquipmentSlot.HEAD,
-                    new FabricItemSettings().group(ModItemGroup.PECULIA)));
+                    new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
     public static final Item CLOAK_CHESTPLATE = registerItem("cloak_chestplate",
             new ArmorItem(ModArmorMaterials.CLOAK, EquipmentSlot.CHEST,
-                    new FabricItemSettings().group(ModItemGroup.PECULIA)));
+                    new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
     public static final Item CLOAK_LEGGINGS = registerItem("cloak_leggings",
             new ArmorItem(ModArmorMaterials.CLOAK, EquipmentSlot.LEGS,
-                    new FabricItemSettings().group(ModItemGroup.PECULIA)));
+                    new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
 
     //end
 
@@ -139,15 +149,6 @@ public class ModItems {
             new ElectrocutedItem(ModToolMaterials.COPPER,0, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).maxCount(1)));
     public static final Item CHARGED_GILDED_COPPER_CLEAVER = registerItem("charged_gilded_copper_cleaver",
             new ElectrocutedItem(ModToolMaterials.COPPER,1, -2.0f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).maxCount(1)));
-
-    public static final Item SOUL = registerItem("soul",
-            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).rarity(Rarity.UNCOMMON)));
-    public static final Item INACTIVE_TOME = registerItem("inactive_tome",
-            new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD)));
-    public static final Item INACTIVE_HEALING_TOME = registerItem("inactive_healing_tome",
-            new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD)));
-    public static final Item TOME_OF_HEALING = registerItem("tome_of_healing",
-            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).rarity(Rarity.UNCOMMON).maxDamage(128)));
 
     public static final Item SCULK_SAC = registerItem("sculk_sac",
             new SculkSacItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).rarity(Rarity.UNCOMMON)));
