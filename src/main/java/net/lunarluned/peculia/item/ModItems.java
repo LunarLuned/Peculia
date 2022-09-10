@@ -20,13 +20,13 @@ public class ModItems {
     public static final Item PECULIAR_DAGGER = registerItem("peculiar_dagger",
             new PeculiarDaggerItem(ModToolMaterials.PECULIAR,3, -2.0f,new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).rarity(Rarity.EPIC)));
 
-    public static final Item SOUL_CLOAK_HOOD = registerItem("cloak_helmet",
+    public static final Item CLOAK_HELMET = registerItem("cloak_helmet",
             new ArmorItem(ModArmorMaterials.CLOAK, EquipmentSlot.HEAD,
                     new FabricItemSettings().group(ModItemGroup.PECULIA)));
-    public static final Item SOUL_CLOAK = registerItem("cloak_chestplate",
+    public static final Item CLOAK_CHESTPLATE = registerItem("cloak_chestplate",
             new ArmorItem(ModArmorMaterials.CLOAK, EquipmentSlot.CHEST,
                     new FabricItemSettings().group(ModItemGroup.PECULIA)));
-    public static final Item SOUL_CLOAK_DRAPES = registerItem("cloak_leggings",
+    public static final Item CLOAK_LEGGINGS = registerItem("cloak_leggings",
             new ArmorItem(ModArmorMaterials.CLOAK, EquipmentSlot.LEGS,
                     new FabricItemSettings().group(ModItemGroup.PECULIA)));
 
@@ -147,7 +147,7 @@ public class ModItems {
     public static final Item INACTIVE_HEALING_TOME = registerItem("inactive_healing_tome",
             new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD)));
     public static final Item TOME_OF_HEALING = registerItem("tome_of_healing",
-            new HealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).rarity(Rarity.UNCOMMON).maxDamage(128)));
+            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).rarity(Rarity.UNCOMMON).maxDamage(128)));
 
     public static final Item SCULK_SAC = registerItem("sculk_sac",
             new SculkSacItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).rarity(Rarity.UNCOMMON)));
