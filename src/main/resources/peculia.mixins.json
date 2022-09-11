@@ -13,13 +13,14 @@
     "LivingEntityMixin",
     "PlayerManagerMixin",
     "ScytheModification",
-    "WardenEntityMixin",
-    "WitherEntityMixin",
-    "WitherSkullEntityMixin",
     "cursed.ItemMixin",
     "enchantments.AxeModification",
     "enchantments.EnchantingDenialMixin",
-    "enchantments.PickaxeModification"
+    "enchantments.PickaxeModification",
+    "entities.ghast.GhastEntityMixin",
+    "entities.warden.WardenEntityMixin",
+    "entities.wither.WitherEntityMixin",
+    "entities.wither.WitherSkullEntityMixin"
   ],
   "client": [
     "cursed.KeyboardMixin"

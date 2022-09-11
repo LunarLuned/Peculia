@@ -1,4 +1,4 @@
-package net.lunarluned.peculia.mixin;
+package net.lunarluned.peculia.mixin.entities.wither;
 
 import net.lunarluned.peculia.effect.ModEffects;
 import net.minecraft.entity.Entity;

@@ -55,13 +55,13 @@ public class ModItems {
     public static final Item MYTHRIL_CLAYMORE = registerItem("mythril_claymore",
             new ModSwordItem(ModToolMaterials.MYTHRIL,5, -2.7f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item MYTHRIL_SCYTHE = registerItem("mythril_scythe",
-            new ModHoeItem(ModToolMaterials.MYTHRIL, 2, -2.5f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
+            new ModHoeItem(ModToolMaterials.MYTHRIL, 4, -2.5f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item MYTHRIL_HALBERD = registerItem("mythril_halberd",
             new ModAxeItem(ModToolMaterials.MYTHRIL,8, -3.1f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item MYTHRIL_HAMMER = registerItem("mythril_hammer",
             new ModPickaxeItem(ModToolMaterials.MYTHRIL, 9, -3.4f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item MYTHRIL_SPEAREL = registerItem("mythril_spearel",
-            new ModShovelItem(ModToolMaterials.MYTHRIL, 1, -2.4f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
+            new ModShovelItem(ModToolMaterials.MYTHRIL, 2, -2.4f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
     public static final Item MYTHRIL_GAUNTLET = registerItem("mythril_gauntlet",
             new ModGauntletItem(ModToolMaterials.MYTHRIL, 3, -2.1f, new FabricItemSettings().group(ModItemGroup.PECULIA)));
     public static final Item POPROCKS = registerItem("poprocks",
