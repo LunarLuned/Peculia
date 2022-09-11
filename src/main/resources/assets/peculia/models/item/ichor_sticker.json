@@ -1,3 +1,6 @@
 {
-  "parent": "peculia:block/ichor_sticker"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "peculia:item/ichor_sticker"
+  }
 }
