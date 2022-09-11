@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#SI",
+    "GED",
+    "NPV"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:wooden_sword"
+    },
+    "S": {
+      "item": "minecraft:stone_sword"
+    },
+    "I": {
+      "item": "minecraft:iron_sword"
+    },
+    "G": {
+      "item": "minecraft:golden_sword"
+    },
+    "E": {
+      "item": "peculia:fallen_hero_sword"
+    },
+    "D": {
+      "item": "minecraft:diamond_sword"
+    },
+    "N": {
+      "item": "minecraft:netherite_sword"
+    },
+    "P": {
+      "item": "peculia:bottle_of_condensed_void"
+    },
+    "V": {
+      "item": "peculia:mythril_claymore"
+    }
+  },
+  "result": {
+    "item": "peculia:peculiar_sword",
+    "count": 1
+  }
+}

@@ -12,13 +12,16 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.NotNull;
 
 import static com.mojang.blaze3d.platform.GlStateManager.Viewport.getX;
 import static com.mojang.blaze3d.platform.GlStateManager.Viewport.getY;
@@ -71,4 +74,8 @@ public class IchorStickerBlock extends Block {
         areaEffectCloudEntity.addEffect(regeneration);
         attacker.world.spawnEntity(areaEffectCloudEntity);
     }
+
+
+
+
 }

@@ -1,4 +1,4 @@
-package net.lunarluned.peculia.mixin;
+package net.lunarluned.peculia.mixin.anchored;
 
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.sound.ModSoundEvents;
@@ -7,7 +7,6 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.mob.EndermiteEntity;
 import net.minecraft.entity.projectile.thrown.EnderPearlEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.GameRules;

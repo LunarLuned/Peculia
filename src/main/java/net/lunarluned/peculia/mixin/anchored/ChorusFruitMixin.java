@@ -1,11 +1,10 @@
-package net.lunarluned.peculia.mixin;
+package net.lunarluned.peculia.mixin.anchored;
 
 import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ChorusFruitItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

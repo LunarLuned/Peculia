@@ -62,7 +62,7 @@ public class Peculia implements ModInitializer {
 		ModEffects.registerIchorResistanceEffect();
 		ModEffects.registerDeterminedStatusEffect();
 		ModEffects.registerStagnatedEffect();
-		ModEffects.registerLunarSicknessEffect();
+		ModEffects.registerEchoingEffect();
 
 		ModParticles.registerParticles();
 
@@ -88,6 +88,14 @@ public class Peculia implements ModInitializer {
 
 		public IchorDamageSource(Entity name) {
 			super("ichor");
+			setBypassesArmor();
+			setUnblockable();
+		}
+	}
+	public static class EchoingDamageSource extends DamageSource {
+
+		public EchoingDamageSource(Entity name) {
+			super("echoing");
 			setBypassesArmor();
 			setUnblockable();
 		}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "GED",
+    " P "
+  ],
+  "key": {
+    "#": {
+      "item": "peculia:void_touched_gilded_mythical_blade"
+    },
+    "G": {
+      "item": "peculia:dipped_gilded_sacrificial_dagger"
+    },
+    "E": {
+      "item": "peculia:fallen_hero_dagger"
+    },
+    "D": {
+      "item": "peculia:charged_gilded_copper_cleaver"
+    },
+    "P": {
+      "item": "peculia:bottle_of_condensed_void"
+    }
+  },
+  "result": {
+    "item": "peculia:peculiar_dagger",
+    "count": 1
+  }
+}

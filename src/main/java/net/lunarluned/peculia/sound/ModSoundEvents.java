@@ -8,7 +8,7 @@ import net.minecraft.util.registry.Registry;
 
 public class ModSoundEvents {
 
-    public static final SoundEvent ECHO_ATTACK_HIT = registerSoundEvent("effect.echo.attack.hit");
+    public static final SoundEvent ECHO_ATTACK_HIT = registerSoundEvent("effect.echoing.attack.hit");
 
 
     private static SoundEvent registerSoundEvent(String name) {

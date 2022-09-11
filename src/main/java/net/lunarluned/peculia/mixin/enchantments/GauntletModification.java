@@ -1,4 +1,4 @@
-package net.lunarluned.peculia.mixin;
+package net.lunarluned.peculia.mixin.enchantments;
 
 import net.lunarluned.peculia.enchantment.ConcussEnchantment;
 import net.lunarluned.peculia.enchantment.ThunderingEnchantment;

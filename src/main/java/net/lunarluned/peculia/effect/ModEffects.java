@@ -14,7 +14,7 @@ public class ModEffects {
     public static StatusEffect ICHOR_RESISTANCE;
     public static StatusEffect DETERMINED;
     public static StatusEffect STAGNATED;
-    public static StatusEffect LUNAR_SICKNESS;
+    public static StatusEffect ECHOING;
     public static StatusEffect CURSED;
 
     public static StatusEffect registerIchorStatusEffect(String name) {
@@ -35,8 +35,8 @@ public class ModEffects {
     public static StatusEffect registerIchorResistanceStatusEffect(String name) {
         return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new IchorResistanceEffect(StatusEffectCategory.BENEFICIAL, 1385267));
     }
-    public static StatusEffect registerLunarSicknessStatusEffect(String name) {
-        return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new LunarSicknessEffect(StatusEffectCategory.HARMFUL, 1385267));
+    public static StatusEffect registerEchoingStatusEffect(String name) {
+        return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new EchoingEffect(StatusEffectCategory.HARMFUL, 1385267));
     }
     public static StatusEffect registerDeterminedStatusEffect(String name) {
         return Registry.register(Registry.STATUS_EFFECT, new Identifier(Peculia.MOD_ID, name), new DeterminedEffect(StatusEffectCategory.BENEFICIAL, 16743526));
@@ -47,11 +47,11 @@ public class ModEffects {
 
     public static void registerIchorEffect() { ICHOR = registerIchorStatusEffect("ichor");}
 
-    public static void registerLunarSicknessEffect() { LUNAR_SICKNESS = registerLunarSicknessStatusEffect("lunar_sickness");}
+    public static void registerEchoingEffect() { ECHOING = registerEchoingStatusEffect("echoing");}
 
     public static void registerAnchoredEffect() { ANCHORED = registerAnchoredStatusEffect("anchored");}
 
-    public static void registerCursedEffect() { CURSED = registerAnchoredStatusEffect("cursed");}
+    public static void registerCursedEffect() { CURSED = registerCursedStatusEffect("cursed");}
 
     public static void registerVoidTouchedEffect() { VOID_TOUCHED = registerVoidTouchedStatusEffect("void_touched"); }
 

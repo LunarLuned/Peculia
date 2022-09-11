@@ -1,13 +1,17 @@
 package net.lunarluned.peculia.item.custom;
 
+import net.lunarluned.peculia.config.PeculiaConfig;
 import net.lunarluned.peculia.effect.ModEffects;
+import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.tag.BlockTags;
 
 public class PeculiarDaggerItem extends ModDaggerItem {
@@ -32,8 +36,12 @@ public class PeculiarDaggerItem extends ModDaggerItem {
     }
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        super.postHit(stack, target, attacker);
-        target.addStatusEffect(new StatusEffectInstance(ModEffects.LUNAR_SICKNESS, 80, 0));
+        if (attacker instanceof PlayerEntity player && player.getRandom().nextInt(100) <= PeculiaConfig.getIntValue("echo_chance")) {
+            player.world.playSound(null, player.getBlockPos(), ModSoundEvents.ECHO_ATTACK_HIT, SoundCategory.PLAYERS, 1.0F, 1.0F);
+            super.postHit(stack, target, attacker);
+            target.addStatusEffect(new StatusEffectInstance(ModEffects.ECHOING, 40, 0));
+            return true;
+        }
         return true;
     }
 
