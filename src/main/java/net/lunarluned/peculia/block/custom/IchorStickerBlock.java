@@ -56,8 +56,19 @@ public class IchorStickerBlock extends Block {
             world.playSound((PlayerEntity) null, pos, ModSoundEvents.BLOCK_ICHOR_STICKER_RELEASE, SoundCategory.BLOCKS, 1F, 1.0F);
             world.addBlockBreakParticles(pos, state);
             setToAir(state, world, pos);
-            LivingEntity livingEntity = ((LivingEntity) entity);
-            livingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.ICHOR, 90));
+            spawnIchorCloudAtPos((LivingEntity) entity, pos, 1);
         }
+    }
+
+    public static void spawnIchorCloudAtPos(LivingEntity attacker, BlockPos blockPos, int amplifier){
+        AreaEffectCloudEntity areaEffectCloudEntity = new AreaEffectCloudEntity(attacker.world, blockPos.getX(), blockPos.getY(), blockPos.getZ());
+        areaEffectCloudEntity.setOwner(attacker);
+        areaEffectCloudEntity.setRadius(5.0f);
+        areaEffectCloudEntity.setRadiusOnUse(-0.5f);
+        areaEffectCloudEntity.setWaitTime(10);
+        areaEffectCloudEntity.setDuration(20);
+        StatusEffectInstance regeneration = new StatusEffectInstance(ModEffects.ICHOR, 100, amplifier);
+        areaEffectCloudEntity.addEffect(regeneration);
+        attacker.world.spawnEntity(areaEffectCloudEntity);
     }
 }

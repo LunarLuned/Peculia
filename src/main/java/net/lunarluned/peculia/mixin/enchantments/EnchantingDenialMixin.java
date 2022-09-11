@@ -1,4 +1,4 @@
-package net.lunarluned.peculia.mixin;
+package net.lunarluned.peculia.mixin.enchantments;
 
 import net.lunarluned.peculia.item.custom.EchoingMirrorItem;
 import net.lunarluned.peculia.item.custom.ModDaggerItem;

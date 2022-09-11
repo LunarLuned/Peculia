@@ -4,24 +4,25 @@
   "package": "net.lunarluned.peculia.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "AxeModification",
     "BrewingRecipeRegistryMixin",
     "ChorusFruitMixin",
-    "EnchantingDenialMixin",
     "EnderPearlMixin",
     "GauntletModification",
     "IchorResistanceEffectMixin",
     "ItemDropMixin",
-    "ItemMixin",
     "LivingEntityMixin",
-    "PickaxeModification",
     "PlayerManagerMixin",
     "ScytheModification",
     "WardenEntityMixin",
     "WitherEntityMixin",
-    "WitherSkullEntityMixin"
+    "WitherSkullEntityMixin",
+    "cursed.ItemMixin",
+    "enchantments.AxeModification",
+    "enchantments.EnchantingDenialMixin",
+    "enchantments.PickaxeModification"
   ],
   "client": [
+    "cursed.KeyboardMixin"
   ],
   "injectors": {
     "defaultRequire": 1

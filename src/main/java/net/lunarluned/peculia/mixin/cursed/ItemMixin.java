@@ -1,4 +1,4 @@
-package net.lunarluned.peculia.mixin;
+package net.lunarluned.peculia.mixin.cursed;
 
 import net.lunarluned.peculia.effect.ModEffects;
 import net.minecraft.block.BlockState;
@@ -37,10 +37,11 @@ public abstract class ItemMixin {
                     cir.setReturnValue(TypedActionResult.fail(itemStack));
                 }
             } else {
-                cir.setReturnValue(TypedActionResult.pass(user.getStackInHand(hand)));
+                ItemStack itemStack = user.getStackInHand(hand);
+                TypedActionResult.fail(itemStack);
             }
         } else {
-            ItemStack itemStack = user.getStackInHand(hand);
+            ItemStack itemStack = user.getStackInHand(Hand.OFF_HAND);
             cir.setReturnValue(TypedActionResult.fail(itemStack));
         }
     }

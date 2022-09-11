@@ -67,7 +67,7 @@ public class EchoingMirrorItem extends Item {
                 //if user doesnt have anchored, they can use the mirror
                 if (!user.hasStatusEffect(ModEffects.CURSED)) {
                     if (!user.hasStatusEffect(ModEffects.ANCHORED)) {
-                        user.emitGameEvent(GameEvent.BLOCK_PLACE);
+                        user.emitGameEvent(GameEvent.TELEPORT);
                         world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_ECHOING_MIRROR_USE, SoundCategory.NEUTRAL, 1f, 1f);
                         world.sendEntityStatus(user, (byte) 46);
                         user.getItemCooldownManager().set(this, 30);
@@ -75,19 +75,19 @@ public class EchoingMirrorItem extends Item {
                         if (dimension != null && pos != null) {
                             Optional<Vec3d> userSpawn = PlayerEntity.findRespawnPosition(dimension, pos, 0f, false, user.isAlive());
                             if (userSpawn.isPresent()) {
-                                user.emitGameEvent(GameEvent.BLOCK_PLACE);
+                                user.emitGameEvent(GameEvent.TELEPORT);
                                 serverUser.teleport(dimension, userSpawn.get().x, userSpawn.get().y, userSpawn.get().z, 0f, 0f);
                                 dimension.playSound(null, serverUser.getPos().x, serverUser.getPos().y, serverUser.getPos().z, ModSoundEvents.ITEM_ECHOING_MIRROR_USE, SoundCategory.NEUTRAL, 1f, 1f);
                                 dimension.sendEntityStatus(serverUser, (byte) 46);
                                 serverUser.getStackInHand(hand).damage(1, serverUser, p -> p.sendToolBreakStatus(hand));
                                 user.addStatusEffect(new StatusEffectInstance(ModEffects.ANCHORED, 120, 0));
                             } else {
-                                user.emitGameEvent(GameEvent.BLOCK_PLACE);
+                                user.emitGameEvent(GameEvent.TELEPORT);
                                 teleportToSpawn(server, serverUser, hand);
                                 user.addStatusEffect(new StatusEffectInstance(ModEffects.ANCHORED, 120, 0));
                             }
                         } else {
-                            user.emitGameEvent(GameEvent.BLOCK_PLACE);
+                            user.emitGameEvent(GameEvent.TELEPORT);
                             teleportToSpawn(server, serverUser, hand);
                             user.addStatusEffect(new StatusEffectInstance(ModEffects.ANCHORED, 120, 0));
                         }

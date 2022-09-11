@@ -20,13 +20,13 @@ public class ModItems {
     public static final Item PECULIAR_DAGGER = registerItem("peculiar_dagger",
             new PeculiarDaggerItem(ModToolMaterials.PECULIAR,3, -2.0f,new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).rarity(Rarity.EPIC)));
     public static final Item SOUL = registerItem("soul",
-            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON)));
+            new SoulItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON)));
     public static final Item INACTIVE_TOME = registerItem("inactive_tome",
             new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
     public static final Item INACTIVE_HEALING_TOME = registerItem("inactive_healing_tome",
             new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
     public static final Item TOME_OF_HEALING = registerItem("tome_of_healing",
-            new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(128)));
+            new HealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(128)));
 
 
 
