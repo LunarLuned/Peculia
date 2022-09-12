@@ -42,13 +42,13 @@ public class UpdraftTomeItem extends Item {
                 return TypedActionResult.fail(itemStack);
             }
 
-            if (!user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() < 2) {
+            if (!user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() <= 2) {
                 user.emitGameEvent(GameEvent.BLOCK_PLACE);
                 world.playSound( null, user.getPos().x,user.getPos().y,user.getPos().z, ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundCategory.NEUTRAL, 1, 1);
                 return TypedActionResult.fail(itemStack);
             }
 
-            if (user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() < 4) {
+            if (user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() <= 4) {
                 user.emitGameEvent(GameEvent.BLOCK_PLACE);
                 world.playSound( null, user.getPos().x,user.getPos().y,user.getPos().z, ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundCategory.NEUTRAL, 1, 1);
                 return TypedActionResult.fail(itemStack);
@@ -72,6 +72,8 @@ public class UpdraftTomeItem extends Item {
             // if player soul and crouching, levitates around them
             if (user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() > 4) {
 
+                spawnUpdraftCloudAtPos(user, user.getBlockPos(), 49);
+                spawnUpdraftCloudTwoAtPos(user, user.getBlockPos(), 49);
                 user.getOffHandStack().decrement(4);
                 world.playSound( null, user.getPos().x,user.getPos().y,user.getPos().z, ModSoundEvents.ITEM_UPDRAFT_TOME_USE, SoundCategory.NEUTRAL, 1, 1);
                 user.getStackInHand(hand).damage(1, user, p -> p.sendToolBreakStatus(hand));
@@ -80,6 +82,29 @@ public class UpdraftTomeItem extends Item {
             return TypedActionResult.success(itemStack, world.isClient());
         }
         return TypedActionResult.success(itemStack, world.isClient());
+    }
+
+    public static void spawnUpdraftCloudAtPos(LivingEntity attacker, BlockPos blockPos, int amplifier){
+        AreaEffectCloudEntity areaEffectCloudEntity = new AreaEffectCloudEntity(attacker.world, blockPos.getX(), blockPos.getY(), blockPos.getZ());
+        areaEffectCloudEntity.setOwner(attacker);
+        areaEffectCloudEntity.setRadius(5.0f);
+        areaEffectCloudEntity.setRadiusOnUse(-0.5f);
+        areaEffectCloudEntity.setWaitTime(10);
+        areaEffectCloudEntity.setDuration(5);
+        StatusEffectInstance regeneration = new StatusEffectInstance(StatusEffects.LEVITATION, 5, amplifier);
+        areaEffectCloudEntity.addEffect(regeneration);
+        attacker.world.spawnEntity(areaEffectCloudEntity);
+    }
+    public static void spawnUpdraftCloudTwoAtPos(LivingEntity attacker, BlockPos blockPos, int amplifier){
+        AreaEffectCloudEntity areaEffectCloudEntity = new AreaEffectCloudEntity(attacker.world, blockPos.getX(), blockPos.getY() + 1, blockPos.getZ());
+        areaEffectCloudEntity.setOwner(attacker);
+        areaEffectCloudEntity.setRadius(5.0f);
+        areaEffectCloudEntity.setRadiusOnUse(-0.5f);
+        areaEffectCloudEntity.setWaitTime(10);
+        areaEffectCloudEntity.setDuration(5);
+        StatusEffectInstance regeneration = new StatusEffectInstance(StatusEffects.LEVITATION, 5, amplifier);
+        areaEffectCloudEntity.addEffect(regeneration);
+        attacker.world.spawnEntity(areaEffectCloudEntity);
     }
 
 

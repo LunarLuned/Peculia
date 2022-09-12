@@ -39,12 +39,12 @@ public class HealingTomeItem extends Item {
                 user.emitGameEvent(GameEvent.BLOCK_PLACE);
                 return TypedActionResult.fail(itemStack);
             }
-            if (!user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() < 3) {
+            if (!user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() <= 4) {
                 user.emitGameEvent(GameEvent.BLOCK_PLACE);
                 world.playSound( null, user.getPos().x,user.getPos().y,user.getPos().z, ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundCategory.NEUTRAL, 1, 1);
                 return TypedActionResult.fail(itemStack);
             }
-            if (user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() < 6) {
+            if (user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() <= 6) {
                 user.emitGameEvent(GameEvent.BLOCK_PLACE);
                 world.playSound( null, user.getPos().x,user.getPos().y,user.getPos().z, ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundCategory.NEUTRAL, 1, 1);
                 return TypedActionResult.fail(itemStack);
