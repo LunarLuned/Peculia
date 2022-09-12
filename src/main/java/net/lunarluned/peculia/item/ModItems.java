@@ -25,10 +25,21 @@ public class ModItems {
             new SoulItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON)));
     public static final Item INACTIVE_TOME = registerItem("inactive_tome",
             new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+
     public static final Item INACTIVE_HEALING_TOME = registerItem("inactive_healing_tome",
             new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
     public static final Item TOME_OF_HEALING = registerItem("tome_of_healing",
-            new HealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(128)));
+            new HealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(64)));
+
+    public static final Item INACTIVE_UPDRAFT_TOME = registerItem("inactive_updraft_tome",
+            new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    public static final Item TOME_OF_UPDRAFT = registerItem("tome_of_updraft",
+            new UpdraftTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(64)));
+
+    public static final Item INACTIVE_EMPOWERING_TOME = registerItem("inactive_empowering_tome",
+            new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    public static final Item INACTIVE_AGILITY_TOME = registerItem("inactive_agility_tome",
+            new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
 
 
 

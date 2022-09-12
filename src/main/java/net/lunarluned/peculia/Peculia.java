@@ -96,8 +96,7 @@ public class Peculia implements ModInitializer {
 
 		public EchoingDamageSource(Entity name) {
 			super("echoing");
-			setBypassesArmor();
-			setUnblockable();
+			setUsesMagic();
 		}
 	}
 	public static class CondensedVoidDamageSource extends DamageSource {

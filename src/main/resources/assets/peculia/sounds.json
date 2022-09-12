@@ -1,6 +1,6 @@
 {
-  "effect.echo.attack.hit": {
-    "subtitle": "effect.echo.attack.hit",
+  "effect.echoing.attack.hit": {
+    "subtitle": "effect.echoing.attack.hit",
     "sounds": [
       "peculia:echo_attack_hit"
     ]
@@ -27,6 +27,27 @@
     "sounds": [
       "peculia:item/echoing_mirror/echoing_mirror_use1",
       "peculia:item/echoing_mirror/echoing_mirror_use2"
+    ]
+  },
+  "item.healing_tome.use": {
+    "subtitle": "item.healing_tome.use",
+    "sounds": [
+      "peculia:item/healing_tome/use1",
+      "peculia:item/healing_tome/use2"
+    ]
+  },
+  "item.updraft_tome.use": {
+    "subtitle": "item.updraft_tome.use",
+    "sounds": [
+      "peculia:item/updraft_tome/use1",
+      "peculia:item/updraft_tome/use2"
+    ]
+  },
+  "item.generic_tome.fail": {
+    "subtitle": "item.generic_tome.fail",
+    "sounds": [
+      "peculia:item/generic_tome/fail1",
+      "peculia:item/generic_tome/fail2"
     ]
   },
   "block.ichor_sticker.release": {

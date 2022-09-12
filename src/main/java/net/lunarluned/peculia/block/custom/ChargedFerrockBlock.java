@@ -31,7 +31,7 @@ public class ChargedFerrockBlock extends Block {
             player.damage(new Peculia.ElectrocutionDamageSource(player), 2);
             if (itemStack.isEmpty()) {
                 player.setStackInHand(hand, new ItemStack(ModItems.CHARGED_COPPER_CLEAVER));
-                player.damage(new Peculia.CondensedVoidDamageSource(player), 2);
+                player.damage(new Peculia.ElectrocutionDamageSource(player), 2);
             } else if (!player.getInventory().insertStack(new ItemStack(ModItems.CHARGED_COPPER_CLEAVER))) {
                 player.dropItem(new ItemStack(ModItems.CHARGED_COPPER_CLEAVER), false);
                 player.damage(new Peculia.CondensedVoidDamageSource(player), 2);

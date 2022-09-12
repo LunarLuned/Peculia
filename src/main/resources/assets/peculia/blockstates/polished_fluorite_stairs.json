@@ -1,7 +1,7 @@
 {
   "variants": {
     "facing=east,half=bottom,shape=inner_left": {
-      "model": "peculia:block/polished_fluorite_brick_inner",
+      "model": "peculia:block/polished_fluorite_stairs_inner",
       "y": 270,
       "uvlock": true
     },
