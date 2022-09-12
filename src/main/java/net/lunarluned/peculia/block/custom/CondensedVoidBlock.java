@@ -42,6 +42,18 @@ public class CondensedVoidBlock extends Block {
                 player.damage(new Peculia.CondensedVoidDamageSource(player), 2);
             }
         }
+        if (itemStack.isOf(Items.BOOK)) {
+            itemStack.decrement(1);
+            world.playSound(player, player.getX(), player.getY(), player.getZ(), ModSoundEvents.BLOCK_CONDENSED_VOID_USE, SoundCategory.NEUTRAL, 1.0F, 1.0F);
+            player.damage(new Peculia.CondensedVoidDamageSource(player), 1);
+            if (itemStack.isEmpty()) {
+                player.setStackInHand(hand, new ItemStack(ModItems.INACTIVE_TOME));
+                player.damage(new Peculia.CondensedVoidDamageSource(player), 1);
+            } else if (!player.getInventory().insertStack(new ItemStack(ModItems.INACTIVE_TOME))) {
+                player.dropItem(new ItemStack(ModItems.INACTIVE_TOME), false);
+                player.damage(new Peculia.CondensedVoidDamageSource(player), 1);
+            }
+        }
         if (itemStack.isOf(ModItems.GILDED_MYTHICAL_BLADE)) {
             itemStack.decrement(1);
             //add a custom sound later asnne
