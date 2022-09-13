@@ -340,8 +340,12 @@
   "block.ichor_sticker.release": "Ichor Sticker Bulb Breaks",
   "block.condensed_void.use": "Item is Void Touched",
   "item.updraft_tome.use": "Tome drafts up",
+  "item.updraft_tome.crowd_use": "Tome drafts a crowd up",
   "item.generic_tome.fail": "Tome fails",
   "item.healing_tome.use": "Tome heals",
+  "item.healing_tome.crowd_use": "Tome heals in an area",
+  "item.agility_tome.use": "Tome speeds up",
+  "item.agility_tome.crowd_use": "Tome speeds up an area",
 
   "death.attack.electrocution": "%1$s was electrocuted to death",
   "death.attack.echoing": "%1$s faced the echo of a blade",

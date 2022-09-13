@@ -9,6 +9,8 @@ import net.lunarluned.peculia.item.custom.tomes.agility.AgilityTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.agility.LesserAgilityTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.empowering.EmpoweringTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.empowering.LesserEmpoweringTomeItem;
+import net.lunarluned.peculia.item.custom.tomes.fortifying.FortifyingTomeItem;
+import net.lunarluned.peculia.item.custom.tomes.fortifying.LesserFortifyingTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.healing.HealingTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.healing.LesserHealingTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.updraft.LesserUpdraftTomeItem;
@@ -62,6 +64,13 @@ public class ModItems {
             new LesserAgilityTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(32)));
     public static final Item TOME_OF_AGILITY = registerItem("tome_of_agility",
             new AgilityTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(64)));
+
+    public static final Item INACTIVE_FORTIFYING_TOME = registerItem("inactive_fortifying_tome",
+            new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    public static final Item LESSER_TOME_OF_FORTIFYING = registerItem("lesser_tome_of_fortifying",
+            new LesserFortifyingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    public static final Item TOME_OF_FORTIFYING = registerItem("tome_of_fortifying",
+            new FortifyingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(64)));
 
 
 

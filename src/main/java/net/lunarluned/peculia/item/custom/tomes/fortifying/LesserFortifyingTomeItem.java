@@ -1,4 +1,4 @@
-package net.lunarluned.peculia.item.custom.tomes.agility;
+package net.lunarluned.peculia.item.custom.tomes.fortifying;
 
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.item.ModItems;
@@ -19,8 +19,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 
-public class AgilityTomeItem extends GenericTomeItem {
-    public AgilityTomeItem(Settings settings) {
+public class LesserFortifyingTomeItem extends GenericTomeItem {
+    public LesserFortifyingTomeItem(Settings settings) {
         super(settings);
     }
 
@@ -34,49 +34,46 @@ public class AgilityTomeItem extends GenericTomeItem {
         if (!world.isClient) {
 
 
-            if (!user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() <= 2) {
-                user.emitGameEvent(GameEvent.FLAP);
+            if (!user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() <= 29) {
+                user.emitGameEvent(GameEvent.BLOCK_PLACE);
                 world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundCategory.NEUTRAL, 1, 1);
                 return TypedActionResult.fail(itemStack);
             }
-            if (user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() <= 4) {
-                user.emitGameEvent(GameEvent.FLAP);
+            if (user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() <= 39) {
+                user.emitGameEvent(GameEvent.BLOCK_PLACE);
                 world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_GENERIC_TOME_CROWD_FAIL, SoundCategory.NEUTRAL, 1, 1);
                 return TypedActionResult.fail(itemStack);
             }
-            if (!user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() > 2) {
-                user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 240, 1));
-                user.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 200, 1));
-                user.getOffHandStack().decrement(3);
-                world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_AGILITY_TOME_USE, SoundCategory.NEUTRAL, 1, 1);
-                user.getStackInHand(hand).damage(1, user, p -> p.sendToolBreakStatus(hand));
-                user.getItemCooldownManager().set(this, 100);
+                // if player does soul! exist :)
+            if (!user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() > 29) {
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 800, 1));
+                user.getOffHandStack().decrement(30);
+                world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_HEALING_TOME_USE, SoundCategory.NEUTRAL, 1, 1);
+                user.getStackInHand(hand).damage(2, user, p -> p.sendToolBreakStatus(hand));
+                user.getItemCooldownManager().set(this, 1000);
             }
-            // if player soul and crouching, agility the around them
+            // if player soul and crouching, heals around them
             if (user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL)) {
-                spawnAgilityCloudAtPos(user, user.getBlockPos(), 1);
-                world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_AGILITY_TOME_CROWD_USE, SoundCategory.NEUTRAL, 1, 1);
-                user.getOffHandStack().decrement(5);
-                user.getStackInHand(hand).damage(1, user, p -> p.sendToolBreakStatus(hand));
-                user.getItemCooldownManager().set(this, 200);
+                spawnLesserHealthBoostCloudAtPos(user, user.getBlockPos(), 0);
+                world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_HEALING_TOME_CROWD_USE, SoundCategory.NEUTRAL, 1, 1);
+                user.getOffHandStack().decrement(40);
+                user.getStackInHand(hand).damage(2, user, p -> p.sendToolBreakStatus(hand));
+                user.getItemCooldownManager().set(this, 750);
             }
         }
         return TypedActionResult.success(itemStack, world.isClient());
     }
 
 
-    public static void spawnAgilityCloudAtPos(LivingEntity attacker, BlockPos blockPos, int amplifier){
+    public static void spawnLesserHealthBoostCloudAtPos(LivingEntity attacker, BlockPos blockPos, int amplifier){
         AreaEffectCloudEntity areaEffectCloudEntity = new AreaEffectCloudEntity(attacker.world, blockPos.getX(), blockPos.getY(), blockPos.getZ());
         areaEffectCloudEntity.setOwner(attacker);
         areaEffectCloudEntity.setRadius(5.0f);
         areaEffectCloudEntity.setRadiusOnUse(-0.5f);
         areaEffectCloudEntity.setWaitTime(10);
         areaEffectCloudEntity.setDuration(10);
-        StatusEffectInstance speed = new StatusEffectInstance(StatusEffects.SPEED, 200, amplifier);
-        StatusEffectInstance jump_boost = new StatusEffectInstance(StatusEffects.JUMP_BOOST, 180, amplifier);
-        areaEffectCloudEntity.addEffect(speed);
-        areaEffectCloudEntity.addEffect(jump_boost);
+        StatusEffectInstance health_boost = new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 700, amplifier);
+        areaEffectCloudEntity.addEffect(health_boost);
         attacker.world.spawnEntity(areaEffectCloudEntity);
     }
-
 }

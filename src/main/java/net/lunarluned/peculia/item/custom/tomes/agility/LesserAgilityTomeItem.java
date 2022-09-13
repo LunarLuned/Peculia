@@ -2,6 +2,7 @@ package net.lunarluned.peculia.item.custom.tomes.agility;
 
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.item.ModItems;
+import net.lunarluned.peculia.item.custom.tomes.GenericTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.ModTomeItem;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.entity.AreaEffectCloudEntity;
@@ -18,7 +19,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 
-public class LesserAgilityTomeItem extends ModTomeItem {
+public class LesserAgilityTomeItem extends GenericTomeItem {
     public LesserAgilityTomeItem(Settings settings) {
         super(settings);
     }
@@ -33,38 +34,17 @@ public class LesserAgilityTomeItem extends ModTomeItem {
         if (!world.isClient) {
 
 
-// if player has cursed, stagnated or doesnt have any souls, item no workie
-            if (user.hasStatusEffect(ModEffects.CURSED)) {
-                user.emitGameEvent(GameEvent.BLOCK_PLACE);
-                return TypedActionResult.fail(itemStack);
-            }
             if (!user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() <= 4) {
-                user.emitGameEvent(GameEvent.BLOCK_PLACE);
+                user.emitGameEvent(GameEvent.FLAP);
                 world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundCategory.NEUTRAL, 1, 1);
                 return TypedActionResult.fail(itemStack);
             }
             if (user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() <= 7) {
-                user.emitGameEvent(GameEvent.BLOCK_PLACE);
-                world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundCategory.NEUTRAL, 1, 1);
-                return TypedActionResult.fail(itemStack);
-            }
-            //if player has no souls, play generic tome fail sound
-            if (user.isSneaking() && !user.getOffHandStack().isOf(ModItems.SOUL)) {
                 user.emitGameEvent(GameEvent.FLAP);
-                world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundCategory.NEUTRAL, 1, 1);
+                world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_GENERIC_TOME_CROWD_FAIL, SoundCategory.NEUTRAL, 1, 1);
                 return TypedActionResult.fail(itemStack);
             }
-            if (!user.isSneaking() && !user.getOffHandStack().isOf(ModItems.SOUL)) {
-                user.emitGameEvent(GameEvent.FLAP);
-                world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundCategory.NEUTRAL, 1, 1);
-                return TypedActionResult.fail(itemStack);
-            }
-            if (!user.getOffHandStack().isOf(ModItems.SOUL)) {
-                user.emitGameEvent(GameEvent.BLOCK_PLACE);
-                return TypedActionResult.fail(itemStack);
-
                 // if player does soul! exist :)
-            }
             if (!user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL) && user.getOffHandStack().getCount() > 4) {
                 user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 120, 0));
                 user.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 80, 1));
@@ -76,7 +56,7 @@ public class LesserAgilityTomeItem extends ModTomeItem {
             // if player soul and crouching, heals around them
             if (user.isSneaking() && user.getOffHandStack().isOf(ModItems.SOUL)) {
                 spawnLesserAgilityCloudAtPos(user, user.getBlockPos(), 0);
-                world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_HEALING_TOME_USE, SoundCategory.NEUTRAL, 1, 1);
+                world.playSound(null, user.getPos().x, user.getPos().y, user.getPos().z, ModSoundEvents.ITEM_AGILITY_TOME_CROWD_USE, SoundCategory.NEUTRAL, 1, 1);
                 user.getOffHandStack().decrement(8);
                 user.getStackInHand(hand).damage(2, user, p -> p.sendToolBreakStatus(hand));
                 user.getItemCooldownManager().set(this, 200);
@@ -98,18 +78,5 @@ public class LesserAgilityTomeItem extends ModTomeItem {
         areaEffectCloudEntity.addEffect(speed);
         areaEffectCloudEntity.addEffect(jump_boost);
         attacker.world.spawnEntity(areaEffectCloudEntity);
-    }
-
-
-    @Override
-    public int getEnchantability() {
-        return 0;
-    }
-
-
-
-    @Override
-    public boolean isEnchantable(ItemStack stack) {
-        return false;
     }
 }

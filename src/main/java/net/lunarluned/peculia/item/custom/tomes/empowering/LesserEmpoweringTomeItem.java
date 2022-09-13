@@ -100,16 +100,4 @@ public class LesserEmpoweringTomeItem extends ModTomeItem {
         attacker.world.spawnEntity(areaEffectCloudEntity);
     }
 
-
-    @Override
-    public int getEnchantability() {
-        return 0;
-    }
-
-
-
-    @Override
-    public boolean isEnchantable(ItemStack stack) {
-        return false;
-    }
 }

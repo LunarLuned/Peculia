@@ -36,11 +36,39 @@
       "peculia:item/healing_tome/use2"
     ]
   },
+  "item.healing_tome.crowd_use": {
+    "subtitle": "item.healing_tome.crowd_use",
+    "sounds": [
+      "peculia:item/healing_tome/crowd/use1",
+      "peculia:item/healing_tome/crowd/use2"
+    ]
+  },
+  "item.agility_tome.use": {
+    "subtitle": "item.agility_tome.use",
+    "sounds": [
+      "peculia:item/agility_tome/use1",
+      "peculia:item/agility_tome/use2"
+    ]
+  },
+  "item.agility_tome.crowd_use": {
+    "subtitle": "item.agility_tome.crowd_use",
+    "sounds": [
+      "peculia:item/agility_tome/crowd/use1",
+      "peculia:item/agility_tome/crowd/use2"
+    ]
+  },
   "item.updraft_tome.use": {
     "subtitle": "item.updraft_tome.use",
     "sounds": [
       "peculia:item/updraft_tome/use1",
       "peculia:item/updraft_tome/use2"
+    ]
+  },
+  "item.updraft_tome.crowd_use": {
+    "subtitle": "item.updraft_tome.crowd_use",
+    "sounds": [
+      "peculia:item/updraft_tome/crowd/use1",
+      "peculia:item/updraft_tome/crowd/use2"
     ]
   },
   "item.generic_tome.fail": {

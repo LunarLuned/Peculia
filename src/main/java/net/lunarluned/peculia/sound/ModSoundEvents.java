@@ -61,9 +61,14 @@ public class ModSoundEvents {
 
     public static final SoundEvent ITEM_ECHOING_MIRROR_USE = registerSoundEvent("item.echoing_mirror.use");
 
-    public static final SoundEvent ITEM_UPDRAFT_TOME_USE = registerSoundEvent("item.updraft_tome.use");
-    public static final SoundEvent ITEM_HEALING_TOME_USE = registerSoundEvent("item.healing_tome.use");
     public static final SoundEvent ITEM_GENERIC_TOME_FAIL = registerSoundEvent("item.generic_tome.fail");
+    public static final SoundEvent ITEM_GENERIC_TOME_CROWD_FAIL = registerSoundEvent("item.generic_tome.crowd_fail");
+    public static final SoundEvent ITEM_HEALING_TOME_USE = registerSoundEvent("item.healing_tome.use");
+    public static final SoundEvent ITEM_HEALING_TOME_CROWD_USE = registerSoundEvent("item.healing_tome.crowd_use");
+    public static final SoundEvent ITEM_UPDRAFT_TOME_USE = registerSoundEvent("item.updraft_tome.use");
+    public static final SoundEvent ITEM_UPDRAFT_TOME_CROWD_USE = registerSoundEvent("item.updraft_tome.crowd_use");
+    public static final SoundEvent ITEM_AGILITY_TOME_USE = registerSoundEvent("item.agility_tome.use");
+    public static final SoundEvent ITEM_AGILITY_TOME_CROWD_USE = registerSoundEvent("item.agility_tome.crowd_use");
 
     public static final SoundEvent BLOCK_ICHOR_STICKER_RELEASE = registerSoundEvent("block.ichor_sticker.release");
 
