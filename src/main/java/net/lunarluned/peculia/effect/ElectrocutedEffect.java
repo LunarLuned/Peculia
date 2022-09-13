@@ -17,7 +17,7 @@ public class ElectrocutedEffect extends MobEffect {
     public void applyEffectTick(LivingEntity entity, int amplifier) {
         if (!entity.isCrouching()){
             entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 250, 1));
-            entity.hurt(new Peculia.ElectrocutionDamageSource((Player) entity), 1);
+            entity.hurt(new Peculia.ElectrocutionDamageSource(entity), 1);
             super.applyEffectTick(entity, amplifier);
         }
     }

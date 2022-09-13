@@ -13,7 +13,9 @@ import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
+import org.jetbrains.annotations.NotNull;
 
 public class HealingTomeItem extends GenericTomeItem {
     public HealingTomeItem(Properties settings) {
@@ -21,46 +23,49 @@ public class HealingTomeItem extends GenericTomeItem {
     }
 
 
-    public InteractionResultHolder<ItemStack> use(Player user, InteractionHand hand) {
-        ItemStack itemStack = user.getItemInHand(hand);
-        if (!user.level.isClientSide) {
+    @Override
+    public InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand interactionHand) {
+        ItemStack itemStack = player.getItemInHand(interactionHand);
+        if (!level.isClientSide) {
 
-            if (user.getOffhandItem().is(ModItems.SOUL)) {
+            if (!player.isCrouching() && player.getOffhandItem().is(ModItems.SOUL)) {
 
-                if (!user.isCrouching() && user.getOffhandItem().getCount() <= 4) {
-                    user.gameEvent(GameEvent.ITEM_INTERACT_START);
-                    user.level.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                if (player.getOffhandItem().getCount() <= 2) {
+                    level.gameEvent(player, GameEvent.BLOCK_CHANGE, player.getOnPos());
+                    level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
                     return InteractionResultHolder.fail(itemStack);
-                }
-
-                if (user.isCrouching() && user.getOffhandItem().getCount() <= 5) {
-                    user.gameEvent(GameEvent.ITEM_INTERACT_START);
-                    user.level.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_CROWD_FAIL, SoundSource.NEUTRAL, 1, 1);
-                    return InteractionResultHolder.fail(itemStack);
-                }
-
-                // if player does soul! exist :)
-
-                if (!user.isCrouching() && user.getOffhandItem().getCount() >= 3) {
-                    user.addEffect(new MobEffectInstance(MobEffects.HEAL, 1, 1));
-                    user.getOffhandItem().shrink(3);
-                    user.level.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
-                    user.getItemInHand(hand).hurtAndBreak(1, user, p -> p.broadcastBreakEvent(hand));
-                    user.getCooldowns().addCooldown(this, 100);
-                }
-
-                // if player soul and crouching, heals around them
-
-                if (user.isCrouching() && user.getOffhandItem().getCount() >= 6) {
-                    spawnHealingCloudAtPos(user, user.getOnPos(), 1);
-                    user.level.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_CROWD_USE, SoundSource.NEUTRAL, 1, 1);
-                    user.getOffhandItem().shrink(6);
-                    user.getItemInHand(hand).hurtAndBreak(1, user, p -> p.broadcastBreakEvent(hand));
-                    user.getCooldowns().addCooldown(this, 300);
                 }
             }
+            if (player.isCrouching() && player.getOffhandItem().is(ModItems.SOUL)) {
+
+                if (player.getOffhandItem().getCount() <= 5) {
+                    level.gameEvent(player, GameEvent.BLOCK_CHANGE, player.getOnPos());
+                    level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_CROWD_FAIL, SoundSource.NEUTRAL, 1, 1);
+                    return InteractionResultHolder.fail(itemStack);
+                }
+            }
+
+            if (player.getOffhandItem().getCount() >= 3) {
+
+                player.addEffect(new MobEffectInstance(MobEffects.HEAL, 1, 1));
+                player.getOffhandItem().shrink(3);
+                level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
+                player.getItemInHand(interactionHand).hurtAndBreak(1, player, p -> p.broadcastBreakEvent(interactionHand));
+                player.getCooldowns().addCooldown(this, 100);
+            }
         }
-        return InteractionResultHolder.sidedSuccess(itemStack, user.level.isClientSide());
+
+        // If the player is crouching with souls in their offhand, a healing cloud will be summoned around them
+
+        if (player.isCrouching() && player.getOffhandItem().is(ModItems.SOUL) && (player.getOffhandItem().getCount() >= 6)) {
+
+            spawnHealingCloudAtPos(player, player.getOnPos(), 1);
+            level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_CROWD_USE, SoundSource.NEUTRAL, 1, 1);
+            player.getOffhandItem().shrink(6);
+            player.getItemInHand(interactionHand).hurtAndBreak(1, player, p -> p.broadcastBreakEvent(interactionHand));
+            player.getCooldowns().addCooldown(this, 200);
+        }
+        return InteractionResultHolder.sidedSuccess(itemStack, level.isClientSide());
     }
 
     // Spawns a healing cloud at the user's position

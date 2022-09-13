@@ -34,7 +34,7 @@ public class LesserAgilityTomeItem extends GenericTomeItem {
 
             if (user.getOffhandItem().is(ModItems.SOUL)) {
 
-                if (!user.isCrouching() && user.getOffhandItem().getCount() <= 4) {
+                if (!user.isCrouching() && user.getOffhandItem().getCount() <= 6) {
                     user.gameEvent(GameEvent.ITEM_INTERACT_START);
                     user.level.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
                     return InteractionResultHolder.fail(itemStack);

@@ -15,6 +15,7 @@ import net.lunarluned.peculia.world.feature.ModConfiguredFeatures;
 import net.lunarluned.peculia.world.feature.gen.ModWorldGen;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.EntityDamageSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,12 +30,12 @@ public class Peculia implements ModInitializer {
 
 		// To Fix:
 
-		// - Greater Tome of Healing
+		                                        // - Greater Tome of Healing - fixed!
 		// - Both Updraft Tomes
 		// -Both Tomes of Fortifying
-		// - Ichor Stichor
+		                                        // - Ichor Stichor - fixed!
 		// - Sculk Sac and Full Sculk Sac
-		// - Electrocuted Effect
+		                                      // - Electrocuted Effect - fixed!
 		// - Loot Table Modifiers
 
 		// ඞ
@@ -85,7 +86,7 @@ public class Peculia implements ModInitializer {
 
 	public static class ElectrocutionDamageSource extends EntityDamageSource {
 
-		public ElectrocutionDamageSource(Player source) {
+		public ElectrocutionDamageSource(Entity source) {
 			super("electrocution", source);
 			bypassArmor();
 		}

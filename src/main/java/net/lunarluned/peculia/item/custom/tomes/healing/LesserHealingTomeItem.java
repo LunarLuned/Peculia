@@ -1,6 +1,7 @@
 package net.lunarluned.peculia.item.custom.tomes.healing;
 
 import net.lunarluned.peculia.item.ModItems;
+import net.lunarluned.peculia.item.custom.tomes.GenericTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.ModTomeItem;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.core.BlockPos;
@@ -17,7 +18,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.NotNull;
 
-public class LesserHealingTomeItem extends ModTomeItem {
+public class LesserHealingTomeItem extends GenericTomeItem {
     public LesserHealingTomeItem(Properties settings) {
         super(settings);
     }
@@ -34,17 +35,20 @@ public class LesserHealingTomeItem extends ModTomeItem {
 
             if (!player.isCrouching() && player.getOffhandItem().is(ModItems.SOUL)) {
 
-                if (player.getOffhandItem().getCount() <= 7){
+                if (player.getOffhandItem().getCount() <= 7) {
                     level.gameEvent(player, GameEvent.BLOCK_CHANGE, player.getOnPos());
                     level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
                     return InteractionResultHolder.fail(itemStack);
                 }
+            }
+            if (player.isCrouching() && player.getOffhandItem().is(ModItems.SOUL)) {
 
                 if (player.getOffhandItem().getCount() <= 9) {
                     level.gameEvent(player, GameEvent.BLOCK_CHANGE, player.getOnPos());
                     level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_CROWD_FAIL, SoundSource.NEUTRAL, 1, 1);
                     return InteractionResultHolder.fail(itemStack);
                 }
+            }
 
                 if (player.getOffhandItem().getCount() >= 7) {
 
@@ -66,7 +70,6 @@ public class LesserHealingTomeItem extends ModTomeItem {
                 player.getItemInHand(interactionHand).hurtAndBreak(2, player, p -> p.broadcastBreakEvent(interactionHand));
                 player.getCooldowns().addCooldown(this, 350);
             }
-        }
         return InteractionResultHolder.sidedSuccess(itemStack, level.isClientSide());
     }
 

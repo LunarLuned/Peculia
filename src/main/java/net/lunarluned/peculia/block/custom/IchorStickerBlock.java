@@ -18,6 +18,8 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
+import static net.lunarluned.peculia.block.custom.CrumblingBlock.setToAir;
+
 public class IchorStickerBlock extends Block {
     public IchorStickerBlock(Properties settings) {
         super(settings);
@@ -38,6 +40,7 @@ public class IchorStickerBlock extends Block {
             level.playSound(null, pos, ModSoundEvents.BLOCK_ICHOR_STICKER_RELEASE, SoundSource.BLOCKS, 1.0f, 1.0f);
             level.levelEvent((Player) entity, 2001, pos, getId(state));
             spawnIchorCloudAtPos((LivingEntity) entity, pos, 1);
+            setToAir(state, level, pos);
         }
     }
 
