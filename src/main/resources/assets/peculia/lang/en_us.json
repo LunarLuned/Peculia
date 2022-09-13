@@ -170,10 +170,47 @@
   "item.peculia.inactive_empowering_tome.desc": "Empowering",
   "item.peculia.inactive_agility_tome": "Inactive Tome",
   "item.peculia.inactive_agility_tome.desc": "Agility",
+
   "item.peculia.tome_of_healing": "Tome of Healing",
+  "item.peculia.tome_of_healing.desc": "Greater",
+  "item.peculia.lesser_tome_of_healing": "Tome of Healing",
+  "item.peculia.lesser_tome_of_healing.desc": "Lesser",
+
   "item.peculia.tome_of_updraft": "Tome of Updraft",
+  "item.peculia.tome_of_updraft.desc": "Greater",
+  "item.peculia.lesser_tome_of_updraft": "Tome of Updraft",
+  "item.peculia.lesser_tome_of_updraft.desc": "Lesser",
+
   "item.peculia.tome_of_empowering": "Tome of Empowering",
+  "item.peculia.tome_of_empowering.desc": "Greater",
+  "item.peculia.lesser_tome_of_empowering": "Tome of Empowering",
+  "item.peculia.lesser_tome_of_empowering.desc": "Lesser",
+
   "item.peculia.tome_of_agility": "Tome of Agility",
+  "item.peculia.tome_of_agility.desc": "Greater",
+  "item.peculia.lesser_tome_of_agility": "Tome of Agility",
+  "item.peculia.lesser_tome_of_agility.desc": "Lesser",
+
+  "item.peculia.tome_of_evoking": "Tome of Evoking",
+  "item.peculia.tome_of_evoking.desc": "Greater",
+  "item.peculia.lesser_tome_of_evoking": "Tome of Evoking",
+  "item.peculia.lesser_tome_of_evoking.desc": "Lesser",
+
+  "item.peculia.tome_of_warding": "Tome of Warding",
+  "item.peculia.tome_of_warding.desc": "Greater",
+  "item.peculia.lesser_tome_of_warding": "Tome of Warding",
+  "item.peculia.lesser_tome_of_warding.desc": "Lesser",
+
+  "item.peculia.tome_of_watching": "Tome of Watching",
+  "item.peculia.tome_of_watching.desc": "Greater",
+  "item.peculia.lesser_tome_of_watching": "Tome of Watching",
+  "item.peculia.lesser_tome_of_watching.desc": "Lesser",
+
+  "item.peculia.tome_of_fortifying": "Tome of Fortifying",
+  "item.peculia.tome_of_fortifying.desc": "Greater",
+  "item.peculia.lesser_tome_of_fortifying": "Tome of Fortifying",
+  "item.peculia.lesser_tome_of_fortifying.desc": "Lesser",
+
   "item.peculia.empty_mirror": "Empty Mirror",
   "item.peculia.fallen_hero_dagger": "Fallen Hero Dagger",
   "item.peculia.fallen_hero_sword": "Fallen Hero Sword",

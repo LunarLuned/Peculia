@@ -1,4 +1,4 @@
-package net.lunarluned.peculia.item.custom;
+package net.lunarluned.peculia.item.custom.tomes;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;

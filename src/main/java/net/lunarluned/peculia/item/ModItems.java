@@ -4,6 +4,15 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.fluid.ModFluids;
 import net.lunarluned.peculia.item.custom.*;
+import net.lunarluned.peculia.item.custom.tomes.*;
+import net.lunarluned.peculia.item.custom.tomes.agility.AgilityTomeItem;
+import net.lunarluned.peculia.item.custom.tomes.agility.LesserAgilityTomeItem;
+import net.lunarluned.peculia.item.custom.tomes.empowering.EmpoweringTomeItem;
+import net.lunarluned.peculia.item.custom.tomes.empowering.LesserEmpoweringTomeItem;
+import net.lunarluned.peculia.item.custom.tomes.healing.HealingTomeItem;
+import net.lunarluned.peculia.item.custom.tomes.healing.LesserHealingTomeItem;
+import net.lunarluned.peculia.item.custom.tomes.updraft.LesserUpdraftTomeItem;
+import net.lunarluned.peculia.item.custom.tomes.updraft.UpdraftTomeItem;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
@@ -28,18 +37,31 @@ public class ModItems {
 
     public static final Item INACTIVE_HEALING_TOME = registerItem("inactive_healing_tome",
             new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    public static final Item LESSER_TOME_OF_HEALING = registerItem("lesser_tome_of_healing",
+            new LesserHealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(32)));
     public static final Item TOME_OF_HEALING = registerItem("tome_of_healing",
             new HealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(64)));
 
     public static final Item INACTIVE_UPDRAFT_TOME = registerItem("inactive_updraft_tome",
             new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    public static final Item LESSER_TOME_OF_UPDRAFT = registerItem("lesser_tome_of_updraft",
+            new LesserUpdraftTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(32)));
     public static final Item TOME_OF_UPDRAFT = registerItem("tome_of_updraft",
             new UpdraftTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(64)));
 
     public static final Item INACTIVE_EMPOWERING_TOME = registerItem("inactive_empowering_tome",
             new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    public static final Item LESSER_TOME_OF_EMPOWERING = registerItem("lesser_tome_of_empowering",
+            new LesserEmpoweringTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    public static final Item TOME_OF_EMPOWERING = registerItem("tome_of_empowering",
+            new EmpoweringTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(64)));
+
     public static final Item INACTIVE_AGILITY_TOME = registerItem("inactive_agility_tome",
             new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    public static final Item LESSER_TOME_OF_AGILITY = registerItem("lesser_tome_of_agility",
+            new LesserAgilityTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    public static final Item TOME_OF_AGILITY = registerItem("tome_of_agility",
+            new AgilityTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(64)));
 
 
 
