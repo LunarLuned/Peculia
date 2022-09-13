@@ -1,5 +1,7 @@
 package net.lunarluned.peculia.particle.custom;
 
+import ParticleTextureSheet;
+import SpriteProvider;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.*;
@@ -7,8 +9,7 @@ import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
 
 public class IchorParticle extends SpriteBillboardParticle {
-    protected IchorParticle(ClientWorld level, double xCoord, double yCoord, double zCoord,
-                            SpriteProvider spriteSet, double xd, double yd, double zd) {
+    protected IchorParticle(ClientWorld level, double xCoord, double yCoord, double zCoord, SpriteProvider spriteSet, double xd, double yd, double zd) {
         super(level, xCoord, yCoord, zCoord, xd, yd, zd);
 
         this.velocityMultiplier = 0.6F;
@@ -47,8 +48,7 @@ public class IchorParticle extends SpriteBillboardParticle {
             this.sprites = spriteSet;
         }
 
-        public Particle createParticle(DefaultParticleType particleType, ClientWorld level, double x, double y, double z,
-                                       double dx, double dy, double dz) {
+        public Particle createParticle(DefaultParticleType particleType, ClientWorld level, double x, double y, double z, double dx, double dy, double dz) {
             return new IchorParticle(level, x, y, z, this.sprites, dx, dy, dz);
         }
     }

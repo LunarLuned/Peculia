@@ -1,27 +1,25 @@
 package net.lunarluned.peculia.mixin.entities.wither;
 
 import net.lunarluned.peculia.effect.ModEffects;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.projectile.ProjectileEntity;
-import net.minecraft.entity.projectile.WitherSkullEntity;
-import net.minecraft.util.hit.EntityHitResult;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.WitherSkull;
+import net.minecraft.world.phys.EntityHitResult;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
-@Mixin(WitherSkullEntity.class)
+@Mixin(WitherSkull.class)
 public class WitherSkullEntityMixin {
 
-    @Inject(method = "onEntityHit", locals = LocalCapture.CAPTURE_FAILHARD, at =  @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;addStatusEffect(Lnet/minecraft/entity/effect/StatusEffectInstance;Lnet/minecraft/entity/Entity;)Z"))
-
-    private void stagnatedEffectOnHit(EntityHitResult entityHitResult, CallbackInfo ci, Entity entity, Entity entity2, boolean bl, int i) {
-        ((LivingEntity)entity).addStatusEffect(new StatusEffectInstance(ModEffects.STAGNATED, 120, 0), ((ProjectileEntity) (Object) this).getEffectCause());
+    @Inject(at = @At("RETURN"), method = "onHitEntity")
+    protected void onHitEntity(EntityHitResult entityHitResult, CallbackInfo ci) {
+        Entity entity = entityHitResult.getEntity();
+        if (entity instanceof LivingEntity) {
+            ((LivingEntity) entity).addEffect(new MobEffectInstance(ModEffects.STAGNATED, 120, 0), ((Projectile) (Object) this).getEffectSource());
+        }
     }
-
-
 }

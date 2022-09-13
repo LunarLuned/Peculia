@@ -1,36 +1,32 @@
 package net.lunarluned.peculia.block.custom;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.particle.BlockStateParticleEffect;
-import net.minecraft.particle.ParticleTypes;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.GameRules;
-import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.random.Random;
+import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.NotNull;
 
 public class CrumblingBlock extends Block {
-    public CrumblingBlock(Settings settings) {
+    public CrumblingBlock(Properties settings) {
         super(settings);
     }
 
-    public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
-        setToAir(state, world, pos);
-        super.onSteppedOn(world, pos, state, entity);
+    public void stepOn(@NotNull Level level, @NotNull BlockPos pos, @NotNull BlockState state, @NotNull Entity entity) {
+        if (entity instanceof LivingEntity) {
+            setToAir(state, level, pos);
+            super.stepOn(level, pos, state, entity);
 
-        world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_NETHERRACK_BREAK, SoundCategory.BLOCKS, 1F, 1.0F);
-        world.addBlockBreakParticles(pos, state);
+            level.playSound(null, pos, SoundEvents.NETHERRACK_BREAK, SoundSource.BLOCKS, 1F, 1.0F);
+            level.levelEvent(null, 2001, pos, getId(state));
+        }
     }
 
-    public static void setToAir(BlockState state, World world, BlockPos pos) {
-        world.setBlockState(pos, pushEntitiesUpBeforeBlockChange(state, Blocks.AIR.getDefaultState(), world, pos));
+    public static void setToAir(BlockState state, Level world, BlockPos pos) {
+        world.setBlockAndUpdate(pos, pushEntitiesUp(state, Blocks.AIR.defaultBlockState(), world, pos));
     }
 }

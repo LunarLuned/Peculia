@@ -4,15 +4,16 @@ import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.mixin.BrewingRecipeRegistryMixin;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.Items;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.Potions;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.item.alchemy.Potions;
 
 public class ModPotions {
+
     public static Potion ICHOR_POTION;
     public static Potion EXTICHOR_POTION;
     public static Potion ICHORRESISTANCE_POTION;
@@ -21,30 +22,30 @@ public class ModPotions {
     public static Potion EXTDARKNESS_POTION;
 
     public static Potion registerDarknessPotion(String name) {
-        return Registry.register(Registry.POTION, new Identifier(Peculia.MOD_ID, name),
-                new Potion(new StatusEffectInstance(StatusEffects.DARKNESS, 250, 0)));
+        return Registry.register(Registry.POTION, new ResourceLocation(Peculia.MOD_ID, name),
+        new Potion(new MobEffectInstance(MobEffects.DARKNESS, 250, 0)));
     }
     public static Potion registerextDarknessPotion(String name) {
-        return Registry.register(Registry.POTION, new Identifier(Peculia.MOD_ID, name),
-                new Potion(new StatusEffectInstance(StatusEffects.DARKNESS, 525, 0)));
+        return Registry.register(Registry.POTION, new ResourceLocation(Peculia.MOD_ID, name),
+        new Potion(new MobEffectInstance(MobEffects.DARKNESS, 525, 0)));
     }
 
     public static Potion registerIchorPotion(String name) {
-        return Registry.register(Registry.POTION, new Identifier(Peculia.MOD_ID, name),
-                new Potion(new StatusEffectInstance(ModEffects.ICHOR, 400, 0)));
+        return Registry.register(Registry.POTION, new ResourceLocation(Peculia.MOD_ID, name),
+        new Potion(new MobEffectInstance(ModEffects.ICHOR, 400, 0)));
     }
     public static Potion registerextIchorPotion(String name) {
-        return Registry.register(Registry.POTION, new Identifier(Peculia.MOD_ID, name),
-                new Potion(new StatusEffectInstance(ModEffects.ICHOR, 800, 0)));
+        return Registry.register(Registry.POTION, new ResourceLocation(Peculia.MOD_ID, name),
+        new Potion(new MobEffectInstance(ModEffects.ICHOR, 800, 0)));
     }
 
     public static Potion registerIchorResistancePotion(String name) {
-        return Registry.register(Registry.POTION, new Identifier(Peculia.MOD_ID, name),
-                new Potion(new StatusEffectInstance(ModEffects.ICHOR_RESISTANCE, 3600, 0)));
+        return Registry.register(Registry.POTION, new ResourceLocation(Peculia.MOD_ID, name),
+        new Potion(new MobEffectInstance(ModEffects.ICHOR_RESISTANCE, 3600, 0)));
     }
     public static Potion registerextIchorResistancePotion(String name) {
-        return Registry.register(Registry.POTION, new Identifier(Peculia.MOD_ID, name),
-                new Potion(new StatusEffectInstance(ModEffects.ICHOR_RESISTANCE, 9600, 0)));
+        return Registry.register(Registry.POTION, new ResourceLocation(Peculia.MOD_ID, name),
+        new Potion(new MobEffectInstance(ModEffects.ICHOR_RESISTANCE, 9600, 0)));
     }
 
     public static void registerIchorPotion() {
@@ -72,8 +73,9 @@ public class ModPotions {
 
     private static void registerIchorPotionRecipe() {
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, ModItems.ICHOR,
-                ModPotions.ICHOR_POTION);
+        ModPotions.ICHOR_POTION);
     }
+
     private static void registerextIchorPotionRecipe() {
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(ModPotions.ICHOR_POTION, Items.REDSTONE,
                 ModPotions.EXTICHOR_POTION);

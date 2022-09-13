@@ -2,10 +2,13 @@ package net.lunarluned.peculia.world.feature;
 
 import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.block.ModBlocks;
-import net.minecraft.block.Blocks;
-import net.minecraft.structure.rule.BlockMatchRuleTest;
-import net.minecraft.util.registry.RegistryEntry;
-import net.minecraft.world.gen.feature.*;
+import net.minecraft.core.Holder;
+import net.minecraft.data.worldgen.features.FeatureUtils;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 
 import java.util.List;
 
@@ -16,87 +19,85 @@ public class ModConfiguredFeatures {
 
 // List of Configured Features:
 
-    public static final List<OreFeatureConfig.Target> ORE_MYTHRIL_CRYSTAL = List.of(
-            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.AIR),
-                    ModBlocks.MYTHRIL_CRYSTAL.getDefaultState()));
+    public static final List<OreConfiguration.TargetBlockState> ORE_MYTHRIL_CRYSTAL = List.of(
+    OreConfiguration.target(new BlockMatchTest(Blocks.AIR),
+    ModBlocks.MYTHRIL_CRYSTAL.defaultBlockState()));
 
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> MYTHRIL_CRYSTAL =
-            ConfiguredFeatures.register("mythril_crystal", Feature.ORE,
-                    new OreFeatureConfig(ORE_MYTHRIL_CRYSTAL, 6));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> MYTHRIL_CRYSTAL =
+    FeatureUtils.register("mythril_crystal", Feature.ORE,
+    new OreConfiguration(ORE_MYTHRIL_CRYSTAL, 6));
 
-    public static final List<OreFeatureConfig.Target> ORE_POPROCK_CRYSTAL = List.of(
-            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE),
-                    ModBlocks.POPROCK_CRYSTAL.getDefaultState()));
+    public static final List<OreConfiguration.TargetBlockState> ORE_POPROCK_CRYSTAL = List.of(
+    OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),
+    ModBlocks.POPROCK_CRYSTAL.defaultBlockState()));
 
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> POPROCK_CRYSTAL =
-            ConfiguredFeatures.register("poprock_crystal", Feature.ORE,
-                    new OreFeatureConfig(ORE_POPROCK_CRYSTAL, 12));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> POPROCK_CRYSTAL =
+    FeatureUtils.register("poprock_crystal", Feature.ORE,
+    new OreConfiguration(ORE_POPROCK_CRYSTAL, 12));
 
-    public static final List<OreFeatureConfig.Target> ORE_ERODED_END_STONE = List.of(
-            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE),
-                    ModBlocks.ERODED_END_STONE.getDefaultState()));
+    public static final List<OreConfiguration.TargetBlockState> ORE_ERODED_END_STONE = List.of(
+    OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),
+    ModBlocks.ERODED_END_STONE.defaultBlockState()));
 
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ERODED_END_STONE =
-            ConfiguredFeatures.register("eroded_end_stone", Feature.ORE,
-                    new OreFeatureConfig(ORE_ERODED_END_STONE, 20));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ERODED_END_STONE =
+    FeatureUtils.register("eroded_end_stone", Feature.ORE,
+    new OreConfiguration(ORE_ERODED_END_STONE, 20));
 
-    public static final List<OreFeatureConfig.Target> ORE_SILL = List.of(
-            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE),
-                    ModBlocks.SILL.getDefaultState()));
+    public static final List<OreConfiguration.TargetBlockState> ORE_SILL = List.of(
+    OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),
+    ModBlocks.SILL.defaultBlockState()));
 
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> SILL =
-            ConfiguredFeatures.register("sill", Feature.ORE,
-                    new OreFeatureConfig(ORE_SILL, 60));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> SILL =
+    FeatureUtils.register("sill", Feature.ORE,
+    new OreConfiguration(ORE_SILL, 60));
 
-    public static final List<OreFeatureConfig.Target> ORE_FLUORITE = List.of(
-            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE),
-                    ModBlocks.FLUORITE.getDefaultState()));
+    public static final List<OreConfiguration.TargetBlockState> ORE_FLUORITE = List.of(
+    OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),
+    ModBlocks.FLUORITE.defaultBlockState()));
 
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> FLUORITE =
-            ConfiguredFeatures.register("fluorite", Feature.ORE,
-                    new OreFeatureConfig(ORE_FLUORITE, 45));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> FLUORITE =
+    FeatureUtils.register("fluorite", Feature.ORE,
+    new OreConfiguration(ORE_FLUORITE, 45));
 
-    public static final List<OreFeatureConfig.Target> ORE_CONDENSED_VOID = List.of(
-            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE),
-                    ModBlocks.CONDENSED_VOID.getDefaultState()));
+    public static final List<OreConfiguration.TargetBlockState> ORE_CONDENSED_VOID = List.of(
+    OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),
+    ModBlocks.CONDENSED_VOID.defaultBlockState()));
 
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> CONDENSED_VOID =
-            ConfiguredFeatures.register("condensed_void", Feature.ORE,
-                    new OreFeatureConfig(ORE_CONDENSED_VOID, 60));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> CONDENSED_VOID =
+    FeatureUtils.register("condensed_void", Feature.ORE,
+    new OreConfiguration(ORE_CONDENSED_VOID, 60));
 
-    public static final List<OreFeatureConfig.Target> ORE_CRUMBLING_STONE = List.of(
-            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.STONE),
-                    ModBlocks.CRUMBLING_STONE.getDefaultState()));
+    public static final List<OreConfiguration.TargetBlockState> ORE_CRUMBLING_STONE = List.of(
+    OreConfiguration.target(new BlockMatchTest(Blocks.STONE),
+    ModBlocks.CRUMBLING_STONE.defaultBlockState()));
 
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> CRUMBLING_STONE =
-            ConfiguredFeatures.register("crumbling_stone", Feature.ORE,
-                    new OreFeatureConfig(ORE_CRUMBLING_STONE, 40));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> CRUMBLING_STONE =
+    FeatureUtils.register("crumbling_stone", Feature.ORE,
+    new OreConfiguration(ORE_CRUMBLING_STONE, 40));
 
-    public static final List<OreFeatureConfig.Target> ORE_CRUMBLING_DEEPSLATE = List.of(
-            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.DEEPSLATE),
-                    ModBlocks.CRUMBLING_DEEPSLATE.getDefaultState()));
+    public static final List<OreConfiguration.TargetBlockState> ORE_CRUMBLING_DEEPSLATE = List.of(
+    OreConfiguration.target(new BlockMatchTest(Blocks.DEEPSLATE),
+    ModBlocks.CRUMBLING_DEEPSLATE.defaultBlockState()));
 
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> CRUMBLING_DEEPSLATE =
-            ConfiguredFeatures.register("crumbling_deepslate", Feature.ORE,
-                    new OreFeatureConfig(ORE_CRUMBLING_DEEPSLATE, 30));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> CRUMBLING_DEEPSLATE =
+    FeatureUtils.register("crumbling_deepslate", Feature.ORE,
+    new OreConfiguration(ORE_CRUMBLING_DEEPSLATE, 30));
 
-    public static final List<OreFeatureConfig.Target> ORE_CRUMBLING_NETHERRACK = List.of(
-            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.NETHERRACK),
-                    ModBlocks.CRUMBLING_NETHERRACK.getDefaultState()));
+    public static final List<OreConfiguration.TargetBlockState> ORE_CRUMBLING_NETHERRACK = List.of(
+    OreConfiguration.target(new BlockMatchTest(Blocks.NETHERRACK),
+    ModBlocks.CRUMBLING_NETHERRACK.defaultBlockState()));
 
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> CRUMBLING_NETHERRACK =
-            ConfiguredFeatures.register("crumbling_netherrack", Feature.ORE,
-                    new OreFeatureConfig(ORE_CRUMBLING_NETHERRACK, 45));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> CRUMBLING_NETHERRACK =
+    FeatureUtils.register("crumbling_netherrack", Feature.ORE,
+    new OreConfiguration(ORE_CRUMBLING_NETHERRACK, 45));
 
-    public static final List<OreFeatureConfig.Target> ORE_CRUMBLING_END_STONE = List.of(
-            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE),
-                    ModBlocks.CRUMBLING_END_STONE.getDefaultState()));
+    public static final List<OreConfiguration.TargetBlockState> ORE_CRUMBLING_END_STONE = List.of(
+    OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE),
+    ModBlocks.CRUMBLING_END_STONE.defaultBlockState()));
 
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> CRUMBLING_END_STONE =
-            ConfiguredFeatures.register("crumbling_endstone", Feature.ORE,
-                    new OreFeatureConfig(ORE_CRUMBLING_END_STONE, 30));
-
-
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> CRUMBLING_END_STONE =
+    FeatureUtils.register("crumbling_endstone", Feature.ORE,
+    new OreConfiguration(ORE_CRUMBLING_END_STONE, 30));
 
 
 // Registry for Configured Features:

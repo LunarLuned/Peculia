@@ -1,20 +1,20 @@
 package net.lunarluned.peculia.mixin.cursed;
 
 import net.lunarluned.peculia.effect.ModEffects;
-import net.minecraft.client.Keyboard;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.option.KeyBinding;
+import net.minecraft.client.KeyMapping;
+import net.minecraft.client.KeyboardHandler;
+import net.minecraft.client.Minecraft;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(Keyboard.class)
+@Mixin(KeyboardHandler.class)
 public abstract class KeyboardMixin {
-    @Inject(method = "onKey", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "keyPress", at = @At("HEAD"), cancellable = true)
     public void onKey(long window, int key, int scancode, int action, int modifiers, CallbackInfo callbackInfo) {
-        if (MinecraftClient.getInstance().player != null && MinecraftClient.getInstance().player.hasStatusEffect(ModEffects.CURSED) && !MinecraftClient.getInstance().player.isSpectator() && !MinecraftClient.getInstance().player.isCreative()) {
-            KeyBinding.unpressAll();
+        if (Minecraft.getInstance().player != null && Minecraft.getInstance().player.hasEffect(ModEffects.CURSED) && !Minecraft.getInstance().player.isSpectator() && !Minecraft.getInstance().player.isCreative()) {
+            KeyMapping.releaseAll();
             callbackInfo.cancel();
         }
     }

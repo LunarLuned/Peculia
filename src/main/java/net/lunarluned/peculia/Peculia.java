@@ -9,21 +9,16 @@ import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.enchantment.ModEnchantments;
 import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.misc.ModGameEvents;
-import net.lunarluned.peculia.particle.ModParticles;
 import net.lunarluned.peculia.potion.ModPotions;
 import net.lunarluned.peculia.sound.ModSoundEvents;
-import net.lunarluned.peculia.util.ModLootTableModifiers;
 import net.lunarluned.peculia.world.feature.ModConfiguredFeatures;
 import net.lunarluned.peculia.world.feature.gen.ModWorldGen;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.damage.EntityDamageSource;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.EntityDamageSource;
+import net.minecraft.world.entity.player.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.File;
-
-import static net.lunarluned.peculia.effect.ModEffects.registerStagnatedEffect;
 
 public class Peculia implements ModInitializer {
 	public static final String MOD_ID = "peculia";
@@ -31,19 +26,28 @@ public class Peculia implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
+		// To Fix:
+
+		// - Greater Tome of Healing
+		// - Both Updraft Tomes
+		// -Both Tomes of Fortifying
+		// - Ichor Stichor
+		// - Sculk Sac and Full Sculk Sac
+		// - Electrocuted Effect
+		// - Loot Table Modifiers
+
 		// ඞ
 		PeculiaConfig.init();
-
-		String defaultConfig = "{\n" + "  \"defaultconfig_file\": false\n" + "}";
-
+		String defaultConfig = """
+				{
+				  "defaultconfig_file": false
+				}""";
 		File configFile = Config.createFile("config/peculia/backupconfig.json", defaultConfig, false);
 		JsonObject json = Config.getJsonObject(Config.readFile(configFile));
 
 		PeculiaConfig.generateConfigs(json == null);
 		PeculiaConfig.loadConfig();
-
-
-
 		ModItems.registerModItems();
 		ModGameEvents.registerGameEvents();
 		ModGameEvents.init();
@@ -54,6 +58,7 @@ public class Peculia implements ModInitializer {
 		ModWorldGen.generateModWorldGen();
 
 		//disclaimer. i do not know why effects and potions calls for you to register each effect like this. it just does. idk why.
+
 		ModEffects.registerIchorEffect();
 		ModEffects.registerElectrocutedEffect();
 		ModEffects.registerVoidTouchedEffect();
@@ -64,67 +69,66 @@ public class Peculia implements ModInitializer {
 		ModEffects.registerStagnatedEffect();
 		ModEffects.registerEchoingEffect();
 
-		ModParticles.registerParticles();
-
 		ModPotions.registerIchorPotion();
 		ModPotions.registerextIchorPotion();
 		ModPotions.registerDarknessPotion();
 		ModPotions.registerextDarknessPotion();
 		ModPotions.registerIchorResistancePotion();
 		ModPotions.registerextIchorResistancePotion();
-		ModLootTableModifiers.modifyLootTables();
+		//ModLootTableModifiers.modifyLootTables();
 
 		LOGGER.info("You have 5 days until the piss droplets hit your minecraft house.");
 		LOGGER.info("ඞ");
 	}
+
+	// Damage Sources
+
 	public static class ElectrocutionDamageSource extends EntityDamageSource {
 
-		public ElectrocutionDamageSource(Entity source) {
+		public ElectrocutionDamageSource(Player source) {
 			super("electrocution", source);
-			setBypassesArmor();
+			bypassArmor();
 		}
 	}
 	public static class IchorDamageSource extends DamageSource {
 
-		public IchorDamageSource(Entity name) {
+		public IchorDamageSource() {
 			super("ichor");
-			setBypassesArmor();
-			setUnblockable();
+			bypassArmor();
 		}
 	}
 	public static class EchoingDamageSource extends DamageSource {
 
-		public EchoingDamageSource(Entity name) {
+		public EchoingDamageSource() {
 			super("echoing");
-			setUsesMagic();
+			setMagic();
 		}
 	}
 	public static class CondensedVoidDamageSource extends DamageSource {
 
-		public CondensedVoidDamageSource(Entity name) {
+		public CondensedVoidDamageSource() {
 			super("condensed");
-			setUsesMagic();
-			setBypassesArmor();
-			setBypassesProtection();
+			setMagic();
+			bypassArmor();
+			bypassEnchantments();
 		}
 	}
 	public static class EchoingMirrorDamageSource extends DamageSource {
 
-		public EchoingMirrorDamageSource(Entity name) {
+		public EchoingMirrorDamageSource() {
 			super("echomirror");
-			setUsesMagic();
-			setBypassesArmor();
-			setBypassesProtection();
+			setMagic();
+			bypassArmor();
+			bypassEnchantments();
 		}
 	}
 	public static class AnchoredDamageSource extends DamageSource {
 
-		public AnchoredDamageSource(Entity name) {
+		public AnchoredDamageSource() {
 			super("anchored");
-			setUsesMagic();
-			setBypassesArmor();
-			setBypassesProtection();
-			setUnblockable();
+			setMagic();
+			bypassArmor();
+			bypassEnchantments();
 		}
 	}
 }

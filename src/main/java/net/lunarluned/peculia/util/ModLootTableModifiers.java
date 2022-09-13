@@ -3,19 +3,14 @@ package net.lunarluned.peculia.util;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.item.ModItems;
-import net.minecraft.item.Items;
-import net.minecraft.loot.LootPool;
-import net.minecraft.loot.condition.RandomChanceLootCondition;
-import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.function.SetCountLootFunction;
-import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
-import net.minecraft.loot.provider.number.UniformLootNumberProvider;
-import net.minecraft.util.Identifier;
+import net.minecraft.world.level.storage.loot.LootPool;
 
-import java.util.concurrent.ThreadLocalRandom;
+// I don't know how any of this works, you're gonna have to figure that out yourself anne sorry! - Sydney
+
+// I commented it out for the time being so that the game can run
 
 public class ModLootTableModifiers {
-        private static final Identifier END_CITY_STRUCTURE_CHEST_ID
+/*        private static final Identifier END_CITY_STRUCTURE_CHEST_ID
             = new Identifier("minecraft", "chests/end_city_treasure");
     private static final Identifier SPAWN_BONUS_CHEST_CHEST_ID
             = new Identifier("minecraft", "chests/spawn_bonus_chest");
@@ -337,5 +332,6 @@ public class ModLootTableModifiers {
             }
         });
         }
+        /**/
 }
 

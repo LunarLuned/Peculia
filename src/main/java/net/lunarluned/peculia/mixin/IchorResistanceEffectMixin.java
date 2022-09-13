@@ -1,37 +1,34 @@
 package net.lunarluned.peculia.mixin;
 
 import net.lunarluned.peculia.effect.ModEffects;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(LivingEntity.class)
 public abstract class IchorResistanceEffectMixin extends Entity {
 
-    public IchorResistanceEffectMixin(EntityType<?> type, World world) {
-        super(type, world);
+    public IchorResistanceEffectMixin(EntityType<?> entityType, Level level) {
+        super(entityType, level);
     }
 
     @Shadow
-    @Nullable
-    public abstract StatusEffectInstance getStatusEffect(StatusEffect effect);
+    public abstract boolean hasEffect(MobEffect mobEffect);
 
     @Shadow
-    public abstract boolean hasStatusEffect(StatusEffect effect);
+    public abstract boolean removeEffect(MobEffect mobEffect);
 
-    @ModifyVariable(method = "damage", at = @At("HEAD"), argsOnly = true)
-    private float multiplyDamageForIchorResistance(float amount) {
-        if (this.hasStatusEffect(ModEffects.ICHOR_RESISTANCE)) {
-            return amount + (amount * (0.20f * (this.getStatusEffect(ModEffects.ICHOR_RESISTANCE).getAmplifier() + 1)));
+    @Inject(method = "tickEffects", at = @At(value = "HEAD"))
+    public void tickEffects(CallbackInfo ci) {
+        if (this.hasEffect(ModEffects.ICHOR_RESISTANCE)) {
+            this.removeEffect(ModEffects.ICHOR);
         }
-        return amount;
     }
 }
