@@ -27,6 +27,7 @@ public class UpdraftTomeItem extends GenericTomeItem {
         ItemStack itemStack = player.getItemInHand(interactionHand);
         if (!level.isClientSide) {
 
+
             if (!player.isCrouching() && player.getOffhandItem().is(ModItems.SOUL)) {
 
                 if (player.getOffhandItem().getCount() <= 1) {
@@ -44,12 +45,12 @@ public class UpdraftTomeItem extends GenericTomeItem {
                 }
             }
 
-            if (!player.isCrouching() && player.getOffhandItem().getCount() >= 2 && player.getOffhandItem().is(ModItems.SOUL)) {
+            if (!player.isCrouching() && (player.getOffhandItem().getCount() >= 2) && player.getOffhandItem().is(ModItems.SOUL)) {
 
-                flyingPaperOnUse(level, player, player);
                 player.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 5, 49, false, false, false));
                 player.getOffhandItem().shrink(2);
-                level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
+                level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_UPDRAFT_TOME_USE, SoundSource.NEUTRAL, 1, 1);
+                flyingPaperOnUse(level, player, player);
                 player.getItemInHand(interactionHand).hurtAndBreak(1, player, p -> p.broadcastBreakEvent(interactionHand));
                 player.getCooldowns().addCooldown(this, 40);
             }
@@ -60,10 +61,9 @@ public class UpdraftTomeItem extends GenericTomeItem {
         if (player.isCrouching() && player.getOffhandItem().is(ModItems.SOUL) && (player.getOffhandItem().getCount() >= 4)) {
 
             spawnUpdraftCloudAtPos(player, player.getOnPos(), 49);
+            flyingPaperOnUse(level, player, player);
             spawnUpdraftCloudTwoAtPos(player, player.getOnPos(), 49);
-            flyingPaperOnUse(level, player, player);
-            flyingPaperOnUse(level, player, player);
-            level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_CROWD_USE, SoundSource.NEUTRAL, 1, 1);
+            level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_UPDRAFT_TOME_CROWD_USE, SoundSource.NEUTRAL, 1, 1);
             player.getOffhandItem().shrink(4);
             player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 0));
             player.getItemInHand(interactionHand).hurtAndBreak(1, player, p -> p.broadcastBreakEvent(interactionHand));
