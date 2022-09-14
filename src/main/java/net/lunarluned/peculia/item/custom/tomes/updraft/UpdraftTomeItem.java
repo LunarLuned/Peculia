@@ -44,8 +44,9 @@ public class UpdraftTomeItem extends GenericTomeItem {
                 }
             }
 
-            if (player.getOffhandItem().getCount() >= 2) {
+            if (!player.isCrouching() && player.getOffhandItem().getCount() >= 2 && player.getOffhandItem().is(ModItems.SOUL)) {
 
+                flyingPaperOnUse(level, player, player);
                 player.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 5, 49, false, false, false));
                 player.getOffhandItem().shrink(2);
                 level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
@@ -60,6 +61,8 @@ public class UpdraftTomeItem extends GenericTomeItem {
 
             spawnUpdraftCloudAtPos(player, player.getOnPos(), 49);
             spawnUpdraftCloudTwoAtPos(player, player.getOnPos(), 49);
+            flyingPaperOnUse(level, player, player);
+            flyingPaperOnUse(level, player, player);
             level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_CROWD_USE, SoundSource.NEUTRAL, 1, 1);
             player.getOffhandItem().shrink(4);
             player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 0));

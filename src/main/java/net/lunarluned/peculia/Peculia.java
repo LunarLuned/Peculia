@@ -9,6 +9,7 @@ import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.enchantment.ModEnchantments;
 import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.misc.ModGameEvents;
+import net.lunarluned.peculia.misc.ModParticles;
 import net.lunarluned.peculia.potion.ModPotions;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.lunarluned.peculia.world.feature.ModConfiguredFeatures;
@@ -57,6 +58,8 @@ public class Peculia implements ModInitializer {
 		ModEnchantments.registerModEnchantments();
 		ModConfiguredFeatures.registerConfiguredFeatures();
 		ModWorldGen.generateModWorldGen();
+
+		ModParticles.init();
 
 		//disclaimer. i do not know why effects and potions calls for you to register each effect like this. it just does. idk why.
 

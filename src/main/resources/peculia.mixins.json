@@ -20,7 +20,8 @@
     "entities.ghast.GhastEntityMixin",
     "entities.warden.WardenEntityMixin",
     "entities.wither.WitherEntityMixin",
-    "entities.wither.WitherSkullEntityMixin"
+    "entities.wither.WitherSkullEntityMixin",
+    "util.SimpleParticleTypeAccessor"
   ],
   "client": [
     "stunned.KeyboardMixin"
