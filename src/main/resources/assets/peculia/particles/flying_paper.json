@@ -1,5 +1,8 @@
 {
   "textures": [
-    "peculia:flying_paper"
+    "peculia:generic_tome/flying_paper",
+    "peculia:generic_tome/flying_paper_2",
+    "peculia:generic_tome/flying_paper_3",
+    "peculia:generic_tome/flying_paper_4"
   ]
 }
