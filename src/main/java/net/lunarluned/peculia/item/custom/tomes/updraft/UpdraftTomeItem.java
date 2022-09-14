@@ -12,70 +12,64 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.NotNull;
-import java.util.logging.Level;
 
 public class UpdraftTomeItem extends GenericTomeItem {
-    public UpdraftTomeItem(Item.Properties settings) {
+    public UpdraftTomeItem(Properties settings) {
         super(settings);
     }
 
-    @Override
-    public boolean isValidRepairItem(@NotNull ItemStack itemStack, ItemStack itemStack2) {
-        return itemStack2.is(ModItems.SOUL);
-    }
 
-    public InteractionResultHolder<ItemStack> use(Player user, InteractionHand hand) {
-        ItemStack itemStack = user.getItemInHand(hand);
-        if (!user.level.isClientSide) {
+    public InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand interactionHand) {
+        ItemStack itemStack = player.getItemInHand(interactionHand);
+        if (!level.isClientSide) {
 
-            if (user.getOffhandItem().is(ModItems.SOUL)) {
+            if (!player.isCrouching() && player.getOffhandItem().is(ModItems.SOUL)) {
 
-                if (!user.isCrouching() && user.getOffhandItem().getCount() <= 1) {
-                    user.gameEvent(GameEvent.ITEM_INTERACT_START);
-                    user.level.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                if (player.getOffhandItem().getCount() <= 1) {
+                    level.gameEvent(player, GameEvent.BLOCK_CHANGE, player.getOnPos());
+                    level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
                     return InteractionResultHolder.fail(itemStack);
-                }
-
-                if (user.isCrouching() && user.getOffhandItem().getCount() <= 3) {
-                    user.gameEvent(GameEvent.ITEM_INTERACT_START);
-                    user.level.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_CROWD_FAIL, SoundSource.NEUTRAL, 1, 1);
-                    return InteractionResultHolder.fail(itemStack);
-                }
-
-                // if player does soul! exist :)
-
-                if (!user.isCrouching() && user.getOffhandItem().getCount() >= 2) {
-                    user.getOffhandItem().shrink(2);
-                    user.gameEvent(GameEvent.ITEM_INTERACT_START);
-                    user.level.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_UPDRAFT_TOME_USE, SoundSource.NEUTRAL, 1, 1);
-                    user.getItemInHand(hand).hurtAndBreak(1, user, p -> p.broadcastBreakEvent(hand));
-                    user.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 5, 49, false, false, false));
-                    user.getCooldowns().addCooldown(this, 40);
-                }
-
-                // if player soul and crouching, levitates around them
-
-                if (user.isCrouching() && user.getOffhandItem().getCount() >= 4) {
-
-                    spawnUpdraftCloudAtPos(user, user.getOnPos(), 49);
-                    spawnUpdraftCloudTwoAtPos(user, user.getOnPos(), 49);
-                    user.gameEvent(GameEvent.ITEM_INTERACT_START);
-                    user.getOffhandItem().shrink(4);
-                    user.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 0));
-                    user.level.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_UPDRAFT_TOME_CROWD_USE, SoundSource.NEUTRAL, 1, 1);
-                    user.getItemInHand(hand).hurtAndBreak(1, user, p -> p.broadcastBreakEvent(hand));
-                    user.getCooldowns().addCooldown(this, 120);
                 }
             }
+            if (player.isCrouching() && player.getOffhandItem().is(ModItems.SOUL)) {
+
+                if (player.getOffhandItem().getCount() <= 3) {
+                    level.gameEvent(player, GameEvent.BLOCK_CHANGE, player.getOnPos());
+                    level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_CROWD_FAIL, SoundSource.NEUTRAL, 1, 1);
+                    return InteractionResultHolder.fail(itemStack);
+                }
+            }
+
+            if (player.getOffhandItem().getCount() >= 2) {
+
+                player.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 5, 49, false, false, false));
+                player.getOffhandItem().shrink(2);
+                level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
+                player.getItemInHand(interactionHand).hurtAndBreak(1, player, p -> p.broadcastBreakEvent(interactionHand));
+                player.getCooldowns().addCooldown(this, 40);
+            }
         }
-        return InteractionResultHolder.sidedSuccess(itemStack, user.level.isClientSide());
+
+        // If the player is crouching with souls in their offhand, a levitation cloud will be summoned around them
+
+        if (player.isCrouching() && player.getOffhandItem().is(ModItems.SOUL) && (player.getOffhandItem().getCount() >= 4)) {
+
+            spawnUpdraftCloudAtPos(player, player.getOnPos(), 49);
+            spawnUpdraftCloudTwoAtPos(player, player.getOnPos(), 49);
+            level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_CROWD_USE, SoundSource.NEUTRAL, 1, 1);
+            player.getOffhandItem().shrink(4);
+            player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 0));
+            player.getItemInHand(interactionHand).hurtAndBreak(1, player, p -> p.broadcastBreakEvent(interactionHand));
+            player.getCooldowns().addCooldown(this, 120);
+        }
+        return InteractionResultHolder.sidedSuccess(itemStack, level.isClientSide());
     }
 
-    // Spawns an updraft cloud at the user's position
+        // Spawns a healing cloud at the user's position
 
     public static void spawnUpdraftCloudAtPos(LivingEntity attacker, BlockPos blockPos, int amplifier){
         AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(attacker.level, blockPos.getX(), blockPos.getY(), blockPos.getZ());
@@ -84,7 +78,7 @@ public class UpdraftTomeItem extends GenericTomeItem {
         areaEffectCloudEntity.setRadiusOnUse(-0.5f);
         areaEffectCloudEntity.setWaitTime(10);
         areaEffectCloudEntity.setDuration(5);
-        MobEffectInstance levitation = new MobEffectInstance(MobEffects.LEVITATION, 5, amplifier);
+        MobEffectInstance levitation = new MobEffectInstance(MobEffects.LEVITATION, 5, amplifier, false, false, false);
         areaEffectCloudEntity.addEffect(levitation);
         attacker.level.addFreshEntity(areaEffectCloudEntity);
     }
@@ -95,7 +89,7 @@ public class UpdraftTomeItem extends GenericTomeItem {
         areaEffectCloudEntity.setRadiusOnUse(-0.5f);
         areaEffectCloudEntity.setWaitTime(10);
         areaEffectCloudEntity.setDuration(5);
-        MobEffectInstance levitation = new MobEffectInstance(MobEffects.LEVITATION, 5, amplifier);
+        MobEffectInstance levitation = new MobEffectInstance(MobEffects.LEVITATION, 5, amplifier, false, false, false);
         areaEffectCloudEntity.addEffect(levitation);
         attacker.level.addFreshEntity(areaEffectCloudEntity);
     }

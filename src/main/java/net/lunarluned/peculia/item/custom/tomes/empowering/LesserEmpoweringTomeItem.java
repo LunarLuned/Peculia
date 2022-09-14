@@ -33,6 +33,27 @@ public class LesserEmpoweringTomeItem extends ModTomeItem {
         ItemStack itemStack = user.getItemInHand(hand);
         if (!user.level.isClientSide) {
 
+            if (!user.isCrouching() && !user.getOffhandItem().is(ModItems.SOUL)) {
+                user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                return InteractionResultHolder.fail(itemStack);
+            }
+            if (user.isCrouching() && !user.getOffhandItem().is(ModItems.SOUL)) {
+                user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                return InteractionResultHolder.fail(itemStack);
+            }
+            if (user.getOffhandItem().isEmpty()) {
+                user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                return InteractionResultHolder.fail(itemStack);
+            }
+            if (!user.getOffhandItem().is(ModItems.SOUL)) {
+                user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                return InteractionResultHolder.fail(itemStack);
+            }
+
             if (user.hasEffect(ModEffects.CURSED)) {
                 user.gameEvent(GameEvent.ITEM_INTERACT_START);
                 return InteractionResultHolder.fail(itemStack);

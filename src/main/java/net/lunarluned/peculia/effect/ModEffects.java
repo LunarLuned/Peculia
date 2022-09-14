@@ -16,12 +16,16 @@ public class ModEffects {
     public static MobEffect STAGNATED;
     public static MobEffect ECHOING;
     public static MobEffect CURSED;
+    public static MobEffect STUNNED;
 
     public static MobEffect registerIchorStatusEffect(String name) {
         return Registry.register(Registry.MOB_EFFECT, new ResourceLocation(Peculia.MOD_ID, name), new IchorEffect(MobEffectCategory.HARMFUL, 15766579));
     }
     public static MobEffect registerCursedStatusEffect(String name) {
-        return Registry.register(Registry.MOB_EFFECT, new ResourceLocation(Peculia.MOD_ID, name), new IchorEffect(MobEffectCategory.HARMFUL, 15766579));
+        return Registry.register(Registry.MOB_EFFECT, new ResourceLocation(Peculia.MOD_ID, name), new CursedEffect(MobEffectCategory.HARMFUL, 	5861294));
+    }
+    public static MobEffect registerStunnedStatusEffect(String name) {
+        return Registry.register(Registry.MOB_EFFECT, new ResourceLocation(Peculia.MOD_ID, name), new StunnedEffect(MobEffectCategory.HARMFUL, 	12703983));
     }
      public static MobEffect registerVoidTouchedStatusEffect(String name) {
         return Registry.register(Registry.MOB_EFFECT, new ResourceLocation(Peculia.MOD_ID, name), new VoidTouchedEffect(MobEffectCategory.HARMFUL, 15750875));
@@ -52,6 +56,8 @@ public class ModEffects {
     public static void registerAnchoredEffect() { ANCHORED = registerAnchoredStatusEffect("anchored");}
 
     public static void registerCursedEffect() { CURSED = registerCursedStatusEffect("cursed");}
+
+    public static void registerStunnedEffect() { STUNNED = registerStunnedStatusEffect("stunned");}
 
     public static void registerVoidTouchedEffect() { VOID_TOUCHED = registerVoidTouchedStatusEffect("void_touched"); }
 

@@ -23,7 +23,7 @@
     "entities.wither.WitherSkullEntityMixin"
   ],
   "client": [
-    "cursed.KeyboardMixin"
+    "stunned.KeyboardMixin"
   ],
   "injectors": {
     "defaultRequire": 1

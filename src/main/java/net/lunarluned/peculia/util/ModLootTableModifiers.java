@@ -3,71 +3,77 @@ package net.lunarluned.peculia.util;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.item.ModItems;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
+import net.minecraft.world.level.storage.loot.functions.LootItemFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 
 // I don't know how any of this works, you're gonna have to figure that out yourself anne sorry! - Sydney
-
-// I commented it out for the time being so that the game can run
+//god i have no clue, for the time being its commented out
+/*/
 
 public class ModLootTableModifiers {
-/*        private static final Identifier END_CITY_STRUCTURE_CHEST_ID
-            = new Identifier("minecraft", "chests/end_city_treasure");
-    private static final Identifier SPAWN_BONUS_CHEST_CHEST_ID
-            = new Identifier("minecraft", "chests/spawn_bonus_chest");
-        private static final Identifier ANCIENT_CITY_ICE_BOX_STRUCTURE_CHEST_ID
-            = new Identifier("minecraft", "chests/ancient_city_ice_box");
-    private static final Identifier ANCIENT_CITY_STRUCTURE_CHEST_ID
-            = new Identifier("minecraft", "chests/ancient_city");
-    private static final Identifier DESERT_PYRAMID_STRUCTURE_CHEST_ID
-            = new Identifier("minecraft", "chests/desert_pyramid");
-    private static final Identifier BASTION_OTHER_STRUCTURE_CHEST_ID
-            = new Identifier("minecraft", "chests/bastion_other");
-    private static final Identifier BASTION_TREASURE_STRUCTURE_CHEST_ID
-            = new Identifier("minecraft", "chests/bastion_treasure");
-    private static final Identifier BASTION_HOGLIN_STABLE_STRUCTURE_CHEST_ID
-            = new Identifier("minecraft", "chests/bastion_hoglin_stable");
-    private static final Identifier STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID
-            = new Identifier("minecraft", "chests/stronghold_corridor");
-    private static final Identifier STRONGHOLD_CROSSING_STRUCTURE_CHEST_ID
-            = new Identifier("minecraft", "chests/stronghold_crossing");
+        private static final ResourceLocation END_CITY_STRUCTURE_CHEST_ID
+            = new ResourceLocation("minecraft", "chests/end_city_treasure");
+    private static final ResourceLocation SPAWN_BONUS_CHEST_CHEST_ID
+            = new ResourceLocation("minecraft", "chests/spawn_bonus_chest");
+        private static final ResourceLocation ANCIENT_CITY_ICE_BOX_STRUCTURE_CHEST_ID
+            = new ResourceLocation("minecraft", "chests/ancient_city_ice_box");
+    private static final ResourceLocation ANCIENT_CITY_STRUCTURE_CHEST_ID
+            = new ResourceLocation("minecraft", "chests/ancient_city");
+    private static final ResourceLocation DESERT_PYRAMID_STRUCTURE_CHEST_ID
+            = new ResourceLocation("minecraft", "chests/desert_pyramid");
+    private static final ResourceLocation BASTION_OTHER_STRUCTURE_CHEST_ID
+            = new ResourceLocation("minecraft", "chests/bastion_other");
+    private static final ResourceLocation BASTION_TREASURE_STRUCTURE_CHEST_ID
+            = new ResourceLocation("minecraft", "chests/bastion_treasure");
+    private static final ResourceLocation BASTION_HOGLIN_STABLE_STRUCTURE_CHEST_ID
+            = new ResourceLocation("minecraft", "chests/bastion_hoglin_stable");
+    private static final ResourceLocation STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID
+            = new ResourceLocation("minecraft", "chests/stronghold_corridor");
+    private static final ResourceLocation STRONGHOLD_CROSSING_STRUCTURE_CHEST_ID
+            = new ResourceLocation("minecraft", "chests/stronghold_crossing");
 
     //bosses
-    private static final Identifier WARDEN_ENTITY_ID
-            = new Identifier("minecraft", "entities/warden");
-    private static final Identifier WITHER_ENTITY_ID
-            = new Identifier("minecraft", "entities/wither");
-    private static final Identifier ENDER_DRAGON_ENTITY_ID
-            = new Identifier("minecraft", "entities/ender_dragon");
+    private static final ResourceLocation WARDEN_ENTITY_ID
+            = new ResourceLocation("minecraft", "entities/warden");
+    private static final ResourceLocation WITHER_ENTITY_ID
+            = new ResourceLocation("minecraft", "entities/wither");
+    private static final ResourceLocation ENDER_DRAGON_ENTITY_ID
+            = new ResourceLocation("minecraft", "entities/ender_dragon");
 
     //entities
-    private static final Identifier ZOMBIE_ENTITY_ID
-            = new Identifier("minecraft", "entities/zombie");
-    private static final Identifier DROWNED_ENTITY_ID
-            = new Identifier("minecraft", "entities/drowned");
-    private static final Identifier HUSK_ENTITY_ID
-            = new Identifier("minecraft", "entities/husk");
-    private static final Identifier WITHER_SKELETON_ENTITY_ID
-            = new Identifier("minecraft", "entities/wither_skeleton");
-    private static final Identifier SKELETON_ENTITY_ID
-            = new Identifier("minecraft", "entities/skeleton");
-    private static final Identifier STRAY_ENTITY_ID
-            = new Identifier("minecraft", "entities/stray");
-    private static final Identifier WITCH_ENTITY_ID
-            = new Identifier("minecraft", "entities/witch");
-    private static final Identifier CREEPER_ENTITY_ID
-            = new Identifier("minecraft", "entities/creeper");
-    private static final Identifier SCULK_SPINE_BLOCK_ID
-            = new Identifier("peculia", "blocks/sculk_spine");
+    private static final ResourceLocation ZOMBIE_ENTITY_ID
+            = new ResourceLocation("minecraft", "entities/zombie");
+    private static final ResourceLocation DROWNED_ENTITY_ID
+            = new ResourceLocation("minecraft", "entities/drowned");
+    private static final ResourceLocation HUSK_ENTITY_ID
+            = new ResourceLocation("minecraft", "entities/husk");
+    private static final ResourceLocation WITHER_SKELETON_ENTITY_ID
+            = new ResourceLocation("minecraft", "entities/wither_skeleton");
+    private static final ResourceLocation SKELETON_ENTITY_ID
+            = new ResourceLocation("minecraft", "entities/skeleton");
+    private static final ResourceLocation STRAY_ENTITY_ID
+            = new ResourceLocation("minecraft", "entities/stray");
+    private static final ResourceLocation WITCH_ENTITY_ID
+            = new ResourceLocation("minecraft", "entities/witch");
+    private static final ResourceLocation CREEPER_ENTITY_ID
+            = new ResourceLocation("minecraft", "entities/creeper");
+    private static final ResourceLocation SCULK_SPINE_BLOCK_ID
+            = new ResourceLocation("peculia", "blocks/sculk_spine");
 
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
             //blocks
             if(SCULK_SPINE_BLOCK_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.3f)) // Drops 30% of the time
-                        .with(ItemEntry.builder(ModItems.SCULK_SAC))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(12.0f, 38.0f)).build());
+                        .rolls(setRolls.create(1))
+                        .conditionally(LootItemCondition.(0.3f)) // Drops 30% of the time
+                        .with(LootPoolEntryContainer.builder(ModItems.SCULK_SAC))
+                        .apply(LootItemFunction.builder(NumberProvider.create(12.0f, 38.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
             //bosses
@@ -332,6 +338,5 @@ public class ModLootTableModifiers {
             }
         });
         }
-        /**/
 }
-
+/**/

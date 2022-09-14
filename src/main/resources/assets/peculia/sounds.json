@@ -78,6 +78,13 @@
       "peculia:item/generic_tome/fail2"
     ]
   },
+  "item.generic_tome.crowd_fail": {
+    "subtitle": "item.generic_tome.fail",
+    "sounds": [
+      "peculia:item/generic_tome/crowd/fail1",
+      "peculia:item/generic_tome/crowd/fail2"
+    ]
+  },
   "block.ichor_sticker.release": {
     "subtitle": "block.ichor_sticker.release",
     "sounds": [

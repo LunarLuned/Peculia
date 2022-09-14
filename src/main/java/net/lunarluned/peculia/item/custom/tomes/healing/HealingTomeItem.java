@@ -23,7 +23,6 @@ public class HealingTomeItem extends GenericTomeItem {
     }
 
 
-    @Override
     public InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand interactionHand) {
         ItemStack itemStack = player.getItemInHand(interactionHand);
         if (!level.isClientSide) {

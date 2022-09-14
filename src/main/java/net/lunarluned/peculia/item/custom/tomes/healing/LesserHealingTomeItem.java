@@ -23,12 +23,8 @@ public class LesserHealingTomeItem extends GenericTomeItem {
         super(settings);
     }
 
-    @Override
-    public boolean isValidRepairItem(@NotNull ItemStack itemStack, ItemStack itemStack2) {
-        return itemStack2.is(ModItems.SOUL);
-    }
 
-    @Override
+
     public InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand interactionHand) {
         ItemStack itemStack = player.getItemInHand(interactionHand);
         if (!level.isClientSide) {

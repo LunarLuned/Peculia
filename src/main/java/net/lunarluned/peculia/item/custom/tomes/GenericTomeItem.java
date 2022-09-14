@@ -33,28 +33,6 @@ public class GenericTomeItem extends ModTomeItem {
                 return InteractionResultHolder.fail(itemStack);
             }
 
-            // if player has no souls, play generic tome fail sound
-
-            if (!user.isCrouching() && !user.getOffhandItem().is(ModItems.SOUL)) {
-                user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
-                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
-                return InteractionResultHolder.fail(itemStack);
-            }
-            if (user.isCrouching() && !user.getOffhandItem().is(ModItems.SOUL)) {
-                user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
-                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
-                return InteractionResultHolder.fail(itemStack);
-            }
-            if (user.getOffhandItem().isEmpty()) {
-                user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
-                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
-                return InteractionResultHolder.fail(itemStack);
-            }
-            if (!user.getOffhandItem().is(ModItems.SOUL)) {
-                user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
-                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
-                return InteractionResultHolder.fail(itemStack);
-            }
         }
         return InteractionResultHolder.sidedSuccess(itemStack, user.level.isClientSide());
 

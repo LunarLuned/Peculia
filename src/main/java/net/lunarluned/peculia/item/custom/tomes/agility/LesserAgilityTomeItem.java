@@ -32,6 +32,27 @@ public class LesserAgilityTomeItem extends GenericTomeItem {
         ItemStack itemStack = user.getItemInHand(hand);
         if (!world.isClientSide) {
 
+            if (!user.isCrouching() && !user.getOffhandItem().is(ModItems.SOUL)) {
+                user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                return InteractionResultHolder.fail(itemStack);
+            }
+            if (user.isCrouching() && !user.getOffhandItem().is(ModItems.SOUL)) {
+                user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                return InteractionResultHolder.fail(itemStack);
+            }
+            if (user.getOffhandItem().isEmpty()) {
+                user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                return InteractionResultHolder.fail(itemStack);
+            }
+            if (!user.getOffhandItem().is(ModItems.SOUL)) {
+                user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                return InteractionResultHolder.fail(itemStack);
+            }
+
             if (user.getOffhandItem().is(ModItems.SOUL)) {
 
                 if (!user.isCrouching() && user.getOffhandItem().getCount() <= 6) {

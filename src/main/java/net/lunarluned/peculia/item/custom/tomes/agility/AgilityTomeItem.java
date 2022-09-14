@@ -22,15 +22,31 @@ public class AgilityTomeItem extends GenericTomeItem {
         super(settings);
     }
 
-    @Override
-    public boolean isValidRepairItem(@NotNull ItemStack itemStack, ItemStack itemStack2) {
-        return itemStack2.is(ModItems.SOUL);
-    }
 
-    @Override
     public InteractionResultHolder<ItemStack> use(@NotNull Level world, Player user, @NotNull InteractionHand hand) {
         ItemStack itemStack = user.getItemInHand(hand);
         if (!world.isClientSide) {
+
+            if (!user.isCrouching() && !user.getOffhandItem().is(ModItems.SOUL)) {
+                user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                return InteractionResultHolder.fail(itemStack);
+            }
+            if (user.isCrouching() && !user.getOffhandItem().is(ModItems.SOUL)) {
+                user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                return InteractionResultHolder.fail(itemStack);
+            }
+            if (user.getOffhandItem().isEmpty()) {
+                user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                return InteractionResultHolder.fail(itemStack);
+            }
+            if (!user.getOffhandItem().is(ModItems.SOUL)) {
+                user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                return InteractionResultHolder.fail(itemStack);
+            }
 
             if (user.getOffhandItem().is(ModItems.SOUL)) {
 

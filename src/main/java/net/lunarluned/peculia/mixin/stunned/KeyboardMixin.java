@@ -1,4 +1,4 @@
-package net.lunarluned.peculia.mixin.cursed;
+package net.lunarluned.peculia.mixin.stunned;
 
 import net.lunarluned.peculia.effect.ModEffects;
 import net.minecraft.client.KeyMapping;
@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class KeyboardMixin {
     @Inject(method = "keyPress", at = @At("HEAD"), cancellable = true)
     public void onKey(long window, int key, int scancode, int action, int modifiers, CallbackInfo callbackInfo) {
-        if (Minecraft.getInstance().player != null && Minecraft.getInstance().player.hasEffect(ModEffects.CURSED) && !Minecraft.getInstance().player.isSpectator() && !Minecraft.getInstance().player.isCreative()) {
+        if (Minecraft.getInstance().player != null && Minecraft.getInstance().player.hasEffect(ModEffects.STUNNED) && !Minecraft.getInstance().player.isSpectator() && !Minecraft.getInstance().player.isCreative()) {
             KeyMapping.releaseAll();
             callbackInfo.cancel();
         }
