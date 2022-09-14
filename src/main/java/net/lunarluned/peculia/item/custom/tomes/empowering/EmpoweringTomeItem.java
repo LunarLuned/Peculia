@@ -5,6 +5,7 @@ import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.item.custom.tomes.GenericTomeItem;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -69,8 +70,9 @@ public class EmpoweringTomeItem extends GenericTomeItem {
 
                 // if player does soul! exist :)
 
-                if (!user.isCrouching() && user.getOffhandItem().getCount() >= 10) {
+                if (!user.isCrouching() && user.getOffhandItem().getCount() >= 10 && user.getOffhandItem().is(ModItems.SOUL)) {
                     user.addEffect(new MobEffectInstance(ModEffects.DETERMINED, 600, 0));
+                    TomeParticles((ServerLevel) world, user);
                     user.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 800, 0));
                     user.getOffhandItem().shrink(10);
                     world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
@@ -79,7 +81,8 @@ public class EmpoweringTomeItem extends GenericTomeItem {
                 }
 
                 // if player soul and crouching, heals around them
-                if (user.isCrouching() && user.getOffhandItem().getCount() >= 15) {
+                if (user.isCrouching() && user.getOffhandItem().getCount() >= 15 && user.getOffhandItem().is(ModItems.SOUL)) {
+                    TomeParticlesCrouching(world, user, user);
                     spawnHealingCloudAtPos(user, user.getOnPos(), 1);
                     world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
                     user.getOffhandItem().shrink(15);
@@ -93,7 +96,7 @@ public class EmpoweringTomeItem extends GenericTomeItem {
 
 
     public static void spawnHealingCloudAtPos(LivingEntity attacker, BlockPos blockPos, int amplifier){
-        AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(attacker.level, blockPos.getX(), blockPos.getY(), blockPos.getZ());
+        AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(attacker.level, blockPos.getX(), blockPos.getY() + 1, blockPos.getZ());
         areaEffectCloudEntity.setOwner(attacker);
         areaEffectCloudEntity.setRadius(5.0f);
         areaEffectCloudEntity.setRadiusOnUse(-0.5f);

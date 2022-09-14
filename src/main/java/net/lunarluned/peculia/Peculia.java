@@ -32,11 +32,11 @@ public class Peculia implements ModInitializer {
 		// To Fix:
 
 		                                        // - Greater Tome of Healing - fixed!
-		// - Both Updraft Tomes
-		// -Both Tomes of Fortifying
+		                                        // - Both Updraft Tomes - fixed!
+		                                        // - Both Tomes of Fortifying - fixed!
 		                                        // - Ichor Stichor - fixed!
 		// - Sculk Sac and Full Sculk Sac
-		                                      // - Electrocuted Effect - fixed!
+		                                        // - Electrocuted Effect - fixed!
 		// - Loot Table Modifiers
 
 		// ඞ

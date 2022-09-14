@@ -4,6 +4,7 @@ import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.item.custom.tomes.GenericTomeItem;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -60,17 +61,19 @@ public class AgilityTomeItem extends GenericTomeItem {
                     world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_CROWD_FAIL, SoundSource.NEUTRAL, 1, 1);
                     return InteractionResultHolder.fail(itemStack);
                 }
-                if (!user.isCrouching() && user.getOffhandItem().getCount() >= 3) {
+                if (!user.isCrouching() && user.getOffhandItem().getCount() >= 3 && user.getOffhandItem().is(ModItems.SOUL)) {
                     user.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 240, 1));
                     user.addEffect(new MobEffectInstance(MobEffects.JUMP, 200, 1));
+                    TomeParticles((ServerLevel) world, user);
                     user.getOffhandItem().shrink(3);
                     world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_AGILITY_TOME_USE, SoundSource.NEUTRAL, 1, 1);
                     user.getItemInHand(hand).hurtAndBreak(1, user, p -> p.broadcastBreakEvent(hand));
                     user.getCooldowns().addCooldown(this, 100);
                 }
                 // if player soul and crouching, agility the around them
-                if (user.isCrouching() && user.getOffhandItem().getCount() >= 5) {
+                if (user.isCrouching() && user.getOffhandItem().getCount() >= 5 && user.getOffhandItem().is(ModItems.SOUL)) {
                     spawnAgilityCloudAtPos(user, user.getOnPos(), 1);
+                    TomeParticlesCrouching(world, user, user);
                     world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_AGILITY_TOME_CROWD_USE, SoundSource.NEUTRAL, 1, 1);
                     user.getOffhandItem().shrink(5);
                     user.getItemInHand(hand).hurtAndBreak(1, user, p -> p.broadcastBreakEvent(hand));
@@ -83,7 +86,7 @@ public class AgilityTomeItem extends GenericTomeItem {
 
 
     public static void spawnAgilityCloudAtPos(LivingEntity attacker, BlockPos blockPos, int amplifier){
-        AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(attacker.level, blockPos.getX(), blockPos.getY(), blockPos.getZ());
+        AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(attacker.level, blockPos.getX(), blockPos.getY() + 1, blockPos.getZ());
         areaEffectCloudEntity.setOwner(attacker);
         areaEffectCloudEntity.setRadius(5.0f);
         areaEffectCloudEntity.setRadiusOnUse(-0.5f);

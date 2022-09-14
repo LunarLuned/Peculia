@@ -4,6 +4,7 @@ import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.item.custom.tomes.GenericTomeItem;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -68,7 +69,8 @@ public class LesserAgilityTomeItem extends GenericTomeItem {
 
                 // if player does soul! exist :)
 
-                if (!user.isCrouching() && user.getOffhandItem().getCount() >= 7) {
+                if (!user.isCrouching() && user.getOffhandItem().getCount() >= 7 && user.getOffhandItem().is(ModItems.SOUL)) {
+                    TomeParticles((ServerLevel) world, user);
                     user.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 120, 0));
                     user.addEffect(new MobEffectInstance(MobEffects.JUMP, 80, 1));
                     user.getOffhandItem().shrink(7);
@@ -79,8 +81,9 @@ public class LesserAgilityTomeItem extends GenericTomeItem {
 
                 // if player soul and crouching, heals around them
 
-                if (user.isCrouching() && user.getOffhandItem().getCount() >= 8) {
+                if (user.isCrouching() && user.getOffhandItem().getCount() >= 8 && user.getOffhandItem().is(ModItems.SOUL)) {
                     spawnLesserAgilityCloudAtPos(user, user.getOnPos(), 0);
+                    TomeParticlesCrouching(world, user, user);
                     world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_AGILITY_TOME_CROWD_USE, SoundSource.NEUTRAL, 1, 1);
                     user.getOffhandItem().shrink(8);
                     user.getItemInHand(hand).hurtAndBreak(2, user, p -> p.broadcastBreakEvent(hand));
@@ -93,7 +96,7 @@ public class LesserAgilityTomeItem extends GenericTomeItem {
 
 
     public static void spawnLesserAgilityCloudAtPos(LivingEntity attacker, BlockPos blockPos, int amplifier){
-        AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(attacker.level, blockPos.getX(), blockPos.getY(), blockPos.getZ());
+        AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(attacker.level, blockPos.getX(), blockPos.getY() + 1, blockPos.getZ());
         areaEffectCloudEntity.setOwner(attacker);
         areaEffectCloudEntity.setRadius(5.0f);
         areaEffectCloudEntity.setRadiusOnUse(-0.5f);

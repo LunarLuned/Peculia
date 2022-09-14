@@ -5,6 +5,7 @@ import net.lunarluned.peculia.item.custom.tomes.GenericTomeItem;
 import net.lunarluned.peculia.misc.ModParticles;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.ParticleUtils;
 import net.minecraft.world.InteractionHand;
@@ -47,8 +48,8 @@ public class LesserUpdraftTomeItem extends GenericTomeItem {
             }
 
             if (!player.isCrouching() && player.getOffhandItem().getCount() >= 4 && player.getOffhandItem().is(ModItems.SOUL))  {
-                flyingPaperOnUse(level, player, player);
                 player.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 5, 29));
+                TomeParticles((ServerLevel) level, player);
                 player.getOffhandItem().shrink(4);
                 level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_UPDRAFT_TOME_USE, SoundSource.NEUTRAL, 1, 1);
                 player.getItemInHand(interactionHand).hurtAndBreak(1, player, p -> p.broadcastBreakEvent(interactionHand));
@@ -61,9 +62,8 @@ public class LesserUpdraftTomeItem extends GenericTomeItem {
         if (player.isCrouching() && player.getOffhandItem().is(ModItems.SOUL) && (player.getOffhandItem().getCount() >= 6)) {
 
             spawnLesserUpdraftCloudAtPos(player, player.getOnPos(), 29);
-            flyingPaperOnUse(level, player, player);
-            flyingPaperOnUse(level, player, player);
             spawnLesserUpdraftCloudTwoAtPos(player, player.getOnPos(), 29);
+            TomeParticlesCrouching(level, player, player);
             level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_UPDRAFT_TOME_CROWD_USE, SoundSource.NEUTRAL, 1, 1);
             player.getOffhandItem().shrink(6);
             player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 60, 0));

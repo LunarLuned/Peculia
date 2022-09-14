@@ -4,6 +4,7 @@ import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.item.custom.tomes.GenericTomeItem;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -44,9 +45,10 @@ public class HealingTomeItem extends GenericTomeItem {
                 }
             }
 
-            if (player.getOffhandItem().getCount() >= 3) {
+            if (player.getOffhandItem().getCount() >= 3 && !player.isCrouching() && player.getOffhandItem().is(ModItems.SOUL)) {
 
                 player.addEffect(new MobEffectInstance(MobEffects.HEAL, 1, 1));
+                TomeParticles((ServerLevel) level, player);
                 player.getOffhandItem().shrink(3);
                 level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
                 player.getItemInHand(interactionHand).hurtAndBreak(1, player, p -> p.broadcastBreakEvent(interactionHand));
@@ -59,6 +61,7 @@ public class HealingTomeItem extends GenericTomeItem {
         if (player.isCrouching() && player.getOffhandItem().is(ModItems.SOUL) && (player.getOffhandItem().getCount() >= 6)) {
 
             spawnHealingCloudAtPos(player, player.getOnPos(), 1);
+            TomeParticlesCrouching(level, player, player);
             level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_CROWD_USE, SoundSource.NEUTRAL, 1, 1);
             player.getOffhandItem().shrink(6);
             player.getItemInHand(interactionHand).hurtAndBreak(1, player, p -> p.broadcastBreakEvent(interactionHand));
@@ -70,7 +73,7 @@ public class HealingTomeItem extends GenericTomeItem {
     // Spawns a healing cloud at the user's position
 
     public static void spawnHealingCloudAtPos(LivingEntity attacker, BlockPos blockPos, int amplifier){
-        AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(attacker.level, blockPos.getX(), blockPos.getY(), blockPos.getZ());
+        AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(attacker.level, blockPos.getX(), blockPos.getY() + 1, blockPos.getZ());
         areaEffectCloudEntity.setOwner(attacker);
         areaEffectCloudEntity.setRadius(5.0f);
         areaEffectCloudEntity.setRadiusOnUse(-0.5f);

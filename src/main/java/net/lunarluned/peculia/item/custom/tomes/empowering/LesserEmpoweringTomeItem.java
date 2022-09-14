@@ -2,9 +2,11 @@ package net.lunarluned.peculia.item.custom.tomes.empowering;
 
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.item.ModItems;
+import net.lunarluned.peculia.item.custom.tomes.GenericTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.ModTomeItem;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -18,7 +20,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.NotNull;
 
-public class LesserEmpoweringTomeItem extends ModTomeItem {
+public class LesserEmpoweringTomeItem extends GenericTomeItem {
     public LesserEmpoweringTomeItem(Properties settings) {
         super(settings);
     }
@@ -94,6 +96,7 @@ public class LesserEmpoweringTomeItem extends ModTomeItem {
                 }
                 if (!user.isCrouching() && user.getOffhandItem().is(ModItems.SOUL) && user.getOffhandItem().getCount() >= 15) {
                     user.addEffect(new MobEffectInstance(ModEffects.DETERMINED, 200, 0));
+                    TomeParticles((ServerLevel) world, user);
                     user.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 400, 0));
                     user.getOffhandItem().shrink(15);
                     user.level.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
@@ -105,6 +108,7 @@ public class LesserEmpoweringTomeItem extends ModTomeItem {
 
                 if (user.isCrouching() && user.getOffhandItem().is(ModItems.SOUL) && user.getOffhandItem().getCount() >= 20) {
                     spawnHealingCloudAtPos(user, user.getOnPos(), 1);
+                    TomeParticlesCrouching(world, user, user);
                     user.level.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
                     user.getOffhandItem().shrink(20);
                     user.getItemInHand(hand).hurtAndBreak(1, user, p -> p.broadcastBreakEvent(hand));
@@ -116,7 +120,7 @@ public class LesserEmpoweringTomeItem extends ModTomeItem {
 
 
     public static void spawnHealingCloudAtPos(LivingEntity attacker, BlockPos blockPos, int amplifier){
-        AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(attacker.level, blockPos.getX(), blockPos.getY(), blockPos.getZ());
+        AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(attacker.level, blockPos.getX(), blockPos.getY() + 1, blockPos.getZ());
         areaEffectCloudEntity.setOwner(attacker);
         areaEffectCloudEntity.setRadius(5.0f);
         areaEffectCloudEntity.setRadiusOnUse(-0.5f);

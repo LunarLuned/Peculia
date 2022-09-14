@@ -4,6 +4,7 @@ import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.item.custom.tomes.GenericTomeItem;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -66,9 +67,10 @@ public class FortifyingTomeItem extends GenericTomeItem {
                 }
             }
 
-            if (user.getOffhandItem().getCount() >= 32) {
+            if (user.getOffhandItem().getCount() >= 32 && !user.isCrouching() && user.getOffhandItem().is(ModItems.SOUL)) {
 
                 user.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 1800, 4, true, true, false));
+                TomeParticles((ServerLevel) world, user);
                 user.getOffhandItem().shrink(32);
                 world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
                 user.getItemInHand(interactionHand).hurtAndBreak(1, user, p -> p.broadcastBreakEvent(interactionHand));
@@ -81,6 +83,7 @@ public class FortifyingTomeItem extends GenericTomeItem {
         if (user.isCrouching() && user.getOffhandItem().is(ModItems.SOUL) && (user.getOffhandItem().getCount() >= 48)) {
 
             spawnHealthBoostCloudAtPos(user, user.getOnPos(), 1);
+            TomeParticlesCrouching(world, user, user);
             world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_CROWD_USE, SoundSource.NEUTRAL, 1, 1);
             user.getOffhandItem().shrink(48);
             user.getItemInHand(interactionHand).hurtAndBreak(1, user, p -> p.broadcastBreakEvent(interactionHand));
@@ -92,7 +95,7 @@ public class FortifyingTomeItem extends GenericTomeItem {
     // Spawns a health boost cloud at the user's position
 
     public static void spawnHealthBoostCloudAtPos(LivingEntity attacker, BlockPos blockPos, int amplifier){
-        AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(attacker.level, blockPos.getX(), blockPos.getY(), blockPos.getZ());
+        AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(attacker.level, blockPos.getX(), blockPos.getY() + 1, blockPos.getZ());
         areaEffectCloudEntity.setOwner(attacker);
         areaEffectCloudEntity.setRadius(5.0f);
         areaEffectCloudEntity.setRadiusOnUse(-0.5f);
