@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "peculia:inactive_empowering_tome"
+  },
+  "addition": {
+    "item": "peculia:compressed_cobblestone"
+  },
+  "result": {
+    "item": "peculia:lesser_tome_of_empowering"
+  }
+}

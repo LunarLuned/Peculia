@@ -6,14 +6,19 @@ import net.lunarluned.peculia.item.ModItems;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.LootItemFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+
 
 // I don't know how any of this works, you're gonna have to figure that out yourself anne sorry! - Sydney
 //god i have no clue, for the time being its commented out
-/*/
+
 
 public class ModLootTableModifiers {
         private static final ResourceLocation END_CITY_STRUCTURE_CHEST_ID
@@ -66,277 +71,304 @@ public class ModLootTableModifiers {
             = new ResourceLocation("peculia", "blocks/sculk_spine");
 
     public static void modifyLootTables() {
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, table, setter) -> {
             //blocks
             if(SCULK_SPINE_BLOCK_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(setRolls.create(1))
-                        .conditionally(LootItemCondition.(0.3f)) // Drops 30% of the time
-                        .with(LootPoolEntryContainer.builder(ModItems.SCULK_SAC))
-                        .apply(LootItemFunction.builder(NumberProvider.create(12.0f, 38.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.2f)); //20% chance
+                builder.setRolls(UniformGenerator.between(12, 38)); // at the least you'll get 12, at most 38
+                builder.add(LootItem.lootTableItem(ModItems.SCULK_SAC));
+                table.withPool(builder);
             }
             //bosses
             if(WITHER_ENTITY_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(1.0f)) // Drops 100% of the time
-                        .with(ItemEntry.builder(ModItems.SOUL))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(12.0f, 38.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(1f)); //100% chance
+                builder.setRolls(UniformGenerator.between(12, 42)); // at the least you'll get 12, at most 42
+                builder.add(LootItem.lootTableItem(ModItems.SOUL));
+                table.withPool(builder);
+
             }
-            if (source.isBuiltin() && WARDEN_ENTITY_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
-                        .with(ItemEntry.builder(ModItems.FALLEN_HERO_DAGGER))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                tableBuilder.pool(poolBuilder);
+            if(WARDEN_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.5f)); //50% chance
+                builder.setRolls(UniformGenerator.between(1, 1)); //  you'll get 1
+                builder.add(LootItem.lootTableItem(ModItems.FALLEN_HERO_DAGGER));
+                table.withPool(builder);
+
             }
-            if (source.isBuiltin() && WARDEN_ENTITY_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.5f)) // Drops 50% of the time
-                        .with(ItemEntry.builder(ModItems.SOUL))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 8.0f)).build());
-                tableBuilder.pool(poolBuilder);
+            if(WARDEN_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.9f)); //90% chance
+                builder.setRolls(UniformGenerator.between(7, 10)); //  you'll get 7, 8, 9 or t10
+                builder.add(LootItem.lootTableItem(ModItems.SOUL));
+                table.withPool(builder);
+
             }
-            if (source.isBuiltin() && ENDER_DRAGON_ENTITY_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(1f)) // Drops 100% of the time
-                        .with(ItemEntry.builder(ModItems.FALLEN_HERO_SWORD))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                tableBuilder.pool(poolBuilder);
+            if(ENDER_DRAGON_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(1f)); //90% chance
+                builder.setRolls(UniformGenerator.between(1, 1)); //  you'll get 1
+                builder.add(LootItem.lootTableItem(ModItems.FALLEN_HERO_SWORD));
+                table.withPool(builder);
+
             }
             //entities
-            if (source.isBuiltin() && WITHER_SKELETON_ENTITY_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.4f)) // Drops 40% of the time
-                        .with(ItemEntry.builder(ModItems.SOUL))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f)).build());
-                tableBuilder.pool(poolBuilder);
+            if(WITHER_SKELETON_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.6f)); //90% chance
+                builder.setRolls(UniformGenerator.between(4, 8)); //  you'll get 1
+                builder.add(LootItem.lootTableItem(ModItems.SOUL));
+                table.withPool(builder);
+
             }
-            if (source.isBuiltin() && ZOMBIE_ENTITY_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
-                        .with(ItemEntry.builder(ModItems.SOUL))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                tableBuilder.pool(poolBuilder);
+            if(ZOMBIE_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.1f)); //10% chance
+                builder.setRolls(UniformGenerator.between(1, 4)); //  1 to 4
+                builder.add(LootItem.lootTableItem(ModItems.SOUL));
+                table.withPool(builder);
             }
-            if (source.isBuiltin() && HUSK_ENTITY_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
-                        .with(ItemEntry.builder(ModItems.SOUL))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                tableBuilder.pool(poolBuilder);
+            if(HUSK_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.1f)); //10% chance
+                builder.setRolls(UniformGenerator.between(1, 4)); //  1 to 4
+                builder.add(LootItem.lootTableItem(ModItems.SOUL));
+                table.withPool(builder);
             }
-            if (source.isBuiltin() && DROWNED_ENTITY_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
-                        .with(ItemEntry.builder(ModItems.SOUL))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                tableBuilder.pool(poolBuilder);
+            if(DROWNED_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.1f)); //10% chance
+                builder.setRolls(UniformGenerator.between(1, 4)); //  1 to 4
+                builder.add(LootItem.lootTableItem(ModItems.SOUL));
+                table.withPool(builder);
             }
-            if (source.isBuiltin() && CREEPER_ENTITY_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
-                        .with(ItemEntry.builder(ModItems.SOUL))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                tableBuilder.pool(poolBuilder);
+            if(CREEPER_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.1f)); //10% chance
+                builder.setRolls(UniformGenerator.between(1, 4)); //  1 to 4
+                builder.add(LootItem.lootTableItem(ModItems.SOUL));
+                table.withPool(builder);
             }
-            if (source.isBuiltin() && SKELETON_ENTITY_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 10% of the time
-                        .with(ItemEntry.builder(ModItems.SOUL))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                tableBuilder.pool(poolBuilder);
+            if(SKELETON_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.1f)); //10% chance
+                builder.setRolls(UniformGenerator.between(1, 4)); //  1 to 4
+                builder.add(LootItem.lootTableItem(ModItems.SOUL));
+                table.withPool(builder);
             }
-            if (source.isBuiltin() && STRAY_ENTITY_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
-                        .with(ItemEntry.builder(ModItems.SOUL))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                tableBuilder.pool(poolBuilder);
+            if(STRAY_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.1f)); //10% chance
+                builder.setRolls(UniformGenerator.between(1, 4)); //  1 to 4
+                builder.add(LootItem.lootTableItem(ModItems.SOUL));
+                table.withPool(builder);
             }
-            if (source.isBuiltin() && WITCH_ENTITY_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
-                        .with(ItemEntry.builder(ModItems.SOUL))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                tableBuilder.pool(poolBuilder);
+            if(WITCH_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.1f)); //10% chance
+                builder.setRolls(UniformGenerator.between(3, 6)); //  3 to 6
+                builder.add(LootItem.lootTableItem(ModItems.SOUL));
+                table.withPool(builder);
             }
             //structures
-            if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(1.0f)) // Drops 100% of the time
-                        .with(ItemEntry.builder(Items.EMERALD))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 7.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
+                        if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(1f)); //100% chance
+                builder.setRolls(UniformGenerator.between(3, 7)); //  3 to 7
+                builder.add(LootItem.lootTableItem(Items.EMERALD));
+                table.withPool(builder);
             }
             if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.8f)) // Drops 100% of the time
-                        .with(ItemEntry.builder(Items.COPPER_INGOT))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(4.0f, 10.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.8f)); //80% chance
+                builder.setRolls(UniformGenerator.between(4, 12)); //  4 to 12
+                builder.add(LootItem.lootTableItem(Items.COPPER_INGOT));
+                table.withPool(builder);
             }
             if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
-                        .with(ItemEntry.builder(ModItems.FALLEN_HERO_SWORD))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1f, 1f)).build());
-                tableBuilder.pool(poolBuilder.build());
-
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.05f)); //5% chance
+                builder.setRolls(UniformGenerator.between(1, 1)); //  4 to 12
+                builder.add(LootItem.lootTableItem(ModItems.FALLEN_HERO_SWORD));
+                table.withPool(builder);
             }
             if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.9f)) // Drops 100% of the time
-                        .with(ItemEntry.builder(Items.ARROW))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(4.0f, 24.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.9f)); //90% chance
+                builder.setRolls(UniformGenerator.between(4, 24)); //  4 to 12
+                builder.add(LootItem.lootTableItem(Items.ARROW));
+                table.withPool(builder);
             }
             if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.9f)) // Drops 100% of the time
-                        .with(ItemEntry.builder(Items.ARROW))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(4.0f, 24.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.9f)); //90% chance
+                builder.setRolls(UniformGenerator.between(4, 24)); //  4 to 12
+                builder.add(LootItem.lootTableItem(Items.ARROW));
+                table.withPool(builder);
             }
             if(SPAWN_BONUS_CHEST_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(1.0f)) // Drops 100% of the time
-                        .with(ItemEntry.builder(ModItems.SCRAMBLED_EGGS))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(1f)); //100% chance
+                builder.setRolls(UniformGenerator.between(1, 1)); //  1
+                builder.add(LootItem.lootTableItem(ModItems.SCRAMBLED_EGGS));
+                table.withPool(builder);
             }
             if(BASTION_HOGLIN_STABLE_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(2))
-                        .conditionally(RandomChanceLootCondition.builder(0.20f)) // Drops 20% of the time
-                        .with(ItemEntry.builder(ModItems.SPORODINE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.2f)); //20% chance
+                builder.setRolls(UniformGenerator.between(1, 2)); //  1 to 2
+                builder.add(LootItem.lootTableItem(ModItems.SPORODINE));
+                table.withPool(builder);
             }
             if(BASTION_OTHER_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(10))
-                        .conditionally(RandomChanceLootCondition.builder(0.80f)) // Drops 80% of the time
-                        .with(ItemEntry.builder(ModItems.HOGLIN_TUSK))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 5.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.6f)); //60% chance
+                builder.setRolls(UniformGenerator.between(1, 5)); //  1 to 5
+                builder.add(LootItem.lootTableItem(ModItems.HOGLIN_TUSK));
+                table.withPool(builder);
             }
             if(BASTION_TREASURE_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(10))
-                        .conditionally(RandomChanceLootCondition.builder(0.80f)) // Drops 80% of the time
-                        .with(ItemEntry.builder(ModItems.HOGLIN_TUSK))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(3.0f, 8.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.2f)); //20% chance
+                builder.setRolls(UniformGenerator.between(3, 5)); //  3 to 5
+                builder.add(LootItem.lootTableItem(ModItems.HOGLIN_TUSK));
+                table.withPool(builder);
             }
             if(BASTION_TREASURE_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
-                        .with(ItemEntry.builder(ModItems.SACRIFICIAL_DAGGER))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.05f)); //5% chance
+                builder.setRolls(UniformGenerator.between(1, 1)); //  1
+                builder.add(LootItem.lootTableItem(ModItems.SACRIFICIAL_DAGGER));
+                table.withPool(builder);
             }
             if(END_CITY_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.10f)) // Drops 10% of the time
-                        .with(ItemEntry.builder(ModItems.MYTHICAL_BLADE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.1f)); //10% chance
+                builder.setRolls(UniformGenerator.between(1, 1)); //  1
+                builder.add(LootItem.lootTableItem(ModItems.MYTHICAL_BLADE));
+                table.withPool(builder);
             }
             if(END_CITY_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.45f)) // Drops 45% of the time
-                        .with(ItemEntry.builder(ModItems.DISC_FRAGMENT_LULLA))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 3.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.45f)); //10% chance
+                builder.setRolls(UniformGenerator.between(1, 3)); //  1
+                builder.add(LootItem.lootTableItem(ModItems.DISC_FRAGMENT_LULLA));
+                table.withPool(builder);
             }
             if(ANCIENT_CITY_ICE_BOX_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.40f)) // Drops 40% of the time
-                        .with(ItemEntry.builder(ModItems.SCULK_SAC))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(23.0f, 50.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.45f)); //45% chance
+                builder.setRolls(UniformGenerator.between(23, 50)); //  23 to 50
+                builder.add(LootItem.lootTableItem(ModItems.SCULK_SAC));
+                table.withPool(builder);
             }
             if(ANCIENT_CITY_ICE_BOX_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.30f)) // Drops 10% of the time
-                        .with(ItemEntry.builder(ModItems.FULL_SCULK_SAC))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 10.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.30f)); //30% chance
+                builder.setRolls(UniformGenerator.between(23, 50)); //  23 to 50
+                builder.add(LootItem.lootTableItem(ModItems.SCULK_SAC));
+                table.withPool(builder);
+            }
+            if(ANCIENT_CITY_ICE_BOX_STRUCTURE_CHEST_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.30f)); //30% chance
+                builder.setRolls(UniformGenerator.between(2, 10)); //  2 to 10
+                builder.add(LootItem.lootTableItem(ModItems.FULL_SCULK_SAC));
+                table.withPool(builder);
             }
             if(DESERT_PYRAMID_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.20f)) // Drops 20% of the time
-                        .with(ItemEntry.builder(ModItems.COPPER_CLEAVER))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.20f)); //30% chance
+                builder.setRolls(UniformGenerator.between(1, 1)); //  1 to 1
+                builder.add(LootItem.lootTableItem(ModItems.COPPER_CLEAVER));
+                table.withPool(builder);
             }
             if(ANCIENT_CITY_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
-                        .with(ItemEntry.builder(ModItems.CHARGED_COPPER_CLEAVER))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.05f)); //5% chance
+                builder.setRolls(UniformGenerator.between(1, 1)); //  1 to 1
+                builder.add(LootItem.lootTableItem(ModItems.GILDED_COPPER_CLEAVER));
+                table.withPool(builder);
             }
             if(ANCIENT_CITY_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.50f)) // Drops 50% of the time
-                        .with(ItemEntry.builder(ModBlocks.SCULK_SPINE))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0f, 12.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.50f)); //50% chance
+                builder.setRolls(UniformGenerator.between(2, 12)); //  1 to 1
+                builder.add(LootItem.lootTableItem(ModBlocks.SCULK_SPINE));
+                table.withPool(builder);
             }
             if(ANCIENT_CITY_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.05f)) // Drops 5% of the time
-                        .with(ItemEntry.builder(ModItems.FALLEN_HERO_DAGGER))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.05f)); //50% chance
+                builder.setRolls(UniformGenerator.between(1, 1)); //  1 to 1
+                builder.add(LootItem.lootTableItem(ModItems.FALLEN_HERO_DAGGER));
+                table.withPool(builder);
             }
         });
         }
 }
-/**/

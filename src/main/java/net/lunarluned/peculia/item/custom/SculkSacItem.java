@@ -32,6 +32,6 @@ public class SculkSacItem extends Item {
 
             }
         }
-        return InteractionResultHolder.sidedSuccess(itemStack, user.level.isClientSide());
+        return InteractionResultHolder.sidedSuccess(itemStack, !user.level.isClientSide());
     }
 }

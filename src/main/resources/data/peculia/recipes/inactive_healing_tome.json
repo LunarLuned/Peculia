@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "peculia:inactive_tome"
+  },
+  "addition": {
+    "item": "minecraft:ghast_tear"
+  },
+  "result": {
+    "item": "peculia:inactive_healing_tome"
+  }
+}

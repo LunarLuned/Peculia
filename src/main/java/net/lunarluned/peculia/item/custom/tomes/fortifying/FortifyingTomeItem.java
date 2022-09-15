@@ -72,7 +72,7 @@ public class FortifyingTomeItem extends GenericTomeItem {
                 user.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 1800, 4, true, true, false));
                 TomeParticles((ServerLevel) world, user);
                 user.getOffhandItem().shrink(32);
-                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
+                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_FORTIFYING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
                 user.getItemInHand(interactionHand).hurtAndBreak(1, user, p -> p.broadcastBreakEvent(interactionHand));
                 user.getCooldowns().addCooldown(this, 1250);
             }
@@ -84,7 +84,7 @@ public class FortifyingTomeItem extends GenericTomeItem {
 
             spawnHealthBoostCloudAtPos(user, user.getOnPos(), 1);
             TomeParticlesCrouching(world, user, user);
-            world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_CROWD_USE, SoundSource.NEUTRAL, 1, 1);
+            world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_FORTIFYING_TOME_CROWD_USE, SoundSource.NEUTRAL, 1, 1);
             user.getOffhandItem().shrink(48);
             user.getItemInHand(interactionHand).hurtAndBreak(1, user, p -> p.broadcastBreakEvent(interactionHand));
             user.getCooldowns().addCooldown(this, 975);

@@ -10,8 +10,8 @@
         }
     },
     "result": {
-        "item": "peculia:chiseled_spinal_brick",
+        "item": "peculia:chiseled_spinal_bricks",
         "count": 1
     },
-    "group": "chiseled_spinal_brick"
+    "group": "chiseled_spinal_bricks"
 }

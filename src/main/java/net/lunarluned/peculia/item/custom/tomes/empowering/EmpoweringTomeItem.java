@@ -75,7 +75,7 @@ public class EmpoweringTomeItem extends GenericTomeItem {
                     TomeParticles((ServerLevel) world, user);
                     user.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 800, 0));
                     user.getOffhandItem().shrink(10);
-                    world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
+                    world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_EMPOWERING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
                     user.getItemInHand(hand).hurtAndBreak(1, user, p -> p.broadcastBreakEvent(hand));
                     user.getCooldowns().addCooldown(this, 800);
                 }
@@ -84,7 +84,7 @@ public class EmpoweringTomeItem extends GenericTomeItem {
                 if (user.isCrouching() && user.getOffhandItem().getCount() >= 15 && user.getOffhandItem().is(ModItems.SOUL)) {
                     TomeParticlesCrouching(world, user, user);
                     spawnHealingCloudAtPos(user, user.getOnPos(), 1);
-                    world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_HEALING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
+                    world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), ModSoundEvents.ITEM_EMPOWERING_TOME_CROWD_USE, SoundSource.NEUTRAL, 1, 1);
                     user.getOffhandItem().shrink(15);
                     user.getItemInHand(hand).hurtAndBreak(1, user, p -> p.broadcastBreakEvent(hand));
                     user.getCooldowns().addCooldown(this, 300);

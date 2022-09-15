@@ -43,6 +43,34 @@
       "peculia:item/healing_tome/crowd/use2"
     ]
   },
+  "item.fortifying_tome.use": {
+    "subtitle": "item.fortifying_tome.use",
+    "sounds": [
+      "peculia:item/fortifying_tome/use1",
+      "peculia:item/fortifying_tome/use2"
+    ]
+  },
+  "item.fortifying_tome.crowd_use": {
+    "subtitle": "item.fortifying_tome.crowd_use",
+    "sounds": [
+      "peculia:item/fortifying_tome/crowd/use1",
+      "peculia:item/fortifying_tome/crowd/use2"
+    ]
+  },
+  "item.empowering_tome.use": {
+    "subtitle": "item.empowering_tome.use",
+    "sounds": [
+      "peculia:item/empowering_tome/use1",
+      "peculia:item/empowering_tome/use2"
+    ]
+  },
+  "item.empowering_tome.crowd_use": {
+    "subtitle": "item.empowering_tome.crowd_use",
+    "sounds": [
+      "peculia:item/empowering_tome/crowd/use1",
+      "peculia:item/empowering_tome/crowd/use2"
+    ]
+  },
   "item.agility_tome.use": {
     "subtitle": "item.agility_tome.use",
     "sounds": [

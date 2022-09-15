@@ -12,6 +12,7 @@ import net.lunarluned.peculia.misc.ModGameEvents;
 import net.lunarluned.peculia.misc.ModParticles;
 import net.lunarluned.peculia.potion.ModPotions;
 import net.lunarluned.peculia.sound.ModSoundEvents;
+import net.lunarluned.peculia.util.ModLootTableModifiers;
 import net.lunarluned.peculia.world.feature.ModConfiguredFeatures;
 import net.lunarluned.peculia.world.feature.gen.ModWorldGen;
 import net.minecraft.world.damagesource.DamageSource;
@@ -37,7 +38,7 @@ public class Peculia implements ModInitializer {
 		                                        // - Ichor Stichor - fixed!
 		// - Sculk Sac and Full Sculk Sac
 		                                        // - Electrocuted Effect - fixed!
-		// - Loot Table Modifiers
+		                                        // - Loot Table Modifiers - fixed
 
 		// ඞ
 		PeculiaConfig.init();
@@ -79,7 +80,7 @@ public class Peculia implements ModInitializer {
 		ModPotions.registerextDarknessPotion();
 		ModPotions.registerIchorResistancePotion();
 		ModPotions.registerextIchorResistancePotion();
-		//ModLootTableModifiers.modifyLootTables();
+		ModLootTableModifiers.modifyLootTables();
 
 		LOGGER.info("You have 5 days until the piss droplets hit your minecraft house.");
 		LOGGER.info("ඞ");
