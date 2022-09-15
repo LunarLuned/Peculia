@@ -1,7 +1,8 @@
-package net.lunarluned.peculia.entity.registry;
+package net.lunarluned.peculia.common.registry.entity.registry;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.lunarluned.peculia.Peculia;
-import net.lunarluned.peculia.entity.projectiles.PeculiarSliceEntity;
+import net.lunarluned.peculia.common.registry.entity.living_entities.coal_geode.CoalGeodeEntity;
 import net.lunarluned.peculia.misc.CoreRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.world.entity.Entity;
@@ -12,12 +13,15 @@ public class ModEntities {
 
     public static final CoreRegistry<EntityType<?>> ENTITIES = CoreRegistry.create(Registry.ENTITY_TYPE_REGISTRY, Peculia.MOD_ID);
 
-    public static final EntityType<PeculiarSliceEntity> PECULIAR_SLICE = register("peculiar_slice", EntityType.Builder.of(PeculiarSliceEntity::new, MobCategory.MISC).sized(0.6F, 0.6F));
+    public static final EntityType<CoalGeodeEntity> COAL_GEODE = register("coal_geode", EntityType.Builder.of(CoalGeodeEntity::new, MobCategory.CREATURE).sized(1f, 0.6f).clientTrackingRange(10));
 
     public static <T extends Entity> EntityType<T> register(String id, EntityType.Builder<T> type) {
         return ENTITIES.register(id, type.build(id));
     }
 
+    public static void registerAttributes() {
+        FabricDefaultAttributeRegistry.register(COAL_GEODE, CoalGeodeEntity.createCoalGeodeAttributes());
+    }
 
     public static void registerModEntities() {
         System.out.println("Registering Entities for " + Peculia.MOD_ID);

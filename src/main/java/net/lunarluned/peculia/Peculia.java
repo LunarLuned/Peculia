@@ -3,6 +3,7 @@ package net.lunarluned.peculia;
 import com.google.gson.JsonObject;
 import net.fabricmc.api.ModInitializer;
 import net.lunarluned.peculia.block.ModBlocks;
+import net.lunarluned.peculia.common.registry.entity.registry.ModEntities;
 import net.lunarluned.peculia.config.Config;
 import net.lunarluned.peculia.config.PeculiaConfig;
 import net.lunarluned.peculia.effect.ModEffects;
@@ -18,7 +19,6 @@ import net.lunarluned.peculia.world.feature.gen.ModWorldGen;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.EntityDamageSource;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.player.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.File;
@@ -61,6 +61,8 @@ public class Peculia implements ModInitializer {
 		ModWorldGen.generateModWorldGen();
 
 		ModParticles.init();
+		ModEntities.registerModEntities();
+		ModEntities.registerAttributes();
 
 		//disclaimer. i do not know why effects and potions calls for you to register each effect like this. it just does. idk why.
 
