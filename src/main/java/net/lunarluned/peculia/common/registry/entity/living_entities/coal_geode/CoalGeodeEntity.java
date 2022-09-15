@@ -4,6 +4,7 @@ import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
@@ -35,12 +36,50 @@ import java.util.UUID;
 
 public class CoalGeodeEntity extends AbstractGolem implements NeutralMob {
 
-    protected void registerGoals() {
+
+
+    public void registerGoals() {
         this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.9));
-        this.goalSelector.addGoal(1, new PanicGoal(this, 1));
+        this.goalSelector.addGoal(3, new PanicGoal(this, 1));
         this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 6.0F));
         this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+        this.targetSelector.addGoal(1, (new HurtByTargetGoal(this, new Class[0])));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, LivingEntity.class, 5, false, false, (livingEntity) -> livingEntity instanceof Enemy && !(livingEntity instanceof Creeper)));
     }
+
+    public float getAttackDamage() {
+        return (float)this.getAttributeValue(Attributes.ATTACK_DAMAGE);
+    }
+
+    public boolean doHurtTarget(Entity entity) {
+        this.attackAnimationState.start(this.tickCount);
+        this.level.broadcastEntityEvent(this, (byte)4);
+        float f = this.getAttackDamage();
+        float g = (int)f > 0 ? f / 2.0F + (float)this.random.nextInt((int)f) : f;
+        boolean bl = entity.hurt(DamageSource.mobAttack(this), g);
+        if (bl) {
+            double var10000;
+            if (entity instanceof LivingEntity) {
+                LivingEntity livingEntity = (LivingEntity)entity;
+                var10000 = livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE);
+            } else {
+                var10000 = 0.0;
+            }
+
+            double d = var10000;
+            double e = Math.max(0.0, 1.0 - d);
+            entity.setDeltaMovement(entity.getDeltaMovement().add(0.0, 0.4000000059604645 * e, 0.0));
+            this.doEnchantDamageEffects(this, entity);
+        }
+
+        this.playSound(SoundEvents.IRON_GOLEM_ATTACK, 1.0F, 1.0F);
+        return bl;
+    }
+
+    public boolean canAttackType(EntityType<?> entityType) {
+            return entityType != EntityType.CREEPER && super.canAttackType(entityType);
+        }
+
 
     protected static final ImmutableList<SensorType<? extends Sensor<? super CoalGeodeEntity>>> SENSOR_TYPES =
             ImmutableList.of(SensorType.NEAREST_LIVING_ENTITIES, SensorType.NEAREST_PLAYERS);
@@ -75,7 +114,7 @@ public class CoalGeodeEntity extends AbstractGolem implements NeutralMob {
     //attributes
 
     public static AttributeSupplier.Builder createCoalGeodeAttributes() {
-        return createMobAttributes().add(Attributes.MAX_HEALTH, 16.0).add(Attributes.MOVEMENT_SPEED, 0.2f).add(Attributes.ARMOR, 8.0).add(Attributes.KNOCKBACK_RESISTANCE, 0.6).add(Attributes.ATTACK_DAMAGE, 4.0).add(Attributes.FOLLOW_RANGE, 48.0);
+        return createMobAttributes().add(Attributes.MAX_HEALTH, 16.0).add(Attributes.MOVEMENT_SPEED, 0.28f).add(Attributes.ARMOR, 8.0).add(Attributes.KNOCKBACK_RESISTANCE, 0.6).add(Attributes.ATTACK_DAMAGE, 4.0).add(Attributes.FOLLOW_RANGE, 48.0);
     }
 
     private boolean isMoving() {
@@ -90,7 +129,11 @@ public class CoalGeodeEntity extends AbstractGolem implements NeutralMob {
         super.defineSynchedData();
     }
 
+    // Prevents the Coal Geode from drowning, similar to Iron Golems
 
+    protected int decreaseAirSupply(int i) {
+        return i;
+    }
 
     // Plays the animations upon ticking
 

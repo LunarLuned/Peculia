@@ -2,6 +2,7 @@ package net.lunarluned.peculia.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.lunarluned.peculia.Peculia;
+import net.lunarluned.peculia.common.registry.entity.registry.ModEntities;
 import net.lunarluned.peculia.item.custom.*;
 import net.lunarluned.peculia.item.custom.tomes.*;
 import net.lunarluned.peculia.item.custom.tomes.agility.AgilityTomeItem;
@@ -321,6 +322,9 @@ public class ModItems {
 
     public static final Item PORK_SPREAD_TOAST = registerItem("pork_spread_toast",
     new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).food(ModFoodComponents.PORK_SPREAD_TOAST).maxCount(64)));
+
+    public static final Item COAL_GEODE_SPAWN_EGG = registerItem("coal_geode_spawn_egg",
+            new SpawnEggItem(ModEntities.COAL_GEODE, 7631988, 3552822, new Item.Properties().tab(ModItemGroup.PECULIA_OVERWORLD)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new ResourceLocation(Peculia.MOD_ID, name), item);

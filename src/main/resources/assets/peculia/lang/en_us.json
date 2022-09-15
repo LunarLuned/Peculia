@@ -261,6 +261,7 @@
   "itemGroup.peculia.peculia_misc": "Peculia Miscellaneous",
 
   "entity.peculia.coal_geode": "Coal Geode",
+  "item.peculia.coal_geode_spawn_egg": "Coal Geode Spawn Egg",
 
   "advancements.end.obtain_mythril_shard.title": "Shard of Myth",
   "advancements.end.obtain_mythril_shard.description": "Obtain a Mythril Shard, pieces of a comet floating above the Void.",

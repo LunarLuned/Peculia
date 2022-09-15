@@ -4,6 +4,7 @@ import com.google.gson.JsonObject;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.loader.api.FabricLoader;
 import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.common.registry.entity.registry.ModEntities;
 import net.lunarluned.peculia.config.Config;
@@ -11,6 +12,7 @@ import net.lunarluned.peculia.config.PeculiaConfig;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.enchantment.ModEnchantments;
 import net.lunarluned.peculia.item.ModItems;
+import net.lunarluned.peculia.item.compat.CombatantItems;
 import net.lunarluned.peculia.misc.ModGameEvents;
 import net.lunarluned.peculia.misc.ModParticles;
 import net.lunarluned.peculia.potion.ModPotions;
@@ -89,8 +91,11 @@ public class Peculia implements ModInitializer {
 		ModLootTableModifiers.modifyLootTables();
 
 
+		if (FabricLoader.getInstance().isModLoaded("combatant")) {
+			CombatantItems.registerCombatantCompatItems();
+		}
 
-		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.LUSH_CAVES), MobCategory.CREATURE, ModEntities.COAL_GEODE, 10, 1, 2);
+		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.LUSH_CAVES), MobCategory.CREATURE, ModEntities.COAL_GEODE, 100, 1, 2);
 
 		LOGGER.info("You have 5 days until the piss droplets hit your minecraft house.");
 		LOGGER.info("ඞ");
