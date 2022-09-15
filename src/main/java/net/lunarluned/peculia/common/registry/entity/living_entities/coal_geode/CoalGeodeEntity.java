@@ -66,6 +66,12 @@ public class CoalGeodeEntity extends AbstractGolem implements NeutralMob {
     public final AnimationState spitAnimationState = new AnimationState();
     public final AnimationState feedingAnimationState = new AnimationState();
 
+    public void aiStep() {
+        super.aiStep();
+        if (this.isLeashed()) {
+            this.setPersistenceRequired();
+        }
+    }
     //attributes
 
     public static AttributeSupplier.Builder createCoalGeodeAttributes() {
@@ -83,6 +89,8 @@ public class CoalGeodeEntity extends AbstractGolem implements NeutralMob {
     protected void defineSynchedData() {
         super.defineSynchedData();
     }
+
+
 
     // Plays the animations upon ticking
 

@@ -260,6 +260,7 @@
   "itemGroup.peculia.peculia_overworld": "Peculia Overworld",
   "itemGroup.peculia.peculia_misc": "Peculia Miscellaneous",
 
+  "entity.peculia.coal_geode": "Coal Geode",
 
   "advancements.end.obtain_mythril_shard.title": "Shard of Myth",
   "advancements.end.obtain_mythril_shard.description": "Obtain a Mythril Shard, pieces of a comet floating above the Void.",

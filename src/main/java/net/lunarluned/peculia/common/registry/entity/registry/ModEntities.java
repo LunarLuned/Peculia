@@ -13,7 +13,7 @@ public class ModEntities {
 
     public static final CoreRegistry<EntityType<?>> ENTITIES = CoreRegistry.create(Registry.ENTITY_TYPE_REGISTRY, Peculia.MOD_ID);
 
-    public static final EntityType<CoalGeodeEntity> COAL_GEODE = register("coal_geode", EntityType.Builder.of(CoalGeodeEntity::new, MobCategory.CREATURE).sized(1f, 0.6f).clientTrackingRange(10));
+    public static final EntityType<CoalGeodeEntity> COAL_GEODE = register("coal_geode", EntityType.Builder.of(CoalGeodeEntity::new, MobCategory.CREATURE).sized(0.7f, 0.85f).clientTrackingRange(10));
 
     public static <T extends Entity> EntityType<T> register(String id, EntityType.Builder<T> type) {
         return ENTITIES.register(id, type.build(id));

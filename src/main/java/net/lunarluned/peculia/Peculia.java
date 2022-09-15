@@ -2,6 +2,8 @@ package net.lunarluned.peculia;
 
 import com.google.gson.JsonObject;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.common.registry.entity.registry.ModEntities;
 import net.lunarluned.peculia.config.Config;
@@ -19,6 +21,8 @@ import net.lunarluned.peculia.world.feature.gen.ModWorldGen;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.EntityDamageSource;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.level.biome.Biomes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.File;
@@ -83,6 +87,10 @@ public class Peculia implements ModInitializer {
 		ModPotions.registerIchorResistancePotion();
 		ModPotions.registerextIchorResistancePotion();
 		ModLootTableModifiers.modifyLootTables();
+
+
+
+		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.LUSH_CAVES), MobCategory.CREATURE, ModEntities.COAL_GEODE, 10, 1, 2);
 
 		LOGGER.info("You have 5 days until the piss droplets hit your minecraft house.");
 		LOGGER.info("ඞ");

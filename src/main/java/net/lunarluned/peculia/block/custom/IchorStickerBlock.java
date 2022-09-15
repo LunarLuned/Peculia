@@ -38,7 +38,6 @@ public class IchorStickerBlock extends Block {
         super.stepOn(level, pos, state, entity);
         if (!entity.isCrouching() && entity instanceof LivingEntity) {
             level.playSound(null, pos, ModSoundEvents.BLOCK_ICHOR_STICKER_RELEASE, SoundSource.BLOCKS, 1.0f, 1.0f);
-            level.levelEvent((Player) entity, 2001, pos, getId(state));
             spawnIchorCloudAtPos((LivingEntity) entity, pos, 1);
             setToAir(state, level, pos);
         }
