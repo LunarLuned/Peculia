@@ -7,12 +7,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
-import net.minecraft.world.level.storage.loot.functions.LootItemFunction;
-import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 
@@ -53,6 +49,16 @@ public class ModLootTableModifiers {
     //entities
     private static final ResourceLocation ZOMBIE_ENTITY_ID
             = new ResourceLocation("minecraft", "entities/zombie");
+    private static final ResourceLocation SPIDER_ENTITY_ID
+            = new ResourceLocation("minecraft", "entities/spider");
+    private static final ResourceLocation CAVE_SPIDER_ENTITY_ID
+            = new ResourceLocation("minecraft", "entities/cave_spider");
+    private static final ResourceLocation ENDERMAN_ENTITY_ID
+            = new ResourceLocation("minecraft", "entities/enderman");
+    private static final ResourceLocation ENDERMITE_ENTITY_ID
+            = new ResourceLocation("minecraft", "entities/endermite");
+    private static final ResourceLocation ZOMBIFIED_PIGLIN_ENTITY_ID
+            = new ResourceLocation("minecraft", "entities/zombified_piglin");
     private static final ResourceLocation DROWNED_ENTITY_ID
             = new ResourceLocation("minecraft", "entities/drowned");
     private static final ResourceLocation HUSK_ENTITY_ID
@@ -171,6 +177,51 @@ public class ModLootTableModifiers {
                 table.withPool(builder);
             }
             if(SKELETON_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.1f)); //10% chance
+                builder.setRolls(UniformGenerator.between(1, 4)); //  1 to 4
+                builder.add(LootItem.lootTableItem(ModItems.SOUL));
+                table.withPool(builder);
+            }
+            if(SPIDER_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.1f)); //10% chance
+                builder.setRolls(UniformGenerator.between(1, 4)); //  1 to 4
+                builder.add(LootItem.lootTableItem(ModItems.SOUL));
+                table.withPool(builder);
+            }
+            if(CAVE_SPIDER_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.1f)); //10% chance
+                builder.setRolls(UniformGenerator.between(1, 4)); //  1 to 4
+                builder.add(LootItem.lootTableItem(ModItems.SOUL));
+                table.withPool(builder);
+            }
+            if(ENDERMAN_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.1f)); //10% chance
+                builder.setRolls(UniformGenerator.between(1, 7)); //  1 to 7
+                builder.add(LootItem.lootTableItem(ModItems.SOUL));
+                table.withPool(builder);
+            }
+            if(ENDERMITE_ENTITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.1f)); //10% chance
+                builder.setRolls(UniformGenerator.between(3, 10)); //  3 to 10
+                builder.add(LootItem.lootTableItem(ModItems.SOUL));
+                table.withPool(builder);
+            }
+            if(ZOMBIFIED_PIGLIN_ENTITY_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1));
                 LootPool.Builder builder = LootPool.lootPool();
