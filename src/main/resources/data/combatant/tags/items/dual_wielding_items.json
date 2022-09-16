@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "peculia:iron_gauntlet",
+    "peculia:golden_gauntlet",
+    "peculia:diamond_gauntlet",
+    "peculia:netherite_gauntlet",
+    "peculia:mythril_gauntlet"
+  ]
+}

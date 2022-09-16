@@ -187,6 +187,7 @@ public class CoalGeodeEntity extends AbstractGolem implements NeutralMob {
             if (!this.level.isClientSide) {
                 this.usePlayerItem(player, interactionHand, itemStack);
                 this.gameEvent(GameEvent.EAT, this);
+                this.feedingAnimationState.start(this.tickCount);
                 this.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1, false, true, true));
                 this.setPersistenceRequired();
 
