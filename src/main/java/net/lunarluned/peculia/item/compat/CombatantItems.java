@@ -2,7 +2,7 @@ package net.lunarluned.peculia.item.compat;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.lunarluned.peculia.Peculia;
-import net.lunarluned.peculia.item.ModToolMaterials;
+import net.lunarluned.peculia.item.modmats.ModToolMaterials;
 import net.lunarluned.peculia.item.custom.ModSwordItem;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "odyssey:wither_skull_fragment"
+    }
+  ],
+  "result": {
+    "item": "odyssey:wither_bone_meal",
+    "count": 9
+  }
+}

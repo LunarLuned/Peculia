@@ -113,6 +113,21 @@
       "peculia:item/generic_tome/crowd/fail2"
     ]
   },
+  "item.watching_tome.use": {
+    "subtitle": "item.watching_tome.use",
+    "sounds": [
+      "peculia:item/watching_tome/use1",
+      "peculia:item/watching_tome/use2"
+    ]
+  },
+  "item.generic_glyph.use": {
+    "subtitle": "item.generic_glyph.use",
+    "sounds": [
+      "peculia:item/glyph/use1",
+      "peculia:item/glyph/use2",
+      "peculia:item/glyph/use3"
+    ]
+  },
   "block.ichor_sticker.release": {
     "subtitle": "block.ichor_sticker.release",
     "sounds": [

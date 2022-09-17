@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#W#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:string"
+    },
+    "W": {
+      "item": "odyssey:wither_skull_fragment"
+    }
+  },
+  "result": {
+    "item": "peculia:wither_skull_mask",
+    "count": 1
+  }
+}

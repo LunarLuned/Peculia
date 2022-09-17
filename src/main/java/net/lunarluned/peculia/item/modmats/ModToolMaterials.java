@@ -1,5 +1,6 @@
-package net.lunarluned.peculia.item;
+package net.lunarluned.peculia.item.modmats;
 
+import net.lunarluned.peculia.item.ModItems;
 import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;

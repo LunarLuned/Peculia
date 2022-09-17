@@ -4,6 +4,7 @@ import com.google.gson.JsonObject;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.loader.api.FabricLoader;
 import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.common.registry.entity.registry.ModEntities;
@@ -13,6 +14,7 @@ import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.enchantment.ModEnchantments;
 import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.item.compat.CombatantItems;
+import net.lunarluned.peculia.item.compat.OdysseyItems;
 import net.lunarluned.peculia.misc.ModGameEvents;
 import net.lunarluned.peculia.misc.ModParticles;
 import net.lunarluned.peculia.potion.ModPotions;
@@ -81,6 +83,8 @@ public class Peculia implements ModInitializer {
 		ModEffects.registerDeterminedStatusEffect();
 		ModEffects.registerStagnatedEffect();
 		ModEffects.registerEchoingEffect();
+		ModEffects.registerGroundedEffect();
+		ModEffects.registerStunnedEffect();
 
 		ModPotions.registerIchorPotion();
 		ModPotions.registerextIchorPotion();
@@ -94,6 +98,13 @@ public class Peculia implements ModInitializer {
 		if (FabricLoader.getInstance().isModLoaded("combatant")) {
 			CombatantItems.registerCombatantCompatItems();
 		}
+		if (FabricLoader.getInstance().isModLoaded("odyssey")) {
+			OdysseyItems.registerOdysseyCompatItems();
+		}
+
+		// Furnace Fuel
+
+		FuelRegistry.INSTANCE.add(ModItems.SOUL, 1000);
 
 		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.LUSH_CAVES), MobCategory.CREATURE, ModEntities.COAL_GEODE, 100, 1, 2);
 

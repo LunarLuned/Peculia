@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.common.registry.entity.registry.ModEntities;
 import net.lunarluned.peculia.item.custom.*;
+import net.lunarluned.peculia.item.custom.glyphs.*;
 import net.lunarluned.peculia.item.custom.tomes.*;
 import net.lunarluned.peculia.item.custom.tomes.agility.AgilityTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.agility.LesserAgilityTomeItem;
@@ -13,8 +14,14 @@ import net.lunarluned.peculia.item.custom.tomes.fortifying.FortifyingTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.fortifying.LesserFortifyingTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.healing.HealingTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.healing.LesserHealingTomeItem;
+import net.lunarluned.peculia.item.custom.tomes.inverted.watching.InvertedWatchingTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.updraft.LesserUpdraftTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.updraft.UpdraftTomeItem;
+import net.lunarluned.peculia.item.custom.tomes.watching.LesserWatchingTomeItem;
+import net.lunarluned.peculia.item.custom.tomes.watching.WatchingTomeItem;
+import net.lunarluned.peculia.item.modmats.ModArmorMaterials;
+import net.lunarluned.peculia.item.modmats.ModFoodComponents;
+import net.lunarluned.peculia.item.modmats.ModToolMaterials;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -41,64 +48,97 @@ public class ModItems {
     new SoulItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON)));
 
     public static final Item INACTIVE_TOME = registerItem("inactive_tome",
-    new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
 
     public static final Item INACTIVE_HEALING_TOME = registerItem("inactive_healing_tome",
-    new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
 
     public static final Item LESSER_TOME_OF_HEALING = registerItem("lesser_tome_of_healing",
-    new LesserHealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    new LesserHealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
 
     public static final Item TOME_OF_HEALING = registerItem("tome_of_healing",
-    new HealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(64)));
+    new HealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
 
     public static final Item INACTIVE_UPDRAFT_TOME = registerItem("inactive_updraft_tome",
-    new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
 
     public static final Item LESSER_TOME_OF_UPDRAFT = registerItem("lesser_tome_of_updraft",
-    new LesserUpdraftTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    new LesserUpdraftTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
 
     public static final Item TOME_OF_UPDRAFT = registerItem("tome_of_updraft",
-    new UpdraftTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(64)));
+    new UpdraftTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
 
     public static final Item INACTIVE_EMPOWERING_TOME = registerItem("inactive_empowering_tome",
-    new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
 
     public static final Item LESSER_TOME_OF_EMPOWERING = registerItem("lesser_tome_of_empowering",
-    new LesserEmpoweringTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    new LesserEmpoweringTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
 
     public static final Item TOME_OF_EMPOWERING = registerItem("tome_of_empowering",
-    new EmpoweringTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(64)));
+    new EmpoweringTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
 
     public static final Item INACTIVE_AGILITY_TOME = registerItem("inactive_agility_tome",
-    new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
 
     public static final Item LESSER_TOME_OF_AGILITY = registerItem("lesser_tome_of_agility",
-    new LesserAgilityTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    new LesserAgilityTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
 
     public static final Item TOME_OF_AGILITY = registerItem("tome_of_agility",
-    new AgilityTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(64)));
+    new AgilityTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
 
     public static final Item INACTIVE_FORTIFYING_TOME = registerItem("inactive_fortifying_tome",
-    new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
 
     public static final Item LESSER_TOME_OF_FORTIFYING = registerItem("lesser_tome_of_fortifying",
-    new LesserFortifyingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    new LesserFortifyingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
 
     public static final Item TOME_OF_FORTIFYING = registerItem("tome_of_fortifying",
-    new FortifyingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON).maxDamage(64)));
+    new FortifyingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
+
+    public static final Item INACTIVE_WATCHING_TOME = registerItem("inactive_watching_tome",
+    new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
+
+    public static final Item LESSER_TOME_OF_WATCHING = registerItem("lesser_tome_of_watching",
+    new LesserWatchingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
+
+    public static final Item TOME_OF_WATCHING = registerItem("tome_of_watching",
+    new WatchingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
+
+    public static final Item LESSER_INVERTED_TOME_OF_WATCHING = registerItem("lesser_inverted_tome_of_watching",
+            new InvertedWatchingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
+
+    public static final Item INVERTED_TOME_OF_WATCHING = registerItem("inverted_tome_of_watching",
+    new InvertedWatchingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
 
     public static final Item CLOAK_HELMET = registerItem("cloak_helmet",
     new ArmorItem(ModArmorMaterials.CLOAK, EquipmentSlot.HEAD,
-    new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
 
     public static final Item CLOAK_CHESTPLATE = registerItem("cloak_chestplate",
     new ArmorItem(ModArmorMaterials.CLOAK, EquipmentSlot.CHEST,
-    new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
 
     public static final Item CLOAK_LEGGINGS = registerItem("cloak_leggings",
     new ArmorItem(ModArmorMaterials.CLOAK, EquipmentSlot.LEGS,
-    new FabricItemSettings().group(ModItemGroup.PECULIA_MISC)));
+    new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
+
+    public static final Item HEALING_GLYPH = registerItem("healing_glyph",
+    new HealingGlyphItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.COMMON)));
+
+    public static final Item AGILITY_GLYPH = registerItem("agility_glyph",
+    new AgilityGlyphItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.COMMON)));
+
+    public static final Item UPDRAFT_GLYPH = registerItem("updraft_glyph",
+    new UpdraftGlyphItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.COMMON)));
+
+    public static final Item EMPOWERING_GLYPH = registerItem("empowering_glyph",
+    new EmpoweringGlyphItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.COMMON)));
+
+    public static final Item FORTIFYING_GLYPH = registerItem("fortifying_glyph",
+    new FortifyingGlyphItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.COMMON)));
+
+    public static final Item WATCHING_GLYPH = registerItem("watching_glyph",
+    new WatchingGlyphItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.COMMON)));
 
     // End Items
 
@@ -181,6 +221,12 @@ public class ModItems {
 
     // Nether Items
     public static final Item HOGLIN_TUSK = registerItem("hoglin_tusk",
+    new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER)));
+
+    public static final Item SANGUINE_QUARTZ = registerItem("sanguine_quartz",
+    new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER)));
+
+    public static final Item SANGUINE_QUARTZ_FRAGMENT = registerItem("sanguine_quartz_fragment",
     new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER)));
 
     public static final Item CRIMSON_STEW = registerItem("crimson_stew",

@@ -16,6 +16,9 @@ public class ModItemGroup {
     public static final CreativeModeTab PECULIA_OVERWORLD = FabricItemGroupBuilder.build(new ResourceLocation(Peculia.MOD_ID, "peculia_overworld"),
     () -> new ItemStack(ModItems.DIAMOND_GAUNTLET));
 
+    public static final CreativeModeTab PECULIA_ARCANE = FabricItemGroupBuilder.build(new ResourceLocation(Peculia.MOD_ID, "peculia_arcane"),
+            () -> new ItemStack(ModItems.TOME_OF_HEALING));
+
     public static final CreativeModeTab PECULIA_MISC = FabricItemGroupBuilder.build(new ResourceLocation(Peculia.MOD_ID, "peculia_misc"),
     () -> new ItemStack(ModItems.FALLEN_HERO_DAGGER));
 }

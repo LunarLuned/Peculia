@@ -1,19 +1,20 @@
-package net.lunarluned.peculia.item;
+package net.lunarluned.peculia.item.modmats;
 
+import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+
 import java.util.function.Supplier;
 
-public enum ModArmorMaterials implements ArmorMaterial {
-    MYTHRIL("mythril", 33, new int[]{3, 6, 8, 3}, 20, ModSoundEvents.ARMOR_MYTHRIL_EQUIP, 3.0F, 0.0F, () -> {
-        return Ingredient.of(ModItems.MYTHRIL_INGOT);
-    }),
-    CLOAK("cloak", 22, new int[]{1, 4, 4, 2}, 35, ModSoundEvents.ARMOR_MYTHRIL_EQUIP, 0.0F, 0.0F, () -> {
-        return Ingredient.of(ModItems.SOUL);
+public enum OdysseyArmorMaterials implements ArmorMaterial {
+    WITHER_SKULL_MASK("wither_skull_mask", 1, new int[]{1, 4, 4, 2}, 0, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> {
+        return Ingredient.of(Items.BONE);
     });
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
@@ -26,7 +27,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     private final float knockbackResistance;
     private final LazyLoadedValue repairIngredientSupplier;
 
-    ModArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredientSupplier) {
+    OdysseyArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredientSupplier) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;

@@ -1,4 +1,4 @@
-package net.lunarluned.peculia.item;
+package net.lunarluned.peculia.item.modmats;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

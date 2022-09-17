@@ -72,6 +72,10 @@ public class ModSoundEvents {
     public static final SoundEvent ITEM_FORTIFYING_TOME_USE = registerSoundEvent("item.fortifying_tome.use");
     public static final SoundEvent ITEM_FORTIFYING_TOME_CROWD_USE = registerSoundEvent("item.fortifying_tome.crowd_use");
 
+    public static final SoundEvent ITEM_WATCHING_TOME_USE = registerSoundEvent("item.watching_tome.use");
+
+    public static final SoundEvent ITEM_GENERIC_GLYPH_USE = registerSoundEvent("item.generic_glyph.use");
+
     public static final SoundEvent BLOCK_ICHOR_STICKER_RELEASE = registerSoundEvent("block.ichor_sticker.release");
 
     public static final SoundType MYTHRIL = new SoundType(1f, 1f,
