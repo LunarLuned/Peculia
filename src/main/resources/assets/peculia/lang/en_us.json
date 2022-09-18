@@ -100,6 +100,7 @@
   "block.peculia.ichor_mold_vein": "Ichor Mold Vein",
   "block.peculia.ichor_mold": "Ichor Mold",
   "block.peculia.ichor_nylium": "Ichor Nylium",
+  "block.peculia.sanguine_quartz_block": "Sanguine Quartz Block",
   "block.peculia.ichor_sticker": "Ichor Sticker",
   "block.peculia.crumbling_netherrack": "Crumbling Netherrack",
 
@@ -208,9 +209,9 @@
   "item.peculia.lesser_tome_of_empowering": "Tome of Empowering",
   "item.peculia.lesser_tome_of_empowering.desc": "Lesser",
   "item.peculia.inverted_tome_of_empowering": "Tome of Empowering",
-  "item.peculia.inverted_tome_of_empowering.desc": "Greater",
-  "item.peculia.inverted_lesser_tome_of_empowering": "Tome of Empowering",
-  "item.peculia.inverted_lesser_tome_of_empowering.desc": "Lesser",
+  "item.peculia.inverted_tome_of_empowering.desc": "Greater, Inverted",
+  "item.peculia.lesser_inverted_tome_of_empowering": "Tome of Empowering",
+  "item.peculia.lesser_inverted_tome_of_empowering.desc": "Lesser, Inverted",
 
   "item.peculia.tome_of_agility": "Tome of Agility",
   "item.peculia.tome_of_agility.desc": "Greater",

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#P#",
+    "#S#"
+  ],
+  "key": {
+    "#": {
+      "item": "peculia:soul"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "S": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+  "result": {
+    "item": "peculia:empowering_glyph",
+    "count": 1
+  }
+}

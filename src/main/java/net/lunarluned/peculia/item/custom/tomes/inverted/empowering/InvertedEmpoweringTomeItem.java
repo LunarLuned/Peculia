@@ -1,5 +1,6 @@
-package net.lunarluned.peculia.item.custom.tomes.inverted.watching;
+package net.lunarluned.peculia.item.custom.tomes.inverted.empowering;
 
+import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.item.custom.tomes.GenericTomeItem;
 import net.lunarluned.peculia.sound.ModSoundEvents;
@@ -21,8 +22,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class LesserInvertedWatchingTomeItem extends GenericTomeItem {
-    public LesserInvertedWatchingTomeItem(Properties settings) {
+public class InvertedEmpoweringTomeItem extends GenericTomeItem {
+    public InvertedEmpoweringTomeItem(Properties settings) {
         super(settings);
     }
 
@@ -30,6 +31,7 @@ public class LesserInvertedWatchingTomeItem extends GenericTomeItem {
     public InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand interactionHand) {
         ItemStack itemStack = player.getItemInHand(interactionHand);
         if (!level.isClientSide) {
+
 
             if (!player.isCrouching() && !player.getOffhandItem().is(ModItems.SOUL)) {
                 player.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
@@ -54,7 +56,7 @@ public class LesserInvertedWatchingTomeItem extends GenericTomeItem {
 
             if (!player.isCrouching() && player.getOffhandItem().is(ModItems.SOUL)) {
 
-                if (player.getOffhandItem().getCount() <= 13) {
+                if (player.getOffhandItem().getCount() <= 9) {
                     level.gameEvent(player, GameEvent.BLOCK_CHANGE, player.getOnPos());
                     level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
                     return InteractionResultHolder.fail(itemStack);
@@ -65,31 +67,29 @@ public class LesserInvertedWatchingTomeItem extends GenericTomeItem {
             int m;
             int l;
             int k = blockPos.getX();
-            int j = 16;
+            int j = 10;
 
             // Scans the area for nearby players
 
             AABB aABB = new AABB(k, l = blockPos.getY(), m = blockPos.getZ(), k + 1, l + 1, m + 1).inflate(j).expandTowards(0.0, level.getHeight(), 0.0);
-            List<Player> nearbyPlayers = level.getEntitiesOfClass(Player.class, aABB);
             List<LivingEntity> nearbyEntities = level.getEntitiesOfClass(LivingEntity.class, aABB);
 
-            if (!player.isCrouching() && (player.getOffhandItem().getCount() >= 14) && player.getOffhandItem().is(ModItems.SOUL)) {
+            if (!player.isCrouching() && (player.getOffhandItem().getCount() >= 10) && player.getOffhandItem().is(ModItems.SOUL)) {
 
                 for (LivingEntity livingEntity : nearbyEntities) {
-                    livingEntity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 400, 1, false, false, false));
+                    livingEntity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 660, 0, true, true, true));
+                    livingEntity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 260, 0, true, true, true));
                 }
-
-                for (Player players : nearbyPlayers) {
-                    players.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 1, false, false, false));
-                }
-                player.getOffhandItem().shrink(14);
-                player.removeEffect(MobEffects.BLINDNESS);
-                player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1, false, false, false));
+                player.getOffhandItem().shrink(10);
+                player.removeEffect(MobEffects.DIG_SLOWDOWN);
+                player.removeEffect(MobEffects.WEAKNESS);
+                player.addEffect(new MobEffectInstance(ModEffects.DETERMINED, 600, 0));
                 TomeParticles((ServerLevel) level, player);
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 800, 0));
+                level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_AGILITY_TOME_USE, SoundSource.NEUTRAL, 1, 1);
                 level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), SoundEvents.SOUL_ESCAPE, SoundSource.NEUTRAL, 1, 1);
-                level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_WATCHING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
                 player.getItemInHand(interactionHand).hurtAndBreak(1, player, p -> p.broadcastBreakEvent(interactionHand));
-                player.getCooldowns().addCooldown(this, 100);
+                player.getCooldowns().addCooldown(this, 400);
             }
         }
 

@@ -83,7 +83,6 @@ public class Peculia implements ModInitializer {
 		ModEffects.registerDeterminedStatusEffect();
 		ModEffects.registerStagnatedEffect();
 		ModEffects.registerEchoingEffect();
-		ModEffects.registerGroundedEffect();
 		ModEffects.registerStunnedEffect();
 
 		ModPotions.registerIchorPotion();

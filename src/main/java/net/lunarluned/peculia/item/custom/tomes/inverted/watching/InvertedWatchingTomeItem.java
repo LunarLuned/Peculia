@@ -5,6 +5,7 @@ import net.lunarluned.peculia.item.custom.tomes.GenericTomeItem;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -30,6 +31,26 @@ public class InvertedWatchingTomeItem extends GenericTomeItem {
         ItemStack itemStack = player.getItemInHand(interactionHand);
         if (!level.isClientSide) {
 
+            if (!player.isCrouching() && !player.getOffhandItem().is(ModItems.SOUL)) {
+                player.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                return InteractionResultHolder.fail(itemStack);
+            }
+            if (player.isCrouching() && !player.getOffhandItem().is(ModItems.SOUL)) {
+                player.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                return InteractionResultHolder.fail(itemStack);
+            }
+            if (player.getOffhandItem().isEmpty()) {
+                player.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                return InteractionResultHolder.fail(itemStack);
+            }
+            if (!player.getOffhandItem().is(ModItems.SOUL)) {
+                player.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
+                return InteractionResultHolder.fail(itemStack);
+            }
 
             if (!player.isCrouching() && player.getOffhandItem().is(ModItems.SOUL)) {
 
@@ -65,6 +86,7 @@ public class InvertedWatchingTomeItem extends GenericTomeItem {
                 player.removeEffect(MobEffects.BLINDNESS);
                 player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 1, false, false, false));
                 TomeParticles((ServerLevel) level, player);
+                level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), SoundEvents.SOUL_ESCAPE, SoundSource.NEUTRAL, 1, 1);
                 level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_WATCHING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
                 player.getItemInHand(interactionHand).hurtAndBreak(1, player, p -> p.broadcastBreakEvent(interactionHand));
                 player.getCooldowns().addCooldown(this, 100);

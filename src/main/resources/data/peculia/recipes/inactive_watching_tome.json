@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "peculia:inactive_tome"
+  },
+  "addition": {
+    "item": "minecraft:glowstone_dust"
+  },
+  "result": {
+    "item": "peculia:inactive_watching_tome"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "peculia:inactive_watching_tome"
+  },
+  "addition": {
+    "item": "minecraft:eye_of_ender"
+  },
+  "result": {
+    "item": "peculia:lesser_tome_of_watching"
+  }
+}

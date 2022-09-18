@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "peculia:lesser_tome_of_updraft"
+  },
+  "addition": {
+    "item": "peculia:sanguine_quartz"
+  },
+  "result": {
+    "item": "peculia:lesser_inverted_tome_of_updraft"
+  }
+}

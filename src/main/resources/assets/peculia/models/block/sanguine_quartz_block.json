@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "peculia:block/sanguine_quartz_top",
+    "side": "peculia:block/sanguine_quartz"
+  }
+}

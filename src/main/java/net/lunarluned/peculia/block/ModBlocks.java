@@ -44,7 +44,7 @@ public class ModBlocks {
     new Block(FabricBlockSettings.of(Material.METAL).strength(2f).requiresTool().sounds(SoundType.METAL)), ModItemGroup.PECULIA);
 
     public static final Block MYTHRIL_CRYSTAL = registerBlock("mythril_crystal",
-    new MythrilCrystalBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(ModSoundEvents.MYTHRIL)), ModItemGroup.PECULIA);
+    new MythrilCrystalBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(ModSoundEvents.MYTHRIL), UniformInt.of(2, 8)), ModItemGroup.PECULIA);
 
     public static final Block MYTHRIL_BRICKS = registerBlock("mythril_bricks",
     new Block(FabricBlockSettings.of(Material.METAL).strength(2f).requiresTool().nonOpaque().sounds(ModSoundEvents.MYTHRIL)), ModItemGroup.PECULIA);
@@ -193,6 +193,9 @@ public class ModBlocks {
 
     public static final Block ICHOR_STICKER = registerBlock("ichor_sticker",
     new IchorStickerBlock(FabricBlockSettings.of(Material.PLANT).sounds(SoundType.WART_BLOCK).nonOpaque().luminance(15).strength(1f)), ModItemGroup.PECULIA_NETHER);
+
+    public static final Block SANGUINE_QUARTZ_BLOCK = registerBlock("sanguine_quartz_block",
+            new SanguineQuartzBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(ModSoundEvents.MYTHRIL), UniformInt.of(2, 8)), ModItemGroup.PECULIA);
 
     public static final Block SCULK_SPINE = registerBlock("sculk_spine",
     new SculkPillarBlock(FabricBlockSettings.of(Material.SCULK).mapColor(MaterialColor.TERRACOTTA_WHITE).sounds(SoundType.SCULK_CATALYST).requiresTool().resistance(1).strength(2f),
