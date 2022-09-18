@@ -2,19 +2,67 @@ package net.lunarluned.peculia;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
 import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.client.ModEntityRenderer;
 import net.lunarluned.peculia.misc.ModParticles;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 
 @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
 public class PeculiaClientMod implements ClientModInitializer {
+
+    public static ModelResourceLocation TOME_OF_HEALING_INVENTORY = new ModelResourceLocation("peculia:tome_of_healing_inventory#inventory");
+    public static ModelResourceLocation INVERTED_TOME_OF_HEALING_INVENTORY = new ModelResourceLocation("peculia:inverted_tome_of_healing_inventory#inventory");
+
+    public static ModelResourceLocation TOME_OF_UPDRAFT_INVENTORY = new ModelResourceLocation("peculia:tome_of_updraft_inventory#inventory");
+    public static ModelResourceLocation INVERTED_TOME_OF_UPDRAFT_INVENTORY = new ModelResourceLocation("peculia:inverted_tome_of_updraft_inventory#inventory");
+
+    public static ModelResourceLocation TOME_OF_EMPOWERING_INVENTORY = new ModelResourceLocation("peculia:tome_of_empowering_inventory#inventory");
+    public static ModelResourceLocation INVERTED_TOME_OF_EMPOWERING_INVENTORY = new ModelResourceLocation("peculia:inverted_tome_of_empowering_inventory#inventory");
+
+    public static ModelResourceLocation TOME_OF_AGILITY_INVENTORY = new ModelResourceLocation("peculia:tome_of_agility_inventory#inventory");
+    public static ModelResourceLocation INVERTED_TOME_OF_AGILITY_INVENTORY = new ModelResourceLocation("peculia:inverted_tome_of_agility_inventory#inventory");
+
+    public static ModelResourceLocation TOME_OF_FORTIFYING_INVENTORY = new ModelResourceLocation("peculia:tome_of_fortifying_inventory#inventory");
+    public static ModelResourceLocation INVERTED_TOME_OF_FORTIFYING_INVENTORY = new ModelResourceLocation("peculia:inverted_tome_of_fortifying_inventory#inventory");
+
+    public static ModelResourceLocation TOME_OF_WATCHING_INVENTORY = new ModelResourceLocation("peculia:tome_of_watching_inventory#inventory");
+    public static ModelResourceLocation INVERTED_TOME_OF_WATCHING_INVENTORY = new ModelResourceLocation("peculia:inverted_tome_of_watching_inventory#inventory");
+
+
+
     @Override
     public void onInitializeClient() {
         ModParticles.init();
         ModEntityRenderer.registerRenderers();
 
         // Renders Blocks in List as Transparent (With Translucency)
+
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(TOME_OF_HEALING_INVENTORY));
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(INVERTED_TOME_OF_HEALING_INVENTORY));
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(TOME_OF_UPDRAFT_INVENTORY));
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(INVERTED_TOME_OF_UPDRAFT_INVENTORY));
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(TOME_OF_EMPOWERING_INVENTORY));
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(INVERTED_TOME_OF_EMPOWERING_INVENTORY));
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(TOME_OF_AGILITY_INVENTORY));
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(INVERTED_TOME_OF_AGILITY_INVENTORY));
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(TOME_OF_FORTIFYING_INVENTORY));
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(INVERTED_TOME_OF_FORTIFYING_INVENTORY));
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(TOME_OF_WATCHING_INVENTORY));
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(INVERTED_TOME_OF_WATCHING_INVENTORY));
 
         BlockRenderLayerMap.INSTANCE.putBlocks(
                 RenderType.translucent(),
@@ -34,6 +82,7 @@ public class PeculiaClientMod implements ClientModInitializer {
                 ModBlocks.CHISELED_POPROCK_BRICKS,
                 ModBlocks.DRAGONGLASS,
                 ModBlocks.DRAGONGLASS_PANE
+
 
         );
         //hello acikek.

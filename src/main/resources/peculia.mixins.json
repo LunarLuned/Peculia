@@ -9,9 +9,9 @@
     "ItemDropMixin",
     "PlayerManagerMixin",
     "ScytheModification",
-    "anchored.ChorusFruitMixin",
-    "anchored.EnderPearlMixin",
-    "cursed.ItemMixin",
+    "effects.anchored.ChorusFruitMixin",
+    "effects.anchored.EnderPearlMixin",
+    "effects.cursed.ItemMixin",
     "enchantments.AxeModification",
     "enchantments.EnchantingDenialMixin",
     "enchantments.GauntletModification",
@@ -24,7 +24,8 @@
     "util.SimpleParticleTypeAccessor"
   ],
   "client": [
-    "stunned.KeyboardMixin"
+    "effects.stunned.KeyboardMixin",
+    "items.misc.ItemRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

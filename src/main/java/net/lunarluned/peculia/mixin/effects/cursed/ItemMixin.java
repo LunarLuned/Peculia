@@ -1,4 +1,4 @@
-package net.lunarluned.peculia.mixin.cursed;
+package net.lunarluned.peculia.mixin.effects.cursed;
 
 import net.lunarluned.peculia.effect.ModEffects;
 import net.minecraft.core.BlockPos;

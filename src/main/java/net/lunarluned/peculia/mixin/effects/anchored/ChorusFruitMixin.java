@@ -1,4 +1,4 @@
-package net.lunarluned.peculia.mixin.anchored;
+package net.lunarluned.peculia.mixin.effects.anchored;
 
 import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.effect.ModEffects;

@@ -1,4 +1,4 @@
-package net.lunarluned.peculia.mixin.stunned;
+package net.lunarluned.peculia.mixin.effects.stunned;
 
 import net.lunarluned.peculia.effect.ModEffects;
 import net.minecraft.client.KeyMapping;

@@ -1,6 +1,8 @@
 package net.lunarluned.peculia.enchantment;
 
 import net.lunarluned.peculia.item.custom.ModGauntletItem;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -18,7 +20,7 @@ public class ShoryukenEnchantment extends Enchantment {
     @Override
     public void doPostAttack(@NotNull LivingEntity user, @NotNull Entity target, int level) {
         if (target instanceof LivingEntity) {
-            target.setDeltaMovement(0, (level / 6.0f) * (1.0D - ((LivingEntity) (target)).getAttributeValue(Attributes.KNOCKBACK_RESISTANCE) * 0.5), 0);
+            ((LivingEntity) target).addEffect(new MobEffectInstance(MobEffects.LEVITATION, 5, 19, false, false, false));
         }
     }
 
