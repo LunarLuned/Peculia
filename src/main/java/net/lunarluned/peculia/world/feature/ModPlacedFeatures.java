@@ -48,4 +48,8 @@ public class ModPlacedFeatures {
     ModConfiguredFeatures.FLUORITE, ModOreFeatures.modifiersWithCount(2,
     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.aboveBottom(40))));
 
+    public static final Holder<PlacedFeature> ORE_SANGUINE_QUARTZ = PlacementUtils.register("sanguine_quartz",
+            ModConfiguredFeatures.SANGUINE_QUARTZ, ModOreFeatures.modifiersWithCount(3,
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(80), VerticalAnchor.aboveBottom(140))));
+
 }

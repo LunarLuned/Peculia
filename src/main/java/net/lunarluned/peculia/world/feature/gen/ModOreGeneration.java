@@ -41,5 +41,8 @@ public class ModOreGeneration {
 
         BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
                 GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.ORE_FLUORITE.unwrapKey().get());
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.ORE_SANGUINE_QUARTZ.unwrapKey().get());
     }
 }

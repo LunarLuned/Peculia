@@ -99,6 +99,15 @@ public class ModConfiguredFeatures {
     FeatureUtils.register("crumbling_endstone", Feature.ORE,
     new OreConfiguration(ORE_CRUMBLING_END_STONE, 30));
 
+    public static final List<OreConfiguration.TargetBlockState> ORE_SANGUINE_QUARTZ = List.of(
+            OreConfiguration.target(new BlockMatchTest(Blocks.AIR),
+                    ModBlocks.SANGUINE_QUARTZ_BLOCK.defaultBlockState()));
+
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> SANGUINE_QUARTZ =
+            FeatureUtils.register("sanguine_quartz", Feature.ORE,
+                    new OreConfiguration(ORE_SANGUINE_QUARTZ, 6));
+    // it aint generating. my game theory is that it's like. cave air or smth but its 12am i wanna go sleep lol
+
 
 // Registry for Configured Features:
 
