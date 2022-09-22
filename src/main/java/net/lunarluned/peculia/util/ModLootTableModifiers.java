@@ -103,7 +103,7 @@ public class ModLootTableModifiers {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1));
                 LootPool.Builder builder = LootPool.lootPool();
-                builder.when(LootItemRandomChanceCondition.randomChance(0.5f)); //50% chance
+                builder.when(LootItemRandomChanceCondition.randomChance(0.1f)); //10% chance
                 builder.setRolls(UniformGenerator.between(1, 1)); //  you'll get 1
                 builder.add(LootItem.lootTableItem(ModItems.FALLEN_HERO_DAGGER));
                 table.withPool(builder);
@@ -114,7 +114,7 @@ public class ModLootTableModifiers {
                         .setRolls(ConstantValue.exactly(1));
                 LootPool.Builder builder = LootPool.lootPool();
                 builder.when(LootItemRandomChanceCondition.randomChance(0.9f)); //90% chance
-                builder.setRolls(UniformGenerator.between(7, 10)); //  you'll get 7, 8, 9 or t10
+                builder.setRolls(UniformGenerator.between(7, 26)); //  at the least you'll get 7, at most 26
                 builder.add(LootItem.lootTableItem(ModItems.SOUL));
                 table.withPool(builder);
 

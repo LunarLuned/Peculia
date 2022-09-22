@@ -53,7 +53,7 @@ public class ModItems {
     new PeculiarDaggerItem(ModToolMaterials.PECULIAR,3, -2.0f,new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).rarity(Rarity.EPIC)));
 
     public static final Item PECULIAR_SWORD = registerItem("peculiar_sword",
-    new PeculiarDaggerItem(ModToolMaterials.PECULIAR,5, -2.5f,new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).rarity(Rarity.EPIC)));
+    new PeculiarSwordItem(ModToolMaterials.PECULIAR,5, -2.5f,new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).rarity(Rarity.EPIC)));
 
     public static final Item SOUL = registerItem("soul",
     new SoulItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON)));
