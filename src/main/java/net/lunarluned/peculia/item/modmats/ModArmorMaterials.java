@@ -3,6 +3,7 @@ package net.lunarluned.peculia.item.modmats;
 import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
@@ -13,7 +14,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     MYTHRIL("mythril", 33, new int[]{3, 6, 8, 3}, 20, ModSoundEvents.ARMOR_MYTHRIL_EQUIP, 3.0F, 0.0F, () -> {
         return Ingredient.of(ModItems.MYTHRIL_INGOT);
     }),
-    CLOAK("cloak", 22, new int[]{1, 4, 4, 2}, 35, ModSoundEvents.ARMOR_MYTHRIL_EQUIP, 0.0F, 0.0F, () -> {
+    CLOAK("cloak", 22, new int[]{1, 4, 4, 2}, 35, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> {
         return Ingredient.of(ModItems.SOUL);
     });
 

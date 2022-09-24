@@ -1,5 +1,6 @@
 package net.lunarluned.peculia.mixin.effects.stunned;
 
+import com.mojang.blaze3d.platform.InputConstants;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.KeyboardHandler;
@@ -8,6 +9,9 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import javax.swing.*;
+import java.awt.event.KeyEvent;
 
 @Mixin(KeyboardHandler.class)
 public abstract class KeyboardMixin {
