@@ -65,91 +65,91 @@ public class ModItems {
     new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
 
     public static final Item LESSER_TOME_OF_HEALING = registerItem("lesser_tome_of_healing",
-    new LesserHealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    new LesserHealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item TOME_OF_HEALING = registerItem("tome_of_healing",
-    new HealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
+    new HealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item LESSER_INVERTED_TOME_OF_HEALING = registerItem("lesser_inverted_tome_of_healing",
-    new LesserInvertedHealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    new LesserInvertedHealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item INVERTED_TOME_OF_HEALING = registerItem("inverted_tome_of_healing",
-    new InvertedHealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
+    new InvertedHealingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item INACTIVE_UPDRAFT_TOME = registerItem("inactive_updraft_tome",
     new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
 
     public static final Item LESSER_TOME_OF_UPDRAFT = registerItem("lesser_tome_of_updraft",
-    new LesserUpdraftTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    new LesserUpdraftTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item TOME_OF_UPDRAFT = registerItem("tome_of_updraft",
-    new UpdraftTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
+    new UpdraftTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item LESSER_INVERTED_TOME_OF_UPDRAFT = registerItem("lesser_inverted_tome_of_updraft",
-    new LesserInvertedUpdraftTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    new LesserInvertedUpdraftTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item INVERTED_TOME_OF_UPDRAFT = registerItem("inverted_tome_of_updraft",
-    new InvertedUpdraftTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
+    new InvertedUpdraftTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item INACTIVE_EMPOWERING_TOME = registerItem("inactive_empowering_tome",
     new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
 
     public static final Item LESSER_TOME_OF_EMPOWERING = registerItem("lesser_tome_of_empowering",
-    new LesserEmpoweringTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    new LesserEmpoweringTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item TOME_OF_EMPOWERING = registerItem("tome_of_empowering",
-    new EmpoweringTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
+    new EmpoweringTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item LESSER_INVERTED_TOME_OF_EMPOWERING = registerItem("lesser_inverted_tome_of_empowering",
-    new LesserInvertedEmpoweringTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    new LesserInvertedEmpoweringTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item INVERTED_TOME_OF_EMPOWERING = registerItem("inverted_tome_of_empowering",
-    new InvertedEmpoweringTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
+    new InvertedEmpoweringTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item INACTIVE_AGILITY_TOME = registerItem("inactive_agility_tome",
     new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
 
     public static final Item LESSER_TOME_OF_AGILITY = registerItem("lesser_tome_of_agility",
-    new LesserAgilityTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    new LesserAgilityTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item TOME_OF_AGILITY = registerItem("tome_of_agility",
-    new AgilityTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
+    new AgilityTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item LESSER_INVERTED_TOME_OF_AGILITY = registerItem("lesser_inverted_tome_of_agility",
-    new LesserInvertedAgilityTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    new LesserInvertedAgilityTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item INVERTED_TOME_OF_AGILITY = registerItem("inverted_tome_of_agility",
-    new InvertedAgilityTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
+    new InvertedAgilityTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item INACTIVE_FORTIFYING_TOME = registerItem("inactive_fortifying_tome",
     new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
 
     public static final Item LESSER_TOME_OF_FORTIFYING = registerItem("lesser_tome_of_fortifying",
-    new LesserFortifyingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    new LesserFortifyingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item TOME_OF_FORTIFYING = registerItem("tome_of_fortifying",
-    new FortifyingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
+    new FortifyingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item LESSER_INVERTED_TOME_OF_FORTIFYING = registerItem("lesser_inverted_tome_of_fortifying",
-    new LesserInvertedFortifyingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    new LesserInvertedFortifyingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item INVERTED_TOME_OF_FORTIFYING = registerItem("inverted_tome_of_fortifying",
-    new InvertedFortifyingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
+    new InvertedFortifyingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item INACTIVE_WATCHING_TOME = registerItem("inactive_watching_tome",
     new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
 
     public static final Item LESSER_TOME_OF_WATCHING = registerItem("lesser_tome_of_watching",
-    new LesserWatchingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    new LesserWatchingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item TOME_OF_WATCHING = registerItem("tome_of_watching",
-    new WatchingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
+    new WatchingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item LESSER_INVERTED_TOME_OF_WATCHING = registerItem("lesser_inverted_tome_of_watching",
-    new LesserInvertedWatchingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(32)));
+    new LesserInvertedWatchingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item INVERTED_TOME_OF_WATCHING = registerItem("inverted_tome_of_watching",
-    new InvertedWatchingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON).maxDamage(64)));
+    new InvertedWatchingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
 
     public static final Item CLOAK_HELMET = registerItem("cloak_helmet",
     new ArmorItem(ModArmorMaterials.CLOAK, EquipmentSlot.HEAD,

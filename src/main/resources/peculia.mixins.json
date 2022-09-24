@@ -18,6 +18,7 @@
     "enchantments.PickaxeModification",
     "entities.LivingEntityMixin",
     "entities.ghast.GhastEntityMixin",
+    "entities.warden.SonicBoomMixin",
     "entities.warden.WardenEntityMixin",
     "entities.wither.WitherEntityMixin",
     "entities.wither.WitherSkullEntityMixin",

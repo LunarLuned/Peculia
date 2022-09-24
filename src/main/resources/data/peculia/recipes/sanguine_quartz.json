@@ -1,12 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "##",
-    "##"
+    "###",
+    "#Q#",
+    "###"
   ],
   "key": {
     "#": {
       "item": "peculia:sanguine_quartz_fragment"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
     }
   },
   "result": {
