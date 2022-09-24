@@ -9,8 +9,10 @@ import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.NotNull;
 
 public class FullSculkSacItem extends Item {
 
@@ -18,16 +20,18 @@ public class FullSculkSacItem extends Item {
         super(settings);
     }
 
-    public InteractionResultHolder<ItemStack> use(Player user, InteractionHand hand) {
+    @Override
+    public InteractionResultHolder<ItemStack> use(@NotNull Level world, Player user, @NotNull InteractionHand hand) {
+
         ItemStack itemStack = user.getItemInHand(hand);
 
-        if (user.level instanceof ServerLevel) {
-            int i = 3 + user.level.random.nextInt(5) + user.level.random.nextInt(5);
-            ExperienceOrb.award((ServerLevel) user.level, Vec3.atCenterOf(user.getOnPos()), i);
+        if (!world.isClientSide) {
+            int i = 3 + world.random.nextInt(5) + world.random.nextInt(5);
+            ExperienceOrb.award((ServerLevel) world, Vec3.atCenterOf(user.getOnPos()), i);
             itemStack.shrink(1);
             user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
-            user.level.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), SoundEvents.SCULK_BLOCK_CHARGE, SoundSource.NEUTRAL, 0.5F, 0.4F / (user.level.getRandom().nextFloat() * 0.4F + 0.8F));
+            world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), SoundEvents.SCULK_BLOCK_CHARGE, SoundSource.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
         }
-        return InteractionResultHolder.sidedSuccess(itemStack, user.level.isClientSide());
+        return InteractionResultHolder.sidedSuccess(itemStack, world.isClientSide());
     }
 }
