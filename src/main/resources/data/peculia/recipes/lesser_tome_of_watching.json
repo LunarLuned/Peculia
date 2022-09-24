@@ -4,7 +4,7 @@
     "item": "peculia:inactive_watching_tome"
   },
   "addition": {
-    "item": "minecraft:eye_of_ender"
+    "item": "minecraft:ender_eye"
   },
   "result": {
     "item": "peculia:lesser_tome_of_watching"

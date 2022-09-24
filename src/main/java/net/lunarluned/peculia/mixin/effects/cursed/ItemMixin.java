@@ -18,11 +18,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(Item.class)
 public abstract class ItemMixin {
 
-    @Inject(at = @At("RETURN"), method = "use")
+    @Inject(at = @At("RETURN"), method = "use", cancellable = true)
     public void use(Level level, Player player, InteractionHand interactionHand, CallbackInfoReturnable<InteractionResultHolder<ItemStack>> cir) {
         if (player.hasEffect(ModEffects.CURSED)) {
+            InteractionResultHolder.fail(player.getItemInHand(interactionHand));
+        } else {
             InteractionResultHolder.pass(player.getItemInHand(interactionHand));
-        }
+            }
     }
 
     @Inject(at = @At("HEAD"), method = "canAttackBlock", cancellable = true)
