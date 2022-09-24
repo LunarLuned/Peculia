@@ -2,12 +2,10 @@ package net.lunarluned.peculia.item.custom.tomes.updraft;
 
 import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.item.custom.tomes.GenericTomeItem;
-import net.lunarluned.peculia.misc.ModParticles;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.ParticleUtils;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -24,7 +22,6 @@ public class LesserUpdraftTomeItem extends GenericTomeItem {
     public LesserUpdraftTomeItem(Properties settings) {
         super(settings);
     }
-
 
     public InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand interactionHand) {
         ItemStack itemStack = player.getItemInHand(interactionHand);
@@ -48,7 +45,7 @@ public class LesserUpdraftTomeItem extends GenericTomeItem {
             }
 
             if (!player.isCrouching() && player.getOffhandItem().getCount() >= 4 && player.getOffhandItem().is(ModItems.SOUL))  {
-                player.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 5, 29));
+                player.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 5, 29, false, false, false));
                 TomeParticles((ServerLevel) level, player);
                 player.getOffhandItem().shrink(4);
                 level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_UPDRAFT_TOME_USE, SoundSource.NEUTRAL, 1, 1);
