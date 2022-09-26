@@ -64,7 +64,7 @@ public class LesserWatchingTomeItem extends GenericTomeItem {
                 }
                 player.getOffhandItem().shrink(14);
                 TomeParticles((ServerLevel) level, player);
-                level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_UPDRAFT_TOME_USE, SoundSource.NEUTRAL, 1, 1);
+                level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_WATCHING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
                 player.getItemInHand(interactionHand).hurtAndBreak(1, player, p -> p.broadcastBreakEvent(interactionHand));
                 player.getCooldowns().addCooldown(this, 200);
             }
