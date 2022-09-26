@@ -12,6 +12,12 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
 public class PeculiaClientMod implements ClientModInitializer {
 
+    public static ModelResourceLocation MYTHRIL_HALBERD_INVENTORY = new ModelResourceLocation("peculia:mythril_halberd_inventory#inventory");
+    public static ModelResourceLocation MYTHRIL_CLAYMORE_INVENTORY = new ModelResourceLocation("peculia:mythril_claymore_inventory#inventory");
+    public static ModelResourceLocation MYTHRIL_HAMMER_INVENTORY = new ModelResourceLocation("peculia:mythril_hammer_inventory#inventory");
+    public static ModelResourceLocation MYTHRIL_SCYTHE_INVENTORY = new ModelResourceLocation("peculia:mythril_scythe_inventory#inventory");
+    public static ModelResourceLocation MYTHRIL_SPEAREL_INVENTORY = new ModelResourceLocation("peculia:mythril_spearel_inventory#inventory");
+
     public static ModelResourceLocation TOME_OF_HEALING_INVENTORY = new ModelResourceLocation("peculia:tome_of_healing_inventory#inventory");
     public static ModelResourceLocation INVERTED_TOME_OF_HEALING_INVENTORY = new ModelResourceLocation("peculia:inverted_tome_of_healing_inventory#inventory");
 
@@ -37,7 +43,16 @@ public class PeculiaClientMod implements ClientModInitializer {
         ModParticles.init();
         ModEntityRenderer.registerRenderers();
 
-        // Renders Blocks in List as Transparent (With Translucency)
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(MYTHRIL_HALBERD_INVENTORY));
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(MYTHRIL_CLAYMORE_INVENTORY));
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(MYTHRIL_HAMMER_INVENTORY));
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(MYTHRIL_SCYTHE_INVENTORY));
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(MYTHRIL_SPEAREL_INVENTORY));
 
         ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
                 out.accept(TOME_OF_HEALING_INVENTORY));
@@ -63,6 +78,10 @@ public class PeculiaClientMod implements ClientModInitializer {
                 out.accept(TOME_OF_WATCHING_INVENTORY));
         ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
                 out.accept(INVERTED_TOME_OF_WATCHING_INVENTORY));
+
+        // Renders Blocks in List as Transparent (With Translucency)
+
+
 
         BlockRenderLayerMap.INSTANCE.putBlocks(
                 RenderType.translucent(),

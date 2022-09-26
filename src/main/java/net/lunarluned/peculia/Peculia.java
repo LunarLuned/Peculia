@@ -105,8 +105,6 @@ public class Peculia implements ModInitializer {
 
 		FuelRegistry.INSTANCE.add(ModItems.SOUL, 1000);
 
-		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.LUSH_CAVES), MobCategory.CREATURE, ModEntities.COAL_GEODE, 100, 1, 2);
-
 		LOGGER.info("You have 5 days until the piss droplets hit your minecraft house.");
 		LOGGER.info("ඞ");
 	}

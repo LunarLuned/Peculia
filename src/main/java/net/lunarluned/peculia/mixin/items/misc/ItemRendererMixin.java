@@ -30,6 +30,18 @@ public class ItemRendererMixin {
 
         if (bl2) {
 
+            if (itemStack.is(ModItems.MYTHRIL_HALBERD))
+                return itemModelShaper.getModelManager().getModel(PeculiaClientMod.MYTHRIL_HALBERD_INVENTORY);
+            if (itemStack.is(ModItems.MYTHRIL_CLAYMORE))
+                return itemModelShaper.getModelManager().getModel(PeculiaClientMod.MYTHRIL_CLAYMORE_INVENTORY);
+            if (itemStack.is(ModItems.MYTHRIL_HAMMER))
+                return itemModelShaper.getModelManager().getModel(PeculiaClientMod.MYTHRIL_HAMMER_INVENTORY);
+            if (itemStack.is(ModItems.MYTHRIL_SCYTHE))
+                return itemModelShaper.getModelManager().getModel(PeculiaClientMod.MYTHRIL_SCYTHE_INVENTORY);
+            if (itemStack.is(ModItems.MYTHRIL_SPEAREL))
+                return itemModelShaper.getModelManager().getModel(PeculiaClientMod.MYTHRIL_SPEAREL_INVENTORY);
+
+
             if (itemStack.is(ModItems.TOME_OF_HEALING))
                 return itemModelShaper.getModelManager().getModel(PeculiaClientMod.TOME_OF_HEALING_INVENTORY);
             if (itemStack.is(ModItems.LESSER_TOME_OF_HEALING))
