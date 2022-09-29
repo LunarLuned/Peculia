@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "peculia:peculiar_sword",
+    "peculia:peculiar_dagger",
+    "peculia:soul",
+    "peculia:cloak_helmet",
+    "peculia:cloak_chestplate",
+    "peculia:cloak_leggings",
+    "peculia:healing_glyph",
+    "peculia:agility_glyph",
+    "peculia:updraft_glyph",
+    "peculia:empowering_glyph",
+    "peculia:fortifying_glyph",
+    "peculia:watching_glyph",
+    "minecraft:end_portal_frame",
+    "minecraft:ender_eye",
+    "minecraft:blaze_rod",
+    "minecraft:blaze_powder"
+  ]
+}

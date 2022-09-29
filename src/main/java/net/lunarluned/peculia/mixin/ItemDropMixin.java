@@ -32,5 +32,12 @@ public abstract class ItemDropMixin extends Entity {
             isInvulnerableTo(DamageSource.OUT_OF_WORLD);
             this.setDeltaMovement(this.getDeltaMovement().multiply(0.96D, -1D, 0.96D));
         }
+
+        if (getItem().is(PeculiaTags.SPOOKY_ITEMS)) {
+
+            setNoGravity(true);
+            this.setDeltaMovement(this.getDeltaMovement().multiply(0.8D, 0.8D, 0.8D));
+
+        }
     }
 }
