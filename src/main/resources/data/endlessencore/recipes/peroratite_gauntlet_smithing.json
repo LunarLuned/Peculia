@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "peculia:diamond_gauntlet"
+  },
+  "addition": {
+    "item": "endlessencore:peroratite_ingot"
+  },
+  "result": {
+    "item": "endlessencore:peroratite_gauntlet"
+  }
+}
