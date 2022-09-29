@@ -18,6 +18,9 @@ public class PeculiaClientMod implements ClientModInitializer {
     public static ModelResourceLocation MYTHRIL_SCYTHE_INVENTORY = new ModelResourceLocation("peculia:mythril_scythe_inventory#inventory");
     public static ModelResourceLocation MYTHRIL_SPEAREL_INVENTORY = new ModelResourceLocation("peculia:mythril_spearel_inventory#inventory");
 
+    public static ModelResourceLocation SOUL_SCYTHE_INVENTORY = new ModelResourceLocation("peculia:soul_scythe_inventory#inventory");
+    public static ModelResourceLocation JAILORS_SCYTHE_INVENTORY = new ModelResourceLocation("peculia:jailors_scythe_inventory#inventory");
+
     public static ModelResourceLocation TOME_OF_HEALING_INVENTORY = new ModelResourceLocation("peculia:tome_of_healing_inventory#inventory");
     public static ModelResourceLocation INVERTED_TOME_OF_HEALING_INVENTORY = new ModelResourceLocation("peculia:inverted_tome_of_healing_inventory#inventory");
 
@@ -53,6 +56,11 @@ public class PeculiaClientMod implements ClientModInitializer {
                 out.accept(MYTHRIL_SCYTHE_INVENTORY));
         ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
                 out.accept(MYTHRIL_SPEAREL_INVENTORY));
+
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(SOUL_SCYTHE_INVENTORY));
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(JAILORS_SCYTHE_INVENTORY));
 
         ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
                 out.accept(TOME_OF_HEALING_INVENTORY));

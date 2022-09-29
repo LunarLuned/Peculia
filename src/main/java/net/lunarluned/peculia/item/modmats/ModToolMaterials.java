@@ -22,10 +22,14 @@ public enum ModToolMaterials implements Tier {
     PECULIAR(6, 2452, 13.0F, 5.0F, 25, () -> {
         return Ingredient.of(ModItems.BOTTLE_OF_CONDENSED_VOID);
     }),
+    SCYTHE(6, 950, 0F, 0.0F, 1, () -> {
+        return Ingredient.of(Items.IRON_INGOT);
+    }),
     SCRAP(4, 890, 9.0F, 4.0F, 1, () -> {
         return Ingredient.of(Items.NETHERITE_SCRAP);
 
     });
+
 
 
     private final int miningLevel;

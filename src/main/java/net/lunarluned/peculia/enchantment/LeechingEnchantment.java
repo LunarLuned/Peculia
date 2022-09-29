@@ -1,6 +1,6 @@
 package net.lunarluned.peculia.enchantment;
 
-import net.lunarluned.peculia.item.custom.ModHoeItem;
+import net.lunarluned.peculia.item.custom.scythes.GenericScytheItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
@@ -62,7 +62,7 @@ public class LeechingEnchantment extends Enchantment {
 
     @Override
     public boolean canEnchant(ItemStack stack) {
-        return stack.getItem() instanceof ModHoeItem;
+        return stack.getItem() instanceof GenericScytheItem;
     }
 
 }

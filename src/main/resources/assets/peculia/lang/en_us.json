@@ -38,6 +38,8 @@
   "item.peculia.charged_gilded_copper_cleaver": "Copper Cleaver",
   "item.peculia.charged_gilded_copper_cleaver.desc": "Charged, Rose Gold",
 
+  "item.peculia.soul_scythe": "Soul Scythe",
+  "item.peculia.jailors_scythe": "Jailor's Scythe",
 
   "item.peculia.sacrificial_dagger": "Sacrificial Dagger",
   "item.peculia.wither_skull_mask": "Wither Skull Mask",
@@ -377,6 +379,7 @@
   "effect.peculia.ichor": "Ichor",
   "effect.peculia.echoing": "Echoing",
   "effect.peculia.cursed": "Cursed",
+  "effect.peculia.stunned": "Stunned",
   "effect.peculia.void_touched": "Void Touched",
   "effect.peculia.anchored": "Anchored",
   "effect.peculia.ichor_resistance": "Ichor Resistance",

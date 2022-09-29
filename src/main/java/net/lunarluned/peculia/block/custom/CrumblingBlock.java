@@ -9,6 +9,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.gameevent.GameEvent;
 import org.jetbrains.annotations.NotNull;
 
 public class CrumblingBlock extends Block {
@@ -20,6 +21,7 @@ public class CrumblingBlock extends Block {
         if (entity instanceof LivingEntity) {
             setToAir(state, level, pos);
             super.stepOn(level, pos, state, entity);
+            entity.gameEvent(GameEvent.BLOCK_DESTROY);
 
             level.playSound(null, pos, SoundEvents.NETHERRACK_BREAK, SoundSource.BLOCKS, 1F, 1.0F);
             level.levelEvent(null, 2001, pos, getId(state));

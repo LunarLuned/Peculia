@@ -41,6 +41,10 @@ public class ItemRendererMixin {
             if (itemStack.is(ModItems.MYTHRIL_SPEAREL))
                 return itemModelShaper.getModelManager().getModel(PeculiaClientMod.MYTHRIL_SPEAREL_INVENTORY);
 
+            if (itemStack.is(ModItems.SOUL_SCYTHE))
+                return itemModelShaper.getModelManager().getModel(PeculiaClientMod.SOUL_SCYTHE_INVENTORY);
+            if (itemStack.is(ModItems.JAILORS_SCYTHE))
+                return itemModelShaper.getModelManager().getModel(PeculiaClientMod.JAILORS_SCYTHE_INVENTORY);
 
             if (itemStack.is(ModItems.TOME_OF_HEALING))
                 return itemModelShaper.getModelManager().getModel(PeculiaClientMod.TOME_OF_HEALING_INVENTORY);

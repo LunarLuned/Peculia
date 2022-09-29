@@ -5,6 +5,9 @@ import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.common.registry.entity.registry.ModEntities;
 import net.lunarluned.peculia.item.custom.*;
 import net.lunarluned.peculia.item.custom.glyphs.*;
+import net.lunarluned.peculia.item.custom.scythes.GenericScytheItem;
+import net.lunarluned.peculia.item.custom.scythes.JailorsScytheItem;
+import net.lunarluned.peculia.item.custom.scythes.SoulScytheItem;
 import net.lunarluned.peculia.item.custom.tomes.*;
 import net.lunarluned.peculia.item.custom.tomes.agility.AgilityTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.agility.LesserAgilityTomeItem;
@@ -202,7 +205,7 @@ public class ModItems {
     new ModSwordItem(ModToolMaterials.MYTHRIL,5, -2.7f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
 
     public static final Item MYTHRIL_SCYTHE = registerItem("mythril_scythe",
-    new ModHoeItem(ModToolMaterials.MYTHRIL, 4, -2.5f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
+    new GenericScytheItem(ModToolMaterials.MYTHRIL, 4, -2.5f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
 
     public static final Item MYTHRIL_HALBERD = registerItem("mythril_halberd",
     new ModAxeItem(ModToolMaterials.MYTHRIL,8, -3.1f, new FabricItemSettings().group(ModItemGroup.PECULIA).maxCount(1)));
@@ -331,6 +334,12 @@ public class ModItems {
 
     public static final Item CHARGED_GILDED_COPPER_CLEAVER = registerItem("charged_gilded_copper_cleaver",
     new ElectrocutedItem(ModToolMaterials.COPPER,1, -2.0f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).maxCount(1)));
+
+    public static final Item SOUL_SCYTHE = registerItem("soul_scythe",
+    new SoulScytheItem(ModToolMaterials.SCYTHE, 4, -2.4f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).maxCount(1)));
+
+    public static final Item JAILORS_SCYTHE = registerItem("jailors_scythe",
+    new JailorsScytheItem(ModToolMaterials.SCYTHE, 6, -2.2f, new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).maxCount(1)));
 
     public static final Item SCULK_SAC = registerItem("sculk_sac",
     new SculkSacItem(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).rarity(Rarity.UNCOMMON)));

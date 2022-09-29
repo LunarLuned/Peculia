@@ -19,6 +19,7 @@ public class PeculiaConfig {
 
     public static void init() {
         INT_OPTIONS.put("echo_chance", 25);
+        INT_OPTIONS.put("soul_scythe_chance", 10);
     }
     public static void loadConfig() {
         JsonObject json;

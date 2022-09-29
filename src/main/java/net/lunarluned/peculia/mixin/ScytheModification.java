@@ -1,6 +1,6 @@
 package net.lunarluned.peculia.mixin;
 
-import net.lunarluned.peculia.item.custom.ModHoeItem;
+import net.lunarluned.peculia.item.custom.scythes.GenericScytheItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.*;
 import org.spongepowered.asm.mixin.Final;
@@ -22,19 +22,19 @@ public abstract class ScytheModification {
     public void isAcceptableItem(ItemStack itemStack, CallbackInfoReturnable<Boolean> cir) {
         Enchantment enchantment = (Enchantment) (Object) this;
         if (enchantment instanceof KnockbackEnchantment) {
-            if (type != EnchantmentCategory.WEAPON || !(itemStack.getItem() instanceof ModHoeItem)) return;
+            if (type != EnchantmentCategory.WEAPON || !(itemStack.getItem() instanceof GenericScytheItem)) return;
             cir.setReturnValue(true);
         }
         if (enchantment instanceof SweepingEdgeEnchantment) {
-            if (type != EnchantmentCategory.WEAPON || !(itemStack.getItem() instanceof ModHoeItem)) return;
+            if (type != EnchantmentCategory.WEAPON || !(itemStack.getItem() instanceof GenericScytheItem)) return;
             cir.setReturnValue(true);
         }
         if (enchantment instanceof DamageEnchantment) {
-            if (type != EnchantmentCategory.WEAPON || !(itemStack.getItem() instanceof ModHoeItem)) return;
+            if (type != EnchantmentCategory.WEAPON || !(itemStack.getItem() instanceof GenericScytheItem)) return;
             cir.setReturnValue(true);
         }
         if (enchantment instanceof FireAspectEnchantment) {
-            if (type != EnchantmentCategory.WEAPON || !(itemStack.getItem() instanceof ModHoeItem)) return;
+            if (type != EnchantmentCategory.WEAPON || !(itemStack.getItem() instanceof GenericScytheItem)) return;
             cir.setReturnValue(true);
         }
     }
