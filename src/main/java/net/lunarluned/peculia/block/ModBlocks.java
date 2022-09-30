@@ -311,7 +311,8 @@ public class ModBlocks {
 
 //misc
 
-
+    public static final Block GRAVESTONE = registerBlock("gravestone",
+            new GravestoneBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).sounds(SoundType.DEEPSLATE).requiresTool().resistance(2).strength(3f)), ModItemGroup.PECULIA_MISC);
 
     private static Block registerBlock(String name, Block block, CreativeModeTab group) {
         registerBlockItem(name, block, group);

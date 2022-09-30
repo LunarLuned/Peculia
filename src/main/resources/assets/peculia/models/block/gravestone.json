@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [15, 17],
 	"textures": {
-		"0": "gravestone",
-		"particle": "gravestone"
+		"0": "peculia:block/gravestone",
+		"particle": "peculia:block/gravestone"
 	},
 	"elements": [
 		{
