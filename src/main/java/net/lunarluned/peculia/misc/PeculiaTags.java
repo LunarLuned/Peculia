@@ -8,6 +8,5 @@ import net.minecraft.world.item.Item;
 public class PeculiaTags {
 
     public static final TagKey<Item> ALERTING_ITEMS = TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation("peculia", "alerting_items"));
-    public static final TagKey<Item> SPOOKY_ITEMS = TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation("peculia", "spooky_items"));
 
 }

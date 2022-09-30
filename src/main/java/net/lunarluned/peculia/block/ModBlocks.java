@@ -309,6 +309,9 @@ public class ModBlocks {
     public static final Block SNOW_BRICK_WALL = registerBlock("snow_brick_wall",
     new WallBlock(FabricBlockSettings.of(Material.SNOW).mapColor(MaterialColor.SNOW).strength(2f).requiresTool().sounds(SoundType.SNOW).nonOpaque()), ModItemGroup.PECULIA_OVERWORLD);
 
+//misc
+
+
 
     private static Block registerBlock(String name, Block block, CreativeModeTab group) {
         registerBlockItem(name, block, group);

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "peculia:block/gravestone",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "peculia:block/gravestone"
+    },
+    "facing=south": {
+      "model": "peculia:block/gravestone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "peculia:block/gravestone",
+      "y": 270
+    }
+  }
+}
