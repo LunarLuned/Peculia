@@ -166,6 +166,7 @@
   "item.peculia.disc_fragment_lulla.desc": "Amber Gray - Lulla",
 
   "block.peculia.gravestone": "Gravestone",
+  "block.peculia.corporeum_soul_sand": "Corporeum Soul Sand",
 
   "block.peculia.cryptstone": "Cryptstone",
   "block.peculia.polished_cryptstone": "Polished Cryptstone",
@@ -182,6 +183,8 @@
   "block.peculia.polished_cryptstone_tile_slab": "Polished Cryptstone Tile Slab",
   "block.peculia.polished_cryptstone_tile_wall": "Polished Cryptstone Tile Wall",
 
+  "item.peculia.corporeum_fragment": "Corporeum Fragment",
+  "item.peculia.bucket_of_agony": "Bucket Of Agony",
   "item.peculia.soul": "Soul",
   "item.peculia.inactive_tome": "Inactive Tome",
   "item.peculia.inactive_tome.desc": "Empty",

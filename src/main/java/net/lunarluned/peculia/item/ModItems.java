@@ -61,6 +61,12 @@ public class ModItems {
     public static final Item SOUL = registerItem("soul",
     new SoulItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON)));
 
+    public static final Item CORPOREUM_FRAGMENT = registerItem("corporeum_fragment",
+    new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
+
+    public static final Item BUCKET_OF_AGONY = registerItem("bucket_of_agony",
+    new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
+
     public static final Item INACTIVE_TOME = registerItem("inactive_tome",
     new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
 
