@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#TR",
+    "TLT",
+    "RT#"
+  ],
+  "key": {
+    "#": {
+      "item": "peculia:soul"
+    },
+    "T": {
+      "item": "peculia:corporeum_fragment"
+    },
+    "R": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "L": {
+      "item": "minecraft:lava_bucket"
+    }
+  },
+  "result": {
+    "item": "peculia:bucket_of_agony",
+    "count": 1
+  }
+}
