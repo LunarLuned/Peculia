@@ -167,6 +167,21 @@
 
   "block.peculia.gravestone": "Gravestone",
 
+  "block.peculia.cryptstone": "Cryptstone",
+  "block.peculia.polished_cryptstone": "Polished Cryptstone",
+  "block.peculia.polished_cryptstone_bricks": "Polished Cryptstone Bricks",
+  "block.peculia.polished_cryptstone_tiles": "Polished Cryptstone Tiles",
+  "block.peculia.polished_cryptstone_pillar": "Polished Cryptstone Pillar",
+  "block.peculia.polished_cryptstone_stairs": "Polished Cryptstone Stairs",
+  "block.peculia.polished_cryptstone_slab": "Polished Cryptstone Slab",
+  "block.peculia.polished_cryptstone_wall": "Polished Cryptstone Wall",
+  "block.peculia.polished_cryptstone_brick_stairs": "Polished Cryptstone Brick Stairs",
+  "block.peculia.polished_cryptstone_brick_slab": "Polished Cryptstone Brick Slab",
+  "block.peculia.polished_cryptstone_brick_wall": "Polished Cryptstone Brick Wall",
+  "block.peculia.polished_cryptstone_tile_stairs": "Polished Cryptstone Tile Stairs",
+  "block.peculia.polished_cryptstone_tile_slab": "Polished Cryptstone Tile Slab",
+  "block.peculia.polished_cryptstone_tile_wall": "Polished Cryptstone Tile Wall",
+
   "item.peculia.soul": "Soul",
   "item.peculia.inactive_tome": "Inactive Tome",
   "item.peculia.inactive_tome.desc": "Empty",

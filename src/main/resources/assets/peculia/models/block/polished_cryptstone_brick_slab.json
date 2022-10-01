@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "peculia:block/polished_cryptstone_bricks",
+    "top": "peculia:block/polished_cryptstone_bricks",
+    "side": "peculia:block/polished_cryptstone_bricks"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "peculia:crumbling_stone",
+    "peculia:crumbling_deepslate",
+    "peculia:cryptstone",
+    "peculia:sill"
+  ]
+}

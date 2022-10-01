@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "peculia:block/polished_cryptstone_brick_slab"
+    },
+    "type=double": {
+      "model": "peculia:block/polished_cryptstone_bricks"
+    },
+    "type=top": {
+      "model": "peculia:block/polished_cryptstone_brick_slab_top"
+    }
+  }
+}

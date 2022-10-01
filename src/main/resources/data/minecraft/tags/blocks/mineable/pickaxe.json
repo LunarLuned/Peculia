@@ -76,6 +76,20 @@
     "peculia:charged_ferrock",
     "peculia:refined_ferrock_bricks",
     "peculia:refined_ferrock_tiles",
-    "peculia:gravestone"
+    "peculia:gravestone",
+    "peculia:fluorite",
+    "peculia:polished_cryptstone",
+    "peculia:polished_cryptstone_pillar",
+    "peculia:polished_cryptstone_slab",
+    "peculia:polished_cryptstone_stairs",
+    "peculia:polished_cryptstone_wall",
+    "peculia:polished_cryptstone_bricks",
+    "peculia:polished_cryptstone_brick_slab",
+    "peculia:polished_cryptstone_brick_stairs",
+    "peculia:polished_cryptstone_brick_wall",
+    "peculia:polished_cryptstone_tiles",
+    "peculia:polished_cryptstone_tile_slab",
+    "peculia:polished_cryptstone_tile_stairs",
+    "peculia:polished_cryptstone_tile_wall"
   ]
 }

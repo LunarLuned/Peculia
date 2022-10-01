@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "peculia:fluorite"
+    "peculia:fluorite",
+    "peculia:cryptstone"
   ]
 }

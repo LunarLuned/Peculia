@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "peculia:block/polished_cryptstone",
+    "top": "peculia:block/polished_cryptstone",
+    "side": "peculia:block/polished_cryptstone"
+  }
+}

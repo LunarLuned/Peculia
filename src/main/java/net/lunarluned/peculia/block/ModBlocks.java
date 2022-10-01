@@ -312,7 +312,64 @@ public class ModBlocks {
 //misc
 
     public static final Block GRAVESTONE = registerBlock("gravestone",
-            new GravestoneBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).sounds(SoundType.DEEPSLATE).requiresTool().resistance(2).strength(3f)), ModItemGroup.PECULIA_MISC);
+    new GravestoneBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).sounds(SoundType.DEEPSLATE).requiresTool().resistance(2).strength(3f)), ModItemGroup.PECULIA_MISC);
+
+
+    public static final Block CRYPTSTONE = registerBlock("cryptstone",
+            new Block(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).sounds(SoundType.DEEPSLATE).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block POLISHED_CRYPTSTONE = registerBlock("polished_cryptstone",
+            new Block(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).sounds(SoundType.DEEPSLATE).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block POLISHED_CRYPTSTONE_STAIRS = registerBlock("polished_cryptstone_stairs",
+            new ModStairsBlock(ModBlocks.POLISHED_FLUORITE.defaultBlockState(),
+                    FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).strength(2f).requiresTool().sounds(SoundType.DEEPSLATE)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block POLISHED_CRYPTSTONE_SLAB = registerBlock("polished_cryptstone_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).strength(2f).requiresTool().sounds(SoundType.DEEPSLATE)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block POLISHED_CRYPTSTONE_WALL = registerBlock("polished_cryptstone_wall",
+            new WallBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).strength(2f).requiresTool().sounds(SoundType.DEEPSLATE)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block POLISHED_CRYPTSTONE_BRICKS = registerBlock("polished_cryptstone_bricks",
+            new Block(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).sounds(SoundType.DEEPSLATE_BRICKS).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block POLISHED_CRYPTSTONE_BRICK_STAIRS = registerBlock("polished_cryptstone_brick_stairs",
+            new ModStairsBlock(ModBlocks.POLISHED_FLUORITE_BRICKS.defaultBlockState(),
+                    FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).strength(2f).requiresTool().sounds(SoundType.DEEPSLATE_BRICKS)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block POLISHED_CRYPTSTONE_BRICK_SLAB = registerBlock("polished_cryptstone_brick_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).strength(2f).requiresTool().sounds(SoundType.DEEPSLATE_BRICKS)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block POLISHED_CRYPTSTONE_BRICK_WALL = registerBlock("polished_cryptstone_brick_wall",
+            new WallBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).strength(2f).requiresTool().sounds(SoundType.DEEPSLATE_BRICKS)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block POLISHED_CRYPTSTONE_PILLAR = registerBlock("polished_cryptstone_pillar",
+            new RotatedPillarBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).sounds(SoundType.DEEPSLATE_BRICKS).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block POLISHED_CRYPTSTONE_TILES = registerBlock("polished_cryptstone_tiles",
+            new Block(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).sounds(SoundType.DEEPSLATE_TILES).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block POLISHED_CRYPTSTONE_TILE_STAIRS = registerBlock("polished_cryptstone_tile_stairs",
+            new ModStairsBlock(ModBlocks.SILL_BRICKS.defaultBlockState(),
+                    FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).strength(2f).requiresTool().sounds(SoundType.DEEPSLATE_TILES)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block POLISHED_CRYPTSTONE_TILE_SLAB = registerBlock("polished_cryptstone_tile_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).strength(2f).requiresTool().sounds(SoundType.DEEPSLATE_TILES)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block POLISHED_CRYPTSTONE_TILE_WALL = registerBlock("polished_cryptstone_tile_wall",
+            new WallBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).strength(2f).requiresTool().sounds(SoundType.DEEPSLATE_TILES)), ModItemGroup.PECULIA_OVERWORLD);
+
+
+
+
+
+
+
+
+
+
+
 
     private static Block registerBlock(String name, Block block, CreativeModeTab group) {
         registerBlockItem(name, block, group);

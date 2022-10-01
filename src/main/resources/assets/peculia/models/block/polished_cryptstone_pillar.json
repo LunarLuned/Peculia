@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "peculia:block/polished_cryptstone_pillar_top",
+    "side": "peculia:block/polished_cryptstone_pillar"
+  }
+}
+
