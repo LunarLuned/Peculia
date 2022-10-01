@@ -12,8 +12,6 @@ import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 
-// I don't know how any of this works, you're gonna have to figure that out yourself anne sorry! - Sydney
-//god i have no clue, for the time being its commented out
 
 
 public class ModLootTableModifiers {
@@ -45,6 +43,10 @@ public class ModLootTableModifiers {
             = new ResourceLocation("minecraft", "entities/wither");
     private static final ResourceLocation ENDER_DRAGON_ENTITY_ID
             = new ResourceLocation("minecraft", "entities/ender_dragon");
+
+    //block
+    private static final ResourceLocation GRAVESTONE_BLOCK_ID
+            = new ResourceLocation("peculia", "blocks/gravestone");
 
     //entities
     private static final ResourceLocation ZOMBIE_ENTITY_ID
@@ -86,6 +88,33 @@ public class ModLootTableModifiers {
                 builder.when(LootItemRandomChanceCondition.randomChance(0.2f)); //20% chance
                 builder.setRolls(UniformGenerator.between(12, 38)); // at the least you'll get 12, at most 38
                 builder.add(LootItem.lootTableItem(ModItems.SCULK_SAC));
+                table.withPool(builder);
+            }
+            if(GRAVESTONE_BLOCK_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.85f)); //85% chance
+                builder.setRolls(UniformGenerator.between(1, 3)); // at the least you'll get 1, at most 3
+                builder.add(LootItem.lootTableItem(Items.ROTTEN_FLESH));
+                table.withPool(builder);
+            }
+            if(GRAVESTONE_BLOCK_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.70f)); //20% chance
+                builder.setRolls(UniformGenerator.between(1, 6)); // at the least you'll get 1, at most 6
+                builder.add(LootItem.lootTableItem(Items.BONE));
+                table.withPool(builder);
+            }
+            if(GRAVESTONE_BLOCK_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1));
+                LootPool.Builder builder = LootPool.lootPool();
+                builder.when(LootItemRandomChanceCondition.randomChance(0.50f)); //20% chance
+                builder.setRolls(UniformGenerator.between(1, 2)); // at the least you'll get 1, at most 6
+                builder.add(LootItem.lootTableItem(Items.DRIED_KELP));
                 table.withPool(builder);
             }
             //bosses
