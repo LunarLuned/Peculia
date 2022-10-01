@@ -314,6 +314,8 @@ public class ModBlocks {
     public static final Block GRAVESTONE = registerBlock("gravestone",
     new GravestoneBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).sounds(SoundType.DEEPSLATE).requiresTool().resistance(2).strength(3f)), ModItemGroup.PECULIA_MISC);
 
+    public static final Block CORPOREUM_SOUL_SAND = registerBlock("corporeum_soul_sand",
+            new CorporeumSoulSandBlock(FabricBlockSettings.of(Material.SAND).mapColor(MaterialColor.COLOR_BROWN).sounds(SoundType.SOUL_SAND).resistance(1).strength(1f)), ModItemGroup.PECULIA_NETHER);
 
     public static final Block CRYPTSTONE = registerBlock("cryptstone",
             new Block(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).sounds(SoundType.DEEPSLATE).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
