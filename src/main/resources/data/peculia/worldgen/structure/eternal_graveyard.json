@@ -3,7 +3,7 @@
 
   "start_pool": "peculia:eternal_graveyard/start_pool",
 
-  "size": 3,
+  "size": 6,
 
   "max_distance_from_center": 112,
 

@@ -1,0 +1,17 @@
+{
+
+
+  "name": "peculia:eternal_graveyard/graveyards_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "peculia:eternal_graveyard/graveyards/grave_field_1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
