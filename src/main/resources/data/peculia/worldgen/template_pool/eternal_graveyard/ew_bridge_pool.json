@@ -1,0 +1,26 @@
+{
+
+
+  "name": "peculia:eternal_graveyard/ns_bridge_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "peculia:eternal_graveyard/bridge_west/west_bridge_1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "peculia:eternal_graveyard/bridge_east/east_bridge_1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
