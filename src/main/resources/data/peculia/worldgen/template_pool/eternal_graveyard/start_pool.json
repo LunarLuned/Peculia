@@ -1,0 +1,23 @@
+{
+
+  "name": "peculia:eternal_graveyard/start_pool",
+
+  "fallback": "minecraft:empty",
+
+  "elements": [
+    {
+
+      "weight": 1,
+      "element": {
+
+        "location": "peculia:eternal_graveyard/graveyard_center/crypt_1",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
