@@ -3,11 +3,15 @@ package net.lunarluned.peculia;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
 import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.client.ModEntityRenderer;
+import net.lunarluned.peculia.item.ModItems;
+import net.lunarluned.peculia.item.custom.RemnantHeartItem;
 import net.lunarluned.peculia.misc.ModParticles;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 
 @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
 public class PeculiaClientMod implements ClientModInitializer {
@@ -40,11 +44,13 @@ public class PeculiaClientMod implements ClientModInitializer {
     public static ModelResourceLocation INVERTED_TOME_OF_WATCHING_INVENTORY = new ModelResourceLocation("peculia:inverted_tome_of_watching_inventory#inventory");
 
 
-
     @Override
     public void onInitializeClient() {
         ModParticles.init();
         ModEntityRenderer.registerRenderers();
+
+        FabricModelPredicateProviderRegistry.register(ModItems.REMNANT_HEART, new ResourceLocation("opened"),
+                (itemStack, clientWorld, livingEntity, worldSeed) -> RemnantHeartItem.isOpened(itemStack) ? 1.0F : 0.0F);
 
         ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
                 out.accept(MYTHRIL_HALBERD_INVENTORY));

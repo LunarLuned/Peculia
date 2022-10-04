@@ -118,6 +118,14 @@ public class Peculia implements ModInitializer {
 			bypassArmor();
 		}
 	}
+	public static class SiphoningDamageSource extends DamageSource {
+
+		public SiphoningDamageSource() {
+			super("siphoning");
+			bypassArmor();
+			bypassEnchantments();
+		}
+	}
 	public static class IchorDamageSource extends DamageSource {
 
 		public IchorDamageSource() {

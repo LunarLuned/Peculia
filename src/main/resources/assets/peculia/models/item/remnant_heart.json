@@ -902,6 +902,14 @@
 			}
 		}
 	],
+	"overrides": [
+		{
+			"predicate": {
+				"opened": 1
+			},
+			"model": "peculia:item/remnant_heart_open"
+		}
+	],
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [90, 0, -90],

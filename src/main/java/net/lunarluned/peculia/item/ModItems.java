@@ -47,16 +47,16 @@ public class ModItems {
     // Misc Items
 
     public static final Item FALLEN_HERO_DAGGER = registerItem("fallen_hero_dagger",
-    new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).rarity(Rarity.UNCOMMON)));
+    new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).fireproof().rarity(Rarity.UNCOMMON)));
 
     public static final Item FALLEN_HERO_SWORD = registerItem("fallen_hero_sword",
-    new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).rarity(Rarity.UNCOMMON)));
+    new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).fireproof().rarity(Rarity.UNCOMMON)));
 
     public static final Item PECULIAR_DAGGER = registerItem("peculiar_dagger",
-    new PeculiarDaggerItem(ModToolMaterials.PECULIAR,3, -2.0f,new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).rarity(Rarity.EPIC)));
+    new PeculiarDaggerItem(ModToolMaterials.PECULIAR,3, -2.0f,new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).fireproof().rarity(Rarity.EPIC)));
 
     public static final Item PECULIAR_SWORD = registerItem("peculiar_sword",
-    new PeculiarSwordItem(ModToolMaterials.PECULIAR,5, -2.5f,new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).rarity(Rarity.EPIC)));
+    new PeculiarSwordItem(ModToolMaterials.PECULIAR,5, -2.5f,new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).fireproof().rarity(Rarity.EPIC)));
 
     public static final Item SOUL = registerItem("soul",
     new SoulItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON)));
@@ -69,6 +69,9 @@ public class ModItems {
 
     public static final Item ECTOPLASM = registerItem("ectoplasm",
     new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON)));
+
+    public static final Item REMNANT_HEART = registerItem("remnant_heart",
+    new RemnantHeartItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).rarity(Rarity.UNCOMMON)));
 
     public static final Item INACTIVE_TOME = registerItem("inactive_tome",
     new ModTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
