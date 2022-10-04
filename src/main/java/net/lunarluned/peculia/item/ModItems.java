@@ -36,6 +36,7 @@ import net.lunarluned.peculia.item.custom.tomes.watching.WatchingTomeItem;
 import net.lunarluned.peculia.item.modmats.ModArmorMaterials;
 import net.lunarluned.peculia.item.modmats.ModFoodComponents;
 import net.lunarluned.peculia.item.modmats.ModToolMaterials;
+import net.lunarluned.peculia.misc.PeculiaTags;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -326,6 +327,9 @@ public class ModItems {
 
     public static final Item SPORODINE = registerItem("sporodine",
     new Item(new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER)));
+
+    public static final Item TUSK_HORN = registerItem("tusk_horn",
+    new TuskHornItem(new FabricItemSettings().tab(ModItemGroup.PECULIA_NETHER).stacksTo(1), PeculiaTags.TUSK_HORNS));
 
     // Overworld Items
 

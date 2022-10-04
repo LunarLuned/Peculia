@@ -420,5 +420,23 @@
         "stream": true
       }
     ]
+  },
+  "item.tusk_horn.stampede": {
+    "sounds": [
+      "peculia:item/tusk_horn/stampede"
+    ],
+    "subtitle": "subtitles.item.tusk_horn"
+  },
+  "item.tusk_horn.pulse": {
+    "sounds": [
+      "peculia:item/tusk_horn/pulse"
+    ],
+    "subtitle": "subtitles.item.tusk_horn"
+  },
+  "item.tusk_horn.cry": {
+    "sounds": [
+      "peculia:item/tusk_horn/cry"
+    ],
+    "subtitle": "subtitles.item.tusk_horn"
   }
 }
