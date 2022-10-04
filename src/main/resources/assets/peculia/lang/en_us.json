@@ -429,6 +429,11 @@
   "item.agility_tome.crowd_use": "Tome speeds up an area",
   "item.watching_tome.use": "Tome observes",
 
+  "item.peculia.tusk_horn": "Tusk Horn",
+  "instrument.peculia.stampede_tusk_horn": "Stampede",
+  "instrument.peculia.pulse_tusk_horn": "Pulse",
+  "instrument.peculia.cry_tusk_horn": "Cry",
+  "subtitles.item.tusk_horn": "Tusk Horn plays",
 
   "death.attack.electrocution": "%1$s was electrocuted to death",
   "death.attack.echoing": "%1$s faced the echo of a blade",

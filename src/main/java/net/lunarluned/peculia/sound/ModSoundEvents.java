@@ -76,6 +76,10 @@ public class ModSoundEvents {
 
     public static final SoundEvent ITEM_GENERIC_GLYPH_USE = registerSoundEvent("item.generic_glyph.use");
 
+    public static final SoundEvent ITEM_TUSK_HORN_STAMPEDE = registerSoundEvent("item.tusk_horn.stampede");
+    public static final SoundEvent ITEM_TUSK_HORN_PULSE = registerSoundEvent("item.tusk_horn.pulse");
+    public static final SoundEvent ITEM_TUSK_HORN_CRY = registerSoundEvent("item.tusk_horn.cry");
+
     public static final SoundEvent BLOCK_ICHOR_STICKER_RELEASE = registerSoundEvent("block.ichor_sticker.release");
 
     public static final SoundType MYTHRIL = new SoundType(1f, 1f,

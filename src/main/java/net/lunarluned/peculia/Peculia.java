@@ -16,16 +16,19 @@ import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.item.compat.CombatantItems;
 import net.lunarluned.peculia.item.compat.OdysseyItems;
 import net.lunarluned.peculia.misc.ModGameEvents;
+import net.lunarluned.peculia.misc.ModInstruments;
 import net.lunarluned.peculia.misc.ModParticles;
 import net.lunarluned.peculia.potion.ModPotions;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.lunarluned.peculia.util.ModLootTableModifiers;
 import net.lunarluned.peculia.world.feature.ModConfiguredFeatures;
 import net.lunarluned.peculia.world.feature.gen.ModWorldGen;
+import net.minecraft.core.Registry;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.EntityDamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.item.Instrument;
 import net.minecraft.world.level.biome.Biomes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,17 +41,8 @@ public class Peculia implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-		// To Fix:
-
-		                                        // - Greater Tome of Healing - fixed!
-		                                        // - Both Updraft Tomes - fixed!
-		                                        // - Both Tomes of Fortifying - fixed!
-		                                        // - Ichor Stichor - fixed!
-		// - Sculk Sac and Full Sculk Sac
-		                                        // - Electrocuted Effect - fixed!
-		                                        // - Loot Table Modifiers - fixed
-
 		// ඞ
+
 		PeculiaConfig.init();
 		String defaultConfig = """
 				{
@@ -100,6 +94,12 @@ public class Peculia implements ModInitializer {
 		if (FabricLoader.getInstance().isModLoaded("odyssey")) {
 			OdysseyItems.registerOdysseyCompatItems();
 		}
+
+		// Tusk Horns
+
+		Registry.register(Registry.INSTRUMENT, ModInstruments.STAMPEDE_TUSK_HORN, new Instrument(ModSoundEvents.ITEM_TUSK_HORN_STAMPEDE, 140, 256.0F));
+		Registry.register(Registry.INSTRUMENT, ModInstruments.PULSE_TUSK_HORN, new Instrument(ModSoundEvents.ITEM_TUSK_HORN_PULSE, 140, 256.0F));
+		Registry.register(Registry.INSTRUMENT, ModInstruments.CRY_TUSK_HORN, new Instrument(ModSoundEvents.ITEM_TUSK_HORN_CRY, 140, 256.0F));
 
 		// Furnace Fuel
 
