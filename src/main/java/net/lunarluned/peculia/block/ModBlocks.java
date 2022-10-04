@@ -13,6 +13,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.properties.ChestType;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 
@@ -372,11 +373,12 @@ public class ModBlocks {
 
 
 
-
     private static Block registerBlock(String name, Block block, CreativeModeTab group) {
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new ResourceLocation(Peculia.MOD_ID, name), block);
     }
+
+
 
     private static Item registerBlockItem(String name, Block block, CreativeModeTab group) {
         return Registry.register(Registry.ITEM, new ResourceLocation(Peculia.MOD_ID, name),
