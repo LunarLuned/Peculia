@@ -13,7 +13,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.properties.ChestType;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 
@@ -180,11 +179,19 @@ public class ModBlocks {
     public static final Block DRAGONGLASS_PANE = registerBlock("dragonglass_pane",
     new IronBarsBlock(FabricBlockSettings.copyOf(Blocks.GLASS).strength(1f).nonOpaque().requiresTool()), ModItemGroup.PECULIA);
 
+
+
+
+
+
+
+    // nether blocks
+
     public static final Block CRUMBLING_NETHERRACK = registerBlock("crumbling_netherrack",
     new CrumblingBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.NETHERRACK).strength(0f).resistance(0)), ModItemGroup.PECULIA_NETHER);
 
     public static final Block ICHOR_MOLD_VEIN = registerBlock("ichor_mold_vein",
-    new IchorMoldVeinBlock(FabricBlockSettings.of(Material.PLANT).sounds(SoundType.WART_BLOCK).nonOpaque().strength(0.1f)), ModItemGroup.PECULIA_NETHER);
+    new GenericMultifaceBlock(FabricBlockSettings.of(Material.PLANT).sounds(SoundType.WART_BLOCK).noCollision().nonOpaque().strength(0.1f)), ModItemGroup.PECULIA_NETHER);
 
     public static final Block ICHOR_MOLD = registerBlock("ichor_mold",
     new Block(FabricBlockSettings.of(Material.PLANT).sounds(SoundType.WART_BLOCK).strength(1f)), ModItemGroup.PECULIA_NETHER);
@@ -195,8 +202,22 @@ public class ModBlocks {
     public static final Block ICHOR_STICKER = registerBlock("ichor_sticker",
     new IchorStickerBlock(FabricBlockSettings.of(Material.PLANT).sounds(SoundType.WART_BLOCK).nonOpaque().luminance(15).strength(1f)), ModItemGroup.PECULIA_NETHER);
 
+    public static final Block PERFORATED_FLESH = registerBlock("perforated_flesh",
+    new Block(FabricBlockSettings.of(Material.PLANT).sounds(SoundType.WART_BLOCK).strength(3f).requiresTool()), ModItemGroup.PECULIA_NETHER);
+
+    public static final Block ARTERIAL_BRAMBLE = registerBlock("arterial_bramble",
+    new ArterialBrambleBlock(FabricBlockSettings.of(Material.PLANT).sounds(SoundType.WART_BLOCK).nonOpaque().noCollision()), ModItemGroup.PECULIA_NETHER);
+
     public static final Block SANGUINE_QUARTZ_BLOCK = registerBlock("sanguine_quartz_block",
-            new SanguineQuartzBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(ModSoundEvents.MYTHRIL), UniformInt.of(2, 8)), ModItemGroup.PECULIA_NETHER);
+    new SanguineQuartzBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(ModSoundEvents.MYTHRIL), UniformInt.of(2, 8)), ModItemGroup.PECULIA_NETHER);
+
+
+
+
+
+
+
+    // overworld blocks
 
     public static final Block SCULK_SPINE = registerBlock("sculk_spine",
     new SculkPillarBlock(FabricBlockSettings.of(Material.SCULK).mapColor(MaterialColor.TERRACOTTA_WHITE).sounds(SoundType.SCULK_CATALYST).requiresTool().resistance(1).strength(2f),

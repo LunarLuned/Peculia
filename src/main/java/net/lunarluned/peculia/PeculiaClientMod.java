@@ -95,12 +95,11 @@ public class PeculiaClientMod implements ClientModInitializer {
 
         // Renders Blocks in List as Transparent (With Translucency)
 
-
-
         BlockRenderLayerMap.INSTANCE.putBlocks(
                 RenderType.translucent(),
 
                 ModBlocks.ICHOR_MOLD_VEIN,
+                ModBlocks.ARTERIAL_BRAMBLE,
                 ModBlocks.ICHOR_STICKER,
                 ModBlocks.MYTHRIL_CRYSTAL,
                 ModBlocks.MYTHRIL_BRICKS,

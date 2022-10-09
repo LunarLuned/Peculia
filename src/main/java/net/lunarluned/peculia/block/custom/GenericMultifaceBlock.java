@@ -4,9 +4,9 @@ import net.minecraft.world.level.block.MultifaceBlock;
 import net.minecraft.world.level.block.MultifaceSpreader;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
-public class IchorMoldVeinBlock extends MultifaceBlock {
+public class GenericMultifaceBlock extends MultifaceBlock {
 
-    public IchorMoldVeinBlock(BlockBehaviour.Properties settings) {
+    public GenericMultifaceBlock(BlockBehaviour.Properties settings) {
         super(settings);
     }
 
