@@ -190,7 +190,7 @@ public class ModBlocks {
     new Block(FabricBlockSettings.of(Material.PLANT).sounds(SoundType.WART_BLOCK).strength(1f)), ModItemGroup.PECULIA_NETHER);
 
     public static final Block ICHOR_NYLIUM = registerBlock("ichor_nylium",
-    new Block(FabricBlockSettings.of(Material.STONE).sounds(SoundType.NYLIUM).strength(1f)), ModItemGroup.PECULIA_NETHER);
+    new IchorNyliumBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.NYLIUM).strength(1f)), ModItemGroup.PECULIA_NETHER);
 
     public static final Block ICHOR_STICKER = registerBlock("ichor_sticker",
     new IchorStickerBlock(FabricBlockSettings.of(Material.PLANT).sounds(SoundType.WART_BLOCK).nonOpaque().luminance(15).strength(1f)), ModItemGroup.PECULIA_NETHER);

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:nether/find_bastion",
+  "criteria": {
+    "blowing_horn": {
+      "conditions": {
+        "item": {
+          "items": [
+            "peculia:tusk_horn"
+          ]
+        }
+      },
+      "trigger": "minecraft:using_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.adventure.use_tusk_horn.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "peculia:tusk_horn"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.adventure.use_tusk_horn.title"
+    }
+  },
+  "requirements": [
+    [
+      "blowing_horn"
+    ]
+  ]
+}

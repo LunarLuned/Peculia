@@ -1,3 +1,6 @@
 {
-  "parent": "peculia:block/gravestone"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "peculia:item/gravestone"
+  }
 }

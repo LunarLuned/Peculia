@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "peculia:sill_ruin",
+      "weight": 4
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+
+    "salt": 1414694280,
+
+    "spacing": 8,
+
+    "separation": 4
+  }
+}
