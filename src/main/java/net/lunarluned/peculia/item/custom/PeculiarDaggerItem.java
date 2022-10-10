@@ -1,6 +1,9 @@
 package net.lunarluned.peculia.item.custom;
 
-import net.lunarluned.peculia.config.PeculiaConfig;
+import net.lunarluned.peculia.Peculia;
+import net.lunarluned.peculia.config.ModConfig;
+import net.lunarluned.peculia.config.options.items.ItemChances;
+import net.lunarluned.peculia.config.options.items.ItemsConfig;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -26,7 +29,7 @@ public class PeculiarDaggerItem extends ModDaggerItem {
 
     @Override
     public boolean hurtEnemy(@NotNull ItemStack stack, @NotNull LivingEntity target, @NotNull LivingEntity attacker) {
-        if (attacker instanceof Player player && player.getRandom().nextInt(100) <= PeculiaConfig.getIntValue("echo_chance")) {
+        if (attacker instanceof Player player && player.getRandom().nextInt(100) <= Peculia.getConfig().items.itemsConfig.itemChances.echoing_chance) {
             player.level.playSound(null, player.getOnPos(), ModSoundEvents.ECHO_ATTACK_HIT, SoundSource.PLAYERS, 1.0F, 1.0F);
             super.hurtEnemy(stack, target, attacker);
             target.addEffect(new MobEffectInstance(ModEffects.ECHOING, 40, 0));

@@ -26,6 +26,9 @@
     ],
     "client": [
       "net.lunarluned.peculia.PeculiaClientMod"
+    ],
+    "modmenu": [
+      "net.lunarluned.peculia.config.ModMenuCompatibility"
     ]
   },
   "mixins": [

@@ -1,6 +1,5 @@
 package net.lunarluned.peculia.enchantment;
 
-import net.lunarluned.peculia.config.PeculiaConfig;
 import net.lunarluned.peculia.item.custom.ModSwordItem;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -26,7 +25,7 @@ public class NewEchoEnchantment extends Enchantment {
 
     @Override
     public void doPostAttack(@NotNull LivingEntity user, @NotNull Entity target, int level) {
-        if (user instanceof Player player && player.getRandom().nextInt(100) <= PeculiaConfig.getIntValue("echo_chance")) {
+        if (user instanceof Player player && player.getRandom().nextInt(100) <= 25) {
 
         }
     }

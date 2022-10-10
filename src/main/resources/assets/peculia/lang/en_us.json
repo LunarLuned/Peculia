@@ -459,5 +459,57 @@
   "death.attack.ichor": "%1$s couldn't stop burning",
   "death.attack.ichor.player": "%1$s couldn't stop burning whilst fighting %2$s",
   "death.attack.echomirror": "%1$s's mirror shattered in their hands",
-  "death.attack.echomirror.player": "%1$s's mirror shattered in their hands whilst fighting %2$s"
+  "death.attack.echomirror.player": "%1$s's mirror shattered in their hands whilst fighting %2$s",
+
+  "text.autoconfig.peculia.title": "Peculia Settings",
+
+  "text.autoconfig.peculia.option.mobs": "Mobs",
+
+
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig": "Vanilla Mob Changes",
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.@Tooltip": "Vanilla Mob Changes",
+
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.ghastConfig.@Tooltip": "Ghast Changes",
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.ghastConfig.stat_increase.@Tooltip": "Ghast Attribute Changes",
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.ghastConfig": "Ghast Changes",
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.ghastConfig.stat_increase": "Ghast Attribute Changes",
+
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.witherConfig.@Tooltip": "Wither Changes",
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.witherConfig.stagnated_on_hit.@Tooltip": "Wither Skulls give Stagnated on Hit",
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.witherConfig.stat_increase.@Tooltip": "Wither Attribute Changes",
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.witherConfig": "Wither Changes",
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.witherConfig.stagnated_on_hit": "Wither Skulls give Stagnated on Hit",
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.witherConfig.stat_increase": "Wither Attribute Changes",
+
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.wardenConfig": "Warden Changes",
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.wardenConfig.@Tooltip": "Warden Changes",
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.wardenConfig.cursed_on_hit.@Tooltip": "Warden gives Cursed on hit",
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.wardenConfig.stunned_from_sonic_boom.@Tooltip": "Warden's Sonic Boom gives Stunned",
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.wardenConfig.stat_increase.@Tooltip": "Warden Attribute Changes",
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.wardenConfig.cursed_on_hit": "Warden gives Cursed on hit",
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.wardenConfig.stunned_from_sonic_boom": "Warden's Sonic Boom gives Stunned",
+  "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.wardenConfig.stat_increase": "Warden Attribute Changes",
+
+  "text.autoconfig.peculia.option.items": "Items",
+
+  "text.autoconfig.peculia.option.items.itemsConfig": "Item Settings",
+  "text.autoconfig.peculia.option.items.itemsConfig.@Tooltip": "Item Settings",
+
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances": "Item Chances",
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.@Tooltip": "Item Chances",
+
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.soul_harvest_chance": "Soul Scythe Soul Harvesting Chance",
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.soul_harvest_chance.@Tooltip": "Soul Scythe Soul Harvesting Chance",
+
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.echoing_chance": "Peculiar Dagger Echoing Ability Chance",
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.echoing_chance.@ToolTip": "Peculiar Dagger Echoing Ability Chance",
+
+  "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig": "Potion Settings",
+  "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.@Tooltip": "Potion Settings",
+
+  "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.allow_darkness_potions": "Allow Darkness Potions",
+  "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.allow_darkness_potions.@Tooltip": "Allow Darkness Potions",
+
+  "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.allow_ichor_potions": "Allow Ichor Potions",
+  "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.allow_ichor_potions.@Tooltip": "Allow Ichor Potions"
 }

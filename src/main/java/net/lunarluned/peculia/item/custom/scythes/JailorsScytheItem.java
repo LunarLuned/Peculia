@@ -1,6 +1,5 @@
 package net.lunarluned.peculia.item.custom.scythes;
 
-import net.lunarluned.peculia.config.PeculiaConfig;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.sound.ModSoundEvents;

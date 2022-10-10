@@ -1,6 +1,6 @@
 package net.lunarluned.peculia.item.custom.scythes;
 
-import net.lunarluned.peculia.config.PeculiaConfig;
+import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.item.custom.scythes.GenericScytheItem;
 import net.minecraft.sounds.SoundEvents;
@@ -17,7 +17,7 @@ public class SoulScytheItem extends GenericScytheItem {
 
 
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        if (attacker instanceof Player player && player.getRandom().nextInt(100) <= PeculiaConfig.getIntValue("soul_scythe_chance")) {
+        if (attacker instanceof Player player && player.getRandom().nextInt(100) <= Peculia.getConfig().items.itemsConfig.itemChances.soul_harvest_chance) {
             player.drop(new ItemStack(ModItems.SOUL), false);
         }
         // Backstab Bonus Knockback

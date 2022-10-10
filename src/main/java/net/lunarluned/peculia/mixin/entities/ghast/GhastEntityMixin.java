@@ -1,5 +1,6 @@
 package net.lunarluned.peculia.mixin.entities.ghast;
 
+import net.lunarluned.peculia.Peculia;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Ghast;
@@ -16,11 +17,13 @@ public class GhastEntityMixin {
 
     @Inject(at = @At("HEAD"), method = "createAttributes", cancellable = true)
     private static void createAttributes(CallbackInfoReturnable<AttributeSupplier.Builder> cir) {
-        cir.setReturnValue(Monster.createMonsterAttributes()
-                .add(Attributes.MAX_HEALTH, 30.0)
-                .add(Attributes.MOVEMENT_SPEED, 0.7000000238418579)
-                .add(Attributes.FLYING_SPEED, 0.7000000238418579)
-                .add(Attributes.FOLLOW_RANGE, 100.0)
-                .add(Attributes.ARMOR, 8.0));
+        if (Peculia.getConfig().mobs.vanillaMobsConfig.ghastConfig.stat_increase) {
+            cir.setReturnValue(Monster.createMonsterAttributes()
+                    .add(Attributes.MAX_HEALTH, 30.0)
+                    .add(Attributes.MOVEMENT_SPEED, 0.7000000238418579)
+                    .add(Attributes.FLYING_SPEED, 0.7000000238418579)
+                    .add(Attributes.FOLLOW_RANGE, 100.0)
+                    .add(Attributes.ARMOR, 8.0));
+        }
     }
 }

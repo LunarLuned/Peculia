@@ -1,6 +1,8 @@
 package net.lunarluned.peculia;
 
 import com.google.gson.JsonObject;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -8,8 +10,7 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.loader.api.FabricLoader;
 import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.common.registry.entity.registry.ModEntities;
-import net.lunarluned.peculia.config.Config;
-import net.lunarluned.peculia.config.PeculiaConfig;
+import net.lunarluned.peculia.config.ModConfig;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.enchantment.ModEnchantments;
 import net.lunarluned.peculia.item.ModItems;
@@ -35,6 +36,7 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 
 public class Peculia implements ModInitializer {
+	private static final ModConfig CONFIG = AutoConfig.register(ModConfig.class, GsonConfigSerializer::new).getConfig();
 	public static final String MOD_ID = "peculia";
 	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
 
@@ -43,16 +45,8 @@ public class Peculia implements ModInitializer {
 
 		// ඞ
 
-		PeculiaConfig.init();
-		String defaultConfig = """
-				{
-				  "defaultconfig_file": false
-				}""";
-		File configFile = Config.createFile("config/peculia/backupconfig.json", defaultConfig, false);
-		JsonObject json = Config.getJsonObject(Config.readFile(configFile));
 
-		PeculiaConfig.generateConfigs(json == null);
-		PeculiaConfig.loadConfig();
+
 		ModItems.registerModItems();
 		ModGameEvents.registerGameEvents();
 		ModGameEvents.init();
@@ -80,13 +74,18 @@ public class Peculia implements ModInitializer {
 		ModEffects.registerEchoingEffect();
 		ModEffects.registerStunnedEffect();
 
-		ModPotions.registerIchorPotion();
-		ModPotions.registerextIchorPotion();
-		ModPotions.registerDarknessPotion();
-		ModPotions.registerextDarknessPotion();
-		ModPotions.registerIchorResistancePotion();
-		ModPotions.registerextIchorResistancePotion();
-		ModLootTableModifiers.modifyLootTables();
+		if (Peculia.getConfig().items.itemsConfig.potionItemsConfig.allow_ichor_potions) {
+			ModPotions.registerIchorPotion();
+			ModPotions.registerextIchorPotion();
+		}
+		if (Peculia.getConfig().items.itemsConfig.potionItemsConfig.allow_darkness_potions) {
+			ModPotions.registerDarknessPotion();
+			ModPotions.registerextDarknessPotion();
+		}
+			ModPotions.registerIchorResistancePotion();
+			ModPotions.registerextIchorResistancePotion();
+
+			ModLootTableModifiers.modifyLootTables();
 
 
 		if (FabricLoader.getInstance().isModLoaded("combatant")) {
@@ -173,5 +172,10 @@ public class Peculia implements ModInitializer {
 			bypassArmor();
 			bypassEnchantments();
 		}
+	}
+	// Mod Config
+
+	public static ModConfig getConfig () {
+		return CONFIG;
 	}
 }
