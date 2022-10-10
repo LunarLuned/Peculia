@@ -85,8 +85,8 @@ public class ModLootTableModifiers {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                 .setRolls(ConstantValue.exactly(1));
                 LootPool.Builder builder = LootPool.lootPool();
-                builder.when(LootItemRandomChanceCondition.randomChance(0.2f)); //20% chance
-                builder.setRolls(UniformGenerator.between(12, 38)); // at the least you'll get 12, at most 38
+                builder.when(LootItemRandomChanceCondition.randomChance(0.1f)); //10% chance
+                builder.setRolls(UniformGenerator.between(0, 3)); // at the least you'll get 0, at most 3
                 builder.add(LootItem.lootTableItem(ModItems.SCULK_SAC));
                 table.withPool(builder);
             }
