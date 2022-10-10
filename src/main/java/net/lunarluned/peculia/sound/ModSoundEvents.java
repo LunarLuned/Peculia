@@ -80,7 +80,11 @@ public class ModSoundEvents {
     public static final SoundEvent ITEM_TUSK_HORN_PULSE = registerSoundEvent("item.tusk_horn.pulse");
     public static final SoundEvent ITEM_TUSK_HORN_CRY = registerSoundEvent("item.tusk_horn.cry");
 
+    public static final SoundEvent BLOCK_PERFORATED_JAW_BITE = registerSoundEvent("block.perforated_jaw.bite");
+    public static final SoundEvent BLOCK_PERFORATED_JAW_OPEN = registerSoundEvent("block.perforated_jaw.open");
     public static final SoundEvent BLOCK_ICHOR_STICKER_RELEASE = registerSoundEvent("block.ichor_sticker.release");
+
+    public static final SoundEvent BLOCK_CONDENSED_VOID_USE = registerSoundEvent("block.condensed_void.use");
 
     public static final SoundType MYTHRIL = new SoundType(1f, 1f,
             ModSoundEvents.BLOCK_MYTHRIL_BREAK, ModSoundEvents.BLOCK_MYTHRIL_STEP, ModSoundEvents.BLOCK_MYTHRIL_PLACE,
@@ -97,8 +101,6 @@ public class ModSoundEvents {
     public static final SoundType CONDENSED_VOID = new SoundType(1f, 1f,
             ModSoundEvents.BLOCK_CONDENSED_VOID_BREAK, ModSoundEvents.BLOCK_CONDENSED_VOID_STEP, ModSoundEvents.BLOCK_CONDENSED_VOID_PLACE,
             ModSoundEvents.BLOCK_CONDENSED_VOID_HIT, ModSoundEvents.BLOCK_CONDENSED_VOID_FALL);
-
-    public static final SoundEvent BLOCK_CONDENSED_VOID_USE = registerSoundEvent("block.condensed_void.use");
 
     public static final SoundType VOID_LAMP = new SoundType(1f, 1f,
             ModSoundEvents.BLOCK_VOID_LAMP_BREAK, ModSoundEvents.BLOCK_VOID_LAMP_STEP, ModSoundEvents.BLOCK_VOID_LAMP_PLACE,
