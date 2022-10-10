@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "_comment": "eventually put the arterial folds here too",
+
+  "values": [
+    "minecraft:nether_wastes"
+  ]
+}

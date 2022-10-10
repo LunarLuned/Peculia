@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "peculia:perforated_blister",
+      "weight": 4
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+
+    "salt": 1414694190,
+
+    "spacing": 22,
+
+    "separation": 8
+  }
+}
