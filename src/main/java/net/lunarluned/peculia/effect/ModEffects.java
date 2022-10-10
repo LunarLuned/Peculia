@@ -17,11 +17,14 @@ public class ModEffects {
     public static MobEffect ECHOING;
     public static MobEffect CURSED;
     public static MobEffect STUNNED;
-    public static MobEffect MAJICKS;
+    public static MobEffect POROUS;
 
 
     public static MobEffect registerIchorStatusEffect(String name) {
         return Registry.register(Registry.MOB_EFFECT, new ResourceLocation(Peculia.MOD_ID, name), new IchorEffect(MobEffectCategory.HARMFUL, 15766579));
+    }
+    public static MobEffect registerPorousStatusEffect(String name) {
+        return Registry.register(Registry.MOB_EFFECT, new ResourceLocation(Peculia.MOD_ID, name), new PorousEffect(MobEffectCategory.NEUTRAL, 15780363));
     }
     public static MobEffect registerCursedStatusEffect(String name) {
         return Registry.register(Registry.MOB_EFFECT, new ResourceLocation(Peculia.MOD_ID, name), new CursedEffect(MobEffectCategory.HARMFUL, 	5861294));
@@ -52,6 +55,8 @@ public class ModEffects {
     }
 
     public static void registerIchorEffect() { ICHOR = registerIchorStatusEffect("ichor");}
+
+    public static void registerPorousEffect() { POROUS = registerPorousStatusEffect("porous");}
 
     public static void registerEchoingEffect() { ECHOING = registerEchoingStatusEffect("echoing");}
 

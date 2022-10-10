@@ -34,6 +34,9 @@ public abstract class LivingEntityMixin extends Entity {
         if (this.hasEffect(ModEffects.VOID_TOUCHED)) {
             return amount + (amount * (0.45f * (Objects.requireNonNull(this.getEffect(ModEffects.VOID_TOUCHED)).getAmplifier() + 1)));
         }
+        if (this.hasEffect(ModEffects.POROUS)) {
+            return amount + (amount * (0.65f * (Objects.requireNonNull(this.getEffect(ModEffects.POROUS)).getAmplifier() + 5)));
+        }
         if (this.hasEffect(ModEffects.DETERMINED)) {
             return amount + (amount * (-0.20f * (Objects.requireNonNull(this.getEffect(ModEffects.DETERMINED)).getAmplifier() + 1)));
         }

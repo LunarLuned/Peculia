@@ -69,6 +69,7 @@ public class Peculia implements ModInitializer {
 		//disclaimer. i do not know why effects and potions calls for you to register each effect like this. it just does. idk why.
 
 		ModEffects.registerIchorEffect();
+		ModEffects.registerPorousEffect();
 		ModEffects.registerElectrocutedEffect();
 		ModEffects.registerVoidTouchedEffect();
 		ModEffects.registerAnchoredEffect();
@@ -116,6 +117,12 @@ public class Peculia implements ModInitializer {
 		public ElectrocutionDamageSource(Entity source) {
 			super("electrocution", source);
 			bypassArmor();
+		}
+	}
+	public static class JawDamageSource extends DamageSource {
+
+		public JawDamageSource() {
+			super("jaw");
 		}
 	}
 	public static class SiphoningDamageSource extends DamageSource {

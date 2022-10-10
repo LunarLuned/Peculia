@@ -101,17 +101,7 @@ public class PeculiaClientMod implements ClientModInitializer {
                 ModBlocks.ICHOR_MOLD_VEIN,
                 ModBlocks.ARTERIAL_BRAMBLE,
                 ModBlocks.ICHOR_STICKER,
-                ModBlocks.MYTHRIL_CRYSTAL,
-                ModBlocks.MYTHRIL_BRICKS,
-                ModBlocks.MYTHRIL_BRICK_SLAB,
-                ModBlocks.MYTHRIL_BRICK_STAIRS,
-                ModBlocks.MYTHRIL_BRICK_WALL,
-                ModBlocks.POPROCK_CRYSTAL,
-                ModBlocks.POPROCK_BRICKS,
-                ModBlocks.POPROCK_BRICK_SLAB,
-                ModBlocks.POPROCK_BRICK_STAIRS,
-                ModBlocks.POPROCK_BRICK_WALL,
-                ModBlocks.CHISELED_POPROCK_BRICKS,
+                ModBlocks.PERFORATED_PUSTULE,
                 ModBlocks.DRAGONGLASS,
                 ModBlocks.DRAGONGLASS_PANE
 

@@ -20,8 +20,12 @@ public class IchorEffect extends MobEffect {
     public void applyEffectTick(LivingEntity entity, int amplifier) {
         if (!entity.hasEffect(ModEffects.ICHOR_RESISTANCE)) {
             entity.hurt(new Peculia.IchorDamageSource(), 1.0F + amplifier);
+        } else if (!entity.hasEffect(ModEffects.POROUS)) {
+            entity.hurt(new Peculia.IchorDamageSource(), 1.0F + amplifier);
         }
         if ((entity.isFreezing()) || (entity.hasEffect(ModEffects.ICHOR_RESISTANCE))) {
+            entity.removeEffect(ModEffects.ICHOR);
+        } else if (entity.hasEffect(ModEffects.POROUS)) {
             entity.removeEffect(ModEffects.ICHOR);
         }
         if (entity.hasEffect(MobEffects.FIRE_RESISTANCE)) {
