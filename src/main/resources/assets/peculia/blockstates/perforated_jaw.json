@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "closed=true": {"model": "peculia:block/perforated_jaw_closed"},
+    "closed=false": {"model": "peculia:block/perforated_jaw"}
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "peculia:block/perforated_flesh",
+    "east": "peculia:block/perforated_flesh",
+    "north": "peculia:block/perforated_flesh",
+    "particle": "peculia:block/perforated_flesh",
+    "south": "peculia:block/perforated_flesh",
+    "up": "peculia:block/perforated_jaw_closed",
+    "west": "peculia:block/perforated_flesh"
+  }
+}
