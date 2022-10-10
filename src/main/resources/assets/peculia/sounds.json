@@ -134,7 +134,24 @@
       "peculia:block/ichor_sticker/release"
     ]
   },
-
+  "block.perforated_jaw.bite": {
+    "subtitle": "block.perforated_jaw.bite",
+    "sounds": [
+      "peculia:block/perforated_jaw/bite/bite_1",
+      "peculia:block/perforated_jaw/bite/bite_2",
+      "peculia:block/perforated_jaw/bite/bite_3",
+      "peculia:block/perforated_jaw/bite/bite_4",
+      "peculia:block/perforated_jaw/bite/bite_5"
+    ]
+  },
+  "block.perforated_jaw.open": {
+    "subtitle": "block.perforated_jaw.open",
+    "sounds": [
+      "peculia:block/perforated_jaw/open/open_1",
+      "peculia:block/perforated_jaw/open/open_2",
+      "peculia:block/perforated_jaw/open/open_3"
+    ]
+  },
   "block.fluorite_bricks.place": {
     "sounds": [
       "peculia:block/fluorite_bricks/break1",
