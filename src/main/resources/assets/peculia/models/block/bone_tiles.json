@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "peculia:block/bone_tiles"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "peculia:block/bone_tile_slab"
+    },
+    "type=double": {
+      "model": "peculia:block/bone_tiles"
+    },
+    "type=top": {
+      "model": "peculia:block/bone_tile_slab_top"
+    }
+  }
+}

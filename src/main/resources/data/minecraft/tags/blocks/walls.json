@@ -16,6 +16,8 @@
     "peculia:refined_ferrock_tile_wall",
     "peculia:polished_cryptstone_wall",
     "peculia:polished_cryptstone_brick_wall",
-    "peculia:polished_cryptstone_tile_wall"
+    "peculia:polished_cryptstone_tile_wall",
+    "peculia:bone_brick_wall",
+    "peculia:bone_tile_wall"
   ]
 }

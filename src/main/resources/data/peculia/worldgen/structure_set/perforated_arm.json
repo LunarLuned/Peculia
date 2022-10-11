@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "peculia:perforated_arm",
+      "weight": 4
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+
+    "salt": 1419612190,
+
+    "spacing": 38,
+
+    "separation": 11
+  }
+}

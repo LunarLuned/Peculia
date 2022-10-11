@@ -19,6 +19,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Objects;
+
 import static net.lunarluned.peculia.block.custom.CrumblingBlock.setToAir;
 
 public class PerforatedPustuleBlock extends Block {
@@ -34,16 +36,21 @@ public class PerforatedPustuleBlock extends Block {
 
             level.playSound(null, pos, ModSoundEvents.BLOCK_ICHOR_STICKER_RELEASE, SoundSource.BLOCKS, 1.0f, 1.0f);
             spawnPorousCloudAtPos((LivingEntity) entity, pos, 0);
-            setToAir(state, level, pos);
+            level.destroyBlock(pos, false);
         }
     }
+
+    public void onProjectileHit(Level level, BlockState blockState, BlockHitResult hit, Projectile projectile) {
+        BlockPos pos = hit.getBlockPos();
+        level.destroyBlock(pos, false);
+    }
+
 
     @Override
     public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack itemStack) {
         super.playerDestroy(level, player, pos, state, blockEntity, itemStack);
             level.playSound(null, pos, ModSoundEvents.BLOCK_ICHOR_STICKER_RELEASE, SoundSource.BLOCKS, 1.0f, 1.0f);
             spawnPorousCloudAtPos(player, pos, 0);
-            setToAir(state, level, pos);
     }
 
     public static void spawnPorousCloudAtPos(LivingEntity attacker, BlockPos blockPos, int amplifier){

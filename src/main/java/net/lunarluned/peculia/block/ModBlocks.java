@@ -209,10 +209,10 @@ public class ModBlocks {
     new TitanBloodBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.HONEY_BLOCK).noCollision().strength(5f).luminance(15).requiresTool()));
 
     public static final Block PERFORATED_JAW = registerBlock("perforated_jaw",
-    new PerforatedJawBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.NYLIUM).strength(5.5f).hardness(1).requiresTool()), ModItemGroup.PECULIA_NETHER);
+    new PerforatedJawBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.WART_BLOCK).strength(5.5f).hardness(1).requiresTool()), ModItemGroup.PECULIA_NETHER);
 
     public static final Block PERFORATED_PUSTULE = registerBlock("perforated_pustule",
-    new PerforatedPustuleBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.NYLIUM).nonOpaque().luminance(15).strength(0.5f)), ModItemGroup.PECULIA_NETHER);
+    new PerforatedPustuleBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.WART_BLOCK).nonOpaque().luminance(15).strength(0.5f)), ModItemGroup.PECULIA_NETHER);
 
     public static final Block ARTERIAL_BRAMBLE = registerBlock("arterial_bramble",
     new ArterialBrambleBlock(FabricBlockSettings.of(Material.PLANT).sounds(SoundType.WART_BLOCK).nonOpaque().noCollision()), ModItemGroup.PECULIA_NETHER);
@@ -275,19 +275,19 @@ public class ModBlocks {
     new CrumblingBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.DEEPSLATE).strength(0.1f).resistance(0)), ModItemGroup.PECULIA_OVERWORLD);
 
     public static final Block COMPRESSED_COBBLESTONE = registerBlock("compressed_cobblestone",
-    new Block(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(SoundType.STONE).resistance(6)), ModItemGroup.PECULIA_OVERWORLD);
+    new Block(FabricBlockSettings.of(Material.STONE).strength(2f).requiresTool().sounds(SoundType.STONE).resistance(6)), ModItemGroup.PECULIA_OVERWORLD);
 
     public static final Block CONTAINED_COBBLESTONE = registerBlock("contained_cobblestone",
-    new Block(FabricBlockSettings.of(Material.STONE).strength(2f).requiresTool().sounds(SoundType.STONE).resistance(12)), ModItemGroup.PECULIA_OVERWORLD);
+    new Block(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().sounds(SoundType.STONE).resistance(12)), ModItemGroup.PECULIA_OVERWORLD);
 
     public static final Block CONTINENTAL_COBBLESTONE = registerBlock("continental_cobblestone",
-    new Block(FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(SoundType.STONE).resistance(18)), ModItemGroup.PECULIA_OVERWORLD);
+    new Block(FabricBlockSettings.of(Material.STONE).strength(5f).requiresTool().sounds(SoundType.STONE).resistance(18)), ModItemGroup.PECULIA_OVERWORLD);
 
     public static final Block ANOMALAIC_COBBLESTONE = registerBlock("anomalaic_cobblestone",
-    new Block(FabricBlockSettings.of(Material.STONE).strength(3f).requiresTool().sounds(SoundType.STONE).resistance(24)), ModItemGroup.PECULIA_OVERWORLD);
+    new Block(FabricBlockSettings.of(Material.STONE).strength(7f).requiresTool().sounds(SoundType.STONE).resistance(24)), ModItemGroup.PECULIA_OVERWORLD);
 
     public static final Block AWAKENED_COBBLESTONE = registerBlock("awakened_cobblestone",
-    new Block(FabricBlockSettings.of(Material.STONE).strength(3.5f).requiresTool().sounds(SoundType.STONE).resistance(30)), ModItemGroup.PECULIA_OVERWORLD);
+    new Block(FabricBlockSettings.of(Material.STONE).strength(8f).requiresTool().sounds(SoundType.STONE).resistance(30)), ModItemGroup.PECULIA_OVERWORLD);
 
     public static final Block FERROCK = registerBlock("ferrock",
     new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool().mapColor(MaterialColor.COLOR_BROWN).sounds(SoundType.ANCIENT_DEBRIS).resistance(12)), ModItemGroup.PECULIA_OVERWORLD);
@@ -339,6 +339,36 @@ public class ModBlocks {
 
     public static final Block SNOW_BRICK_WALL = registerBlock("snow_brick_wall",
     new WallBlock(FabricBlockSettings.of(Material.SNOW).mapColor(MaterialColor.SNOW).strength(2f).requiresTool().sounds(SoundType.SNOW).nonOpaque()), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block BONE_PILLAR = registerBlock("bone_pillar",
+            new RotatedPillarBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.TERRACOTTA_WHITE).sounds(SoundType.BONE_BLOCK).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block BONE_BRICKS = registerBlock("bone_bricks",
+            new Block(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.TERRACOTTA_WHITE).sounds(SoundType.BONE_BLOCK).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block BONE_BRICK_STAIRS = registerBlock("bone_brick_stairs",
+            new ModStairsBlock(ModBlocks.BONE_BRICKS.defaultBlockState(),
+                    FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.TERRACOTTA_WHITE).strength(1f).strength(2f).requiresTool().sounds(SoundType.BONE_BLOCK)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block BONE_BRICK_SLAB = registerBlock("bone_brick_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.TERRACOTTA_WHITE).strength(1f).strength(2f).nonOpaque().requiresTool().sounds(SoundType.BONE_BLOCK)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block BONE_BRICK_WALL = registerBlock("bone_brick_wall",
+            new WallBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.TERRACOTTA_WHITE).strength(1f).strength(2f).requiresTool().sounds(SoundType.BONE_BLOCK).nonOpaque()), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block BONE_TILES = registerBlock("bone_tiles",
+            new Block(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.TERRACOTTA_WHITE).sounds(SoundType.BONE_BLOCK).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block BONE_TILE_STAIRS = registerBlock("bone_tile_stairs",
+            new ModStairsBlock(ModBlocks.BONE_TILES.defaultBlockState(),
+                    FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.TERRACOTTA_WHITE).strength(1f).strength(2f).requiresTool().sounds(SoundType.BONE_BLOCK)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block BONE_TILE_SLAB = registerBlock("bone_tile_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.TERRACOTTA_WHITE).strength(1f).strength(2f).nonOpaque().requiresTool().sounds(SoundType.BONE_BLOCK)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block BONE_TILE_WALL = registerBlock("bone_tile_wall",
+            new WallBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.TERRACOTTA_WHITE).strength(1f).strength(2f).requiresTool().sounds(SoundType.BONE_BLOCK).nonOpaque()), ModItemGroup.PECULIA_OVERWORLD);
+
 
 //misc
 

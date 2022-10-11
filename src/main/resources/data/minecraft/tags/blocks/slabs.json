@@ -16,6 +16,8 @@
     "peculia:refined_ferrock_tile_slab",
     "peculia:polished_cryptstone_slab",
     "peculia:polished_cryptstone_brick_slab",
-    "peculia:polished_cryptstone_tile_slab"
+    "peculia:polished_cryptstone_tile_slab",
+    "peculia:bone_brick_slab",
+    "peculia:bone_tile_slab"
   ]
 }

@@ -539,5 +539,8 @@
   "text.autoconfig.peculia.option.blocks.blocksConfig.blockChances.titans_blood_burn_chance.@Tooltip": "Chance for Titan's Blood to burn you upon bottling it",
 
   "text.autoconfig.peculia.option.blocks.blocksConfig.blockChances.perforated_jaw_fakeout_bite_chance": "Perforated Jaw Fakeout Bite Chance",
-  "text.autoconfig.peculia.option.blocks.blocksConfig.blockChances.perforated_jaw_fakeout_bite_chance.@Tooltip": "Chance for Perforated Jaw to bite you when trying to do a fakeout"
+  "text.autoconfig.peculia.option.blocks.blocksConfig.blockChances.perforated_jaw_fakeout_bite_chance.@Tooltip": "Chance for Perforated Jaw to bite you when trying to do a fakeout",
+
+  "text.autoconfig.peculia.option.blocks.blocksConfig.blockChances.perforated_jaw_stunned_on_bite_chance": "Perforated Jaw Stunned on Bite Chance",
+  "text.autoconfig.peculia.option.blocks.blocksConfig.blockChances.perforated_jaw_stunned_on_bite_chance.@Tooltip": "Chance for Perforated Jaw to give Stunned on bite"
 }
