@@ -34,12 +34,22 @@ public class PerforatedJawBlock extends Block {
         if (entity instanceof LivingEntity && (!(Boolean)state.getValue(CLOSED))) {
             biteEntity(state, level, pos, entity);
         }
+        if (!(Boolean)state.getValue(CLOSED)) {
+            entity.hurt(new Peculia.JawDamageSource(), 4.0F);
+        }
+    }
+
+    public void attack(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player) {
+        biteEntity(state, level, pos, player);
+        if (!(Boolean)state.getValue(CLOSED) && player.getRandom().nextInt(100) <= Peculia.getConfig().blocks.blocksConfig.blockChances.perforated_jaw_fakeout_bite_chance) {
+            player.hurt(new Peculia.JawDamageSource(), 1.0F);
+        }
+        super.attack(state, level, pos, player);
     }
 
     private static void biteEntity(BlockState blockState, Level level, BlockPos pos, @NotNull Entity entity) {
         if (!(Boolean)blockState.getValue(CLOSED)) {
             level.setBlock(pos, blockState.setValue(CLOSED, true), 3);
-            entity.hurt(new Peculia.JawDamageSource(), 4.0F);
             level.playSound(null, pos, ModSoundEvents.BLOCK_PERFORATED_JAW_BITE, SoundSource.BLOCKS, 1.0f, 1.0f);
         }
     }

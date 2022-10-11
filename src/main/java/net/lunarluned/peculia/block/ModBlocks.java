@@ -205,11 +205,14 @@ public class ModBlocks {
     public static final Block PERFORATED_FLESH = registerBlock("perforated_flesh",
     new Block(FabricBlockSettings.of(Material.STONE).sounds(SoundType.WART_BLOCK).strength(3f).requiresTool()), ModItemGroup.PECULIA_NETHER);
 
+    public static final Block TITAN_BLOOD = registerBlockWithoutBlockItem("titan_blood",
+    new TitanBloodBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.HONEY_BLOCK).noCollision().strength(5f).luminance(15).requiresTool()));
+
     public static final Block PERFORATED_JAW = registerBlock("perforated_jaw",
-    new PerforatedJawBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.NYLIUM).strength(1f).requiresTool()), ModItemGroup.PECULIA_NETHER);
+    new PerforatedJawBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.NYLIUM).strength(5.5f).hardness(1).requiresTool()), ModItemGroup.PECULIA_NETHER);
 
     public static final Block PERFORATED_PUSTULE = registerBlock("perforated_pustule",
-    new PerforatedPustuleBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.NYLIUM).nonOpaque().luminance(15).strength(1f)), ModItemGroup.PECULIA_NETHER);
+    new PerforatedPustuleBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.NYLIUM).nonOpaque().luminance(15).strength(0.5f)), ModItemGroup.PECULIA_NETHER);
 
     public static final Block ARTERIAL_BRAMBLE = registerBlock("arterial_bramble",
     new ArterialBrambleBlock(FabricBlockSettings.of(Material.PLANT).sounds(SoundType.WART_BLOCK).nonOpaque().noCollision()), ModItemGroup.PECULIA_NETHER);

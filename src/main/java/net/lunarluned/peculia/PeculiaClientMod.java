@@ -46,6 +46,9 @@ public class PeculiaClientMod implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ARTERIAL_BRAMBLE, RenderType.cutout());
+
         ModParticles.init();
         ModEntityRenderer.registerRenderers();
 
@@ -99,11 +102,11 @@ public class PeculiaClientMod implements ClientModInitializer {
                 RenderType.translucent(),
 
                 ModBlocks.ICHOR_MOLD_VEIN,
-                ModBlocks.ARTERIAL_BRAMBLE,
                 ModBlocks.ICHOR_STICKER,
                 ModBlocks.PERFORATED_PUSTULE,
                 ModBlocks.DRAGONGLASS,
                 ModBlocks.DRAGONGLASS_PANE
+
 
 
         );

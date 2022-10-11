@@ -3,8 +3,10 @@ package net.lunarluned.peculia.config;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
+import net.lunarluned.peculia.config.options.blocks.BlocksConfig;
 import net.lunarluned.peculia.config.options.items.ItemsConfig;
 import net.lunarluned.peculia.config.options.mobs.VanillaMobsConfig;
+import net.minecraft.world.level.block.Block;
 
 // Mod Config
 
@@ -37,6 +39,21 @@ public class ModConfig implements ConfigData {
         @ConfigEntry.Gui.CollapsibleObject(startExpanded = false)
         @ConfigEntry.Gui.Tooltip
         public ItemsConfig itemsConfig = new ItemsConfig();
+
+    }
+
+
+    // Blocks
+
+    @ConfigEntry.Gui.CollapsibleObject(startExpanded = false)
+
+    public Blocks blocks = new Blocks();
+
+    public static class Blocks {
+
+        @ConfigEntry.Gui.CollapsibleObject(startExpanded = false)
+        @ConfigEntry.Gui.Tooltip
+        public BlocksConfig blocksConfig = new BlocksConfig();
 
     }
 

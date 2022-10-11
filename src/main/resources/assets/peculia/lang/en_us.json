@@ -60,6 +60,7 @@
   "item.peculia.egg_tusk": "Eggs in a Tusk",
   "item.peculia.scrambled_eggs_tusk": "Scrambled Eggs",
   "item.peculia.ichor": "Ichor",
+  "item.peculia.bottle_of_titan_blood": "Bottle of Titan's Blood",
   "item.peculia.sporodine": "Sporodine",
   "item.peculia.netherite_gauntlet": "Netherite Gauntlet",
 
@@ -100,6 +101,7 @@
   "block.peculia.chiseled_spinal_bricks": "Chiseled Spinal Bricks",
 
   "block.peculia.ichor_mold_vein": "Ichor Mold Vein",
+  "block.peculia.titan_blood": "Titan's Blood",
   "block.peculia.ichor_mold": "Ichor Mold",
   "block.peculia.ichor_nylium": "Ichor Nylium",
   "block.peculia.arterial_bramble": "Arterial Bramble",
@@ -188,7 +190,7 @@
   "block.peculia.polished_cryptstone_tile_wall": "Polished Cryptstone Tile Wall",
 
   "item.peculia.corporeum_fragment": "Corporeum Fragment",
-  "item.peculia.bucket_of_agony": "Bucket Of Agony",
+  "item.peculia.bucket_of_agony": "Bucket of Agony",
   "item.peculia.soul": "Soul",
   "item.peculia.ectoplasm": "Ectoplasm",
   "item.peculia.remnant": "Remnant",
@@ -328,6 +330,17 @@
 
   "item.peculia.peculiar_sword": "Peculiar Sword",
   "item.peculia.peculiar_sword.desc": "Projecting",
+
+  "item.peculia.antidote_elixir": "Elixir",
+  "item.peculia.antidote_elixir.desc": "Antidote",
+  "item.peculia.empowering_elixir": "Elixir",
+  "item.peculia.empowering_elixir.desc": "Empowering",
+  "item.peculia.grounded_elixir": "Elixir",
+  "item.peculia.grounded_elixir.desc": "Grounded",
+  "item.peculia.satiated_elixir": "Elixir",
+  "item.peculia.satiated_elixir.desc": "Satiated",
+  "item.peculia.visuality_elixir": "Elixir",
+  "item.peculia.visuality_elixir.desc": "Visuality",
 
   "itemGroup.peculia.peculia": "Peculia End",
   "itemGroup.peculia.peculia_arcane": "Peculia Arcane",
@@ -499,17 +512,32 @@
   "text.autoconfig.peculia.option.items.itemsConfig.itemChances.@Tooltip": "Item Chances",
 
   "text.autoconfig.peculia.option.items.itemsConfig.itemChances.soul_harvest_chance": "Soul Scythe Soul Harvesting Chance",
-  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.soul_harvest_chance.@Tooltip": "Soul Scythe Soul Harvesting Chance",
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.soul_harvest_chance.@Tooltip": "Chance for Soul Harvesting Ability to trigger",
 
   "text.autoconfig.peculia.option.items.itemsConfig.itemChances.echoing_chance": "Peculiar Dagger Echoing Ability Chance",
-  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.echoing_chance.@ToolTip": "Peculiar Dagger Echoing Ability Chance",
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.echoing_chance.@Tooltip": "Chance for Echoing Ability to trigger",
 
   "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig": "Potion Settings",
   "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.@Tooltip": "Potion Settings",
 
   "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.allow_darkness_potions": "Allow Darkness Potions",
-  "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.allow_darkness_potions.@Tooltip": "Allow Darkness Potions",
+  "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.allow_darkness_potions.@Tooltip": "Allows Darkness Potions",
 
   "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.allow_ichor_potions": "Allow Ichor Potions",
-  "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.allow_ichor_potions.@Tooltip": "Allow Ichor Potions"
+  "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.allow_ichor_potions.@Tooltip": "Allows Ichor Potions",
+
+
+  "text.autoconfig.peculia.option.blocks": "Blocks",
+
+  "text.autoconfig.peculia.option.blocks.blocksConfig": "Block Settings",
+  "text.autoconfig.peculia.option.blocks.blocksConfig.@Tooltip": "Block Settings",
+
+  "text.autoconfig.peculia.option.blocks.blocksConfig.blockChances": "Block Chances",
+  "text.autoconfig.peculia.option.blocks.blocksConfig.blockChances.@Tooltip": "Block Chances",
+
+  "text.autoconfig.peculia.option.blocks.blocksConfig.blockChances.titans_blood_burn_chance": "Titan's Blood Burn Chance",
+  "text.autoconfig.peculia.option.blocks.blocksConfig.blockChances.titans_blood_burn_chance.@Tooltip": "Chance for Titan's Blood to burn you upon bottling it",
+
+  "text.autoconfig.peculia.option.blocks.blocksConfig.blockChances.perforated_jaw_fakeout_bite_chance": "Perforated Jaw Fakeout Bite Chance",
+  "text.autoconfig.peculia.option.blocks.blocksConfig.blockChances.perforated_jaw_fakeout_bite_chance.@Tooltip": "Chance for Perforated Jaw to bite you when trying to do a fakeout"
 }

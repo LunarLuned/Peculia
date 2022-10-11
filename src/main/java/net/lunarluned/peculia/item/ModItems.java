@@ -2,8 +2,10 @@ package net.lunarluned.peculia.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.lunarluned.peculia.Peculia;
+import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.common.registry.entity.registry.ModEntities;
 import net.lunarluned.peculia.item.custom.*;
+import net.lunarluned.peculia.item.custom.elixirs.*;
 import net.lunarluned.peculia.item.custom.glyphs.*;
 import net.lunarluned.peculia.item.custom.scythes.GenericScytheItem;
 import net.lunarluned.peculia.item.custom.scythes.JailorsScytheItem;
@@ -58,6 +60,23 @@ public class ModItems {
 
     public static final Item PECULIAR_SWORD = registerItem("peculiar_sword",
     new PeculiarSwordItem(ModToolMaterials.PECULIAR,5, -2.5f,new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(1).fireproof().rarity(Rarity.EPIC)));
+
+    public static final Item ANTIDOTE_ELIXIR = registerItem("antidote_elixir",
+    new AntidoteElixirItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(8).fireproof().rarity(Rarity.UNCOMMON)));
+
+    public static final Item EMPOWERING_ELIXIR = registerItem("empowering_elixir",
+    new EmpoweringElixirItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(8).fireproof().rarity(Rarity.UNCOMMON)));
+
+    public static final Item GROUNDED_ELIXIR = registerItem("grounded_elixir",
+    new GroundedElixirItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(8).fireproof().rarity(Rarity.UNCOMMON)));
+
+    public static final Item SATIATED_ELIXIR = registerItem("satiated_elixir",
+    new SatiatedElixirItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(8).fireproof().rarity(Rarity.UNCOMMON)));
+
+    public static final Item VISUALITY_ELIXIR = registerItem("visuality_elixir",
+    new VisualityElixirItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(8).fireproof().rarity(Rarity.UNCOMMON)));
+
+
 
     public static final Item SOUL = registerItem("soul",
     new SoulItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.UNCOMMON)));
@@ -280,6 +299,8 @@ public class ModItems {
     new FabricItemSettings().group(ModItemGroup.PECULIA)));
 
     // Nether Items
+
+
     public static final Item HOGLIN_TUSK = registerItem("hoglin_tusk",
     new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER)));
 
@@ -324,6 +345,9 @@ public class ModItems {
 
     public static final Item ICHOR = registerItem("ichor",
     new Item(new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER)));
+
+    public static final Item BOTTLE_OF_TITAN_BLOOD = registerItem("bottle_of_titan_blood",
+    new BottleOfTitansBloodItem(ModBlocks.TITAN_BLOOD, new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER)));
 
     public static final Item SPORODINE = registerItem("sporodine",
     new Item(new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER)));
