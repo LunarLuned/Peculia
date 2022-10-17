@@ -386,6 +386,84 @@
     ]
   },
 
+  "block.cryptstone_bricks.place": {
+    "sounds": [
+      "peculia:block/cryptstone_bricks/place/place1",
+      "peculia:block/cryptstone_bricks/place/place2",
+      "peculia:block/cryptstone_bricks/place/place3",
+      "peculia:block/cryptstone_bricks/place/place4"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.cryptstone_bricks.break": {
+    "sounds": [
+      "peculia:block/cryptstone/break/break1",
+      "peculia:block/cryptstone/break/break2",
+      "peculia:block/cryptstone/break/break3",
+      "peculia:block/cryptstone/break/break4",
+      "peculia:block/cryptstone/break/break5"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.cryptstone_bricks.step": {
+    "sounds": [
+      "peculia:block/cryptstone_bricks/step/step1",
+      "peculia:block/cryptstone_bricks/step/step2",
+      "peculia:block/cryptstone_bricks/step/step3",
+      "peculia:block/cryptstone_bricks/step/step4",
+      "peculia:block/cryptstone_bricks/step/step5",
+      "peculia:block/cryptstone_bricks/step/step6"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.cryptstone_bricks.fall": {
+    "sounds": [
+      "peculia:block/cryptstone/place/place1",
+      "peculia:block/cryptstone/place/place2",
+      "peculia:block/cryptstone/place/place3",
+      "peculia:block/cryptstone/place/place4"
+    ]
+  },
+
+  "block.cryptstone.place": {
+    "sounds": [
+      "peculia:block/cryptstone/place/place1",
+      "peculia:block/cryptstone/place/place2",
+      "peculia:block/cryptstone/place/place3",
+      "peculia:block/cryptstone/place/place4"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.cryptstone.break": {
+    "sounds": [
+      "peculia:block/cryptstone/break/break1",
+      "peculia:block/cryptstone/break/break2",
+      "peculia:block/cryptstone/break/break3",
+      "peculia:block/cryptstone/break/break4",
+      "peculia:block/cryptstone/break/break5"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.cryptstone.step": {
+    "sounds": [
+      "peculia:block/cryptstone/step/step1",
+      "peculia:block/cryptstone/step/step2",
+      "peculia:block/cryptstone/step/step3",
+      "peculia:block/cryptstone/step/step4",
+      "peculia:block/cryptstone/step/step5",
+      "peculia:block/cryptstone/step/step6"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.cryptstone.fall": {
+    "sounds": [
+      "peculia:block/cryptstone/place/place1",
+      "peculia:block/cryptstone/place/place2",
+      "peculia:block/cryptstone/place/place3",
+      "peculia:block/cryptstone/place/place4"
+    ]
+  },
+
 
   "block.poprocks.place": {
     "sounds": [
@@ -437,6 +515,45 @@
         "stream": true
       }
     ]
+  },
+  "entity.ghost.death": {
+    "sounds": [
+      "peculia:entity/ghost/death1",
+      "peculia:entity/ghost/death2"
+    ],
+    "subtitle": "subtitles.entity.ghost.death"
+  },
+  "entity.ghost.hurt": {
+    "sounds": [
+      "peculia:entity/ghost/hurt/hurt1",
+      "peculia:entity/ghost/hurt/hurt2"
+    ],
+    "subtitle": "subtitles.entity.ghost.hurt"
+  },
+  "entity.ghost.empowered": {
+    "sounds": [
+      "peculia:entity/ghost/empowered"
+    ],
+    "subtitle": "subtitles.entity.ghost.empowered"
+  },
+  "entity.ghost.moan": {
+    "sounds": [
+      "peculia:entity/ghost/moan/moan1",
+      "peculia:entity/ghost/moan/moan2",
+      "peculia:entity/ghost/moan/moan3",
+      "peculia:entity/ghost/moan/moan4",
+      "peculia:entity/ghost/moan/moan5"
+    ],
+    "subtitle": "subtitles.entity.ghost.moan"
+  },
+  "entity.ghost.jumpscare": {
+    "sounds": [
+      "peculia:entity/ghost/jumpscare/jumpscare1",
+      "peculia:entity/ghost/jumpscare/jumpscare2",
+      "peculia:entity/ghost/jumpscare/jumpscare3",
+      "peculia:entity/ghost/jumpscare/jumpscare4"
+    ],
+    "subtitle": "subtitles.entity.ghost.jumpscare"
   },
   "item.tusk_horn.stampede": {
     "sounds": [
