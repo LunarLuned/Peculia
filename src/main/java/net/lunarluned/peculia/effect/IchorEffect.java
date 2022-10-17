@@ -18,20 +18,16 @@ public class IchorEffect extends MobEffect {
 
     @Override
     public void applyEffectTick(LivingEntity entity, int amplifier) {
-        if (!entity.hasEffect(ModEffects.ICHOR_RESISTANCE)) {
+        if (!entity.hasEffect(ModEffects.ICHOR_RESISTANCE) || !entity.hasEffect(ModEffects.POROUS)) {
             entity.hurt(new Peculia.IchorDamageSource(), 1.0F + amplifier);
-        } else if (!entity.hasEffect(ModEffects.POROUS)) {
-            entity.hurt(new Peculia.IchorDamageSource(), 1.0F + amplifier);
+            if ((entity.isFreezing()) || (entity.hasEffect(ModEffects.ICHOR_RESISTANCE) || entity.hasEffect(ModEffects.POROUS))) {
+                entity.removeEffect(ModEffects.ICHOR);
+            }
+            if (entity.hasEffect(MobEffects.FIRE_RESISTANCE)) {
+                entity.removeEffect(ModEffects.ICHOR);
+                entity.removeEffect(MobEffects.FIRE_RESISTANCE);
+            }
+            super.applyEffectTick(entity, amplifier);
         }
-        if ((entity.isFreezing()) || (entity.hasEffect(ModEffects.ICHOR_RESISTANCE))) {
-            entity.removeEffect(ModEffects.ICHOR);
-        } else if (entity.hasEffect(ModEffects.POROUS)) {
-            entity.removeEffect(ModEffects.ICHOR);
-        }
-        if (entity.hasEffect(MobEffects.FIRE_RESISTANCE)) {
-            entity.removeEffect(ModEffects.ICHOR);
-            entity.removeEffect(MobEffects.FIRE_RESISTANCE);
-        }
-        super.applyEffectTick(entity, amplifier);
     }
 }

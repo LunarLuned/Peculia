@@ -33,6 +33,7 @@ import net.lunarluned.peculia.item.custom.tomes.inverted.watching.InvertedWatchi
 import net.lunarluned.peculia.item.custom.tomes.inverted.watching.LesserInvertedWatchingTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.updraft.LesserUpdraftTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.updraft.UpdraftTomeItem;
+import net.lunarluned.peculia.item.custom.tomes.warding.WardingTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.watching.LesserWatchingTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.watching.WatchingTomeItem;
 import net.lunarluned.peculia.item.modmats.ModArmorMaterials;
@@ -75,6 +76,9 @@ public class ModItems {
 
     public static final Item VISUALITY_ELIXIR = registerItem("visuality_elixir",
     new VisualityElixirItem(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).maxCount(8).fireproof().rarity(Rarity.UNCOMMON)));
+
+    public static final Item GHOST_SPAWN_EGG = registerItem("ghost_spawn_egg",
+    new SpawnEggItem(ModEntities.GHOST, 8122868, 3483938, new Item.Properties().tab(ModItemGroup.PECULIA_MISC)));
 
 
 
@@ -188,6 +192,13 @@ public class ModItems {
 
     public static final Item INVERTED_TOME_OF_WATCHING = registerItem("inverted_tome_of_watching",
     new InvertedWatchingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).maxCount(1).rarity(Rarity.UNCOMMON)));
+
+    public static final Item INACTIVE_WARDING_TOME = registerItem("inactive_warding_tome",
+    new ModTomeItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.PECULIA_ARCANE)));
+
+    public static final Item TOME_OF_WARDING = registerItem("tome_of_warding",
+    new WardingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).maxCount(1).rarity(Rarity.UNCOMMON)));
+
 
     public static final Item CLOAK_HELMET = registerItem("cloak_helmet",
     new ArmorItem(ModArmorMaterials.CLOAK, EquipmentSlot.HEAD,

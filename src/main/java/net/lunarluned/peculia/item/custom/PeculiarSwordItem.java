@@ -20,7 +20,7 @@ import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
-public class PeculiarSwordItem extends ModDaggerItem {
+public class PeculiarSwordItem extends ModSwordItem {
 
 
 

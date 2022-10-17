@@ -41,6 +41,17 @@ public class ModSoundEvents {
     public static final SoundEvent BLOCK_VOID_LAMP_HIT = registerSoundEvent("block.void_lamp.hit");
     public static final SoundEvent BLOCK_VOID_LAMP_FALL = registerSoundEvent("block.void_lamp.fall");
 
+    public static final SoundEvent BLOCK_CRYPTSTONE_BREAK = registerSoundEvent("block.cryptstone.break");
+    public static final SoundEvent BLOCK_CRYPTSTONE_STEP = registerSoundEvent("block.cryptstone.step");
+    public static final SoundEvent BLOCK_CRYPTSTONE_PLACE = registerSoundEvent("block.cryptstone.place");
+    public static final SoundEvent BLOCK_CRYPTSTONE_HIT = registerSoundEvent("block.cryptstone.hit");
+    public static final SoundEvent BLOCK_CRYPTSTONE_FALL = registerSoundEvent("block.cryptstone.fall");
+
+    public static final SoundEvent BLOCK_CRYPTSTONE_BRICKS_BREAK = registerSoundEvent("block.cryptstone_bricks.break");
+    public static final SoundEvent BLOCK_CRYPTSTONE_BRICKS_STEP = registerSoundEvent("block.cryptstone_bricks.step");
+    public static final SoundEvent BLOCK_CRYPTSTONE_BRICKS_PLACE = registerSoundEvent("block.cryptstone_bricks.place");
+    public static final SoundEvent BLOCK_CRYPTSTONE_BRICKS_HIT = registerSoundEvent("block.cryptstone_bricks.hit");
+    public static final SoundEvent BLOCK_CRYPTSTONE_BRICKS_FALL = registerSoundEvent("block.cryptstone_bricks.fall");
 
     public static final SoundEvent BLOCK_POPROCKS_BREAK = registerSoundEvent("block.poprocks.break");
     public static final SoundEvent BLOCK_POPROCKS_STEP = registerSoundEvent("block.poprocks.step");
@@ -86,9 +97,23 @@ public class ModSoundEvents {
 
     public static final SoundEvent BLOCK_CONDENSED_VOID_USE = registerSoundEvent("block.condensed_void.use");
 
+    public static final SoundEvent ENTITY_GHOST_MOAN = registerSoundEvent("entity.ghost.moan");
+    public static final SoundEvent ENTITY_GHOST_JUMPSCARE = registerSoundEvent("entity.ghost.jumpscare");
+    public static final SoundEvent ENTITY_GHOST_EMPOWERED = registerSoundEvent("entity.ghost.empowered");
+    public static final SoundEvent ENTITY_GHOST_HURT = registerSoundEvent("entity.ghost.hurt");
+    public static final SoundEvent ENTITY_GHOST_DEATH = registerSoundEvent("entity.ghost.death");
+
     public static final SoundType MYTHRIL = new SoundType(1f, 1f,
             ModSoundEvents.BLOCK_MYTHRIL_BREAK, ModSoundEvents.BLOCK_MYTHRIL_STEP, ModSoundEvents.BLOCK_MYTHRIL_PLACE,
             ModSoundEvents.BLOCK_MYTHRIL_HIT, ModSoundEvents.BLOCK_MYTHRIL_FALL);
+
+    public static final SoundType CRYPTSTONE = new SoundType(1f, 1f,
+            ModSoundEvents.BLOCK_CRYPTSTONE_BREAK, ModSoundEvents.BLOCK_CRYPTSTONE_STEP, ModSoundEvents.BLOCK_CRYPTSTONE_PLACE,
+            ModSoundEvents.BLOCK_CRYPTSTONE_HIT, ModSoundEvents.BLOCK_CRYPTSTONE_FALL);
+
+    public static final SoundType CRYPTSTONE_BRICKS = new SoundType(1f, 1f,
+            ModSoundEvents.BLOCK_CRYPTSTONE_BRICKS_BREAK, ModSoundEvents.BLOCK_CRYPTSTONE_BRICKS_STEP, ModSoundEvents.BLOCK_CRYPTSTONE_BRICKS_PLACE,
+            ModSoundEvents.BLOCK_CRYPTSTONE_BRICKS_HIT, ModSoundEvents.BLOCK_CRYPTSTONE_BRICKS_FALL);
 
     public static final SoundType FLUORITE = new SoundType(1f, 1f,
             ModSoundEvents.BLOCK_FLUORITE_BREAK, ModSoundEvents.BLOCK_FLUORITE_STEP, ModSoundEvents.BLOCK_FLUORITE_PLACE,
