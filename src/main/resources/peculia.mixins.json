@@ -9,6 +9,7 @@
     "ItemDropMixin",
     "PlayerManagerMixin",
     "ScytheModification",
+    "blocks.DispenserBlockMixin",
     "effects.anchored.ChorusFruitMixin",
     "effects.anchored.EnderPearlMixin",
     "effects.cursed.ItemMixin",
