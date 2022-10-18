@@ -21,6 +21,7 @@ public class WispRenderer extends MobRenderer<WispEntity, WispModel<WispEntity>>
 
     public WispRenderer(EntityRendererProvider.Context context) {
         super(context, new WispModel<>(context.bakeLayer(ModEntityRenderer.WISP)), 0.2F);
+        this.addLayer(new WispGlowFeatureRenderer<>(this));
     }
 
 

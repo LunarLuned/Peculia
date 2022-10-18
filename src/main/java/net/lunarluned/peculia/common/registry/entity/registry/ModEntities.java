@@ -19,7 +19,7 @@ public class ModEntities {
     public static final EntityType<SwordProjectionEntity> SWORD_PROJECTION = register("sword_projection", EntityType.Builder.of(SwordProjectionEntity::new, MobCategory.MISC).sized(1, 1).clientTrackingRange(10));
     public static final EntityType<CoalGeodeEntity> COAL_GEODE = register("coal_geode", EntityType.Builder.of(CoalGeodeEntity::new, MobCategory.CREATURE).sized(0.7f, 0.85f).clientTrackingRange(10));
     public static final EntityType<GhostEntity> GHOST = register("ghost", EntityType.Builder.of(GhostEntity::new, MobCategory.MONSTER).sized(0.8f, 1.9f).clientTrackingRange(10));
-    public static final EntityType<WispEntity> WISP = register("wisp", EntityType.Builder.of(WispEntity::new, MobCategory.CREATURE).sized(0.8f, 1.9f).clientTrackingRange(10));
+    public static final EntityType<WispEntity> WISP = register("wisp", EntityType.Builder.of(WispEntity::new, MobCategory.CREATURE).sized(0.4f, 0.4f).clientTrackingRange(10));
 
     public static <T extends Entity> EntityType<T> register(String id, EntityType.Builder<T> type) {
         return ENTITIES.register(id, type.build(id));

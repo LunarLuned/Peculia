@@ -135,11 +135,22 @@ public class CoalGeodeEntity extends AbstractGolem implements NeutralMob {
         return i;
     }
 
+    public void handleEntityEvent(byte b) {
+        if (b == 4) {
+            this.idleAnimationState.stop();
+            this.feedingAnimationState.start(this.tickCount);
+        }
+        else {
+            super.handleEntityEvent(b);
+        }
+    }
+
     // Plays the animations upon ticking
 
     @Override
     public void tick() {
         if (this.level.isClientSide()) {
+            this.level.broadcastEntityEvent(this, (byte)1);
 
             if (this.isMoving()) {
                 this.idleAnimationState.stop();
@@ -186,6 +197,7 @@ public class CoalGeodeEntity extends AbstractGolem implements NeutralMob {
 
             if (!this.level.isClientSide) {
                 this.usePlayerItem(player, interactionHand, itemStack);
+                this.level.broadcastEntityEvent(this, (byte)4);
                 this.gameEvent(GameEvent.EAT, this);
                 this.feedingAnimationState.start(this.tickCount);
                 this.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1, false, true, true));

@@ -45,7 +45,7 @@ public class GhostEntity extends Monster {
     }
 
     public boolean canAttackType(EntityType<?> entityType) {
-            return entityType != ModEntities.GHOST && entityType != EntityType.IRON_GOLEM && entityType != EntityType.ZOMBIE && entityType != EntityType.SKELETON && entityType != EntityType.CREEPER && super.canAttackType(entityType);
+        return entityType != ModEntities.GHOST && entityType != ModEntities.WISP && entityType != EntityType.IRON_GOLEM && entityType != EntityType.ZOMBIE && entityType != EntityType.SKELETON && entityType != EntityType.CREEPER && super.canAttackType(entityType);
     }
 
     public void handleEntityEvent(byte b) {
@@ -115,7 +115,7 @@ public class GhostEntity extends Monster {
         if (this.getHealth() < this.getMaxHealth() / 2) {
 
             this.playSound(ModSoundEvents.ENTITY_GHOST_EMPOWERED, 1.0F, 1.0F);
-    }
+        }
         this.lookControl = new LookControl(this);
         this.setPathfindingMalus(BlockPathTypes.DANGER_FIRE, 16.0f);
         this.setPathfindingMalus(BlockPathTypes.DAMAGE_FIRE, -1.0f);
@@ -197,11 +197,11 @@ public class GhostEntity extends Monster {
             this.level.broadcastEntityEvent(this, (byte)5);
         }
         if (this.level.isClientSide()) {
-                this.idleAnimationState.startIfStopped(this.tickCount);
+            this.idleAnimationState.startIfStopped(this.tickCount);
             this.level.broadcastEntityEvent(this, (byte)1);
-            }
-        super.tick();
         }
+        super.tick();
+    }
 
     private boolean isInPose(Pose pose) {
         return this.getPose() == pose;

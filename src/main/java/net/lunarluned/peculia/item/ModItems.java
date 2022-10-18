@@ -80,6 +80,9 @@ public class ModItems {
     public static final Item GHOST_SPAWN_EGG = registerItem("ghost_spawn_egg",
     new SpawnEggItem(ModEntities.GHOST, 8122868, 3483938, new Item.Properties().tab(ModItemGroup.PECULIA_MISC)));
 
+    public static final Item WISP_SPAWN_EGG = registerItem("wisp_spawn_egg",
+    new SpawnEggItem(ModEntities.WISP, 3483938, 8122868, new Item.Properties().tab(ModItemGroup.PECULIA_MISC)));
+
 
 
     public static final Item SOUL = registerItem("soul",

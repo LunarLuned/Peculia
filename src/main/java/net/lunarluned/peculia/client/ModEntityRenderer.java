@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.client.entity.model.CoalGeodeModel;
 import net.lunarluned.peculia.client.entity.model.GhostModel;
+import net.lunarluned.peculia.client.entity.model.SwordProjectionModel;
 import net.lunarluned.peculia.client.entity.model.WispModel;
 import net.lunarluned.peculia.client.render.entities.coal_geode.CoalGeodeRenderer;
 import net.lunarluned.peculia.client.render.entities.ghost.GhostRenderer;
@@ -32,6 +33,7 @@ public class ModEntityRenderer {
 
         EntityModelLayerRegistry.registerModelLayer(COAL_GEODE, CoalGeodeModel::getLayerDefinition);
         EntityModelLayerRegistry.registerModelLayer(GHOST, GhostModel::getLayerDefinition);
+        EntityModelLayerRegistry.registerModelLayer(SWORD_PROJECTION, SwordProjectionModel::getLayerDefinition);
         EntityModelLayerRegistry.registerModelLayer(WISP, WispModel::getLayerDefinition);
     }
 }

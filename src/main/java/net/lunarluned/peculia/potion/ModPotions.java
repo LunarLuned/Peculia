@@ -20,6 +20,7 @@ public class ModPotions {
     public static Potion EXTICHORRESISTANCE_POTION;
     public static Potion DARKNESS_POTION;
     public static Potion EXTDARKNESS_POTION;
+    public static Potion BANISHED_POTION;
 
     public static Potion registerDarknessPotion(String name) {
         return Registry.register(Registry.POTION, new ResourceLocation(Peculia.MOD_ID, name),
@@ -28,6 +29,11 @@ public class ModPotions {
     public static Potion registerextDarknessPotion(String name) {
         return Registry.register(Registry.POTION, new ResourceLocation(Peculia.MOD_ID, name),
         new Potion(new MobEffectInstance(MobEffects.DARKNESS, 525, 0)));
+    }
+
+    public static Potion registerBanishedPotion(String name) {
+        return Registry.register(Registry.POTION, new ResourceLocation(Peculia.MOD_ID, name),
+                new Potion(new MobEffectInstance(ModEffects.BANISHING, 40, 0)));
     }
 
     public static Potion registerIchorPotion(String name) {
@@ -55,6 +61,9 @@ public class ModPotions {
     public static void registerextIchorPotion() {
         EXTICHOR_POTION = registerextIchorPotion("extichor_potion");
         registerextIchorPotionRecipe();
+    }
+    public static void registerBanishedPotion() {
+        BANISHED_POTION = registerBanishedPotion("banished_potion");
     }
     public static void registerDarknessPotion() {
         DARKNESS_POTION = registerDarknessPotion("darkness_potion");

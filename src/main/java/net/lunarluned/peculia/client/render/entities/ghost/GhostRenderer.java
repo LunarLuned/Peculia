@@ -16,7 +16,6 @@ import org.jetbrains.annotations.NotNull;
 public class GhostRenderer extends MobRenderer<GhostEntity, GhostModel<GhostEntity>> {
 
     private static final ResourceLocation NORMAL_TEXTURE = new ResourceLocation(Peculia.MOD_ID, "textures/entity/ghost/ghosttrans.png");
-    private static final ResourceLocation GHOST_ANGERED_TEXTURE = new ResourceLocation("textures/entity/ghost/ghosttrans_angered.png");
 
     public GhostRenderer(EntityRendererProvider.Context context) {
         super(context, new GhostModel<>(context.bakeLayer(ModEntityRenderer.GHOST)), 0.6F);
@@ -26,9 +25,6 @@ public class GhostRenderer extends MobRenderer<GhostEntity, GhostModel<GhostEnti
 
     @Override
     public ResourceLocation getTextureLocation(@NotNull GhostEntity entity) {
-        if (entity.isAngered()) {
-            return GHOST_ANGERED_TEXTURE;
-        }
         return NORMAL_TEXTURE;
     }
 }

@@ -1,6 +1,7 @@
 package net.lunarluned.peculia.common.registry.entity.living_entities.wisp;
 
 import net.lunarluned.peculia.common.registry.ModMobTypes;
+import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
@@ -98,6 +99,7 @@ public class WispEntity extends AbstractGolem {
 
     public final AnimationState idleAnimationState = new AnimationState();
     public final AnimationState walkAnimationState = new AnimationState();
+    public final AnimationState danceAnimationState = new AnimationState();
 
     public void aiStep() {
         super.aiStep();
@@ -134,7 +136,11 @@ public class WispEntity extends AbstractGolem {
     @Override
     public void tick() {
         if (this.level.isClientSide()) {
+            // On Half Health, become determined function
+            if (this.getHealth() < this.getMaxHealth() / 2) {
 
+                this.addEffect(new MobEffectInstance(ModEffects.DETERMINED, 30, 3));
+            }
             if (this.isMoving()) {
                 this.idleAnimationState.stop();
                 this.walkAnimationState.startIfStopped(this.tickCount);
