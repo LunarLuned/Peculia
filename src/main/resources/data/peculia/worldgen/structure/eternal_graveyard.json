@@ -29,6 +29,12 @@
       "spawns": [
         {
           "type": "peculia:ghost",
+          "weight": 10,
+          "minCount": 0,
+          "maxCount": 1
+        },
+        {
+          "type": "peculia:wisp",
           "weight": 1,
           "minCount": 0,
           "maxCount": 1
