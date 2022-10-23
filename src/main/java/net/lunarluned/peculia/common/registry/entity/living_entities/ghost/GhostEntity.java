@@ -11,6 +11,7 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -45,13 +46,19 @@ public class GhostEntity extends Monster {
     }
 
     public boolean canAttackType(EntityType<?> entityType) {
-        return entityType != ModEntities.GHOST && entityType != ModEntities.WISP && entityType != EntityType.IRON_GOLEM && entityType != EntityType.ZOMBIE && entityType != EntityType.SKELETON && entityType != EntityType.CREEPER && super.canAttackType(entityType);
+        return entityType != ModEntities.GHOST && entityType != ModEntities.WISP && entityType != EntityType.IRON_GOLEM && entityType != EntityType.ZOMBIE && entityType != EntityType.ZOMBIFIED_PIGLIN && entityType != EntityType.SKELETON && entityType != EntityType.CREEPER && super.canAttackType(entityType);
     }
 
     public void handleEntityEvent(byte b) {
         if (b == 4) {
             this.idleAnimationState.stop();
             this.attackAnimationState.start(this.tickCount);
+        }
+        if (b == 6) {
+            this.attackAnimationState.stop();
+            this.walkAnimationState.stop();
+            this.idleAnimationState.stop();
+            this.fallAnimationState.start(this.tickCount);
         }
         if (b == 5) {
             this.playSound(ModSoundEvents.ENTITY_GHOST_EMPOWERED, 1.0F, 1.0F);
@@ -127,6 +134,9 @@ public class GhostEntity extends Monster {
     }
 
     public final AnimationState idleAnimationState = new AnimationState();
+    public final AnimationState fallAnimationState = new AnimationState();
+    public final AnimationState hurtAnimationState = new AnimationState();
+    public final AnimationState walkAnimationState = new AnimationState();
     public final AnimationState attackAnimationState = new AnimationState();
 
     public void aiStep() {
@@ -186,20 +196,31 @@ public class GhostEntity extends Monster {
 
     // Plays the animations upon ticking
 
+
+
     @Override
     public void tick() {
         updateAngered(this.level);
-
+        if (!this.isOnGround() && fallDistance > 1) {
+            this.level.broadcastEntityEvent(this, (byte)6);
+            this.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 30, 0, false, false, false));
+        }
         LivingEntity livingEntity = this.getTarget();
         if (this.getHealth() < this.getMaxHealth() / 2) {
 
-            this.addEffect(new MobEffectInstance(ModEffects.DETERMINED, 30, 3));
+            this.addEffect(new MobEffectInstance(ModEffects.DETERMINED, 30, 3, false, false, false));
             this.level.broadcastEntityEvent(this, (byte)5);
         }
-        if (this.level.isClientSide()) {
-            this.idleAnimationState.startIfStopped(this.tickCount);
-            this.level.broadcastEntityEvent(this, (byte)1);
-        }
+
+            if (this.isMoving()) {
+                this.idleAnimationState.stop();
+                this.fallAnimationState.stop();
+                this.walkAnimationState.startIfStopped(this.tickCount);
+            } else {
+                this.walkAnimationState.stop();
+                this.fallAnimationState.stop();
+                this.idleAnimationState.startIfStopped(this.tickCount);
+            }
         super.tick();
     }
 

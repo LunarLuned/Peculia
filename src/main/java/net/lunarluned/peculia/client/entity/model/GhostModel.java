@@ -60,6 +60,9 @@ public class GhostModel<T extends GhostEntity> extends HierarchicalModel<T> {
         this.root().getAllParts().forEach(ModelPart::resetPose);
         float k = Math.min((float) ghost.getDeltaMovement().lengthSqr() * 150.0f, 8.0f);
         this.animate(ghost.idleAnimationState, GhostAnimations.GHOST_IDLE, h);
+        this.animate(ghost.walkAnimationState, GhostAnimations.GHOST_WALK, h);
+        this.animate(ghost.hurtAnimationState, GhostAnimations.GHOST_HURT, h);
+        this.animate(ghost.fallAnimationState, GhostAnimations.GHOST_FALL, h);
         this.animate(ghost.attackAnimationState, GhostAnimations.GHOST_ATTACK, h);
     }
 }
