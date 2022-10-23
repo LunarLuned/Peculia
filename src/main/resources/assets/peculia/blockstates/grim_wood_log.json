@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "peculia:block/grim_wood_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "peculia:block/grim_wood_log"
+    },
+    "axis=z": {
+      "model": "peculia:block/grim_wood_log",
+      "x": 90
+    }
+  }
+}

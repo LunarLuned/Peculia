@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.block.custom.*;
+import net.lunarluned.peculia.common.registry.misc.ModSignType;
 import net.lunarluned.peculia.item.ModItemGroup;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.core.Registry;
@@ -12,13 +13,18 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SignItem;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 
 public class ModBlocks {
 
     // End Blocks
+
+    public static final WoodType GRIM_TYPE = WoodType.register(new ModSignType("grim_wood"));
 
     public static final Block POPROCK_CRYSTAL = registerBlock("poprock_crystal",
     new Block(FabricBlockSettings.of(Material.AMETHYST).mapColor(MaterialColor.COLOR_PINK).nonOpaque().strength(1f).requiresTool().sounds(ModSoundEvents.POPROCKS)), ModItemGroup.PECULIA);
@@ -220,6 +226,9 @@ public class ModBlocks {
     public static final Block SANGUINE_QUARTZ_BLOCK = registerBlock("sanguine_quartz_block",
     new SanguineQuartzBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(ModSoundEvents.MYTHRIL), UniformInt.of(2, 8)), ModItemGroup.PECULIA_NETHER);
 
+    public static final Block CORPOREUM_SOUL_SAND = registerBlock("corporeum_soul_sand",
+    new CorporeumSoulSandBlock(FabricBlockSettings.of(Material.SAND).mapColor(MaterialColor.COLOR_BROWN).sounds(SoundType.SOUL_SAND).resistance(1).strength(1f)), ModItemGroup.PECULIA_NETHER);
+
 
 
 
@@ -369,15 +378,6 @@ public class ModBlocks {
     public static final Block BONE_TILE_WALL = registerBlock("bone_tile_wall",
             new WallBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.TERRACOTTA_WHITE).strength(1f).strength(2f).requiresTool().sounds(SoundType.BONE_BLOCK).nonOpaque()), ModItemGroup.PECULIA_OVERWORLD);
 
-
-//misc
-
-    public static final Block GRAVESTONE = registerBlock("gravestone",
-    new GravestoneBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).sounds(SoundType.DEEPSLATE).requiresTool().resistance(2).strength(3f)), ModItemGroup.PECULIA_MISC);
-
-    public static final Block CORPOREUM_SOUL_SAND = registerBlock("corporeum_soul_sand",
-            new CorporeumSoulSandBlock(FabricBlockSettings.of(Material.SAND).mapColor(MaterialColor.COLOR_BROWN).sounds(SoundType.SOUL_SAND).resistance(1).strength(1f)), ModItemGroup.PECULIA_NETHER);
-
     public static final Block CRYPTSTONE = registerBlock("cryptstone",
             new Block(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).sounds(ModSoundEvents.CRYPTSTONE).requiresTool().resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
 
@@ -423,6 +423,65 @@ public class ModBlocks {
     public static final Block POLISHED_CRYPTSTONE_TILE_WALL = registerBlock("polished_cryptstone_tile_wall",
             new WallBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).strength(2f).requiresTool().sounds(ModSoundEvents.CRYPTSTONE_BRICKS)), ModItemGroup.PECULIA_OVERWORLD);
 
+    public static final Block STONY_DIRT_PATH = registerBlock("stony_dirt_path",
+            new DirtPathBlock(FabricBlockSettings.of(Material.DIRT).mapColor(MaterialColor.DIRT).sounds(SoundType.GRAVEL).resistance(1).strength(2f)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block GRIM_WOOD_LOG = registerBlock("grim_wood_log", GrimLog(MaterialColor.COLOR_PURPLE), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block GRIM_WOOD = registerBlock("grim_wood", GrimLog(MaterialColor.COLOR_PURPLE), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block STRIPPED_GRIM_WOOD_LOG = registerBlock("stripped_grim_wood_log", GrimLog(MaterialColor.COLOR_PURPLE), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block STRIPPED_GRIM_WOOD = registerBlock("stripped_grim_wood", GrimLog(MaterialColor.COLOR_PURPLE), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block GRIM_PLANKS = registerBlock("grim_wood_planks",
+            new Block(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_PURPLE).strength(2.0f, 3.0f).sound(SoundType.WOOD)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block GRIM_WOOD_STAIRS = registerBlock("grim_wood_stairs",
+            new ModStairsBlock(GRIM_PLANKS.defaultBlockState(), BlockBehaviour.Properties.copy(GRIM_PLANKS)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block GRIM_WOOD_SLAB = registerBlock("grim_wood_slab",
+            new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_PURPLE).strength(2.0f, 3.0f).sound(SoundType.WOOD)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block GRIM_WOOD_FENCE = registerBlock("grim_wood_fence",
+            new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD, GRIM_PLANKS.defaultMaterialColor()).strength(2.0f, 3.0f).sound(SoundType.WOOD)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block GRIM_WOOD_FENCE_GATE = registerBlock("grim_wood_fence_gate",
+            new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD, GRIM_PLANKS.defaultMaterialColor()).strength(2.0f, 3.0f).sound(SoundType.WOOD)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block GRIM_WOOD_BUTTON = registerBlock("grim_wood_button",
+            new WoodButtonBlock(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().strength(0.5f).sound(SoundType.WOOD)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block GRIM_WOOD_PRESSURE_PLATE = registerBlock("grim_wood_pressure_plate",
+            new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD,
+                    GRIM_PLANKS.defaultMaterialColor()).noCollission().strength(0.5f).sound(SoundType.WOOD)), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block GRIM_WOOD_DOOR = registerBlock("grim_wood_door",
+            new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD, GRIM_PLANKS.defaultMaterialColor()).strength(3.0f).sound(SoundType.WOOD).noOcclusion()), ModItemGroup.PECULIA_OVERWORLD);
+
+    public static final Block GRIM_WOOD_TRAPDOOR = registerBlock("grim_wood_trapdoor",
+            new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_PURPLE).strength(3.0f).sound(SoundType.WOOD).noOcclusion()), ModItemGroup.PECULIA_OVERWORLD);
+
+
+
+    public static final Block GRIM_WOOD_SIGN = registerBlockWithoutBlockItem("grim_wood_sign",
+            new StandingSignBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .noCollission().strength(1.0f).sound(SoundType.WOOD), GRIM_TYPE));
+
+    public static final Block GRIM_WOOD_WALL_SIGN = registerBlockWithoutBlockItem("grim_wood_wall_sign",
+            new WallSignBlock(BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(1.0f).sound(SoundType.WOOD).dropsLike(GRIM_WOOD_SIGN), GRIM_TYPE));
+
+    public static final Item GRIM_WOOD_SIGN_ITEM = registerItem("grim_wood_sign",
+    new SignItem(new FabricItemSettings().tab(ModItemGroup.PECULIA_OVERWORLD).stacksTo(16),
+    ModBlocks.GRIM_WOOD_SIGN, ModBlocks.GRIM_WOOD_WALL_SIGN));
+
+
+
+
+//misc
+
+    public static final Block GRAVESTONE = registerBlock("gravestone",
+    new GravestoneBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).sounds(SoundType.DEEPSLATE).requiresTool().resistance(2).strength(3f)), ModItemGroup.PECULIA_MISC);
 
 
 
@@ -431,6 +490,11 @@ public class ModBlocks {
 
 
 
+
+
+    private static Block GrimLog(MaterialColor materialColor) {
+        return new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, blockState -> materialColor).strength(2.0f).sound(SoundType.WOOD));
+    }
 
 
     private static Block registerBlock(String name, Block block, CreativeModeTab group) {
@@ -438,6 +502,9 @@ public class ModBlocks {
         return Registry.register(Registry.BLOCK, new ResourceLocation(Peculia.MOD_ID, name), block);
     }
 
+    private static Item registerItem(String name, Item item) {
+        return Registry.register(Registry.ITEM, new ResourceLocation(Peculia.MOD_ID, name), item);
+    }
 
 
     private static Item registerBlockItem(String name, Block block, CreativeModeTab group) {

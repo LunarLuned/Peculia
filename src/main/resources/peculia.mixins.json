@@ -7,6 +7,7 @@
     "BrewingRecipeRegistryMixin",
     "IchorResistanceEffectMixin",
     "ItemDropMixin",
+    "MilkBucketMixin",
     "PlayerManagerMixin",
     "ScytheModification",
     "effects.anchored.ChorusFruitMixin",
@@ -22,9 +23,13 @@
     "entities.warden.WardenEntityMixin",
     "entities.wither.WitherEntityMixin",
     "entities.wither.WitherSkullEntityMixin",
-    "util.SimpleParticleTypeAccessor"
+    "util.BlockEntityTypeMixin",
+    "util.SimpleParticleTypeAccessor",
+    "util.WoodTypeAccessor",
+    "util.accessor.MobEffectInstanceAccessor"
   ],
   "client": [
+    "client.SheetsMixin",
     "effects.stunned.KeyboardMixin",
     "items.misc.ItemRendererMixin"
   ],

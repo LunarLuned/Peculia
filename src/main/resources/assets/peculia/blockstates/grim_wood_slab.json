@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "peculia:block/grim_wood_slab"
+    },
+    "type=double": {
+      "model": "peculia:block/grim_wood_planks"
+    },
+    "type=top": {
+      "model": "peculia:block/grim_wood_slab_top"
+    }
+  }
+}

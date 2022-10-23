@@ -1,0 +1,6 @@
+{
+  "parent": "block/button_pressed",
+  "textures": {
+    "texture": "peculia:block/grim_wood_planks"
+  }
+}

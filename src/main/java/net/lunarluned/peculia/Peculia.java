@@ -7,6 +7,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.fabricmc.loader.api.FabricLoader;
 import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.common.registry.entity.registry.ModEntities;
@@ -25,6 +26,7 @@ import net.lunarluned.peculia.util.ModLootTableModifiers;
 import net.lunarluned.peculia.world.feature.ModConfiguredFeatures;
 import net.lunarluned.peculia.world.feature.gen.ModWorldGen;
 import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.EntityDamageSource;
 import net.minecraft.world.entity.Entity;
@@ -40,11 +42,24 @@ public class Peculia implements ModInitializer {
 	public static final String MOD_ID = "peculia";
 	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
 
+	public static ResourceLocation id(String path) {
+		return new ResourceLocation(MOD_ID, path);
+	}
+
 	@Override
 	public void onInitialize() {
 
 		// ඞ
 
+		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.SOUL_SAND_VALLEY), MobCategory.MONSTER, ModEntities.GHOST, 1, 0, 1);
+		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.SOUL_SAND_VALLEY), MobCategory.CREATURE, ModEntities.WISP, 1, 0, 1);
+		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.DRIPSTONE_CAVES), MobCategory.CREATURE, ModEntities.COAL_GEODE, 2, 1, 1);
+
+
+		// Strippable Blocks
+
+		StrippableBlockRegistry.register(ModBlocks.GRIM_WOOD, ModBlocks.STRIPPED_GRIM_WOOD);
+		StrippableBlockRegistry.register(ModBlocks.GRIM_WOOD_LOG, ModBlocks.STRIPPED_GRIM_WOOD_LOG);
 
 
 		ModItems.registerModItems();

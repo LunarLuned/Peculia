@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom_left",
+  "textures": {
+    "bottom": "peculia:block/grim_wood_door_bottom",
+    "top": "peculia:block/grim_wood_door_top"
+  }
+}

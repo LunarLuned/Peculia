@@ -47,7 +47,7 @@ public class PeculiaClientMod implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ARTERIAL_BRAMBLE, RenderType.cutout());
+
 
         ModParticles.init();
         ModEntityRenderer.registerRenderers();
@@ -108,8 +108,18 @@ public class PeculiaClientMod implements ClientModInitializer {
                 ModBlocks.DRAGONGLASS_PANE
 
 
-
         );
+
+        // Renders Blocks in List with cutout
+
+        BlockRenderLayerMap.INSTANCE.putBlocks(
+                RenderType.cutoutMipped(),
+
+                ModBlocks.GRIM_WOOD_DOOR,
+                ModBlocks.GRIM_WOOD_TRAPDOOR,
+                ModBlocks.ARTERIAL_BRAMBLE
+        );
+
         //hello acikek.
     }
 }

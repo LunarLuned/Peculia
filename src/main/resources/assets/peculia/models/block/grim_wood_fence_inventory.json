@@ -1,0 +1,6 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "peculia:block/grim_wood_planks"
+  }
+}
