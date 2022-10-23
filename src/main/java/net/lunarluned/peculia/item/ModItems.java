@@ -361,7 +361,7 @@ public class ModItems {
     new Item(new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER)));
 
     public static final Item BOTTLE_OF_TITAN_BLOOD = registerItem("bottle_of_titan_blood",
-    new BottleOfTitansBloodItem(ModBlocks.TITAN_BLOOD, new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER)));
+    new BottleOfTitansBloodItem(ModBlocks.TITAN_BLOOD, new FabricItemSettings().maxCount(16).group(ModItemGroup.PECULIA_NETHER)));
 
     public static final Item SPORODINE = registerItem("sporodine",
     new Item(new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER)));
