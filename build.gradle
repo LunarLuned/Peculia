@@ -34,6 +34,10 @@ dependencies {
 
 }
 
+loom {
+	accessWidenerPath = file("src/main/resources/peculia.accesswidener")
+}
+
 processResources {
 	inputs.property "version", project.version
 

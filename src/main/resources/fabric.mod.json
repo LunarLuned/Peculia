@@ -19,6 +19,7 @@
   "license": "do whatever",
   "icon": "assets/peculia/icon.png",
 
+  "accessWidener": "peculia.accesswidener",
   "environment": "*",
   "entrypoints": {
     "main": [
