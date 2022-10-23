@@ -20,6 +20,11 @@ public class ElectrocutedEffect extends MobEffect {
             entity.hurt(new Peculia.ElectrocutionDamageSource(entity), 1);
             super.applyEffectTick(entity, amplifier);
         }
+        if (entity.isInWaterOrRain() && !entity.isCrouching()) {
+            entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 250, 1));
+            entity.hurt(new Peculia.ElectrocutionDamageSource(entity), 4);
+            super.applyEffectTick(entity, amplifier);
+        }
     }
 
     @Override
