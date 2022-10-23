@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "peculia:block/stony_dirt_path"
+      },
+      {
+        "model": "peculia:block/stony_dirt_path",
+        "y": 90
+      },
+      {
+        "model": "peculia:block/stony_dirt_path",
+        "y": 180
+      },
+      {
+        "model": "peculia:block/stony_dirt_path",
+        "y": 270
+      }
+    ]
+  }
+}
