@@ -14,6 +14,8 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -42,7 +44,7 @@ public class HarvestingTomeItem extends GenericTomeItem {
             // Scans the area for nearby players
 
             AABB aABB = new AABB(k, l = blockPos.getY(), m = blockPos.getZ(), k + 1, l + 1, m + 1).inflate(j).expandTowards(0.0, level.getHeight(), 0.0);
-            List<LivingEntity> nearbyEntities = level.getEntitiesOfClass(LivingEntity.class, aABB);
+            List<Mob> nearbyEntities = level.getEntitiesOfClass(Mob.class, aABB);
 
 
 
