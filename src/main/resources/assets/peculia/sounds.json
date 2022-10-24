@@ -123,7 +123,7 @@
   "item.harvesting_tome.use": {
     "subtitle": "item.harvesting_tome.use",
     "sounds": [
-      "peculia:item/harvesting_tomeuse1",
+      "peculia:item/harvesting_tome/use1",
       "peculia:item/harvesting_tome/use2"
     ]
   },
