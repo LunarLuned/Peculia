@@ -53,12 +53,6 @@ public class GhostEntity extends Monster {
             this.idleAnimationState.stop();
             this.attackAnimationState.start(this.tickCount);
         }
-        if (b == 6) {
-            this.attackAnimationState.stop();
-            this.walkAnimationState.stop();
-            this.idleAnimationState.stop();
-            this.fallAnimationState.startIfStopped(this.tickCount);
-        }
         else {
             super.handleEntityEvent(b);
         }
@@ -240,12 +234,16 @@ public class GhostEntity extends Monster {
 
         // Plays the falling animation and gives the Ghost Slow Falling if falling while not angered
 
-        if (!this.isOnGround() && !this.isAngered()) {
-            this.attackAnimationState.stop();
-            this.walkAnimationState.stop();
-            this.idleAnimationState.stop();
-            this.fallAnimationState.startIfStopped(this.tickCount);
-            this.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 30, 0, false, false, false));
+        if (!this.isAngered()) {
+            if (!this.isOnGround()) {
+                this.attackAnimationState.stop();
+                this.walkAnimationState.stop();
+                this.idleAnimationState.stop();
+                this.fallAnimationState.startIfStopped(this.tickCount);
+                this.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 30, 0, false, false, false));
+            } else {
+                this.fallAnimationState.stop();
+            }
         }
 
         // Adds a movement and damage increase and spawns Soul particles when the Ghost is angered
@@ -269,11 +267,9 @@ public class GhostEntity extends Monster {
 
         if (this.isMoving()) {
             this.idleAnimationState.stop();
-            this.fallAnimationState.stop();
             this.walkAnimationState.startIfStopped(this.tickCount);
         } else {
             this.walkAnimationState.stop();
-            this.fallAnimationState.stop();
             this.idleAnimationState.startIfStopped(this.tickCount);
         }
 
