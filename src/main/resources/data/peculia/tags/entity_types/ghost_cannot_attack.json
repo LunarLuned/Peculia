@@ -1,5 +1,7 @@
 {
   "values": [
+    "peculia:ghost",
+    "peculia:wisp",
     "minecraft:zombie",
     "minecraft:zombie_horse",
     "minecraft:husk",

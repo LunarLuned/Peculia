@@ -3,29 +3,6 @@
   "values": [
     "peculia:compressed_cobblestone",
     "peculia:contained_cobblestone",
-    "peculia:dark_purpur_pillar",
-    "peculia:dark_purpur",
-    "peculia:dark_purpur_slab",
-    "peculia:dark_purpur_stairs",
-    "peculia:dark_purpur_wall",
-    "peculia:chiseled_dark_purpur",
-    "peculia:snow_brick_pillar",
-    "peculia:snow_bricks",
-    "peculia:snow_brick_slab",
-    "peculia:snow_brick_stairs",
-    "peculia:snow_brick_wall",
-    "peculia:sculk_spine",
-    "peculia:spinal_tiles",
-    "peculia:spinal_bricks",
-    "peculia:spinal_brick_slab",
-    "peculia:spinal_tile_slab",
-    "peculia:spinal_brick_stairs",
-    "peculia:spinal_tile_stairs",
-    "peculia:spinal_brick_wall",
-    "peculia:spinal_tile_wall",
-    "peculia:spinal_pillar",
-    "peculia:chiseled_spinal_bricks",
-    "peculia:void_lamp",
     "peculia:sanguine_quartz_block",
     "peculia:ferrock",
     "peculia:charged_ferrock",
@@ -37,7 +14,6 @@
     "peculia:refined_ferrock_brick_stairs",
     "peculia:refined_ferrock_tile_stairs",
     "peculia:refined_ferrock_brick_wall",
-    "peculia:refined_ferrock_tile_wall",
-    "peculia:corporeum_soul_sand"
+    "peculia:refined_ferrock_tile_wall"
   ]
 }

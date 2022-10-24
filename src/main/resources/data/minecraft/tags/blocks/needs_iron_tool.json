@@ -2,19 +2,6 @@
   "replace": false,
   "values": [
     "peculia:continental_cobblestone",
-    "peculia:anomalaic_cobblestone",
-    "peculia:poprock_crystal",
-    "peculia:poprock_bricks",
-    "peculia:poprock_brick_slab",
-    "peculia:poprock_brick_stairs",
-    "peculia:poprock_brick_wall",
-    "peculia:chiseled_poprock_bricks",
-    "peculia:sill",
-    "peculia:sill_bricks",
-    "peculia:sill_brick_slab",
-    "peculia:sill_brick_stairs",
-    "peculia:sill_brick_wall",
-    "peculia:chiseled_sill_bricks",
-    "peculia:void_lamp"
+    "peculia:anomalaic_cobblestone"
   ]
 }

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "peculia:grim_wood_log"
+    "peculia:ghost",
+    "peculia:wisp"
   ]
 }

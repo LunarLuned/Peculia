@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "peculia:mythril_brick_wall",
+    "peculia:poprock_brick_wall",
+    "peculia:sill_brick_wall",
+    "peculia:sill_tile_wall",
+    "peculia:dark_purpur_wall",
+    "peculia:snow_brick_wall",
+    "peculia:spinal_brick_wall",
+    "peculia:spinal_tile_wall",
+    "peculia:polished_fluorite_wall",
+    "peculia:polished_fluorite_brick_wall",
+    "peculia:polished_fluorite_tile_wall",
+    "peculia:refined_ferrock_brick_wall",
+    "peculia:refined_ferrock_tile_wall",
+    "peculia:polished_cryptstone_wall",
+    "peculia:polished_cryptstone_brick_wall",
+    "peculia:polished_cryptstone_tile_wall",
+    "peculia:bone_brick_wall",
+    "peculia:bone_tile_wall"
+  ]
+}
