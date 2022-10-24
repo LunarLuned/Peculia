@@ -7,7 +7,7 @@
     "BrewingRecipeRegistryMixin",
     "IchorResistanceEffectMixin",
     "ItemDropMixin",
-    "MilkBucketMixin",
+    "items.MilkBucketMixin",
     "PlayerManagerMixin",
     "ScytheModification",
     "blocks.DispenserBlockMixin",

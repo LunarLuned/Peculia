@@ -10,4 +10,8 @@ public class ItemsConfig {
     @ConfigEntry.Gui.CollapsibleObject()
     @ConfigEntry.Gui.Tooltip
     public PotionItemsConfig potionItemsConfig = new PotionItemsConfig();
+
+    @ConfigEntry.Gui.CollapsibleObject()
+    @ConfigEntry.Gui.Tooltip
+    public ItemChanges itemChanges = new ItemChanges();
 }

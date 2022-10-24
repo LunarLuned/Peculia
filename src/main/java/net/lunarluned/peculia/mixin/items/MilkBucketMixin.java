@@ -1,10 +1,11 @@
-package net.lunarluned.peculia.mixin;
+package net.lunarluned.peculia.mixin.items;
 
 
 import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.mixin.util.accessor.MobEffectInstanceAccessor;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.MilkBucketItem;
 import org.spongepowered.asm.mixin.Mixin;
@@ -22,11 +23,13 @@ public class MilkBucketMixin {
     private boolean milkRework(LivingEntity livingEntity)
     {
         //this is filler bc i havent made the config for it yet dont smite me //
-        if (Peculia.getConfig().mobs.vanillaMobsConfig.ghastConfig.stat_increase)  {
+        if (Peculia.getConfig().items.itemsConfig.itemChanges.milk_rework)  {
             List<MobEffectInstance> effects = new ArrayList<>(livingEntity.getActiveEffects());
-            MobEffectInstance effect = effects.get(livingEntity.level.random.nextInt(effects.size() - 1));
+            if (effects.isEmpty()) {
+                return true;
+            }
+            MobEffectInstance effect = effects.get(livingEntity.level.random.nextInt(effects.size()));
             ((MobEffectInstanceAccessor) effect).setDuration((int) (effect.getDuration() * 0.8));
-
         } else {
             livingEntity.removeAllEffects();
         }
