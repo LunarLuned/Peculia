@@ -1,6 +1,6 @@
 {
 	"credit": "Made with Blockbench",
-	"texture_size": [15, 17],
+	"texture_size": [16, 32],
 	"textures": {
 		"0": "peculia:block/gravestone",
 		"particle": "peculia:block/gravestone"
@@ -11,12 +11,12 @@
 			"to": [10, 14, 14],
 			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
-				"north": {"uv": [11.73333, 2.82353, 16, 16], "texture": "#0"},
-				"east": {"uv": [0, 2.82353, 12.8, 16], "texture": "#0"},
-				"south": {"uv": [11.73333, 2.82353, 16, 16], "texture": "#0"},
-				"west": {"uv": [0, 2.82353, 12.8, 16], "texture": "#0"},
-				"up": {"uv": [0, 0, 12.8, 3.76471], "rotation": 270, "texture": "#0"},
-				"down": {"uv": [0, 0, 12.8, 3.76471], "rotation": 90, "texture": "#0"}
+				"north": {"uv": [12, 1.5, 15, 8.5], "texture": "#0"},
+				"east": {"uv": [0, 9, 12, 16], "texture": "#0"},
+				"south": {"uv": [12, 1.5, 15, 8.5], "texture": "#0"},
+				"west": {"uv": [0, 1.5, 12, 8.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 12, 1.5], "rotation": 270, "texture": "#0"},
+				"down": {"uv": [0, 0, 12, 1.5], "rotation": 90, "texture": "#0"}
 			}
 		}
 	],
