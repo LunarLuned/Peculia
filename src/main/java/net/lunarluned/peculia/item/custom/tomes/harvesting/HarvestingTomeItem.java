@@ -74,7 +74,7 @@ public class HarvestingTomeItem extends GenericTomeItem {
             return InteractionResultHolder.sidedSuccess(itemStack, level.isClientSide());
         }
 
-        private static void harvestingBoom (LivingEntity attacker, LivingEntity victim,float radius){
+    public static void harvestingBoom (LivingEntity attacker, LivingEntity victim,float radius){
             AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(victim.level, victim.getX(), victim.getY() + 0.35f, victim.getZ());
             areaEffectCloudEntity.setOwner(attacker);
             areaEffectCloudEntity.setParticle(ParticleTypes.SOUL);
@@ -82,10 +82,10 @@ public class HarvestingTomeItem extends GenericTomeItem {
             areaEffectCloudEntity.setDuration(0);
             attacker.level.addFreshEntity(areaEffectCloudEntity);
         }
-    private static void boom (LivingEntity attacker, LivingEntity victim,float radius){
-        AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(victim.level, victim.getX(), victim.getY() - 0.35f, victim.getZ());
+    public static void boom (LivingEntity attacker, LivingEntity victim,float radius){
+        AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(victim.level, victim.getX(), victim.getY() - 0.05f, victim.getZ());
         areaEffectCloudEntity.setOwner(attacker);
-        areaEffectCloudEntity.setParticle(ParticleTypes.EXPLOSION);
+        areaEffectCloudEntity.setParticle(ParticleTypes.SONIC_BOOM);
         areaEffectCloudEntity.setRadius(radius);
         areaEffectCloudEntity.setDuration(0);
         attacker.level.addFreshEntity(areaEffectCloudEntity);

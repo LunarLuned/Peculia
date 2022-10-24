@@ -24,6 +24,9 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
+import static net.lunarluned.peculia.item.custom.tomes.harvesting.HarvestingTomeItem.boom;
+import static net.lunarluned.peculia.item.custom.tomes.harvesting.HarvestingTomeItem.harvestingBoom;
+
 public class LesserHarvestingTomeItem extends GenericTomeItem {
     public LesserHarvestingTomeItem(Properties settings) {
         super(settings);
@@ -72,20 +75,4 @@ public class LesserHarvestingTomeItem extends GenericTomeItem {
             return InteractionResultHolder.sidedSuccess(itemStack, level.isClientSide());
         }
 
-        private static void harvestingBoom (LivingEntity attacker, LivingEntity victim,float radius){
-            AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(victim.level, victim.getX(), victim.getY() + 0.35f, victim.getZ());
-            areaEffectCloudEntity.setOwner(attacker);
-            areaEffectCloudEntity.setParticle(ParticleTypes.SOUL);
-            areaEffectCloudEntity.setRadius(radius);
-            areaEffectCloudEntity.setDuration(0);
-            attacker.level.addFreshEntity(areaEffectCloudEntity);
-        }
-    private static void boom (LivingEntity attacker, LivingEntity victim,float radius){
-        AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(victim.level, victim.getX(), victim.getY() + 0.15f, victim.getZ());
-        areaEffectCloudEntity.setOwner(attacker);
-        areaEffectCloudEntity.setParticle(ParticleTypes.EXPLOSION);
-        areaEffectCloudEntity.setRadius(radius);
-        areaEffectCloudEntity.setDuration(0);
-        attacker.level.addFreshEntity(areaEffectCloudEntity);
-    }
     }

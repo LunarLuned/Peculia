@@ -197,9 +197,6 @@ public class ModItems {
     public static final Item INVERTED_TOME_OF_WATCHING = registerItem("inverted_tome_of_watching",
     new InvertedWatchingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).maxCount(1).rarity(Rarity.UNCOMMON)));
 
-    public static final Item INACTIVE_HARVESTING_TOME = registerItem("inactive_harvesting_tome",
-    new ModTomeItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.PECULIA_ARCANE)));
-
     public static final Item LESSER_TOME_OF_HARVESTING = registerItem("lesser_tome_of_harvesting",
             new LesserHarvestingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).maxCount(1).rarity(Rarity.UNCOMMON)));
 
