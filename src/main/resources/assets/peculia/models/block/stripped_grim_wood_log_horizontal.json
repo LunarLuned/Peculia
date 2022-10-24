@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "peculia:block/stripped_grim_wood_log_top",
+    "side": "peculia:block/stripped_grim_wood_log"
+  }
+}
