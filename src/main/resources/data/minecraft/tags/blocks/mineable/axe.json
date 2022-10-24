@@ -1,5 +1,18 @@
 {
   "replace": false,
   "values": [
+    "peculia:grim_wood_log",
+    "peculiagrim_wood",
+    "peculia:stripped_grim_wood_log",
+    "peculia:stripped_grim_wood",
+    "peculia:grim_wood_planks",
+    "peculia:grim_wood_stairs",
+    "peculia:grim_wood_slab",
+    "peculia:grim_wood_fence",
+    "peculia:grim_wood_fence_gate",
+    "peculia:grim_wood_pressure_plate",
+    "peculia:grim_wood_door",
+    "peculia:grim_wood_trapdoor",
+    "peculia:grim_wood_sign"
   ]
 }
