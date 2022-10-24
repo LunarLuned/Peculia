@@ -100,6 +100,11 @@ public class ItemRendererMixin {
             if (itemStack.is(ModItems.LESSER_INVERTED_TOME_OF_WATCHING))
                 return itemModelShaper.getModelManager().getModel(PeculiaClientMod.INVERTED_TOME_OF_WATCHING_INVENTORY);
 
+            if (itemStack.is(ModItems.TOME_OF_HARVESTING))
+                return itemModelShaper.getModelManager().getModel(PeculiaClientMod.TOME_OF_HARVESTING_INVENTORY);
+            if (itemStack.is(ModItems.LESSER_TOME_OF_HARVESTING))
+                return itemModelShaper.getModelManager().getModel(PeculiaClientMod.TOME_OF_HARVESTING_INVENTORY);
+
         }
 
         return defaultModel;
