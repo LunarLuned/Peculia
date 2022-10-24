@@ -17,6 +17,7 @@ import net.lunarluned.peculia.item.custom.tomes.empowering.EmpoweringTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.empowering.LesserEmpoweringTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.fortifying.FortifyingTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.fortifying.LesserFortifyingTomeItem;
+import net.lunarluned.peculia.item.custom.tomes.harvesting.LesserHarvestingTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.healing.HealingTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.healing.LesserHealingTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.inverted.agility.InvertedAgilityTomeItem;
@@ -33,7 +34,7 @@ import net.lunarluned.peculia.item.custom.tomes.inverted.watching.InvertedWatchi
 import net.lunarluned.peculia.item.custom.tomes.inverted.watching.LesserInvertedWatchingTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.updraft.LesserUpdraftTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.updraft.UpdraftTomeItem;
-import net.lunarluned.peculia.item.custom.tomes.warding.WardingTomeItem;
+import net.lunarluned.peculia.item.custom.tomes.harvesting.HarvestingTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.watching.LesserWatchingTomeItem;
 import net.lunarluned.peculia.item.custom.tomes.watching.WatchingTomeItem;
 import net.lunarluned.peculia.item.modmats.ModArmorMaterials;
@@ -196,11 +197,14 @@ public class ModItems {
     public static final Item INVERTED_TOME_OF_WATCHING = registerItem("inverted_tome_of_watching",
     new InvertedWatchingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).maxCount(1).rarity(Rarity.UNCOMMON)));
 
-    public static final Item INACTIVE_WARDING_TOME = registerItem("inactive_warding_tome",
+    public static final Item INACTIVE_HARVESTING_TOME = registerItem("inactive_harvesting_tome",
     new ModTomeItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.PECULIA_ARCANE)));
 
-    public static final Item TOME_OF_WARDING = registerItem("tome_of_warding",
-    new WardingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).maxCount(1).rarity(Rarity.UNCOMMON)));
+    public static final Item LESSER_TOME_OF_HARVESTING = registerItem("lesser_tome_of_harvesting",
+            new LesserHarvestingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).maxCount(1).rarity(Rarity.UNCOMMON)));
+
+    public static final Item TOME_OF_HARVESTING = registerItem("tome_of_harvesting",
+    new HarvestingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).maxCount(1).rarity(Rarity.UNCOMMON)));
 
 
     public static final Item CLOAK_HELMET = registerItem("cloak_helmet",

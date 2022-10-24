@@ -1,4 +1,4 @@
-package net.lunarluned.peculia.item.custom.tomes.warding;
+package net.lunarluned.peculia.item.custom.tomes.harvesting;
 
 import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.item.custom.tomes.GenericTomeItem;
@@ -7,7 +7,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.damagesource.DamageSource;
@@ -24,8 +23,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class WardingTomeItem extends GenericTomeItem {
-    public WardingTomeItem(Properties settings) {
+public class LesserHarvestingTomeItem extends GenericTomeItem {
+    public LesserHarvestingTomeItem(Properties settings) {
         super(settings);
     }
 
@@ -38,7 +37,7 @@ public class WardingTomeItem extends GenericTomeItem {
             int m;
             int l;
             int k = blockPos.getX();
-            int j = 16;
+            int j = 8;
 
             // Scans the area for nearby players
 
@@ -47,40 +46,45 @@ public class WardingTomeItem extends GenericTomeItem {
 
 
 
-            if (!player.isCrouching() && player.getOffhandItem().is(ModItems.SOUL)) {
+            if (player.getOffhandItem().is(ModItems.SOUL)) {
 
-                if (player.getOffhandItem().getCount() <= 7) {
+                if (player.getOffhandItem().getCount() <= 11) {
                     level.gameEvent(player, GameEvent.BLOCK_CHANGE, player.getOnPos());
                     level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_GENERIC_TOME_FAIL, SoundSource.NEUTRAL, 1, 1);
                     return InteractionResultHolder.fail(itemStack);
                 }
             }
-                if (!player.isCrouching() && (player.getOffhandItem().getCount() >= 8) && player.getOffhandItem().is(ModItems.SOUL)) {
-                    sonicBoom(player, player, 12);
+                if ((player.getOffhandItem().getCount() >= 12) && player.getOffhandItem().is(ModItems.SOUL)) {
+                    harvestingBoom(player, player, 6);
+                    boom(player, player, 6);
                         for (LivingEntity livingEntity : nearbyEntities)  {
-                            livingEntity.hurt(DamageSource.sonicBoom(player), 5.0F);
+                            livingEntity.hurt(DamageSource.MAGIC, 12.0F);
                         }
                     player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 60, 0));
+                    player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 10, 3));
                     player.getCooldowns().addCooldown(this, 100);
-                    player.getOffhandItem().shrink(8);
+                    player.getOffhandItem().shrink(12);
                     TomeParticles((ServerLevel) level, player);
-                }
-                if (!player.isCrouching() && (player.getOffhandItem().getCount() >= 8) && player.getOffhandItem().is(ModItems.SOUL)) {
-                    player.getOffhandItem().shrink(8);
-                    TomeParticles((ServerLevel) level, player);
-                    level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_WATCHING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
-                    player.getCooldowns().addCooldown(this, 100);
+                    level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_HARVESTING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
                 }
             }
             return InteractionResultHolder.sidedSuccess(itemStack, level.isClientSide());
         }
 
-        private static void sonicBoom (LivingEntity attacker, LivingEntity victim,float radius){
-            AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(victim.level, victim.getX(), victim.getY() + 0.25f, victim.getZ());
+        private static void harvestingBoom (LivingEntity attacker, LivingEntity victim,float radius){
+            AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(victim.level, victim.getX(), victim.getY() + 0.35f, victim.getZ());
             areaEffectCloudEntity.setOwner(attacker);
-            areaEffectCloudEntity.setParticle(ParticleTypes.SONIC_BOOM);
+            areaEffectCloudEntity.setParticle(ParticleTypes.SOUL);
             areaEffectCloudEntity.setRadius(radius);
             areaEffectCloudEntity.setDuration(0);
             attacker.level.addFreshEntity(areaEffectCloudEntity);
         }
+    private static void boom (LivingEntity attacker, LivingEntity victim,float radius){
+        AreaEffectCloud areaEffectCloudEntity = new AreaEffectCloud(victim.level, victim.getX(), victim.getY() + 0.15f, victim.getZ());
+        areaEffectCloudEntity.setOwner(attacker);
+        areaEffectCloudEntity.setParticle(ParticleTypes.EXPLOSION);
+        areaEffectCloudEntity.setRadius(radius);
+        areaEffectCloudEntity.setDuration(0);
+        attacker.level.addFreshEntity(areaEffectCloudEntity);
+    }
     }

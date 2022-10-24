@@ -85,6 +85,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent ITEM_WATCHING_TOME_USE = registerSoundEvent("item.watching_tome.use");
 
+    public static final SoundEvent ITEM_HARVESTING_TOME_USE = registerSoundEvent("item.harvesting_tome.use");
+
     public static final SoundEvent ITEM_GENERIC_GLYPH_USE = registerSoundEvent("item.generic_glyph.use");
 
     public static final SoundEvent ITEM_TUSK_HORN_STAMPEDE = registerSoundEvent("item.tusk_horn.stampede");
