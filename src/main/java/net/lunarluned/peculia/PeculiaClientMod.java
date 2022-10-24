@@ -43,6 +43,7 @@ public class PeculiaClientMod implements ClientModInitializer {
     public static ModelResourceLocation TOME_OF_WATCHING_INVENTORY = new ModelResourceLocation("peculia:tome_of_watching_inventory#inventory");
     public static ModelResourceLocation INVERTED_TOME_OF_WATCHING_INVENTORY = new ModelResourceLocation("peculia:inverted_tome_of_watching_inventory#inventory");
 
+    public static ModelResourceLocation TOME_OF_HARVESTING_INVENTORY = new ModelResourceLocation("peculia:tome_of_harvesting_inventory#inventory");
 
     @Override
     public void onInitializeClient() {
@@ -98,6 +99,8 @@ public class PeculiaClientMod implements ClientModInitializer {
                 out.accept(TOME_OF_WATCHING_INVENTORY));
         ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
                 out.accept(INVERTED_TOME_OF_WATCHING_INVENTORY));
+        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->
+                out.accept(TOME_OF_HARVESTING_INVENTORY));
 
         // Renders Blocks in List as Transparent (With Translucency)
 

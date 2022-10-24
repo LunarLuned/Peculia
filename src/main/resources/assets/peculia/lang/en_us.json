@@ -286,14 +286,14 @@
   "item.peculia.lesser_inverted_tome_of_evoking": "Tome of Evoking",
   "item.peculia.lesser_inverted_tome_of_evoking.desc": "Lesser, Inverted",
 
-  "item.peculia.tome_of_warding": "Tome of Warding",
-  "item.peculia.tome_of_warding.desc": "Greater",
-  "item.peculia.lesser_tome_of_warding": "Tome of Warding",
-  "item.peculia.lesser_tome_of_warding.desc": "Lesser",
-  "item.peculia.inverted_tome_of_warding": "Tome of Warding",
-  "item.peculia.inverted_tome_of_warding.desc": "Greater, Inverted",
-  "item.peculia.lesser_inverted_tome_of_warding": "Tome of Warding",
-  "item.peculia.lesser_inverted_tome_of_warding.desc": "Lesser, Inverted",
+  "item.peculia.tome_of_harvesting": "Tome of Harvesting",
+  "item.peculia.tome_of_harvesting.desc": "Greater",
+  "item.peculia.lesser_tome_of_harvesting": "Tome of Harvesting",
+  "item.peculia.lesser_tome_of_harvesting.desc": "Lesser",
+  "item.peculia.inverted_tome_of_harvesting": "Tome of Harvesting",
+  "item.peculia.inverted_tome_of_harvesting.desc": "Greater, Inverted",
+  "item.peculia.lesser_inverted_tome_of_harvesting": "Tome of Harvesting",
+  "item.peculia.lesser_inverted_tome_of_harvesting.desc": "Lesser, Inverted",
 
   "item.peculia.tome_of_watching": "Tome of Watching",
   "item.peculia.tome_of_watching.desc": "Greater",
@@ -489,6 +489,7 @@
   "item.agility_tome.use": "Tome speeds up",
   "item.agility_tome.crowd_use": "Tome speeds up an area",
   "item.watching_tome.use": "Tome observes",
+  "item.harvesting_tome.use": "Tome harvests",
 
   "subtitles.entity.ghost.moan": "Ghost moans",
   "subtitles.entity.ghost.hurt": "Ghost hurts",
@@ -554,6 +555,9 @@
   "text.autoconfig.peculia.option.items.itemsConfig.itemChances": "Item Chances",
   "text.autoconfig.peculia.option.items.itemsConfig.itemChances.@Tooltip": "Item Chances",
 
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChanges": "Item Changes",
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChanges.@Tooltip": "Item Changes",
+
   "text.autoconfig.peculia.option.items.itemsConfig.itemChances.soul_harvest_chance": "Soul Scythe Soul Harvesting Chance",
   "text.autoconfig.peculia.option.items.itemsConfig.itemChances.soul_harvest_chance.@Tooltip": "Chance for Soul Harvesting Ability to trigger",
 
@@ -569,6 +573,8 @@
   "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.allow_ichor_potions": "Allow Ichor Potions",
   "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.allow_ichor_potions.@Tooltip": "Allows Ichor Potions",
 
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChanges.milk_rework": "Milk Rework",
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChanges.milk_rework.@Tooltip": "Milk now removes half of a random effect's duration, instead of removing all effects",
 
   "text.autoconfig.peculia.option.blocks": "Blocks",
 
