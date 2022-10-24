@@ -26,6 +26,18 @@ public class BlessedEnchantment extends Enchantment {
         return 0;
     }
 
+    public boolean isTreasureOnly() {
+        return false;
+    }
+
+    public boolean isTradeable() {
+        return false;
+    }
+
+    public boolean isDiscoverable() {
+        return false;
+    }
+
     @Override
     public boolean checkCompatibility(Enchantment enchantment) {
         return !(enchantment instanceof DamageEnchantment);

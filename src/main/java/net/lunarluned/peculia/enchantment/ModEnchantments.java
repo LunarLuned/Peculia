@@ -20,7 +20,7 @@ public class ModEnchantments {
     new DeterminedEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentCategory.ARMOR_CHEST));
 
     public static Enchantment BLESSED = register("blessed",
-    new BlessedEnchantment(Enchantment.Rarity.RARE, EnchantmentCategory.WEAPON));
+    new BlessedEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentCategory.WEAPON));
 
     public static Enchantment SHORYUKEN = register("shoryuken",
     new ShoryukenEnchantment(Enchantment.Rarity.RARE, EnchantmentCategory.FISHING_ROD));
