@@ -16,15 +16,25 @@ import org.jetbrains.annotations.NotNull;
 public class GhostRenderer extends MobRenderer<GhostEntity, GhostModel<GhostEntity>> {
 
     private static final ResourceLocation NORMAL_TEXTURE = new ResourceLocation(Peculia.MOD_ID, "textures/entity/ghost/ghosttrans.png");
+    private static final ResourceLocation ANGERED_TEXTURE = new ResourceLocation(Peculia.MOD_ID, "textures/entity/ghost/ghosttrans_angered.png");
 
     public GhostRenderer(EntityRendererProvider.Context context) {
         super(context, new GhostModel<>(context.bakeLayer(ModEntityRenderer.GHOST)), 0.6F);
-        this.addLayer(new GhostGlowFeatureRenderer(this));
+        this.addLayer(new GhostGlowFeatureRenderer<>(this));
     }
 
+    @Override
+    protected boolean isShaking(GhostEntity entity) {
+        return entity.isAngered();
+    }
 
     @Override
     public ResourceLocation getTextureLocation(@NotNull GhostEntity entity) {
-        return NORMAL_TEXTURE;
+        if (entity.isAngered()) {
+            return ANGERED_TEXTURE;
+        } else {
+            return NORMAL_TEXTURE;
+        }
     }
+
 }
