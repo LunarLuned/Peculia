@@ -182,17 +182,6 @@ public class GhostEntity extends Monster {
 
 
     public boolean isAngered() {
-        double d = this.getAttributeValue(Attributes.FOLLOW_RANGE);
-        AABB aABB = AABB.unitCubeFromLowerCorner(this.position()).inflate(d, 20.0, d);
-        this.level.getEntitiesOfClass(GhostEntity.class, aABB, EntitySelector.NO_SPECTATORS).stream().filter((ghost) -> {
-            return ghost != this;
-        }).filter((ghost) -> {
-            return ghost.getTarget() == null;
-        }).filter((ghost) -> {
-            return !ghost.isAlliedTo(this.getTarget());
-        }).forEach((ghost) -> {
-            ghost.setTarget(this.getTarget());
-        });
         return this.entityData.get(ANGERED);
     }
     public void setAngered(boolean isAngered) {
