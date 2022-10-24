@@ -240,7 +240,7 @@ public class GhostEntity extends Monster {
                 this.walkAnimationState.stop();
                 this.idleAnimationState.stop();
                 this.fallAnimationState.startIfStopped(this.tickCount);
-                this.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 30, 0, false, false, false));
+                this.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 30, 1, false, false, false));
             } else {
                 this.fallAnimationState.stop();
             }
