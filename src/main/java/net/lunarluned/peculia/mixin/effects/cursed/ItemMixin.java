@@ -21,26 +21,20 @@ public abstract class ItemMixin {
     @Inject(at = @At("RETURN"), method = "use", cancellable = true)
     public void use(Level level, Player player, InteractionHand interactionHand, CallbackInfoReturnable<InteractionResultHolder<ItemStack>> cir) {
         if (player.hasEffect(ModEffects.CURSED)) {
-            InteractionResultHolder.fail(player.getItemInHand(interactionHand));
-        } else {
-            InteractionResultHolder.pass(player.getItemInHand(interactionHand));
-            }
+            cir.setReturnValue(InteractionResultHolder.pass(player.getItemInHand(interactionHand)));
+        }
     }
 
-    @Inject(at = @At("HEAD"), method = "canAttackBlock", cancellable = true)
+    @Inject(at = @At("RETURN"), method = "canAttackBlock", cancellable = true)
     public void canAttackBlock(BlockState blockState, Level level, BlockPos blockPos, Player player, CallbackInfoReturnable<Boolean> cir) {
-        if (!player.hasEffect(ModEffects.CURSED)) {
-            cir.setReturnValue(true);
-        } else {
+        if (player.hasEffect(ModEffects.CURSED)) {
             cir.setReturnValue(false);
         }
     }
 
     @Inject(at = @At("HEAD"), method = "hurtEnemy", cancellable = true)
     public void hurtEnemy(ItemStack itemStack, LivingEntity livingEntity, LivingEntity livingEntity2, CallbackInfoReturnable<Boolean> cir) {
-        if (!livingEntity.hasEffect(ModEffects.CURSED)) {
-            cir.setReturnValue(true);
-        } else {
+        if (livingEntity.hasEffect(ModEffects.CURSED)) {
             cir.setReturnValue(false);
         }
     }

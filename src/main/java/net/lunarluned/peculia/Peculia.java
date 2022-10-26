@@ -55,12 +55,10 @@ public class Peculia implements ModInitializer {
 		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.SOUL_SAND_VALLEY), MobCategory.CREATURE, ModEntities.WISP, 1, 0, 1);
 		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.DRIPSTONE_CAVES), MobCategory.CREATURE, ModEntities.COAL_GEODE, 2, 1, 1);
 
-
 		// Strippable Blocks
 
 		StrippableBlockRegistry.register(ModBlocks.GRIM_WOOD, ModBlocks.STRIPPED_GRIM_WOOD);
 		StrippableBlockRegistry.register(ModBlocks.GRIM_WOOD_LOG, ModBlocks.STRIPPED_GRIM_WOOD_LOG);
-
 
 		ModItems.registerModItems();
 		ModGameEvents.registerGameEvents();
