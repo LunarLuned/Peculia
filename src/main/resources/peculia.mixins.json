@@ -12,7 +12,6 @@
     "effects.anchored.ChorusFruitMixin",
     "effects.anchored.EnderPearlMixin",
     "effects.cursed.ItemMixin",
-    "enchantments.EnchantmentModification",
     "entities.LivingEntityMixin",
     "entities.ghast.GhastEntityMixin",
     "entities.warden.SonicBoomMixin",
