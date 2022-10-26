@@ -367,8 +367,8 @@ public class ModItems {
     public static final Item SPORODINE = registerItem("sporodine",
     new Item(new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER)));
 
-    public static final Item TUSK_HORN = registerItem("tusk_horn",
-    new TuskHornItem(new FabricItemSettings().tab(ModItemGroup.PECULIA_NETHER).stacksTo(1), PeculiaTags.TUSK_HORNS));
+    public static final Item HOG_HORN = registerItem("hog_horn",
+    new HogHornItem(new FabricItemSettings().tab(ModItemGroup.PECULIA_NETHER).stacksTo(1), PeculiaTags.HOG_HORNS));
 
     // Overworld Items
 

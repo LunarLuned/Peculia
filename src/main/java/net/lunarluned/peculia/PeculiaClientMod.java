@@ -56,7 +56,7 @@ public class PeculiaClientMod implements ClientModInitializer {
         FabricModelPredicateProviderRegistry.register(ModItems.REMNANT_HEART, new ResourceLocation("opened"),
                 (itemStack, clientWorld, livingEntity, worldSeed) -> RemnantHeartItem.isOpened(itemStack) ? 1.0F : 0.0F);
 
-        FabricModelPredicateProviderRegistry.register(ModItems.TUSK_HORN, new ResourceLocation("tooting"),
+        FabricModelPredicateProviderRegistry.register(ModItems.HOG_HORN, new ResourceLocation("tooting"),
                 (itemStack, clientLevel, livingEntity, i) -> livingEntity != null && livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack ? 1.0f : 0.0f);
 
         ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) ->

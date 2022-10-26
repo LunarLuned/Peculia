@@ -112,9 +112,9 @@ public class Peculia implements ModInitializer {
 
 		// Tusk Horns
 
-		Registry.register(Registry.INSTRUMENT, ModInstruments.STAMPEDE_TUSK_HORN, new Instrument(ModSoundEvents.ITEM_TUSK_HORN_STAMPEDE, 140, 256.0F));
-		Registry.register(Registry.INSTRUMENT, ModInstruments.PULSE_TUSK_HORN, new Instrument(ModSoundEvents.ITEM_TUSK_HORN_PULSE, 140, 256.0F));
-		Registry.register(Registry.INSTRUMENT, ModInstruments.CRY_TUSK_HORN, new Instrument(ModSoundEvents.ITEM_TUSK_HORN_CRY, 140, 256.0F));
+		Registry.register(Registry.INSTRUMENT, ModInstruments.STAMPEDE_HOG_HORN, new Instrument(ModSoundEvents.ITEM_HOG_HORN_STAMPEDE, 140, 256.0F));
+		Registry.register(Registry.INSTRUMENT, ModInstruments.PULSE_HOG_HORN, new Instrument(ModSoundEvents.ITEM_HOG_HORN_PULSE, 140, 256.0F));
+		Registry.register(Registry.INSTRUMENT, ModInstruments.CRY_HOG_HORN, new Instrument(ModSoundEvents.ITEM_HOG_HORN_CRY, 140, 256.0F));
 
 		// Furnace Fuel
 

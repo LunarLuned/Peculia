@@ -562,22 +562,22 @@
     ],
     "subtitle": "subtitles.entity.ghost.jumpscare"
   },
-  "item.tusk_horn.stampede": {
+  "item.hog_horn.stampede": {
     "sounds": [
-      "peculia:item/tusk_horn/stampede"
+      "peculia:item/hog_horn/stampede"
     ],
-    "subtitle": "subtitles.item.tusk_horn"
+    "subtitle": "subtitles.item.hog_horn"
   },
-  "item.tusk_horn.pulse": {
+  "item.hog_horn.pulse": {
     "sounds": [
-      "peculia:item/tusk_horn/pulse"
+      "peculia:item/hog_horn/pulse"
     ],
-    "subtitle": "subtitles.item.tusk_horn"
+    "subtitle": "subtitles.item.hog_horn"
   },
-  "item.tusk_horn.cry": {
+  "item.hog_horn.cry": {
     "sounds": [
-      "peculia:item/tusk_horn/cry"
+      "peculia:item/hog_horn/cry"
     ],
-    "subtitle": "subtitles.item.tusk_horn"
+    "subtitle": "subtitles.item.hog_horn"
   }
 }

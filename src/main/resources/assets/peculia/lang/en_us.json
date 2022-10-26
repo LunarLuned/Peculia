@@ -390,8 +390,8 @@
   "advancements.end.obtain_mirror.title": "Who's the fairest one of all?",
   "advancements.end.obtain_mirror.description": "Get an Echoing Mirror, and harness the void's teleportation abilities.",
 
-  "advancements.adventure.use_tusk_horn.title": "30 to 50 Feral Hogs",
-  "advancements.adventure.use_tusk_horn.description": "Obtain & Use a Tusk Horn",
+  "advancements.adventure.use_hog_horn.title": "30 to 50 Feral Hogs",
+  "advancements.adventure.use_hog_horn.description": "Use a Hog Horn",
 
   "advancements.husbandry.jams.title": "Thats my Jam!",
   "advancements.husbandry.jams.description": "Have all Jams in your inventory",
@@ -497,11 +497,11 @@
   "subtitles.entity.ghost.death": "Ghost dies",
   "subtitles.entity.ghost.empowered": "Ghost is empowered",
 
-  "item.peculia.tusk_horn": "Tusk Horn",
-  "instrument.peculia.stampede_tusk_horn": "Stampede",
-  "instrument.peculia.pulse_tusk_horn": "Pulse",
-  "instrument.peculia.cry_tusk_horn": "Cry",
-  "subtitles.item.tusk_horn": "Tusk Horn plays",
+  "item.peculia.hog_horn": "Hog Horn",
+  "instrument.peculia.stampede_hog_horn": "Stampede",
+  "instrument.peculia.pulse_hog_horn": "Pulse",
+  "instrument.peculia.cry_hog_horn": "Cry",
+  "subtitles.item.hog_horn": "Hog Horn plays",
 
   "death.attack.electrocution": "%1$s was electrocuted to death",
   "death.attack.electrocuted.player": "%1$s electrocuted to death whilst fighting %2$s",

@@ -89,9 +89,9 @@ public class ModSoundEvents {
 
     public static final SoundEvent ITEM_GENERIC_GLYPH_USE = registerSoundEvent("item.generic_glyph.use");
 
-    public static final SoundEvent ITEM_TUSK_HORN_STAMPEDE = registerSoundEvent("item.tusk_horn.stampede");
-    public static final SoundEvent ITEM_TUSK_HORN_PULSE = registerSoundEvent("item.tusk_horn.pulse");
-    public static final SoundEvent ITEM_TUSK_HORN_CRY = registerSoundEvent("item.tusk_horn.cry");
+    public static final SoundEvent ITEM_HOG_HORN_STAMPEDE = registerSoundEvent("item.hog_horn.stampede");
+    public static final SoundEvent ITEM_HOG_HORN_PULSE = registerSoundEvent("item.hog_horn.pulse");
+    public static final SoundEvent ITEM_HOG_HORN_CRY = registerSoundEvent("item.hog_horn.cry");
 
     public static final SoundEvent BLOCK_PERFORATED_JAW_BITE = registerSoundEvent("block.perforated_jaw.bite");
     public static final SoundEvent BLOCK_PERFORATED_JAW_OPEN = registerSoundEvent("block.perforated_jaw.open");

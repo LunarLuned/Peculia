@@ -17,9 +17,9 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Iterator;
 import java.util.Optional;
 
-public class TuskHornDispenserFunctionality implements DispenseItemBehavior {
+public class HogHornDispenserFunctionality implements DispenseItemBehavior {
 
-    public static final TuskHornDispenserFunctionality INSTANCE = new TuskHornDispenserFunctionality();
+    public static final HogHornDispenserFunctionality INSTANCE = new HogHornDispenserFunctionality();
 
     private static final String TAG_INSTRUMENT = "instrument";
     public TagKey<Instrument> instruments;
@@ -49,16 +49,16 @@ public class TuskHornDispenserFunctionality implements DispenseItemBehavior {
             Instrument instrument = optional.get().value();
             float f = instrument.range() / 16.0f;
 
-            if (optional.get().is(ModInstruments.CRY_TUSK_HORN)) {
-                level.playSound(null, blockPos, ModSoundEvents.ITEM_TUSK_HORN_CRY, SoundSource.BLOCKS, f, 1.0f);
+            if (optional.get().is(ModInstruments.CRY_HOG_HORN)) {
+                level.playSound(null, blockPos, ModSoundEvents.ITEM_HOG_HORN_CRY, SoundSource.BLOCKS, f, 1.0f);
             }
 
-            if (optional.get().is(ModInstruments.PULSE_TUSK_HORN)) {
-                level.playSound(null, blockPos, ModSoundEvents.ITEM_TUSK_HORN_PULSE, SoundSource.BLOCKS, f, 1.0f);
+            if (optional.get().is(ModInstruments.PULSE_HOG_HORN)) {
+                level.playSound(null, blockPos, ModSoundEvents.ITEM_HOG_HORN_PULSE, SoundSource.BLOCKS, f, 1.0f);
             }
 
-            if (optional.get().is(ModInstruments.STAMPEDE_TUSK_HORN)) {
-                level.playSound(null, blockPos, ModSoundEvents.ITEM_TUSK_HORN_STAMPEDE, SoundSource.BLOCKS, f, 1.0f);
+            if (optional.get().is(ModInstruments.STAMPEDE_HOG_HORN)) {
+                level.playSound(null, blockPos, ModSoundEvents.ITEM_HOG_HORN_STAMPEDE, SoundSource.BLOCKS, f, 1.0f);
             }
         }
         return itemStack;

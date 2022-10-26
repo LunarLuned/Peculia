@@ -26,10 +26,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
-public class TuskHornItem extends Item {
+public class HogHornItem extends Item {
     private final TagKey<Instrument> instruments;
 
-    public TuskHornItem(Properties properties, TagKey<Instrument> tagKey) {
+    public HogHornItem(Properties properties, TagKey<Instrument> tagKey) {
         super(properties);
         this.instruments = tagKey;
     }
@@ -59,7 +59,7 @@ public class TuskHornItem extends Item {
         if (this.allowedIn(creativeModeTab)) {
 
             for (Holder<Instrument> instrumentHolder : Registry.INSTRUMENT.getTagOrEmpty(this.instruments)) {
-                nonNullList.add(create(ModItems.TUSK_HORN, instrumentHolder));
+                nonNullList.add(create(ModItems.HOG_HORN, instrumentHolder));
             }
         }
     }

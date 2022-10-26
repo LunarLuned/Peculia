@@ -369,7 +369,7 @@ public class ModLootTableModifiers {
                 LootPool.Builder builder = LootPool.lootPool();
                 builder.when(LootItemRandomChanceCondition.randomChance(0.4f)); //40% chance
                 builder.setRolls(UniformGenerator.between(1, 1));
-                builder.add(LootItem.lootTableItem(ModItems.TUSK_HORN).apply(SetInstrumentFunction.setInstrumentOptions(PeculiaTags.TUSK_HORNS)));
+                builder.add(LootItem.lootTableItem(ModItems.HOG_HORN).apply(SetInstrumentFunction.setInstrumentOptions(PeculiaTags.HOG_HORNS)));
                 table.withPool(builder);
             }
             if(BASTION_TREASURE_STRUCTURE_CHEST_ID.equals(id)) {

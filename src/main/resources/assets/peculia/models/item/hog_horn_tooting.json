@@ -1,7 +1,7 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "peculia:item/tusk_horn"
+		"layer0": "peculia:item/hog_horn"
 	},
 	"display": {
 		"thirdperson_righthand": {

@@ -1,7 +1,7 @@
 package net.lunarluned.peculia.mixin.blocks;
 
 import net.lunarluned.peculia.item.ModItems;
-import net.lunarluned.peculia.util.dispenser.TuskHornDispenserFunctionality;
+import net.lunarluned.peculia.util.dispenser.HogHornDispenserFunctionality;
 import net.minecraft.core.dispenser.DispenseItemBehavior;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -19,8 +19,8 @@ public abstract class DispenserBlockMixin {
 
         Item item = itemStack.getItem();
 
-        if (item == ModItems.TUSK_HORN) {
-            cir.setReturnValue(TuskHornDispenserFunctionality.INSTANCE);
+        if (item == ModItems.HOG_HORN) {
+            cir.setReturnValue(HogHornDispenserFunctionality.INSTANCE);
         }
     }
 }

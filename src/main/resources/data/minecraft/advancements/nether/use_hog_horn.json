@@ -5,7 +5,7 @@
       "conditions": {
         "item": {
           "items": [
-            "peculia:tusk_horn"
+            "peculia:hog_horn"
           ]
         }
       },
@@ -15,16 +15,16 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "translate": "advancements.adventure.use_tusk_horn.description"
+      "translate": "advancements.adventure.use_hog_horn.description"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "peculia:tusk_horn"
+      "item": "peculia:hog_horn"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancements.adventure.use_tusk_horn.title"
+      "translate": "advancements.adventure.use_hog_horn.title"
     }
   },
   "requirements": [
