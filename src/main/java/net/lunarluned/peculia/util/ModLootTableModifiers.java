@@ -79,21 +79,10 @@ public class ModLootTableModifiers {
             = new ResourceLocation("minecraft", "entities/witch");
     private static final ResourceLocation CREEPER_ENTITY_ID
             = new ResourceLocation("minecraft", "entities/creeper");
-    private static final ResourceLocation SCULK_SPINE_BLOCK_ID
-            = new ResourceLocation("peculia", "blocks/sculk_spine");
 
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, table, setter) -> {
             //blocks
-            if(SCULK_SPINE_BLOCK_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1));
-                LootPool.Builder builder = LootPool.lootPool();
-                builder.when(LootItemRandomChanceCondition.randomChance(0.1f)); //10% chance
-                builder.setRolls(UniformGenerator.between(0, 3)); // at the least you'll get 0, at most 3
-                builder.add(LootItem.lootTableItem(ModItems.SCULK_SAC));
-                table.withPool(builder);
-            }
             if(GRAVESTONE_BLOCK_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1));

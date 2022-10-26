@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "peculia:bottle_of_titan_blood"
+    },
+    {
+      "item": "minecraft:golden_apple"
+    },
+    {
+      "item": "minecraft:ghast_tear"
+    },
+    {
+      "item": "peculia:hoglin_tusk"
+    }
+  ],
+  "result": {
+    "item": "peculia:ambrosia",
+    "count": 1
+  }
+}

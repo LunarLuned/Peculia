@@ -28,8 +28,10 @@ public class SatiatedElixirItem extends GenericElixirItem {
             livingEntity.removeEffect(MobEffects.CONFUSION);
         }
 
-        itemStack.shrink(1);
-        if (livingEntity instanceof Player player && !itemStack.isEmpty()) {
+        if (livingEntity instanceof Player && !((Player)livingEntity).getAbilities().instabuild) {
+            itemStack.shrink(1);
+        }
+        if (livingEntity instanceof Player player && !((Player)livingEntity).getAbilities().instabuild && !itemStack.isEmpty()) {
             player.drop(new ItemStack(Items.GLASS_BOTTLE), false);
         }
         return itemStack.isEmpty() ? new ItemStack(Items.GLASS_BOTTLE) : itemStack;

@@ -315,6 +315,8 @@ public class ModItems {
 
     // Nether Items
 
+    public static final Item AMBROSIA = registerItem("ambrosia",
+    new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_OVERWORLD).rarity(Rarity.RARE).food(ModFoodComponents.AMBROSIA).maxCount(64)));
 
     public static final Item HOGLIN_TUSK = registerItem("hoglin_tusk",
     new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER)));

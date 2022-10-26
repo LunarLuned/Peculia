@@ -7,6 +7,8 @@ import net.minecraft.world.food.FoodProperties;
 
 public class ModFoodComponents {
 
+    // Misc Foods
+    public static final FoodProperties AMBROSIA = (new FoodProperties.Builder().nutrition(6).saturationMod(2f).effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 3000, 0), 1F).effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300, 2), 1F).effect(new MobEffectInstance(MobEffects.CONFUSION, 300, 0), 1F).build());
     // End Foods
 
     public static final FoodProperties POPROCKS = (new FoodProperties.Builder()).nutrition(3).saturationMod(1.2F).fast().effect(new MobEffectInstance(MobEffects.WEAKNESS, 100, 0), 0.4F).effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 150, 0), 1.0F).alwaysEat().build();
