@@ -16,9 +16,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(Enchantment.class)
 public abstract class EnchantmentModification {
 
-    // This whole thing is just broken for some reason, so I disabled it for now, hoping it doesn't cause too many issues with it turned off :(
-    // - Sydney
-
     @Shadow @Final public EnchantmentCategory category;
 
     @Inject(method = "canEnchant", at = @At("HEAD"), cancellable = true)
