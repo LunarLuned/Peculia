@@ -100,12 +100,20 @@ public class ModConfiguredFeatures {
     new OreConfiguration(ORE_CRUMBLING_END_STONE, 30));
 
     public static final List<OreConfiguration.TargetBlockState> ORE_SANGUINE_QUARTZ_BLOCK = List.of(
-            OreConfiguration.target(new BlockMatchTest(Blocks.NETHERRACK),
-                    ModBlocks.SANGUINE_QUARTZ_BLOCK.defaultBlockState()));
+    OreConfiguration.target(new BlockMatchTest(Blocks.NETHERRACK),
+    ModBlocks.SANGUINE_QUARTZ_BLOCK.defaultBlockState()));
 
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> SANGUINE_QUARTZ_BLOCK =
-            FeatureUtils.register("sanguine_quartz_block", Feature.ORE,
-                    new OreConfiguration(ORE_SANGUINE_QUARTZ_BLOCK, 6));
+    FeatureUtils.register("sanguine_quartz_block", Feature.ORE,
+    new OreConfiguration(ORE_SANGUINE_QUARTZ_BLOCK, 6));
+
+    public static final List<OreConfiguration.TargetBlockState> ORE_CRYPTSTONE = List.of(
+    OreConfiguration.target(new BlockMatchTest(Blocks.DEEPSLATE),
+    ModBlocks.CRYPTSTONE.defaultBlockState()));
+
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> CRYPTSTONE =
+    FeatureUtils.register("cryptstone", Feature.ORE,
+    new OreConfiguration(ORE_CRYPTSTONE, 40));
 
 
 // Registry for Configured Features:

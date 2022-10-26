@@ -49,7 +49,11 @@ public class ModPlacedFeatures {
     HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.aboveBottom(40))));
 
     public static final Holder<PlacedFeature> ORE_SANGUINE_QUARTZ_BLOCK = PlacementUtils.register("sanguine_quartz_block",
-            ModConfiguredFeatures.SANGUINE_QUARTZ_BLOCK, ModOreFeatures.modifiersWithCount(6,
-                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(80), VerticalAnchor.aboveBottom(140))));
+    ModConfiguredFeatures.SANGUINE_QUARTZ_BLOCK, ModOreFeatures.modifiersWithCount(6,
+    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(80), VerticalAnchor.aboveBottom(140))));
+
+    public static final Holder<PlacedFeature> ORE_CRYPTSTONE = PlacementUtils.register("cryptstone",
+    ModConfiguredFeatures.CRYPTSTONE, ModOreFeatures.modifiersWithCount(64,
+    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.aboveBottom(0))));
 
 }
