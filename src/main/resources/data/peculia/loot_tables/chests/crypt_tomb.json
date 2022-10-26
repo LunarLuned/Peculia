@@ -185,8 +185,24 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "peculia:lesser_tome_of_fortifying",
-          "weight": 3
+          "name": "peculia:lesser_tome_of_harvesting",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1.0,
+                "min": 0.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "peculia:soul_scythe",
+          "weight": 5
         },
         {
           "type": "minecraft:item",

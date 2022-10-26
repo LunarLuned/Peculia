@@ -280,16 +280,7 @@ public class ModLootTableModifiers {
                 table.withPool(builder);
             }
             //structures
-            if(CRYPT_TOMB_STRUCTURE_CHEST_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.lootPool()
-                .setRolls(ConstantValue.exactly(1));
-                LootPool.Builder builder = LootPool.lootPool();
-                builder.when(LootItemRandomChanceCondition.randomChance(0.1f)); //10% chance
-                builder.setRolls(UniformGenerator.between(1, 1)); //  1
-                builder.add(LootItem.lootTableItem(ModItems.LESSER_TOME_OF_HARVESTING));
-                table.withPool(builder);
-            }
-                        if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
+            if(STRONGHOLD_CORRIDOR_STRUCTURE_CHEST_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1));
                 LootPool.Builder builder = LootPool.lootPool();
