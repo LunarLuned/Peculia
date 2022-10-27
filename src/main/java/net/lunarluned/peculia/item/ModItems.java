@@ -216,6 +216,18 @@ public class ModItems {
     new ArmorItem(ModArmorMaterials.CLOAK, EquipmentSlot.LEGS,
     new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
 
+    public static final Item ECTO_CLOAK_HELMET = registerItem("ecto_cloak_helmet",
+            new ArmorItem(ModArmorMaterials.CLOAK, EquipmentSlot.HEAD,
+                    new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
+
+    public static final Item ECTO_CLOAK_CHESTPLATE = registerItem("ecto_cloak_chestplate",
+            new ArmorItem(ModArmorMaterials.CLOAK, EquipmentSlot.CHEST,
+                    new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
+
+    public static final Item ECTO_CLOAK_LEGGINGS = registerItem("ecto_cloak_leggings",
+            new ArmorItem(ModArmorMaterials.CLOAK, EquipmentSlot.LEGS,
+                    new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));
+
     public static final Item HEALING_GLYPH = registerItem("healing_glyph",
     new HealingGlyphItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).rarity(Rarity.COMMON)));
 
