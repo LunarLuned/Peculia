@@ -1,8 +1,10 @@
 package net.lunarluned.peculia.item.custom.elixirs;
 
+import net.lunarluned.peculia.Peculia;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.stats.Stats;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -26,6 +28,9 @@ public class SatiatedElixirItem extends GenericElixirItem {
         if (!level.isClientSide) {
             livingEntity.removeEffect(MobEffects.HUNGER);
             livingEntity.removeEffect(MobEffects.CONFUSION);
+            if (livingEntity instanceof Player player && player.getRandom().nextInt(100) <= Peculia.getConfig().items.itemsConfig.itemChances.satiated_saturation){
+                livingEntity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 40, 0));
+            }
         }
 
         if (livingEntity instanceof Player && !((Player)livingEntity).getAbilities().instabuild) {

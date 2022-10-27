@@ -565,6 +565,12 @@
   "text.autoconfig.peculia.option.items.itemsConfig.itemChances.echoing_chance": "Peculiar Dagger Echoing Ability Chance",
   "text.autoconfig.peculia.option.items.itemsConfig.itemChances.echoing_chance.@Tooltip": "Chance for Echoing Ability to trigger",
 
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.visuality_night_vision": "Visuality Elixir Night Vision Chance",
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.visuality_night_vision.@Tooltip": "Chance for Visuality Elixir to give Night Vision for 20 seconds",
+
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.satiated_saturation": "Satiated Elixir Saturation Chance",
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.satiated_saturation.@Tooltip": "Chance for Satiated Elixir to give Saturation for 20 seconds",
+
   "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig": "Potion Settings",
   "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.@Tooltip": "Potion Settings",
 

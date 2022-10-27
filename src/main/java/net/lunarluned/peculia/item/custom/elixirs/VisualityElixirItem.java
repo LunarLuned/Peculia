@@ -1,9 +1,11 @@
 package net.lunarluned.peculia.item.custom.elixirs;
 
+import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.stats.Stats;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -27,6 +29,9 @@ public class VisualityElixirItem extends GenericElixirItem {
         if (!level.isClientSide) {
             livingEntity.removeEffect(MobEffects.BLINDNESS);
             livingEntity.removeEffect(MobEffects.DARKNESS);
+            if (livingEntity instanceof Player player && player.getRandom().nextInt(100) <= Peculia.getConfig().items.itemsConfig.itemChances.visuality_night_vision){
+                livingEntity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 480, 0));
+            }
         }
 
         if (livingEntity instanceof Player && !((Player)livingEntity).getAbilities().instabuild) {

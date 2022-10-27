@@ -10,4 +10,10 @@ public class ItemChances {
     @ConfigEntry.Gui.Tooltip
     public int echoing_chance = 25;
 
+    @ConfigEntry.Gui.Tooltip
+    public int visuality_night_vision = 45;
+
+    @ConfigEntry.Gui.Tooltip
+    public int satiated_saturation = 75;
+
 }
