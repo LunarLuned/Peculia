@@ -1,5 +1,6 @@
 package net.lunarluned.peculia.block.custom;
 
+import net.lunarluned.peculia.misc.PeculiaTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -18,7 +19,9 @@ public class CrumblingBlock extends Block {
     }
 
     public void stepOn(@NotNull Level level, @NotNull BlockPos pos, @NotNull BlockState state, @NotNull Entity entity) {
-        if (entity instanceof LivingEntity) {
+
+        if ((entity instanceof LivingEntity) && (!entity.getType().is(PeculiaTags.CANNOT_BREAK_CRUMBLING_BLOCKS))) {
+
             setToAir(state, level, pos);
             super.stepOn(level, pos, state, entity);
             entity.gameEvent(GameEvent.BLOCK_DESTROY);

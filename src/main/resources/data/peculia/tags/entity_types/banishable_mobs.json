@@ -1,6 +1,8 @@
 {
   "values": [
     "peculia:ghost",
-    "peculia:wisp"
+    "peculia:wisp",
+    "minecraft:vex",
+    "minecraft:allay"
   ]
 }
