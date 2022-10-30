@@ -8,6 +8,8 @@
     "minecraft:silverfish",
     "minecraft:endermite",
     "minecraft:phantom",
-    "minecraft:ghast"
+    "minecraft:ghast",
+    "peculia:ghost",
+    "peculia:wisp"
   ]
 }

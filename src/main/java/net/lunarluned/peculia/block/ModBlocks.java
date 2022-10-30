@@ -49,6 +49,9 @@ public class ModBlocks {
     public static final Block MYTHRIL_BLOCK = registerBlock("mythril_block",
     new Block(FabricBlockSettings.of(Material.METAL).strength(2f).requiresTool().sounds(SoundType.METAL)), ModItemGroup.PECULIA);
 
+    public static final Block COMPACT_MYTHRIL_CRYSTAL = registerBlock("compact_mythril_crystal",
+    new MythrilCrystalBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(ModSoundEvents.MYTHRIL), UniformInt.of(2, 8)), ModItemGroup.PECULIA);
+
     public static final Block MYTHRIL_CRYSTAL = registerBlock("mythril_crystal",
     new MythrilCrystalBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(ModSoundEvents.MYTHRIL), UniformInt.of(2, 8)), ModItemGroup.PECULIA);
 
@@ -482,15 +485,6 @@ public class ModBlocks {
 
     public static final Block GRAVESTONE = registerBlock("gravestone",
     new GravestoneBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).sounds(SoundType.DEEPSLATE).requiresTool().resistance(2).strength(3f)), ModItemGroup.PECULIA_MISC);
-
-
-
-
-
-
-
-
-
 
     private static Block GrimLog(MaterialColor materialColor) {
         return new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, blockState -> materialColor).strength(2.0f).sound(SoundType.WOOD));

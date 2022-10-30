@@ -26,6 +26,24 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "peculia:walker_statue_ruin_3",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "peculia:walker_statue_ruin_4",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
     }
   ]
 }

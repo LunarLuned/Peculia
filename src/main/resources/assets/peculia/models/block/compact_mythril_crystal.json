@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "peculia:block/mythril_crystal_top",
+    "side": "peculia:block/compact_mythril_crystal"
+  }
+}

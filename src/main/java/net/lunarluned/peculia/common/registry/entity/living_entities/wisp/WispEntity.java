@@ -1,5 +1,7 @@
 package net.lunarluned.peculia.common.registry.entity.living_entities.wisp;
 
+import com.terraformersmc.modmenu.util.mod.Mod;
+import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.common.registry.ModMobTypes;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.item.ModItems;
@@ -25,6 +27,7 @@ import net.minecraft.world.entity.animal.AbstractGolem;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -83,7 +86,7 @@ public class WispEntity extends AbstractGolem {
         }
 
 
-    public static final Ingredient TEMPTATION_ITEM = Ingredient.of(ModItems.ECTOPLASM);
+    public static final Ingredient TEMPTATION_ITEM = Ingredient.of(ModItems.SOUL);
 
     public WispEntity(EntityType<? extends AbstractGolem> entityType, Level level) {
         super(entityType, level);
@@ -189,7 +192,6 @@ public class WispEntity extends AbstractGolem {
         if (this.isFood(itemStack)) {
 
             if (!this.level.isClientSide) {
-                this.usePlayerItem(player, interactionHand, itemStack);
                 this.gameEvent(GameEvent.EAT, this);
                 this.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1, false, true, true));
                 this.setPersistenceRequired();
@@ -200,14 +202,29 @@ public class WispEntity extends AbstractGolem {
                     this.level.playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.STONE_BREAK, this.getSoundSource(), 1.0f, 1.0f + (this.random.nextFloat() - this.random.nextFloat()) * 0.2f);
                 }
 
-                return InteractionResult.SUCCESS;
+                return soulDuplication(player, interactionHand);
 
             }
-            if (this.level.isClientSide) {
-                return InteractionResult.CONSUME;
-            }
+                return super.mobInteract(player, interactionHand);
         }
         return super.mobInteract(player, interactionHand);
+    }
+
+    public InteractionResult soulDuplication(Player player, @NotNull InteractionHand interactionHand) {
+        ItemStack itemStack = player.getItemInHand(interactionHand);
+        if (!this.level.isClientSide) {
+            if (!player.getAbilities().instabuild) {
+                itemStack.shrink(1);
+            }
+            ItemStack soul = new ItemStack(ModItems.SOUL);
+            if (!player.getInventory().contains(soul)) {
+                player.drop(soul, false);
+            } else {
+                itemStack.setCount(itemStack.getCount() + 1);
+            }
+            return InteractionResult.SUCCESS;
+        }
+        return InteractionResult.CONSUME;
     }
 
     protected boolean shouldDespawnInPeaceful() {
