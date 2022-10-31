@@ -81,9 +81,6 @@ public class WispEntity extends AbstractGolem {
         return bl;
     }
 
-    public boolean canAttackType(EntityType<?> entityType) {
-            return entityType != EntityType.CREEPER && super.canAttackType(entityType);
-        }
 
 
     public static final Ingredient TEMPTATION_ITEM = Ingredient.of(ModItems.SOUL);
@@ -173,7 +170,8 @@ public class WispEntity extends AbstractGolem {
         return 20;
     }
 
-    // Interacting with Coal Geode with Stone
+    /*/ disabling for now
+    // Interacting with Wisp with Ectoplasm
 
     public boolean isFood(@NotNull ItemStack itemStack) {
         return TEMPTATION_ITEM.test(itemStack);
@@ -184,7 +182,6 @@ public class WispEntity extends AbstractGolem {
             itemStack.shrink(1);
         }
     }
-
     public InteractionResult mobInteract(Player player, @NotNull InteractionHand interactionHand) {
 
         ItemStack itemStack = player.getItemInHand(interactionHand);
@@ -226,7 +223,7 @@ public class WispEntity extends AbstractGolem {
         }
         return InteractionResult.CONSUME;
     }
-
+/*/
     protected boolean shouldDespawnInPeaceful() {
         return false;
     }
