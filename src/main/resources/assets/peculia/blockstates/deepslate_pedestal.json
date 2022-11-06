@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "peculia:block/deepslate_pedestal",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "peculia:block/deepslate_pedestal"
+    },
+    "facing=south": {
+      "model": "peculia:block/deepslate_pedestal",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "peculia:block/deepslate_pedestal",
+      "y": 270
+    }
+  }
+}
