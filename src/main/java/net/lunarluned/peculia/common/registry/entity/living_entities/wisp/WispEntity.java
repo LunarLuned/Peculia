@@ -27,6 +27,7 @@ import net.minecraft.world.entity.animal.AbstractGolem;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.SpectralArrow;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -81,6 +82,14 @@ public class WispEntity extends AbstractGolem {
         return bl;
     }
 
+    public boolean hurt(DamageSource damageSource, float f) {
+        Entity entity;
+        entity = damageSource.getDirectEntity();
+        if (entity instanceof SpectralArrow) {
+            return super.hurt(damageSource, f * 1.35f);
+        }
+        return super.hurt(damageSource, f);
+    }
 
 
     public static final Ingredient TEMPTATION_ITEM = Ingredient.of(ModItems.SOUL);

@@ -21,6 +21,8 @@ import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.*;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.projectile.SpectralArrow;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.phys.Vec3;
@@ -81,6 +83,19 @@ public class GhostEntity extends Monster {
     }
 
     // On Hurt Method
+
+    public boolean hurt(DamageSource damageSource, float f) {
+        Entity entity;
+        if (!this.isAngered()) {
+            entity = damageSource.getDirectEntity();
+             if (entity instanceof SpectralArrow) {
+                 return super.hurt(damageSource, f * 1.35f);
+            } else if (entity instanceof AbstractArrow) {
+                return false;
+            }
+        }
+        return super.hurt(damageSource, f);
+    }
 
     public boolean doHurtTarget(Entity entity) {
 
@@ -151,6 +166,9 @@ public class GhostEntity extends Monster {
         if (this.isAlive()) {
             boolean bl = this.isSunSensitive() && this.isSunBurnTick() && !this.isAngered();
             if (bl) {
+                this.setAngered(true);
+            }
+            if (this.isOnFire() && !this.isAngered()) {
                 this.setAngered(true);
             }
             updateAngered(level);
@@ -246,12 +264,13 @@ public class GhostEntity extends Monster {
             }
         }
 
-        // Adds a movement and damage increase and spawns Soul particles when the Ghost is angered
+        // Adds a movement and damage increase, fire res and spawns Soul particles when the Ghost is angered
 
         if (this.isAngered()) {
             this.spawnSoulSpeedParticle();
             this.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, 0, false, false, false));
             this.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 30, 1, false, false, false));
+            this.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 30, 1, false, false, false));
         }
 
         // If the Ghost is at half health, it will become empowered and recieve the Determined effect
