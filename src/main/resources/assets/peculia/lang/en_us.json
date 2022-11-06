@@ -215,6 +215,9 @@
   "block.peculia.polished_cryptstone_tile_slab": "Polished Cryptstone Tile Slab",
   "block.peculia.polished_cryptstone_tile_wall": "Polished Cryptstone Tile Wall",
 
+  "block.peculia.nullrock": "Nullrock",
+  "block.peculia.nullifite": "Nullifite",
+
   "item.peculia.corporeum_fragment": "Corporeum Fragment",
   "item.peculia.bucket_of_agony": "Bucket of Agony",
   "item.peculia.soul": "Soul",
@@ -391,6 +394,9 @@
   "advancements.end.obtain_mythril_spearel.description": "Waste a Mythril Ingot for an inside joke.",
   "advancements.end.obtain_mirror.title": "Who's the fairest one of all?",
   "advancements.end.obtain_mirror.description": "Get an Echoing Mirror, and harness the void's teleportation abilities.",
+
+  "advancements.nether.walk_on_titan_blood_with_golden_boots.title": "I genuinely cannot think of a good title right now",
+  "advancements.nether.walk_on_titan_blood_with_golden_boots.description": "Walk on Titan's Blood, without sinking in it",
 
   "advancements.adventure.use_hog_horn.title": "30 to 50 Feral Hogs",
   "advancements.adventure.use_hog_horn.description": "Use a Hog Horn",

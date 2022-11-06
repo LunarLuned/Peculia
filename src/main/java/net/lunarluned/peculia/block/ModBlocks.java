@@ -6,6 +6,7 @@ import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.block.custom.*;
 import net.lunarluned.peculia.common.registry.misc.ModSignType;
 import net.lunarluned.peculia.item.ModItemGroup;
+import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -215,7 +216,7 @@ public class ModBlocks {
     new Block(FabricBlockSettings.of(Material.STONE).sounds(SoundType.WART_BLOCK).strength(3f).requiresTool()), ModItemGroup.PECULIA_NETHER);
 
     public static final Block TITAN_BLOOD = registerBlockWithoutBlockItem("titan_blood",
-    new TitanBloodBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.HONEY_BLOCK).noCollision().strength(5f).luminance(15).requiresTool()));
+    new TitanBloodBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.HONEY_BLOCK).strength(5f).luminance(15).requiresTool()));
 
     public static final Block PERFORATED_JAW = registerBlock("perforated_jaw",
     new PerforatedJawBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.WART_BLOCK).strength(5.5f).hardness(1).requiresTool()), ModItemGroup.PECULIA_NETHER);
@@ -485,6 +486,15 @@ public class ModBlocks {
 
     public static final Block GRAVESTONE = registerBlock("gravestone",
     new GravestoneBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).sounds(SoundType.DEEPSLATE).requiresTool().resistance(2).strength(3f)), ModItemGroup.PECULIA_MISC);
+
+    public static final Block DEEPSLATE_PEDESTAL = registerBlock("deepslate_pedestal",
+    new DeepslatePedestalBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_GRAY).sounds(SoundType.DEEPSLATE_BRICKS).requiresTool().resistance(4).strength(6)), ModItemGroup.PECULIA_MISC);
+
+    public static final Block NULLROCK = registerBlock("nullrock",
+    new Block(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_BLUE).sounds(ModSoundEvents.FLUORITE).requiresTool().resistance(60).strength(40f)), ModItemGroup.PECULIA_MISC);
+
+    public static final Block NULLIFITE = registerBlock("nullifite",
+    new RotatedPillarBlock(FabricBlockSettings.of(Material.STONE).mapColor(MaterialColor.COLOR_BLUE).sounds(ModSoundEvents.FLUORITE).requiresTool().resistance(60).strength(40f)), ModItemGroup.PECULIA_MISC);
 
     private static Block GrimLog(MaterialColor materialColor) {
         return new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD, blockState -> materialColor).strength(2.0f).sound(SoundType.WOOD));

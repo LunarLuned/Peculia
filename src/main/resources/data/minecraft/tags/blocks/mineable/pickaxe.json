@@ -90,6 +90,8 @@
     "peculia:polished_cryptstone_tiles",
     "peculia:polished_cryptstone_tile_slab",
     "peculia:polished_cryptstone_tile_stairs",
-    "peculia:polished_cryptstone_tile_wall"
+    "peculia:polished_cryptstone_tile_wall",
+
+    "peculia:nullifite"
   ]
 }

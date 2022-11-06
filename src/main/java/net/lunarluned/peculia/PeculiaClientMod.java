@@ -108,6 +108,7 @@ public class PeculiaClientMod implements ClientModInitializer {
                 RenderType.translucent(),
 
                 ModBlocks.ICHOR_MOLD_VEIN,
+                ModBlocks.TITAN_BLOOD,
                 ModBlocks.ICHOR_STICKER,
                 ModBlocks.PERFORATED_PUSTULE,
                 ModBlocks.DRAGONGLASS,
