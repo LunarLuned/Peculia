@@ -14,6 +14,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ElytraItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
@@ -31,12 +32,12 @@ public abstract class MoldleapBootMixin {
     @Inject(method = "tick", at = @At("HEAD"))
     private void tick(CallbackInfo info) {
         LocalPlayer player = (LocalPlayer) (Object) this;
+        ItemStack itemStack = player.getItemBySlot(EquipmentSlot.FEET);
         if (player.isOnGround() || player.isHandsBusy()) {
-            ItemStack itemStack = player.getItemBySlot(EquipmentSlot.FEET);
             if (itemStack.is(ModItems.MYTHRIL_BOOTS)) {
                 jumpCount = 3;
             }
-        } else if (!jumpedLastTick && jumpCount > 0) {
+        } else if (!jumpedLastTick && jumpCount > 0 && itemStack.is(ModItems.MYTHRIL_BOOTS)) {
             if (player.input.jumping && !player.getAbilities().flying) {
                 if (canJump(player)) {
                     --jumpCount;
