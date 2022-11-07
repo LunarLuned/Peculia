@@ -7,12 +7,16 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
     MYTHRIL("mythril", 33, new int[]{3, 6, 8, 3}, 20, ModSoundEvents.ARMOR_MYTHRIL_EQUIP, 3.0F, 0.0F, () -> {
         return Ingredient.of(ModItems.MYTHRIL_INGOT);
+    }),
+    MOLDLEAP("moldleap", 15, new int[]{2, 5, 6, 2}, 9, ModSoundEvents.ARMOR_MOLDLEAP_EQUIP, 0.0F, 0.0F, () -> {
+        return Ingredient.of(Items.LEATHER);
     }),
     CLOAK("cloak", 22, new int[]{1, 4, 4, 2}, 35, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> {
         return Ingredient.of(ModItems.SOUL);

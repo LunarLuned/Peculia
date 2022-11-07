@@ -23,6 +23,17 @@
     ]
   },
 
+  "armor.moldleap.equip": {
+    "subtitle": "armor.moldleap.equip",
+    "sounds": [
+      "peculia:armor/moldleap/moldleap_equip1",
+      "peculia:armor/moldleap/moldleap_equip2",
+      "peculia:armor/moldleap/moldleap_equip3",
+      "peculia:armor/moldleap/moldleap_equip4",
+      "peculia:armor/moldleap/moldleap_equip5",
+      "peculia:armor/moldleap/moldleap_equip6"
+    ]
+  },
   "armor.moldleap.flap": {
     "subtitle": "armor.moldleap.flap",
     "sounds": [

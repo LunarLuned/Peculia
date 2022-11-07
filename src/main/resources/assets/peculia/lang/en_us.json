@@ -64,6 +64,7 @@
   "item.peculia.ambrosia": "Ambrosia",
   "item.peculia.sporodine": "Sporodine",
   "item.peculia.netherite_gauntlet": "Netherite Gauntlet",
+  "item.peculia.moldleap_boots": "Moldleap Boots",
 
   "block.peculia.sculk_sac_block": "Sculk Sac Block",
   "block.peculia.ferrock": "Ferrock",
@@ -319,14 +320,12 @@
   "item.peculia.lesser_inverted_tome_of_fortifying": "Tome of Fortifying",
   "item.peculia.lesser_inverted_tome_of_fortifying.desc": "Lesser, Inverted",
 
-
   "item.peculia.empty_mirror": "Empty Mirror",
   "item.peculia.fallen_hero_dagger": "Fallen Hero Dagger",
   "item.peculia.fallen_hero_sword": "Fallen Hero Sword",
   "item.peculia.cloak_helmet": "Soul Cloak Hood",
   "item.peculia.cloak_chestplate": "Soul Cloak",
   "item.peculia.cloak_leggings": "Soul Cloak Drapes",
-
 
   "item.peculia.echoing_mirror": "Echoing Mirror",
   "item.peculia.mythril_helmet": "Mythril Helmet",
@@ -385,25 +384,26 @@
   "item.peculia.ghost_spawn_egg": "Ghost Spawn Egg",
   "entity.peculia.wisp": "Wisp",
   "item.peculia.wisp_spawn_egg": "Wisp Spawn Egg",
+  "entity.peculia.moldspawn": "Moldspawn",
+  "item.peculia.moldspawn_spawn_egg": "Moldspawn Spawn Egg",
 
-
-  "advancements.end.obtain_mythril_shard.title": "Shard of Myth",
-  "advancements.end.obtain_mythril_shard.description": "Obtain a Mythril Shard, pieces of a comet floating above the Void.",
-  "advancements.end.mythril_gear.title": "Cover me in Comets",
+  "advancements.end.obtain_mythril_shard.title": "Shard of Myths",
+  "advancements.end.obtain_mythril_shard.description": "Obtain a Mythril Shard, pieces of a comet floating above the void.",
+  "advancements.end.mythril_gear.title": "Cover Me in Comets",
   "advancements.end.mythril_gear.description": "Get a full suit of Mythril Armor, quite shiny!",
   "advancements.end.obtain_mythril_spearel.title": "Only a Spoonful",
   "advancements.end.obtain_mythril_spearel.description": "Waste a Mythril Ingot for an inside joke.",
-  "advancements.end.obtain_mirror.title": "Who's the fairest one of all?",
+  "advancements.end.obtain_mirror.title": "Who's the Fairest One of All?",
   "advancements.end.obtain_mirror.description": "Get an Echoing Mirror, and harness the void's teleportation abilities.",
 
   "advancements.nether.walk_on_titan_blood_with_golden_boots.title": "Big Shoes to Fill",
-  "advancements.nether.walk_on_titan_blood_with_golden_boots.description": "Walk on Titan's Blood, without sinking in it",
+  "advancements.nether.walk_on_titan_blood_with_golden_boots.description": "Walk on Titan's Blood without sinking in it",
 
   "advancements.adventure.use_hog_horn.title": "30 to 50 Feral Hogs",
   "advancements.adventure.use_hog_horn.description": "Use a Hog Horn",
 
-  "advancements.husbandry.jams.title": "Thats my Jam!",
-  "advancements.husbandry.jams.description": "Have all Jams in your inventory",
+  "advancements.husbandry.jams.title": "Thats My Jam!",
+  "advancements.husbandry.jams.description": "Have all jams in your inventory",
 
   "item.minecraft.potion.effect.banished_potion": "Potion of Banishing",
   "item.minecraft.splash_potion.effect.banished_potion": "Splash Potion of Banishing",
@@ -462,7 +462,6 @@
   "advancements.adventure.kill_warden.title": "Jail Break",
   "advancements.adventure.kill_warden.description": "There was never just one",
 
-
   "effect.peculia.electrocuted": "Electrocuted",
   "effect.peculia.ichor": "Ichor",
   "effect.peculia.banished": "Banished",
@@ -478,14 +477,15 @@
   "effect.peculia.lunar_sickness": "Lunar Sickness",
 
   "armor.mythril.equip": "Mythril Armor crackles",
-  "armor.moldleap.flap": "Moldleap Boots flaps",
+  "armor.moldleap.equip": "Moldleap Boots sizzle",
+  "armor.moldleap.flap": "Moldleap Boots flap",
   "effect.echoing.attack.hit": "Strong Echo attack",
   "item.echoing_mirror.use": "Echoing Mirror is used",
   "effect.anchored_teleport_fail": "Teleport fails",
-  "block.ichor_sticker.release": "Ichor Sticker Bulb Breaks",
+  "block.ichor_sticker.release": "Ichor Sticker Bulb breaks",
   "block.perforated_jaw.bite": "Perforated Jaw bites",
   "block.perforated_jaw.open": "Perforated Jaw reopens",
-  "block.condensed_void.use": "Item is Void Touched",
+  "block.condensed_void.use": "Item is void touched",
   "item.updraft_tome.use": "Tome drafts up",
   "item.updraft_tome.crowd_use": "Tome drafts a crowd up",
   "item.generic_tome.fail": "Tome fails",
@@ -513,8 +513,8 @@
   "instrument.peculia.cry_hog_horn": "Cry",
   "subtitles.item.hog_horn": "Hog Horn plays",
 
-  "death.attack.electrocution": "%1$s was electrocuted to death",
-  "death.attack.electrocuted.player": "%1$s electrocuted to death whilst fighting %2$s",
+  "death.attack.electrocution": "%1$s was electrocuted",
+  "death.attack.electrocuted.player": "%1$s was electrocuted whilst fighting %2$s",
   "death.attack.jaw": "%1$s was chomped",
   "death.attack.jaw.player": "%1$s was chomped whilst fighting %2$s",
   "death.attack.echoing": "%1$s faced the echo of a blade",
@@ -531,7 +531,6 @@
   "text.autoconfig.peculia.title": "Peculia Settings",
 
   "text.autoconfig.peculia.option.mobs": "Mobs",
-
 
   "text.autoconfig.peculia.option.mobs.vanillaMobsConfig": "Vanilla Mob Changes",
   "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.@Tooltip": "Vanilla Mob Changes",

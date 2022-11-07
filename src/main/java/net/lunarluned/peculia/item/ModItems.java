@@ -384,6 +384,10 @@ public class ModItems {
     public static final Item HOG_HORN = registerItem("hog_horn",
     new HogHornItem(new FabricItemSettings().tab(ModItemGroup.PECULIA_NETHER).stacksTo(1), PeculiaTags.HOG_HORNS));
 
+    public static final Item MOLDLEAP_BOOTS = registerItem("moldleap_boots",
+    new ArmorItem(ModArmorMaterials.MOLDLEAP, EquipmentSlot.FEET,
+    new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER)));
+
     // Overworld Items
 
     public static final Item GOLDEN_GAUNTLET = registerItem("golden_gauntlet",
