@@ -19,5 +19,6 @@ public class PeculiaTags {
     public static final TagKey<EntityType<?>> CANNOT_BREAK_CRUMBLING_BLOCKS = TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("peculia", "cannot_break_crumbling_blocks"));
     public static final TagKey<Block> GRIM_WOOD_LOGS = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation("peculia", "grim_wood_logs"));
     public static final TagKey<Item> GRIM_WOOD_LOGS_ITEM = TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation("peculia", "grim_wood_logs"));
-
+    public static final TagKey<Block> GHOST_SPAWNABLE_ON = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation("peculia", "ghost_spawnable_on"));
+    public static final TagKey<Block> WISP_SPAWNABLE_ON = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation("peculia", "wisp_spawnable_on"));
 }

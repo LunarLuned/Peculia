@@ -4,6 +4,7 @@ import net.lunarluned.peculia.common.registry.ModMobTypes;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.misc.PeculiaTags;
 import net.lunarluned.peculia.sound.ModSoundEvents;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -24,6 +25,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.SpectralArrow;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
@@ -84,7 +86,7 @@ public class GhostEntity extends Monster {
 
     // On Hurt Method
 
-    public boolean hurt(DamageSource damageSource, float f) {
+    public boolean hurt(@NotNull DamageSource damageSource, float f) {
         Entity entity;
         if (!this.isAngered()) {
             entity = damageSource.getDirectEntity();
@@ -239,6 +241,10 @@ public class GhostEntity extends Monster {
     public void readAdditionalSaveData(@NotNull CompoundTag nbt) {
         super.readAdditionalSaveData(nbt);
         this.setAngered(nbt.getBoolean("IsAngered"));
+    }
+
+    public static boolean checkGhostSpawnRules(ServerLevelAccessor serverLevelAccessor, BlockPos blockPos) {
+        return serverLevelAccessor.getBlockState(blockPos.below()).is(PeculiaTags.GHOST_SPAWNABLE_ON);
     }
 
     // Prevents the Ghost from drowning

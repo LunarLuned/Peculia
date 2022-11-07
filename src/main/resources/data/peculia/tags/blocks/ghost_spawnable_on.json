@@ -1,0 +1,11 @@
+{
+  "values": [
+    "#minecraft:soul_fire_base_blocks",
+    "#minecraft:soul_speed_blocks",
+    "peculia:cryptstone",
+    "peculia:polished_cryptstone",
+    "peculia:polished_cryptstone_bricks",
+    "peculia:polished_cryptstone_pillar",
+    "peculia:polished_cryptstone_tiles"
+  ]
+}

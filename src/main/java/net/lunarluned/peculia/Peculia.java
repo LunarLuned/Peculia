@@ -1,6 +1,5 @@
 package net.lunarluned.peculia;
 
-import com.google.gson.JsonObject;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
@@ -10,6 +9,8 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.fabricmc.loader.api.FabricLoader;
 import net.lunarluned.peculia.block.ModBlocks;
+import net.lunarluned.peculia.common.registry.entity.living_entities.ghost.GhostEntity;
+import net.lunarluned.peculia.common.registry.entity.living_entities.wisp.WispEntity;
 import net.lunarluned.peculia.common.registry.entity.registry.ModEntities;
 import net.lunarluned.peculia.config.ModConfig;
 import net.lunarluned.peculia.effect.ModEffects;
@@ -31,11 +32,12 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.EntityDamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.item.Instrument;
 import net.minecraft.world.level.biome.Biomes;
+import net.minecraft.world.level.levelgen.Heightmap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import java.io.File;
 
 public class Peculia implements ModInitializer {
 	private static final ModConfig CONFIG = AutoConfig.register(ModConfig.class, GsonConfigSerializer::new).getConfig();
@@ -52,7 +54,11 @@ public class Peculia implements ModInitializer {
 		// ඞ
 
 		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.SOUL_SAND_VALLEY), MobCategory.MONSTER, ModEntities.GHOST, 1, 0, 1);
+		SpawnPlacements.register(ModEntities.GHOST, SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, serverLevelAccessor, mobSpawnType, blockPos, randomSource) -> GhostEntity.checkGhostSpawnRules(serverLevelAccessor, blockPos));
+
 		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.SOUL_SAND_VALLEY), MobCategory.CREATURE, ModEntities.WISP, 1, 0, 1);
+		SpawnPlacements.register(ModEntities.WISP, SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, serverLevelAccessor, mobSpawnType, blockPos, randomSource) -> WispEntity.checkWispSpawnRules(serverLevelAccessor, blockPos));
+
 		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.DRIPSTONE_CAVES), MobCategory.CREATURE, ModEntities.COAL_GEODE, 2, 1, 1);
 
 		// Strippable Blocks

@@ -1,16 +1,13 @@
 package net.lunarluned.peculia.common.registry.entity.living_entities.wisp;
 
-import com.terraformersmc.modmenu.util.mod.Mod;
-import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.common.registry.ModMobTypes;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.item.ModItems;
+import net.lunarluned.peculia.misc.PeculiaTags;
+import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -21,37 +18,30 @@ import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.ai.sensing.Sensor;
-import net.minecraft.world.entity.ai.sensing.SensorType;
 import net.minecraft.world.entity.animal.AbstractGolem;
 import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.SpectralArrow;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-import org.spongepowered.include.com.google.common.collect.ImmutableList;
-
-import java.util.UUID;
 
 public class WispEntity extends AbstractGolem {
-
-
 
     public void registerGoals() {
         this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.9));
         this.goalSelector.addGoal(3, new PanicGoal(this, 1));
         this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 6.0F));
         this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
-        this.targetSelector.addGoal(1, (new HurtByTargetGoal(this, new Class[0])));
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, LivingEntity.class, 5, false, false, (livingEntity) -> livingEntity instanceof Enemy && !(livingEntity instanceof Creeper)));
+        this.targetSelector.addGoal(1, (new HurtByTargetGoal(this)));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, LivingEntity.class, 5, false, false, (livingEntity) -> livingEntity instanceof Enemy && !(livingEntity instanceof Creeper)));
+    }
+
+    public static boolean checkWispSpawnRules(ServerLevelAccessor serverLevelAccessor, BlockPos blockPos) {
+        return serverLevelAccessor.getBlockState(blockPos.below()).is(PeculiaTags.WISP_SPAWNABLE_ON);
     }
 
     public float getAttackDamage() {
@@ -65,8 +55,7 @@ public class WispEntity extends AbstractGolem {
         boolean bl = entity.hurt(DamageSource.mobAttack(this), g);
         if (bl) {
             double var10000;
-            if (entity instanceof LivingEntity) {
-                LivingEntity livingEntity = (LivingEntity)entity;
+            if (entity instanceof LivingEntity livingEntity) {
                 var10000 = livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE);
             } else {
                 var10000 = 0.0;
@@ -90,7 +79,6 @@ public class WispEntity extends AbstractGolem {
         }
         return super.hurt(damageSource, f);
     }
-
 
     public static final Ingredient TEMPTATION_ITEM = Ingredient.of(ModItems.SOUL);
 
