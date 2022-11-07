@@ -203,7 +203,6 @@ public class ModItems {
     public static final Item TOME_OF_HARVESTING = registerItem("tome_of_harvesting",
     new HarvestingTomeItem(new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE).maxCount(1).rarity(Rarity.UNCOMMON)));
 
-
     public static final Item CLOAK_HELMET = registerItem("cloak_helmet",
     new ArmorItem(ModArmorMaterials.CLOAK, EquipmentSlot.HEAD,
     new FabricItemSettings().group(ModItemGroup.PECULIA_ARCANE)));

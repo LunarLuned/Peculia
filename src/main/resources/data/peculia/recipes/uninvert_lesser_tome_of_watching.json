@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "peculia:lesser_inverted_tome_of_watching"
+  },
+  "addition": {
+    "item": "peculia:ectoplasm"
+  },
+  "result": {
+    "item": "peculia:lesser_tome_of_watching"
+  }
+}

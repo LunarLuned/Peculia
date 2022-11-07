@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "peculia:inverted_tome_of_fortifying"
+  },
+  "addition": {
+    "item": "peculia:ectoplasm"
+  },
+  "result": {
+    "item": "peculia:tome_of_fortifying"
+  }
+}
