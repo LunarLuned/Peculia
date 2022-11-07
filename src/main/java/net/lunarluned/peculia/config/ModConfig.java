@@ -6,6 +6,7 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import net.lunarluned.peculia.config.options.blocks.BlocksConfig;
 import net.lunarluned.peculia.config.options.items.ItemsConfig;
 import net.lunarluned.peculia.config.options.mobs.VanillaMobsConfig;
+import net.lunarluned.peculia.config.options.visualEffects.VisualEffectsConfig;
 import net.minecraft.world.level.block.Block;
 
 // Mod Config
@@ -18,7 +19,6 @@ public class ModConfig implements ConfigData {
     // Mobs
 
     @ConfigEntry.Gui.CollapsibleObject(startExpanded = false)
-
     public Mobs mobs = new Mobs();
 
     public static class Mobs {
@@ -26,6 +26,20 @@ public class ModConfig implements ConfigData {
         @ConfigEntry.Gui.CollapsibleObject(startExpanded = false)
         @ConfigEntry.Gui.Tooltip
         public VanillaMobsConfig vanillaMobsConfig = new VanillaMobsConfig();
+
+    }
+
+    // Visual Effects
+
+    @ConfigEntry.Gui.CollapsibleObject(startExpanded = false)
+
+    public VisualEffects visualEffects = new VisualEffects();
+
+    public static class VisualEffects {
+
+        @ConfigEntry.Gui.CollapsibleObject(startExpanded = false)
+        @ConfigEntry.Gui.Tooltip
+        public VisualEffectsConfig visualEffectsConfig = new VisualEffectsConfig();
 
     }
 

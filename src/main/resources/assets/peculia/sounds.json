@@ -22,6 +22,16 @@
       "peculia:armor/mythril/mythril_equip5"
     ]
   },
+
+  "armor.moldleap.flap": {
+    "subtitle": "armor.moldleap.flap",
+    "sounds": [
+      "peculia:armor/moldleap/flap_1",
+      "peculia:armor/moldleap/flap_2",
+      "peculia:armor/moldleap/flap_3"
+    ]
+  },
+
   "item.echoing_mirror.use": {
     "subtitle": "item.echoing_mirror.use",
     "sounds": [

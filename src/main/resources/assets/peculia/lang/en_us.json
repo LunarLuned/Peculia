@@ -396,7 +396,7 @@
   "advancements.end.obtain_mirror.title": "Who's the fairest one of all?",
   "advancements.end.obtain_mirror.description": "Get an Echoing Mirror, and harness the void's teleportation abilities.",
 
-  "advancements.nether.walk_on_titan_blood_with_golden_boots.title": "I genuinely cannot think of a good title right now",
+  "advancements.nether.walk_on_titan_blood_with_golden_boots.title": "Big Shoes to Fill",
   "advancements.nether.walk_on_titan_blood_with_golden_boots.description": "Walk on Titan's Blood, without sinking in it",
 
   "advancements.adventure.use_hog_horn.title": "30 to 50 Feral Hogs",
@@ -478,6 +478,7 @@
   "effect.peculia.lunar_sickness": "Lunar Sickness",
 
   "armor.mythril.equip": "Mythril Armor crackles",
+  "armor.moldleap.flap": "Moldleap Boots flaps",
   "effect.echoing.attack.hit": "Strong Echo attack",
   "item.echoing_mirror.use": "Echoing Mirror is used",
   "effect.anchored_teleport_fail": "Teleport fails",

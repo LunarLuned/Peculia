@@ -26,6 +26,7 @@
     "util.accessor.MobEffectInstanceAccessor"
   ],
   "client": [
+    "armor.MoldleapBootMixin",
     "client.SheetsMixin",
     "effects.stunned.KeyboardMixin",
     "items.misc.ItemRendererMixin"

@@ -8,6 +8,7 @@ import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.mixin.util.SimpleParticleTypeAccessor;
 import net.lunarluned.peculia.particles.ChainParticles;
 import net.lunarluned.peculia.particles.FlyingPaperParticles;
+import net.lunarluned.peculia.particles.IchorLeapParticles;
 import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
@@ -17,6 +18,7 @@ public class ModParticles {
 
     public static final SimpleParticleType FLYING_PAPER = register("flying_paper", false);
     public static final SimpleParticleType CHAIN = register("chain", false);
+    public static final SimpleParticleType ICHOR_LEAP = register("ichor_leap", false);
 
     public static SimpleParticleType register(String id, boolean bl) {
         return PARTICLES.register(id, SimpleParticleTypeAccessor.createSimpleParticleType(bl));
@@ -27,5 +29,6 @@ public class ModParticles {
         ParticleFactoryRegistry registry = ParticleFactoryRegistry.getInstance();
         registry.register(FLYING_PAPER, FlyingPaperParticles.Factory::new);
         registry.register(CHAIN, ChainParticles.Factory::new);
+        registry.register(ICHOR_LEAP, IchorLeapParticles.IchorLeapParticlesProvider::new);
     }
 }

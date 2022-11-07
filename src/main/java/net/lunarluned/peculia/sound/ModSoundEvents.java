@@ -9,7 +9,12 @@ import net.minecraft.world.level.block.SoundType;
 public class ModSoundEvents {
 
     public static final SoundEvent ECHO_ATTACK_HIT = registerSoundEvent("effect.echoing.attack.hit");
+
     public static final SoundEvent ARMOR_MYTHRIL_EQUIP = registerSoundEvent("armor.mythril.equip");
+
+    public static final SoundEvent ARMOR_MOLDLEAP_EQUIP = registerSoundEvent("armor.moldleap.equip");
+    public static final SoundEvent ARMOR_MOLDLEAP_FLAP = registerSoundEvent("armor.moldleap.flap");
+
 
     public static final SoundEvent BLOCK_MYTHRIL_BREAK = registerSoundEvent("block.mythril.break");
     public static final SoundEvent BLOCK_MYTHRIL_STEP = registerSoundEvent("block.mythril.step");
