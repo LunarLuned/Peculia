@@ -37,7 +37,7 @@ public abstract class MoldleapBootMixin {
 
         if (itemStack.is(ModItems.MOLDLEAP_BOOTS)) {
 
-            if ((player.tickCount % 5 == 0) && (player.getDeltaMovement().horizontalDistance() > 0)) {
+            if ((player.tickCount % 5 == 0) && (player.getDeltaMovement().horizontalDistance() > 0) && !player.isInWater()) {
                 float k = (0.3F * 0.45F) * (0.2F + 1.0F);
                 player.level.addParticle(ParticleTypes.FLAME, player.getX(), player.getY() + (double) k, player.getZ(), 0.0, 0.0, 0.0);
             }
