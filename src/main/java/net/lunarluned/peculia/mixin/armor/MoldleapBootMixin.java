@@ -4,7 +4,7 @@ import io.netty.buffer.Unpooled;
 import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.item.ModItems;
-import net.lunarluned.peculia.misc.ModParticles;
+import net.lunarluned.peculia.particles.ModParticles;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.particles.ParticleTypes;
@@ -37,9 +37,11 @@ public abstract class MoldleapBootMixin {
 
         if (itemStack.is(ModItems.MOLDLEAP_BOOTS)) {
 
-            if ((player.tickCount % 5 == 0) && (player.getDeltaMovement().horizontalDistance() > 0) && !player.isInWater()) {
-                float k = (0.3F * 0.45F) * (0.2F + 1.0F);
-                player.level.addParticle(ParticleTypes.FLAME, player.getX(), player.getY() + (double) k, player.getZ(), 0.0, 0.0, 0.0);
+            if (Peculia.getConfig().visualEffects.visualEffectsConfig.particlesConfig.moldleap_boots_ichor_particles) {
+                if ((player.tickCount % 5 == 0) && (player.getDeltaMovement().horizontalDistance() > 0) && !player.isInWater()) {
+                    float k = (0.3F * 0.45F) * (0.2F + 1.0F);
+                    player.level.addParticle(ModParticles.ICHOR, player.getX(), player.getY() + (double) k, player.getZ(), 0.0, 0.0, 0.0);
+                }
             }
 
             if (player.isOnGround() || player.isHandsBusy()) {

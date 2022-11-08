@@ -20,7 +20,7 @@ import net.lunarluned.peculia.item.compat.CombatantItems;
 import net.lunarluned.peculia.item.compat.OdysseyItems;
 import net.lunarluned.peculia.misc.ModGameEvents;
 import net.lunarluned.peculia.misc.ModInstruments;
-import net.lunarluned.peculia.misc.ModParticles;
+import net.lunarluned.peculia.particles.ModParticles;
 import net.lunarluned.peculia.potion.ModPotions;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.lunarluned.peculia.util.ModLootTableModifiers;

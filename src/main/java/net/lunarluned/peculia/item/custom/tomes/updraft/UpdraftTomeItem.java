@@ -2,7 +2,6 @@ package net.lunarluned.peculia.item.custom.tomes.updraft;
 
 import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.item.custom.tomes.GenericTomeItem;
-import net.lunarluned.peculia.misc.ModParticles;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;

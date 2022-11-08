@@ -2,11 +2,8 @@ package net.lunarluned.peculia.item.custom.tomes;
 
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.item.ModItems;
-import net.lunarluned.peculia.misc.ModParticles;
-import net.lunarluned.peculia.sound.ModSoundEvents;
+import net.lunarluned.peculia.particles.ModParticles;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.ParticleUtils;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.Entity;

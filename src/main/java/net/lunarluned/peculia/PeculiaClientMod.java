@@ -8,7 +8,7 @@ import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.client.ModEntityRenderer;
 import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.item.custom.RemnantHeartItem;
-import net.lunarluned.peculia.misc.ModParticles;
+import net.lunarluned.peculia.particles.ModParticles;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
