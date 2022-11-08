@@ -1,6 +1,7 @@
 package net.lunarluned.peculia.client.entity.model;
 
 import net.lunarluned.peculia.client.entity.animations.GhostAnimations;
+import net.lunarluned.peculia.client.entity.animations.MoldspawnAnimations;
 import net.lunarluned.peculia.common.registry.entity.living_entities.ghost.GhostEntity;
 import net.lunarluned.peculia.common.registry.entity.living_entities.moldspawn.MoldspawnEntity;
 import net.minecraft.client.model.HierarchicalModel;
@@ -55,8 +56,13 @@ public class MoldspawnModel<T extends MoldspawnEntity> extends HierarchicalModel
     }
 
     @Override
-    public void setupAnim(T moldspawn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-
+    public void setupAnim(T moldspawn, float angle, float distance, float animationProgress, float yaw, float pitch) {
+        this.root().getAllParts().forEach(ModelPart::resetPose);
+        float k = Math.min((float) moldspawn.getDeltaMovement().lengthSqr() * 150.0f, 8.0f);
+        this.animate(moldspawn.idleAnimationState, MoldspawnAnimations.MOLDSPAWN_IDLE, animationProgress);
+        this.animate(moldspawn.leapAnimationState, MoldspawnAnimations.MOLDSPAWN_LEAP, animationProgress);
+        this.animate(moldspawn.biteAnimationState, MoldspawnAnimations.MOLDSPAWN_BITE, animationProgress);
+        this.animate(moldspawn.walkAnimationState, MoldspawnAnimations.MOLDSPAWN_WALK, animationProgress, k);
     }
 
 }

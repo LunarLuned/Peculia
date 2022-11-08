@@ -1,0 +1,12 @@
+{
+  "values": [
+    "peculia:moldspawn",
+    "minecraft:zombie",
+    "minecraft:husk",
+    "minecraft:drowned",
+    "#minecraft:skeletons",
+    "minecraft:vex",
+    "minecraft:iron_golem",
+    "minecraft:creeper"
+  ]
+}

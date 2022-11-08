@@ -1,6 +1,9 @@
 package net.lunarluned.peculia.effect;
 
 import net.lunarluned.peculia.Peculia;
+import net.lunarluned.peculia.common.registry.ModMobTypes;
+import net.lunarluned.peculia.common.registry.entity.living_entities.moldspawn.MoldspawnEntity;
+import net.lunarluned.peculia.common.registry.entity.registry.ModEntities;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffects;
@@ -18,14 +21,16 @@ public class IchorEffect extends MobEffect {
 
     @Override
     public void applyEffectTick(LivingEntity entity, int amplifier) {
-        if (!entity.hasEffect(ModEffects.ICHOR_RESISTANCE) || !entity.hasEffect(ModEffects.POROUS)) {
-            entity.hurt(new Peculia.IchorDamageSource(), 1.0F + amplifier);
-            if ((entity.isFreezing()) || (entity.hasEffect(ModEffects.ICHOR_RESISTANCE) || entity.hasEffect(ModEffects.POROUS))) {
-                entity.removeEffect(ModEffects.ICHOR);
-            }
-            if (entity.hasEffect(MobEffects.FIRE_RESISTANCE)) {
-                entity.removeEffect(ModEffects.ICHOR);
-                entity.removeEffect(MobEffects.FIRE_RESISTANCE);
+        if (!(entity instanceof MoldspawnEntity)) {
+            if (!entity.hasEffect(ModEffects.ICHOR_RESISTANCE) || !entity.hasEffect(ModEffects.POROUS)) {
+                entity.hurt(new Peculia.IchorDamageSource(), 1.0F + amplifier);
+                if ((entity.isFreezing()) || (entity.hasEffect(ModEffects.ICHOR_RESISTANCE) || entity.hasEffect(ModEffects.POROUS))) {
+                    entity.removeEffect(ModEffects.ICHOR);
+                }
+                if (entity.hasEffect(MobEffects.FIRE_RESISTANCE)) {
+                    entity.removeEffect(ModEffects.ICHOR);
+                    entity.removeEffect(MobEffects.FIRE_RESISTANCE);
+                }
             }
             super.applyEffectTick(entity, amplifier);
         }

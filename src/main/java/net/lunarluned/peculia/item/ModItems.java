@@ -387,6 +387,9 @@ public class ModItems {
     new ArmorItem(ModArmorMaterials.MOLDLEAP, EquipmentSlot.FEET,
     new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER)));
 
+    public static final Item MOLDSPAWN_SPAWN_EGG = registerItem("moldspawn_spawn_egg",
+    new SpawnEggItem(ModEntities.MOLDSPAWN, 8343348, 5974563, new Item.Properties().tab(ModItemGroup.PECULIA_NETHER)));
+
     // Overworld Items
 
     public static final Item GOLDEN_GAUNTLET = registerItem("golden_gauntlet",
