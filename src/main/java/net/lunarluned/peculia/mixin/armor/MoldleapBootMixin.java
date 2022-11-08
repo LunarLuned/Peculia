@@ -37,7 +37,7 @@ public abstract class MoldleapBootMixin {
 
         if (itemStack.is(ModItems.MOLDLEAP_BOOTS)) {
 
-            if (Peculia.getConfig().visualEffects.visualEffectsConfig.particlesConfig.moldleap_boots_ichor_particles) {
+            if (Peculia.getConfig().visualEffects.visualEffectsConfig.particlesConfig.moldleap_boots_ichor_particles && !player.isInvisible()) {
                 if ((player.tickCount % 5 == 0) && (player.getDeltaMovement().horizontalDistance() > 0) && !player.isInWater()) {
                     float k = (0.3F * 0.45F) * (0.2F + 1.0F);
                     player.level.addParticle(ModParticles.ICHOR, player.getX(), player.getY() + (double) k, player.getZ(), 0.0, 0.0, 0.0);

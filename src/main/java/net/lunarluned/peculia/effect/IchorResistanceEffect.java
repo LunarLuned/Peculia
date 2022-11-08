@@ -1,5 +1,6 @@
 package net.lunarluned.peculia.effect;
 
+import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.common.registry.entity.living_entities.moldspawn.MoldspawnEntity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
@@ -15,7 +16,7 @@ public class IchorResistanceEffect extends MobEffect {
     @Override
     public void applyEffectTick(@NotNull LivingEntity entity, int amplifier) {
         if (entity instanceof MoldspawnEntity) {
-            entity.hurt(DamageSource.MAGIC, 1);
+            entity.hurt(new Peculia.IchorDamageSource(), 1.0F + amplifier);
         }
     }
 }
