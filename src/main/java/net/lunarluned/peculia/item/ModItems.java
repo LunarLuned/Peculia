@@ -390,6 +390,9 @@ public class ModItems {
     public static final Item MOLDSPAWN_SPAWN_EGG = registerItem("moldspawn_spawn_egg",
     new SpawnEggItem(ModEntities.MOLDSPAWN, 8343348, 5974563, new Item.Properties().tab(ModItemGroup.PECULIA_NETHER)));
 
+    public static final Item MOLDVAULT_CLAW = registerItem("moldvault_claw",
+    new ModGauntletItem(Tiers.IRON, 2, -2.0f, new FabricItemSettings().tab(ModItemGroup.PECULIA_NETHER)));
+
     // Overworld Items
 
     public static final Item GOLDEN_GAUNTLET = registerItem("golden_gauntlet",
