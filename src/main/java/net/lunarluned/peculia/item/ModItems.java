@@ -84,6 +84,9 @@ public class ModItems {
     public static final Item WISP_SPAWN_EGG = registerItem("wisp_spawn_egg",
     new SpawnEggItem(ModEntities.WISP, 3483938, 8122868, new Item.Properties().tab(ModItemGroup.PECULIA_MISC)));
 
+    public static final Item DRUG = registerItem("drug",
+    new Item(new FabricItemSettings().group(ModItemGroup.PECULIA_MISC).food(ModFoodComponents.DRUG)));
+
 
 
     public static final Item SOUL = registerItem("soul",
@@ -391,7 +394,7 @@ public class ModItems {
     new SpawnEggItem(ModEntities.MOLDSPAWN, 8343348, 5974563, new Item.Properties().tab(ModItemGroup.PECULIA_NETHER)));
 
     public static final Item MOLDVAULT_CLAW = registerItem("moldvault_claw",
-    new ModGauntletItem(Tiers.IRON, 2, -2.0f, new FabricItemSettings().tab(ModItemGroup.PECULIA_NETHER)));
+    new ModMoldClawItem(Tiers.IRON, 2, -2.0f, new FabricItemSettings().tab(ModItemGroup.PECULIA_NETHER)));
 
     // Overworld Items
 
