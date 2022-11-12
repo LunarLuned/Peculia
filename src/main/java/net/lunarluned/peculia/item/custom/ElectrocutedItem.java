@@ -1,5 +1,6 @@
 package net.lunarluned.peculia.item.custom;
 
+import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -22,7 +23,9 @@ public class ElectrocutedItem extends ModDaggerItem {
     @Override
     public boolean hurtEnemy(@NotNull ItemStack stack, @NotNull LivingEntity target, @NotNull LivingEntity attacker) {
         super.hurtEnemy(stack, target, attacker);
-        target.addEffect(new MobEffectInstance(ModEffects.ELECTROCUTED, 60, 0));
+        if (attacker.getRandom().nextInt(100) <= Peculia.getConfig().items.itemsConfig.itemChances.charged_chance) {
+            target.addEffect(new MobEffectInstance(ModEffects.ELECTROCUTED, 60, 0));
+        }
         return true;
     }
 

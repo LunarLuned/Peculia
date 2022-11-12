@@ -1,5 +1,6 @@
 package net.lunarluned.peculia.item.custom;
 
+import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -25,7 +26,9 @@ public class VoidTouchedItem extends ModDaggerItem {
     @Override
     public boolean hurtEnemy(@NotNull ItemStack stack, @NotNull LivingEntity target, @NotNull LivingEntity attacker) {
         super.hurtEnemy(stack, target, attacker);
-        target.addEffect(new MobEffectInstance(ModEffects.VOID_TOUCHED, 100, 0));
+        if (attacker.getRandom().nextInt(100) <= Peculia.getConfig().items.itemsConfig.itemChances.void_touched_chance) {
+            target.addEffect(new MobEffectInstance(ModEffects.VOID_TOUCHED, 100, 0));
+        }
         return true;
     }
 

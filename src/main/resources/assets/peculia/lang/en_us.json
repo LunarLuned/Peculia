@@ -557,6 +557,20 @@
   "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.wardenConfig.stunned_from_sonic_boom": "Warden's Sonic Boom gives Stunned",
   "text.autoconfig.peculia.option.mobs.vanillaMobsConfig.wardenConfig.stat_increase": "Warden Attribute Changes",
 
+  "text.autoconfig.peculia.option.visualEffects": "Visual Effects",
+
+  "text.autoconfig.peculia.option.visualEffects.visualEffectsConfig": "Additional Visual Effects",
+  "text.autoconfig.peculia.option.visualEffects.visualEffectsConfig.@Tooltip": "Additional Visual Effects",
+
+  "text.autoconfig.peculia.option.visualEffects.visualEffectsConfig.particlesConfig": "Particles",
+  "text.autoconfig.peculia.option.visualEffects.visualEffectsConfig.particlesConfig.@Tooltip": "Peculia's Particles",
+
+  "text.autoconfig.peculia.option.visualEffects.visualEffectsConfig.particlesConfig.ichor_leap_particles": "Ichor Leap Particles",
+  "text.autoconfig.peculia.option.visualEffects.visualEffectsConfig.particlesConfig.ichor_leap_particles.@Tooltip": "Particles from the Moldleap Boots & Moldspawn when jumping.",
+
+  "text.autoconfig.peculia.option.visualEffects.visualEffectsConfig.particlesConfig.moldleap_boots_ichor_particles": "Ambient Ichor Walking Particles",
+  "text.autoconfig.peculia.option.visualEffects.visualEffectsConfig.particlesConfig.moldleap_boots_ichor_particles.@Tooltip": "Particles from the Moldleap Boots when walking around.",
+
   "text.autoconfig.peculia.option.items": "Items",
 
   "text.autoconfig.peculia.option.items.itemsConfig": "Item Settings",
@@ -564,9 +578,6 @@
 
   "text.autoconfig.peculia.option.items.itemsConfig.itemChances": "Item Chances",
   "text.autoconfig.peculia.option.items.itemsConfig.itemChances.@Tooltip": "Item Chances",
-
-  "text.autoconfig.peculia.option.items.itemsConfig.itemChanges": "Item Changes",
-  "text.autoconfig.peculia.option.items.itemsConfig.itemChanges.@Tooltip": "Item Changes",
 
   "text.autoconfig.peculia.option.items.itemsConfig.itemChances.soul_harvest_chance": "Soul Scythe Soul Harvesting Chance",
   "text.autoconfig.peculia.option.items.itemsConfig.itemChances.soul_harvest_chance.@Tooltip": "Chance for Soul Harvesting Ability to trigger",
@@ -580,6 +591,24 @@
   "text.autoconfig.peculia.option.items.itemsConfig.itemChances.satiated_saturation": "Satiated Elixir Saturation Chance",
   "text.autoconfig.peculia.option.items.itemsConfig.itemChances.satiated_saturation.@Tooltip": "Chance for Satiated Elixir to give Saturation for 20 seconds",
 
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.ichor_dipped_chance": "Ichor Dipped Item Burn Chance",
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.ichor_dipped_chance.@Tooltip": "Chance for Ichor Dipped Items to burn attacked entities",
+
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.void_touched_chance": "Void Touched Item Effect Chance",
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.void_touched_chance.@Tooltip": "Chance for Void Touched Items to give the effect to attacked entities",
+
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.charged_chance": "Charged Item Electrocution Chance",
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.charged_chance.@Tooltip": "Chance for Charged Items to electrocute attacked entities",
+
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.moldclaw_ichor_dipped_chance": "Moldvault Claw Ichor Chance",
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChances.moldclaw_ichor_dipped_chance.@Tooltip": "Chance for the Moldvault Claw to give Ichor to attacked entities",
+
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChanges": "Item Changes",
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChanges.@Tooltip": "Item Changes",
+
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChanges.milk_rework": "Milk Rework",
+  "text.autoconfig.peculia.option.items.itemsConfig.itemChanges.milk_rework.@Tooltip": "Milk now removes half of a random effect's duration, instead of removing all effects",
+
   "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig": "Potion Settings",
   "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.@Tooltip": "Potion Settings",
 
@@ -589,8 +618,6 @@
   "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.allow_ichor_potions": "Allow Ichor Potions",
   "text.autoconfig.peculia.option.items.itemsConfig.potionItemsConfig.allow_ichor_potions.@Tooltip": "Allows Ichor Potions",
 
-  "text.autoconfig.peculia.option.items.itemsConfig.itemChanges.milk_rework": "Milk Rework",
-  "text.autoconfig.peculia.option.items.itemsConfig.itemChanges.milk_rework.@Tooltip": "Milk now removes half of a random effect's duration, instead of removing all effects",
 
   "text.autoconfig.peculia.option.blocks": "Blocks",
 

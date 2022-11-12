@@ -16,4 +16,16 @@ public class ItemChances {
     @ConfigEntry.Gui.Tooltip
     public int satiated_saturation = 75;
 
+    @ConfigEntry.Gui.Tooltip
+    public int ichor_dipped_chance = 50;
+
+    @ConfigEntry.Gui.Tooltip
+    public int void_touched_chance = 70;
+
+    @ConfigEntry.Gui.Tooltip
+    public int charged_chance = 45;
+
+    @ConfigEntry.Gui.Tooltip
+    public int moldclaw_ichor_dipped_chance = 35;
+
 }
