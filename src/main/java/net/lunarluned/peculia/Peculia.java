@@ -1,12 +1,16 @@
 package net.lunarluned.peculia;
 
+import io.netty.buffer.Unpooled;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.fabricmc.fabric.impl.networking.server.ServerPlayNetworkAddon;
 import net.fabricmc.loader.api.FabricLoader;
 import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.common.registry.entity.living_entities.ghost.GhostEntity;
@@ -27,9 +31,12 @@ import net.lunarluned.peculia.util.ModLootTableModifiers;
 import net.lunarluned.peculia.world.feature.ModConfiguredFeatures;
 import net.lunarluned.peculia.world.feature.gen.ModWorldGen;
 import net.minecraft.core.Registry;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.protocol.Packet;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.EntityDamageSource;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.SpawnPlacements;
@@ -44,12 +51,31 @@ public class Peculia implements ModInitializer {
 	public static final String MOD_ID = "peculia";
 	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
 
+	public static final ResourceLocation FALL_DISTANCE_PACKET_ID = new ResourceLocation(MOD_ID, "falldistance");
+	public static final ResourceLocation WALL_JUMP_PACKET_ID = new ResourceLocation(MOD_ID, "walljump");
+
 	public static ResourceLocation id(String path) {
 		return new ResourceLocation(MOD_ID, path);
 	}
 
 	@Override
 	public void onInitialize() {
+
+		// Wall Jump Packets
+		ServerPlayNetworking.registerGlobalReceiver(FALL_DISTANCE_PACKET_ID, (server, player, handler, buf, responseSender) -> {
+			float fallDistance = buf.readFloat();
+			server.execute(() -> {
+				player.fallDistance = fallDistance;
+			});
+		});
+
+		ServerPlayNetworking.registerGlobalReceiver(WALL_JUMP_PACKET_ID, (server, player, handler, buf, responseSender) -> {
+			boolean didWallJump = buf.readBoolean();
+			server.execute(() -> {
+				if (didWallJump)
+					player.causeFoodExhaustion((float) 1);
+			});
+		});
 
 		// ඞ
 
@@ -194,6 +220,10 @@ public class Peculia implements ModInitializer {
 			bypassEnchantments();
 		}
 	}
+
+
+
+
 	// Mod Config
 
 	public static ModConfig getConfig () {

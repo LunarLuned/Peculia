@@ -27,6 +27,7 @@
   ],
   "client": [
     "armor.MoldleapBootMixin",
+    "client.ClientPlayerWallJumpMixin",
     "client.SheetsMixin",
     "effects.stunned.KeyboardMixin",
     "items.misc.ItemRendererMixin"
