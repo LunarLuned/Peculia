@@ -1,12 +1,18 @@
 {
   "values": [
     "peculia:moldspawn",
-    "minecraft:zombie",
-    "minecraft:husk",
-    "minecraft:drowned",
     "#minecraft:skeletons",
     "minecraft:vex",
-    "minecraft:iron_golem",
-    "minecraft:creeper"
+    "minecraft:creeper",
+    "minecraft:pufferfish",
+    "minecraft:zombified_piglin",
+    "minecraft:blaze",
+    "minecraft:slime",
+    "minecraft:magma_cube",
+    "minecraft:shulker",
+    "minecraft:phantom",
+    "minecraft:endermite",
+    "minecraft:wither",
+    "minecraft:ender_dragon"
   ]
 }
