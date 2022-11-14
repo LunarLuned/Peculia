@@ -2,6 +2,7 @@ package net.lunarluned.peculia.common.registry.entity.living_entities.moldspawn;
 
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.misc.PeculiaTags;
+import net.minecraft.ChatFormatting;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.Entity;
@@ -12,12 +13,12 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import org.jetbrains.annotations.NotNull;
 
 public class MoldspawnEntity extends Monster {
+
     public MoldspawnEntity(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
 
@@ -82,7 +83,11 @@ public class MoldspawnEntity extends Monster {
         }
     }
 
-    public boolean doHurtTarget(Entity entity) {
+    public boolean isSuspicious() {
+        return (("Sus".equals(ChatFormatting.stripFormatting(this.getName().getString()))) || ("Sydokiddo".equals(ChatFormatting.stripFormatting(this.getName().getString()))));
+    }
+
+    public boolean doHurtTarget(@NotNull Entity entity) {
         boolean bl = super.doHurtTarget(entity);
         if (bl) {
             this.biteAnimationState.start(this.tickCount);
