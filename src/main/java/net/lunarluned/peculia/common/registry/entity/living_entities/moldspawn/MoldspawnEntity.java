@@ -3,19 +3,22 @@ package net.lunarluned.peculia.common.registry.entity.living_entities.moldspawn;
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.misc.PeculiaTags;
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.entity.AnimationState;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public class MoldspawnEntity extends Monster {
 
@@ -33,6 +36,7 @@ public class MoldspawnEntity extends Monster {
         this.setPathfindingMalus(BlockPathTypes.DAMAGE_CACTUS, -1.0f);
         this.setPathfindingMalus(BlockPathTypes.DANGER_OTHER, -1.0f);
         this.setPathfindingMalus(BlockPathTypes.DAMAGE_OTHER, -1.0f);
+        this.setPathfindingMalus(BlockPathTypes.LAVA, 8.0F);
     }
 
     // Attributes
@@ -85,6 +89,38 @@ public class MoldspawnEntity extends Monster {
 
     public boolean isSuspicious() {
         return (("Sus".equals(ChatFormatting.stripFormatting(this.getName().getString()))) || ("Sydokiddo".equals(ChatFormatting.stripFormatting(this.getName().getString()))));
+    }
+
+    public boolean removeWhenFarAway(double distanceSquared) {
+        return !this.isPersistenceRequired();
+    }
+
+    @Override
+    @Nullable
+    protected SoundEvent getAmbientSound() {
+        return null;
+    }
+
+    @Override
+    @Nullable
+    protected SoundEvent getHurtSound(@NotNull DamageSource damageSource) {
+        return SoundEvents.GENERIC_HURT;
+    }
+
+    @Override
+    @Nullable
+    protected SoundEvent getDeathSound() {
+        return SoundEvents.GENERIC_DEATH;
+    }
+
+    @Override
+    protected void playStepSound(@NotNull BlockPos blockPos, @NotNull BlockState blockState) {
+        this.playSound(SoundEvents.SPIDER_STEP, 0.15f, 1.0f);
+    }
+
+    @Override
+    public MobType getMobType() {
+        return MobType.ARTHROPOD;
     }
 
     public boolean doHurtTarget(@NotNull Entity entity) {
