@@ -22,6 +22,7 @@
     "items.MilkBucketMixin",
     "util.BlockEntityTypeMixin",
     "util.SimpleParticleTypeAccessor",
+    "util.WalkNodeEvaluatorMixin",
     "util.WoodTypeAccessor",
     "util.accessor.MobEffectInstanceAccessor"
   ],

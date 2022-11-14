@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "peculia:wisp"
+    "peculia:wisp",
+    "peculia:moldspawn"
   ]
 }
