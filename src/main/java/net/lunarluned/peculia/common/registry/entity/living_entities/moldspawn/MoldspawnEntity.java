@@ -2,6 +2,7 @@ package net.lunarluned.peculia.common.registry.entity.living_entities.moldspawn;
 
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.misc.PeculiaTags;
+import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
@@ -98,19 +99,19 @@ public class MoldspawnEntity extends Monster {
     @Override
     @Nullable
     protected SoundEvent getAmbientSound() {
-        return null;
+        return ModSoundEvents.ENTITY_MOLDSPAWN_IDLE;
     }
 
     @Override
     @Nullable
     protected SoundEvent getHurtSound(@NotNull DamageSource damageSource) {
-        return SoundEvents.GENERIC_HURT;
+        return ModSoundEvents.ENTITY_MOLDSPAWN_HURT;
     }
 
     @Override
     @Nullable
     protected SoundEvent getDeathSound() {
-        return SoundEvents.GENERIC_DEATH;
+        return ModSoundEvents.ENTITY_MOLDSPAWN_DEATH;
     }
 
     @Override

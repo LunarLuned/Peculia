@@ -583,6 +583,34 @@
     ],
     "subtitle": "subtitles.entity.ghost.jumpscare"
   },
+  "entity.moldspawn.death": {
+    "sounds": [
+      "peculia:entity/moldspawn/death/death1",
+      "peculia:entity/moldspawn/death/death2",
+      "peculia:entity/moldspawn/death/death3",
+      "peculia:entity/moldspawn/death/death4",
+      "peculia:entity/moldspawn/death/death5"
+    ],
+    "subtitle": "subtitles.entity.moldspawn.death"
+  },
+  "entity.moldspawn.hurt": {
+    "sounds": [
+      "peculia:entity/moldspawn/hurt/hurt1",
+      "peculia:entity/moldspawn/hurt/hurt2",
+      "peculia:entity/moldspawn/hurt/hurt3"
+    ],
+    "subtitle": "subtitles.entity.moldspawn.hurt"
+  },
+  "entity.moldspawn.idle": {
+    "sounds": [
+      "peculia:entity/moldspawn/idle/idle1",
+      "peculia:entity/moldspawn/idle/idle2",
+      "peculia:entity/moldspawn/idle/idle3",
+      "peculia:entity/moldspawn/idle/idle4"
+    ],
+    "subtitle": "subtitles.entity.moldspawn.idle"
+  },
+
   "item.hog_horn.stampede": {
     "sounds": [
       "peculia:item/hog_horn/stampede"

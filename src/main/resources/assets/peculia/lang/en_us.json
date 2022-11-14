@@ -510,6 +510,10 @@
   "subtitles.entity.ghost.death": "Ghost dies",
   "subtitles.entity.ghost.empowered": "Ghost is empowered",
 
+  "subtitles.entity.moldspawn.idle": "Moldspawn chitters",
+  "subtitles.entity.moldspawn.hurt": "Moldspawn hurts",
+  "subtitles.entity.moldspawn.death": "Moldspawn dies",
+
   "item.peculia.hog_horn": "Hog Horn",
   "instrument.peculia.stampede_hog_horn": "Stampede",
   "instrument.peculia.pulse_hog_horn": "Pulse",

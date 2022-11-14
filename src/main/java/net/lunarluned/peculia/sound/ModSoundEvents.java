@@ -110,6 +110,10 @@ public class ModSoundEvents {
     public static final SoundEvent ENTITY_GHOST_HURT = registerSoundEvent("entity.ghost.hurt");
     public static final SoundEvent ENTITY_GHOST_DEATH = registerSoundEvent("entity.ghost.death");
 
+    public static final SoundEvent ENTITY_MOLDSPAWN_IDLE = registerSoundEvent("entity.moldspawn.idle");
+    public static final SoundEvent ENTITY_MOLDSPAWN_HURT = registerSoundEvent("entity.moldspawn.hurt");
+    public static final SoundEvent ENTITY_MOLDSPAWN_DEATH = registerSoundEvent("entity.moldspawn.death");
+
     public static final SoundType MYTHRIL = new SoundType(1f, 1f,
             ModSoundEvents.BLOCK_MYTHRIL_BREAK, ModSoundEvents.BLOCK_MYTHRIL_STEP, ModSoundEvents.BLOCK_MYTHRIL_PLACE,
             ModSoundEvents.BLOCK_MYTHRIL_HIT, ModSoundEvents.BLOCK_MYTHRIL_FALL);
