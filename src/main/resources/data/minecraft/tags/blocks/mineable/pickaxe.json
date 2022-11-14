@@ -91,6 +91,15 @@
     "peculia:polished_cryptstone_tile_slab",
     "peculia:polished_cryptstone_tile_stairs",
     "peculia:polished_cryptstone_tile_wall",
+    "peculia:bone_pillar",
+    "peculia:bone_bricks",
+    "peculia:bone_brick_stairs",
+    "peculia:bone_brick_slab",
+    "peculia:bone_brick_wall",
+    "peculia:bone_tiles",
+    "peculia:bone_tile_stairs",
+    "peculia:bone_tile_slab",
+    "peculia:bone_tile_wall",
 
     "peculia:nullifite"
   ]
