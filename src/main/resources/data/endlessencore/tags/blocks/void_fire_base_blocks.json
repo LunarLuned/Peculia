@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "peculia:void_lamp"
+    "peculia:void_lamp",
+    "peculia:condensed_void"
   ]
 }

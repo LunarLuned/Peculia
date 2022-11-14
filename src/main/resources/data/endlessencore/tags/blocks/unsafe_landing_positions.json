@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "peculia:condensed_void",
+    "peculia:titan_blood",
+    "peculia:ichor_sticker",
+    "peculia:perforated_jaw",
+    "peculia:perforated_pustule",
+    "peculia:crumbling_stone",
+    "peculia:crumbling_deepslate",
+    "peculia:crumbling_netherrack",
+    "peculia:crumbling_end_stone",
+    "peculia:charged_ferrock"
+  ]
+}

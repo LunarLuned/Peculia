@@ -26,5 +26,8 @@ public class WalkNodeEvaluatorMixin {
         if (blockState.is(ModBlocks.PERFORATED_JAW) || blockState.is(ModBlocks.PERFORATED_PUSTULE) || blockState.getBlock() instanceof CrumblingBlock || blockState.is(ModBlocks.CONDENSED_VOID)) {
             cir.setReturnValue(BlockPathTypes.POWDER_SNOW);
         }
+        if (blockState.is(ModBlocks.CHARGED_FERROCK)) {
+            cir.setReturnValue(BlockPathTypes.DANGER_OTHER);
+        }
     }
 }
