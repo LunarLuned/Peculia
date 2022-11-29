@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#L#",
+    "LGL",
+    "LLL"
+  ],
+  "key": {
+    "#": {
+      "item": "peculia:moldmein"
+    },
+    "L": {
+      "item": "peculia:moldne"
+    },
+    "G": {
+      "item": "peculia:golden_gauntlet"
+    }
+  },
+  "result": {
+    "item": "peculia:moldvault_claw",
+    "count": 1
+  }
+}

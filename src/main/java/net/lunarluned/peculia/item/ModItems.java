@@ -386,15 +386,21 @@ public class ModItems {
     public static final Item HOG_HORN = registerItem("hog_horn",
     new HogHornItem(new FabricItemSettings().tab(ModItemGroup.PECULIA_NETHER).stacksTo(1), PeculiaTags.HOG_HORNS));
 
+    public static final Item MOLDMEIN = registerItem("moldmein",
+    new Item(new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER)));
+
+    public static final Item MOLDNE = registerItem("moldne",
+    new Item(new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER)));
+
     public static final Item MOLDLEAP_BOOTS = registerItem("moldleap_boots",
     new ArmorItem(ModArmorMaterials.MOLDLEAP, EquipmentSlot.FEET,
-    new FabricItemSettings().group(ModItemGroup.PECULIA_NETHER)));
+    new FabricItemSettings().fireproof().group(ModItemGroup.PECULIA_NETHER)));
 
     public static final Item MOLDSPAWN_SPAWN_EGG = registerItem("moldspawn_spawn_egg",
     new SpawnEggItem(ModEntities.MOLDSPAWN, 8343348, 5974563, new Item.Properties().tab(ModItemGroup.PECULIA_NETHER)));
 
     public static final Item MOLDVAULT_CLAW = registerItem("moldvault_claw",
-    new ModMoldClawItem(Tiers.IRON, 2, -2.0f, new FabricItemSettings().tab(ModItemGroup.PECULIA_NETHER)));
+    new ModMoldClawItem(Tiers.IRON, 2, -2.0f, new FabricItemSettings().fireproof().tab(ModItemGroup.PECULIA_NETHER)));
 
     // Overworld Items
 

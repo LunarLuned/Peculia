@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#L#",
+    "LGL",
+    "LLL"
+  ],
+  "key": {
+    "#": {
+      "item": "peculia:moldmein"
+    },
+    "L": {
+      "item": "peculia:moldne"
+    },
+    "G": {
+      "item": "minecraft:golden_boots"
+    }
+  },
+  "result": {
+    "item": "peculia:moldleap_boots",
+    "count": 1
+  }
+}
