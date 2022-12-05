@@ -1,5 +1,6 @@
 package net.lunarluned.peculia.common.registry.entity.living_entities.moldspawn;
 
+
 import net.lunarluned.peculia.effect.ModEffects;
 import net.lunarluned.peculia.misc.PeculiaTags;
 import net.lunarluned.peculia.sound.ModSoundEvents;
