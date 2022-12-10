@@ -6,8 +6,11 @@ import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.misc.PeculiaTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -23,9 +26,11 @@ import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.SpectralArrow;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import org.jetbrains.annotations.NotNull;
 
@@ -167,7 +172,7 @@ public class WispEntity extends AbstractGolem {
         return 20;
     }
 
-    /*/ disabling for now
+    // disabling for now
     // Interacting with Wisp with Ectoplasm
 
     public boolean isFood(@NotNull ItemStack itemStack) {
@@ -187,6 +192,7 @@ public class WispEntity extends AbstractGolem {
 
             if (!this.level.isClientSide) {
                 this.gameEvent(GameEvent.EAT, this);
+                this.spawnAtLocation(ModItems.SOUL);
                 this.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1, false, true, true));
                 this.setPersistenceRequired();
 
@@ -196,7 +202,6 @@ public class WispEntity extends AbstractGolem {
                     this.level.playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.STONE_BREAK, this.getSoundSource(), 1.0f, 1.0f + (this.random.nextFloat() - this.random.nextFloat()) * 0.2f);
                 }
 
-                return soulDuplication(player, interactionHand);
 
             }
                 return super.mobInteract(player, interactionHand);
@@ -204,23 +209,6 @@ public class WispEntity extends AbstractGolem {
         return super.mobInteract(player, interactionHand);
     }
 
-    public InteractionResult soulDuplication(Player player, @NotNull InteractionHand interactionHand) {
-        ItemStack itemStack = player.getItemInHand(interactionHand);
-        if (!this.level.isClientSide) {
-            if (!player.getAbilities().instabuild) {
-                itemStack.shrink(1);
-            }
-            ItemStack soul = new ItemStack(ModItems.SOUL);
-            if (!player.getInventory().contains(soul)) {
-                player.drop(soul, false);
-            } else {
-                itemStack.setCount(itemStack.getCount() + 1);
-            }
-            return InteractionResult.SUCCESS;
-        }
-        return InteractionResult.CONSUME;
-    }
-/*/
     protected boolean shouldDespawnInPeaceful() {
         return false;
     }

@@ -2,10 +2,12 @@ package net.lunarluned.peculia.common.registry.entity.living_entities.moldspawn;
 
 
 import net.lunarluned.peculia.effect.ModEffects;
+import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.misc.PeculiaTags;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
@@ -16,6 +18,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
@@ -23,9 +26,12 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class MoldspawnEntity extends Monster {
+    public int moldshedtick;
+
 
     public MoldspawnEntity(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
+        this.moldshedtick = this.random.nextInt(3000) + 1700;
 
         this.setPathfindingMalus(BlockPathTypes.WATER, -1.0f);
         this.setPathfindingMalus(BlockPathTypes.WATER_BORDER, 16.0f);
@@ -139,6 +145,28 @@ public class MoldspawnEntity extends Monster {
 
         return bl;
     }
+
+    public void aiStep() {
+        super.aiStep();
+        if (!this.level.isClientSide && this.isInLava() && this.isAlive() && !this.isBaby() && --this.moldshedtick <= 0) {
+            //placeholder sound
+            this.playSound(SoundEvents.SHEEP_SHEAR, 1.0F, (this.random.nextFloat() - this.random.nextFloat()) * 0.2F + 1.0F);
+            this.spawnAtLocation(ModItems.MOLDMEIN);
+            this.moldshedtick = this.random.nextInt(3000) + 3000;
+        }
+    }
+
+    public void readAdditionalSaveData(CompoundTag compoundTag) {
+        super.readAdditionalSaveData(compoundTag);
+        if (compoundTag.contains("MoldShedTick")) {
+            this.moldshedtick = compoundTag.getInt("MoldShedTick");
+        }
+    }
+    public void addAdditionalSaveData(CompoundTag compoundTag) {
+        super.addAdditionalSaveData(compoundTag);
+        compoundTag.putInt("MoldShedTick", this.moldshedtick);
+    }
+
 
     @Override
     public void tick() {
