@@ -21,6 +21,17 @@
   "use_expansion_hack": false,
 
   "spawn_overrides": {
+    "monster": {
+      "bounding_box": "full",
+      "spawns": [
+        {
+          "type": "peculia:moldspawn",
+          "weight": 1,
+          "minCount": 0,
+          "maxCount": 1
+        }
+      ]
+    }
   }
 
 }
