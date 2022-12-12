@@ -98,7 +98,7 @@ public class TitanBloodBlock extends Block {
         if (entity.getType().is(PeculiaTags.TITAN_BLOOD_WALKABLE_MOBS)) {
             return true;
         } else {
-            return entity instanceof LivingEntity && ((LivingEntity) entity).getItemBySlot(EquipmentSlot.FEET).is(Items.GOLDEN_BOOTS);
+            return entity instanceof LivingEntity && ((LivingEntity) entity).getItemBySlot(EquipmentSlot.FEET).is(PeculiaTags.TITANS_BLOOD_WALKABLE_ITEM);
         }
     }
 

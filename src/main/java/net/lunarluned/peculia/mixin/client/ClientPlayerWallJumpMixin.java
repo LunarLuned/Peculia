@@ -89,6 +89,8 @@ public abstract class ClientPlayerWallJumpMixin extends AbstractClientPlayer {
 
         if(this.ticksWallClinged < 1) {
 
+
+
             if (this.ticksKeyDown > 0
                     && this.ticksKeyDown < 4
                     && !this.walls.isEmpty()
@@ -231,6 +233,8 @@ public abstract class ClientPlayerWallJumpMixin extends AbstractClientPlayer {
     }
 
     private void wallJump(float up) {
+
+
 
         float strafe = Math.signum(this.xxa) * up * up;
         float forward = Math.signum(this.zza) * up * up;

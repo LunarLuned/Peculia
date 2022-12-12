@@ -66,7 +66,6 @@
   "item.peculia.netherite_gauntlet": "Netherite Gauntlet",
   "item.peculia.moldne": "Moldne",
   "item.peculia.moldmein": "Moldmein",
-  "item.peculia.weakened_scented_mold": "Weakened Scented Mold",
   "item.peculia.moldleap_boots": "Moldleap Boots",
   "item.peculia.moldvault_claw": "Moldvault Claw",
 
@@ -132,6 +131,7 @@
 
   "block.peculia.ichor_mold_vein": "Ichor Mold Vein",
   "block.peculia.titan_blood": "Bottle of Titan's Blood",
+  "block.peculia.weakened_scented_mold": "Weakened Scented Mold",
   "block.peculia.ichor_mold": "Ichor Mold",
   "block.peculia.ichor_nylium": "Ichor Nylium",
   "block.peculia.arterial_bramble": "Arterial Bramble",

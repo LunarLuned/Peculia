@@ -52,9 +52,6 @@ public abstract class GenericScentedMoldBlock extends Block {
         return SHAPE;
     }
 
-    public static boolean isLit(BlockState blockState) {
-        return blockState.hasProperty(LIT) && (Boolean)blockState.getValue(LIT);
-    }
 
     public void onProjectileHit(Level level, BlockState blockState, BlockHitResult blockHitResult, Projectile projectile) {
         if (!level.isClientSide && projectile.isOnFire() && this.canBeLit(blockState)) {
@@ -72,13 +69,13 @@ public abstract class GenericScentedMoldBlock extends Block {
     public static void addParticlesAndSound(Level level, BlockPos pos, RandomSource randomSource) {
         float f = randomSource.nextFloat();
         if (f < 0.3F) {
-            level.addParticle(ModParticles.ICHOR, pos.getX() + .1, pos.getX() + .1, pos.getX() + .1, 0.0, 0.0, 0.0);
+            float k = (0.3F * 0.45F) * (0.2F + 1.0F);
+            level.addParticle(ModParticles.ICHOR, (double)pos.getX() + (double) k + .3, (double)pos.getY() + (double) k + .4, (double)pos.getZ() + (double) k + .3, 0.0, 0.10000000149011612, 0.0);
             if (f < 0.17F) {
-                level.playLocalSound(pos.getX() + .1, pos.getX() + .1, pos.getX() + .1, SoundEvents.CANDLE_AMBIENT, SoundSource.BLOCKS, 1.0F + randomSource.nextFloat(), randomSource.nextFloat() * 0.7F + 0.3F, false);
+                level.playLocalSound(pos.getX() + .3, pos.getY() + .3, pos.getZ() + .3, SoundEvents.CANDLE_AMBIENT, SoundSource.BLOCKS, 1.0F + randomSource.nextFloat(), randomSource.nextFloat() * 0.7F + 0.3F, false);
             }
+            level.addParticle(ParticleTypes.SMALL_FLAME, (double)pos.getX() + (double) k + .5, (double)pos.getY() + (double) k + .3, (double)pos.getZ() + (double) k + .5, 0.0, 0.10000000149011612, 0.0);
         }
-
-        level.addParticle(ParticleTypes.SMALL_FLAME, pos.getX() + .1, pos.getX() + .1, pos.getX() + .1, 0.0, 0.0, 0.0);
     }
 
 
@@ -87,13 +84,15 @@ public abstract class GenericScentedMoldBlock extends Block {
     public static void extinguish(@Nullable Player player, BlockState blockState, LevelAccessor levelAccessor, BlockPos blockPos) {
         setLit(levelAccessor, blockState, blockPos, false);
         float k = (0.3F * 0.45F) * (0.2F + 1.0F);
-        levelAccessor.addParticle(ParticleTypes.SMOKE, (double)blockPos.getX() + (double) k, (double)blockPos.getY() + (double) k, (double)blockPos.getZ() + (double) k, 0.0, 0.10000000149011612, 0.0);
+        levelAccessor.addParticle(ParticleTypes.SMOKE, (double)blockPos.getX() + (double) k  + .3, (double)blockPos.getY() + (double) k  + .3, (double)blockPos.getZ() + (double) k  + .3, 0.0, 0.10000000149011612, 0.0);
         levelAccessor.playSound(null, blockPos, SoundEvents.CANDLE_EXTINGUISH, SoundSource.BLOCKS, 1.0F, 1.0F);
         levelAccessor.gameEvent(player, GameEvent.BLOCK_CHANGE, blockPos);
+
+
     }
 
     public static void setLit(LevelAccessor levelAccessor, BlockState blockState, BlockPos blockPos, boolean bl) {
-        levelAccessor.setBlock(blockPos, (BlockState)blockState.setValue(LIT, bl), 11);
+        levelAccessor.setBlock(blockPos, blockState.setValue(LIT, bl), 11);
     }
 
     public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {

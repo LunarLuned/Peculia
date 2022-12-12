@@ -7,8 +7,8 @@ import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.particles.ModParticles;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -16,16 +16,22 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
+import net.lunarluned.peculia.mixin.client.ClientPlayerWallJumpMixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import static net.lunarluned.peculia.Peculia.WALL_JUMP_PACKET_ID;
 
 @Mixin(LocalPlayer.class)
 public abstract class MoldleapBootMixin {
 
     private int jumpCount = 0;
     private boolean jumpedLastTick = false;
+
+
+
 
     // Allows for the player to double-jump while wearing Moldleap Boots
 
