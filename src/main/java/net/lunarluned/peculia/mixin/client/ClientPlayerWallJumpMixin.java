@@ -186,9 +186,11 @@ public abstract class ClientPlayerWallJumpMixin extends AbstractClientPlayer {
         if(this.onClimbable() || this.getDeltaMovement().y() > 0.1 || this.getFoodData().getFoodLevel() < 1)
             return false;
 
-    //    if(!this.doesNotCollide(this.getBoundingBox().offset(0, -0.8, 0)))
-     //       return false;
+        ItemStack stack = this.getItemInHand(InteractionHand.MAIN_HAND);
+        ItemStack offHand = this.getItemInHand(InteractionHand.OFF_HAND);
 
+        if(stack.is(ModItems.MOLDVAULT_CLAW) && offHand.is(ModItems.MOLDVAULT_CLAW) || this.getY() < this.lastJumpY - 1)
+            return true;
 
         return !this.staleWalls.containsAll(this.walls);
     }
