@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=true": {"model": "peculia:block/scented_mold_lit"},
+    "lit=false": {"model": "peculia:block/scented_mold"}
+  }
+}
