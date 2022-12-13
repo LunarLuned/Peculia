@@ -4,9 +4,10 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.block.custom.*;
+import net.lunarluned.peculia.block.custom.scentedmold.FatiguedScentedMold;
+import net.lunarluned.peculia.block.custom.scentedmold.WeakenedScentedMold;
 import net.lunarluned.peculia.common.registry.misc.ModSignType;
 import net.lunarluned.peculia.item.ModItemGroup;
-import net.lunarluned.peculia.item.ModItems;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
@@ -206,8 +207,8 @@ public class ModBlocks {
     public static final Block ICHOR_MOLD = registerBlock("ichor_mold",
     new Block(FabricBlockSettings.of(Material.PLANT).sounds(SoundType.WART_BLOCK).strength(1f)), ModItemGroup.PECULIA_NETHER);
 
-    public static final Block WEAKENED_SCENTED_MOLD = registerBlock("weakened_scented_mold",
-    new WeakenedScentedMold(FabricBlockSettings.of(Material.GRASS).sounds(SoundType.WART_BLOCK).strength(1f).luminance(1)), ModItemGroup.PECULIA_NETHER);
+    public static final Block FATIGUED_SCENTED_MOLD = registerBlock("fatigued_scented_mold",
+    new FatiguedScentedMold(FabricBlockSettings.of(Material.GRASS).sounds(SoundType.GLASS).strength(1f).luminance(6)), ModItemGroup.PECULIA_NETHER);
 
     public static final Block ICHOR_NYLIUM = registerBlock("ichor_nylium",
     new IchorNyliumBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.NYLIUM).strength(1f)), ModItemGroup.PECULIA_NETHER);

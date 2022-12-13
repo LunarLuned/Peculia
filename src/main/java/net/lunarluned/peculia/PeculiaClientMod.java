@@ -110,11 +110,11 @@ public class PeculiaClientMod implements ClientModInitializer {
                 ModBlocks.ICHOR_MOLD_VEIN,
                 ModBlocks.TITAN_BLOOD,
                 ModBlocks.ICHOR_STICKER,
-                ModBlocks.WEAKENED_SCENTED_MOLD,
                 ModBlocks.PERFORATED_PUSTULE,
                 ModBlocks.DRAGONGLASS,
-                ModBlocks.DRAGONGLASS_PANE
+                ModBlocks.DRAGONGLASS_PANE,
 
+                ModBlocks.FATIGUED_SCENTED_MOLD
 
         );
 

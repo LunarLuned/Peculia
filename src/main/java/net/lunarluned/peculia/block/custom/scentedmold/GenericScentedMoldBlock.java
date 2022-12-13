@@ -1,4 +1,4 @@
-package net.lunarluned.peculia.block.custom;
+package net.lunarluned.peculia.block.custom.scentedmold;
 
 import net.lunarluned.peculia.particles.ModParticles;
 import net.lunarluned.peculia.sound.ModSoundEvents;

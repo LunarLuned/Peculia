@@ -1,5 +1,6 @@
-package net.lunarluned.peculia.block.custom;
+package net.lunarluned.peculia.block.custom.scentedmold;
 
+import net.lunarluned.peculia.effect.ModEffects;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -65,7 +66,7 @@ public class WeakenedScentedMold extends GenericScentedMoldBlock {
             List<LivingEntity> nearbyEntities = level.getEntitiesOfClass(LivingEntity.class, aABB);
 
             for (LivingEntity livingEntity : nearbyEntities) {
-                livingEntity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 100, 1, false, false, false));
+                livingEntity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 300, 0, true, true, true));
             }
         }
 
@@ -80,7 +81,7 @@ public class WeakenedScentedMold extends GenericScentedMoldBlock {
         AABB aABB = new AABB(k, l = pos.getY(), m = pos.getZ(), k + 1, l + 1, m + 1).inflate(j).expandTowards(0.0, level.getHeight(), 0.0);
         List<LivingEntity> nearbyEntities = level.getEntitiesOfClass(LivingEntity.class, aABB);
         for (LivingEntity livingEntity : nearbyEntities) {
-            livingEntity.removeEffect(MobEffects.DIG_SLOWDOWN);
+            livingEntity.removeEffect(ModEffects.STAGNATED);
         }
     }
 
