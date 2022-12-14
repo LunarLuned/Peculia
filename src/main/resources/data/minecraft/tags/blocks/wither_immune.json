@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
-    "peculia:condensed_void"
+    "peculia:condensed_void",
+    "peculia:nullrock",
+    "peculia:nullifite",
+    "peculia:deepslate_pedestal",
+    "peculia:awakened_cobblestone"
   ]
 }
