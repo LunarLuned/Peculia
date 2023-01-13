@@ -8,6 +8,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Instrument;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.levelgen.structure.Structure;
 
 public class PeculiaTags {
 
@@ -23,5 +24,6 @@ public class PeculiaTags {
     public static final TagKey<Item> TITANS_BLOOD_WALKABLE_ITEM = TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation("peculia", "titans_blood_walkable"));
     public static final TagKey<Block> GHOST_SPAWNABLE_ON = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation("peculia", "ghost_spawnable_on"));
     public static final TagKey<Block> WISP_SPAWNABLE_ON = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation("peculia", "wisp_spawnable_on"));
-        public static final TagKey<Block> MOLDSPAWN_SPAWNABLE_ON = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation("peculia", "moldspawn_spawnable_on"));
+    public static final TagKey<Block> MOLDSPAWN_SPAWNABLE_ON = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation("peculia", "moldspawn_spawnable_on"));
+    public static final TagKey<Structure> PERFORATED_STRUCTURES = TagKey.create(Registry.STRUCTURE_REGISTRY, new ResourceLocation("peculia", "perforated_structures"));
 }
