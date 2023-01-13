@@ -113,6 +113,7 @@
   "block.peculia.bone_tile_slab": "Bone Tile Slab",
   "block.peculia.bone_tile_wall": "Bone Tile Wall",
   "block.peculia.bone_pillar": "Bone Pillar",
+  "block.peculia.stony_dirt_path": "Stony Dirt Path",
 
   "block.peculia.grim_wood_log": "Grimwood Log",
   "block.peculia.grim_wood": "Grimwood",
@@ -330,6 +331,9 @@
   "item.peculia.cloak_helmet": "Soul Cloak Hood",
   "item.peculia.cloak_chestplate": "Soul Cloak",
   "item.peculia.cloak_leggings": "Soul Cloak Drapes",
+  "item.peculia.ecto_cloak_helmet": "Ecto Cloak Hood",
+  "item.peculia.ecto_cloak_chestplate": "Ecto Cloak",
+  "item.peculia.ecto_cloak_leggings": "Ecto Cloak Drapes",
 
   "item.peculia.echoing_mirror": "Echoing Mirror",
   "item.peculia.mythril_helmet": "Mythril Helmet",
@@ -481,6 +485,7 @@
   "effect.peculia.determined": "Determined",
   "effect.peculia.stagnated": "Stagnated",
   "effect.peculia.lunar_sickness": "Lunar Sickness",
+  "effect.peculia.banishing": "Banishin",
 
   "armor.mythril.equip": "Mythril Armor crackles",
   "armor.moldleap.equip": "Moldleap Boots sizzle",
