@@ -20,6 +20,10 @@ public class FullSculkSacItem extends Item {
         super(settings);
     }
 
+    public boolean isFoil(@NotNull ItemStack itemStack) {
+        return true;
+    }
+
     @Override
     public InteractionResultHolder<ItemStack> use(@NotNull Level world, Player user, @NotNull InteractionHand hand) {
 
