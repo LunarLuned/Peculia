@@ -18,16 +18,16 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class MoldspawnEntity extends Monster {
-    public int moldshedtick;
 
+    public int moldshedtick;
 
     public MoldspawnEntity(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
@@ -45,6 +45,10 @@ public class MoldspawnEntity extends Monster {
         this.setPathfindingMalus(BlockPathTypes.DANGER_OTHER, -1.0f);
         this.setPathfindingMalus(BlockPathTypes.DAMAGE_OTHER, -1.0f);
         this.setPathfindingMalus(BlockPathTypes.LAVA, 8.0F);
+    }
+
+    public static boolean checkMoldspawnSpawnRules(ServerLevelAccessor serverLevelAccessor, BlockPos blockPos) {
+        return serverLevelAccessor.getBlockState(blockPos.below()).is(PeculiaTags.MOLDSPAWN_SPAWNABLE_ON);
     }
 
     // Attributes
@@ -156,13 +160,13 @@ public class MoldspawnEntity extends Monster {
         }
     }
 
-    public void readAdditionalSaveData(CompoundTag compoundTag) {
+    public void readAdditionalSaveData(@NotNull CompoundTag compoundTag) {
         super.readAdditionalSaveData(compoundTag);
         if (compoundTag.contains("MoldShedTick")) {
             this.moldshedtick = compoundTag.getInt("MoldShedTick");
         }
     }
-    public void addAdditionalSaveData(CompoundTag compoundTag) {
+    public void addAdditionalSaveData(@NotNull CompoundTag compoundTag) {
         super.addAdditionalSaveData(compoundTag);
         compoundTag.putInt("MoldShedTick", this.moldshedtick);
     }

@@ -1,19 +1,17 @@
 package net.lunarluned.peculia;
 
-import io.netty.buffer.Unpooled;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
-import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
-import net.fabricmc.fabric.impl.networking.server.ServerPlayNetworkAddon;
 import net.fabricmc.loader.api.FabricLoader;
 import net.lunarluned.peculia.block.ModBlocks;
 import net.lunarluned.peculia.common.registry.entity.living_entities.ghost.GhostEntity;
+import net.lunarluned.peculia.common.registry.entity.living_entities.moldspawn.MoldspawnEntity;
 import net.lunarluned.peculia.common.registry.entity.living_entities.wisp.WispEntity;
 import net.lunarluned.peculia.common.registry.entity.registry.ModEntities;
 import net.lunarluned.peculia.config.ModConfig;
@@ -31,12 +29,9 @@ import net.lunarluned.peculia.util.ModLootTableModifiers;
 import net.lunarluned.peculia.world.feature.ModConfiguredFeatures;
 import net.lunarluned.peculia.world.feature.gen.ModWorldGen;
 import net.minecraft.core.Registry;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.network.protocol.Packet;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.EntityDamageSource;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.SpawnPlacements;
@@ -64,9 +59,7 @@ public class Peculia implements ModInitializer {
 		// Wall Jump Packets
 		ServerPlayNetworking.registerGlobalReceiver(FALL_DISTANCE_PACKET_ID, (server, player, handler, buf, responseSender) -> {
 			float fallDistance = buf.readFloat();
-			server.execute(() -> {
-				player.fallDistance = fallDistance;
-			});
+			server.execute(() -> player.fallDistance = fallDistance);
 		});
 
 		ServerPlayNetworking.registerGlobalReceiver(WALL_JUMP_PACKET_ID, (server, player, handler, buf, responseSender) -> {
@@ -86,6 +79,8 @@ public class Peculia implements ModInitializer {
 		SpawnPlacements.register(ModEntities.WISP, SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, serverLevelAccessor, mobSpawnType, blockPos, randomSource) -> WispEntity.checkWispSpawnRules(serverLevelAccessor, blockPos));
 
 		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.DRIPSTONE_CAVES), MobCategory.CREATURE, ModEntities.COAL_GEODE, 2, 1, 1);
+
+		SpawnPlacements.register(ModEntities.MOLDSPAWN, SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, serverLevelAccessor, mobSpawnType, blockPos, randomSource) -> MoldspawnEntity.checkMoldspawnSpawnRules(serverLevelAccessor, blockPos));
 
 		// Strippable Blocks
 
