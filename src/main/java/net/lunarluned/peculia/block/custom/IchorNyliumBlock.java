@@ -7,11 +7,12 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.NyliumBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.lighting.LayerLightEngine;
+import org.jetbrains.annotations.NotNull;
 
 public class IchorNyliumBlock extends Block {
+
     public IchorNyliumBlock(Properties properties) {
         super(properties);
     }
@@ -23,10 +24,9 @@ public class IchorNyliumBlock extends Block {
         return i < levelReader.getMaxLightLevel();
     }
 
-    public void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, RandomSource randomSource) {
+    public void randomTick(@NotNull BlockState blockState, @NotNull ServerLevel serverLevel, @NotNull BlockPos blockPos, @NotNull RandomSource randomSource) {
         if (!canBeNylium(blockState, serverLevel, blockPos)) {
             serverLevel.setBlockAndUpdate(blockPos, Blocks.NETHERRACK.defaultBlockState());
         }
-
     }
 }

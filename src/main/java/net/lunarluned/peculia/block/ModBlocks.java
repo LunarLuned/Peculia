@@ -229,7 +229,7 @@ public class ModBlocks {
     new PerforatedPustuleBlock(FabricBlockSettings.of(Material.STONE).sounds(SoundType.WART_BLOCK).nonOpaque().luminance(15).strength(0.5f)), ModItemGroup.PECULIA_NETHER);
 
     public static final Block ARTERIAL_BRAMBLE = registerBlock("arterial_bramble",
-    new ArterialBrambleBlock(FabricBlockSettings.of(Material.PLANT).sounds(SoundType.WART_BLOCK).nonOpaque().noCollision()), ModItemGroup.PECULIA_NETHER);
+    new ArterialBrambleBlock(FabricBlockSettings.of(Material.PLANT).sounds(SoundType.ROOTS).nonOpaque().noCollision()), ModItemGroup.PECULIA_NETHER);
 
     public static final Block SANGUINE_QUARTZ_BLOCK = registerBlock("sanguine_quartz_block",
     new SanguineQuartzBlock(FabricBlockSettings.of(Material.AMETHYST).nonOpaque().strength(2f).requiresTool().sounds(ModSoundEvents.MYTHRIL), UniformInt.of(2, 8)), ModItemGroup.PECULIA_NETHER);
