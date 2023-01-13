@@ -485,6 +485,8 @@
   "armor.mythril.equip": "Mythril Armor crackles",
   "armor.moldleap.equip": "Moldleap Boots sizzle",
   "armor.moldleap.flap": "Moldleap Boots flap",
+  "item.moldvault_claw.grab": "Moldvault Claw grabs",
+  "item.moldvault_claw.vault": "Moldvault Claw vaults",
   "effect.echoing.attack.hit": "Strong Echo attack",
   "item.echoing_mirror.use": "Echoing Mirror is used",
   "effect.anchored_teleport_fail": "Teleport fails",

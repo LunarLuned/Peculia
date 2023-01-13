@@ -1,5 +1,4 @@
 {
-	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
 		"2": "peculia:item/moldvault_claw",
@@ -59,29 +58,29 @@
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [90, 0, 0],
-			"translation": [4.75, -6.75, 7],
-			"scale": [0.9, 0.9, 0.9]
+			"translation": [5, -7, 6.5],
+			"scale": [0.95, 0.95, 0.95]
 		},
 		"thirdperson_lefthand": {
-			"rotation": [90, -180, 0],
-			"translation": [4.75, 2.75, 7],
-			"scale": [0.9, 0.9, 0.9]
+			"rotation": [90, 180, 0],
+			"translation": [5, 3, 6.5],
+			"scale": [0.95, 0.95, 0.95]
 		},
 		"firstperson_righthand": {
-			"rotation": [174.5, 0, 0],
-			"translation": [5.5, -2.25, -3.25]
+			"rotation": [170, 90, 0],
+			"translation": [5, -1.5, 6]
 		},
 		"firstperson_lefthand": {
-			"rotation": [174.5, -180, 0],
-			"translation": [5.5, -2, 6]
+			"rotation": [170, -90, 0],
+			"translation": [-5, -1.5, 6]
 		},
 		"ground": {
-			"rotation": [89, 0, 0],
-			"translation": [6.25, -5.25, 4.5]
+			"rotation": [0, 0, 180],
+			"translation": [-2.5, 2, 2.5],
+			"scale": [0.5, 0.5, 0.5]
 		},
 		"gui": {
-			"rotation": [-142, -45, 0],
-			"translation": [0, 0.75, 0],
+			"rotation": [-145, -45, 0],
 			"scale": [1.25, 1.25, 1.25]
 		},
 		"head": {

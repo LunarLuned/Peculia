@@ -8,7 +8,6 @@ import net.lunarluned.peculia.particles.ModParticles;
 import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -16,22 +15,16 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
-import net.lunarluned.peculia.mixin.client.ClientPlayerWallJumpMixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
-import static net.lunarluned.peculia.Peculia.WALL_JUMP_PACKET_ID;
 
 @Mixin(LocalPlayer.class)
 public abstract class MoldleapBootMixin {
 
     private int jumpCount = 0;
     private boolean jumpedLastTick = false;
-
-
-
 
     // Allows for the player to double-jump while wearing Moldleap Boots
 
@@ -44,18 +37,15 @@ public abstract class MoldleapBootMixin {
         if (itemStack.is(ModItems.MOLDLEAP_BOOTS)) {
 
             if (Peculia.getConfig().visualEffects.visualEffectsConfig.particlesConfig.moldleap_boots_ichor_particles && !player.isInvisible()) {
-                if ((player.tickCount % 5 == 0) && (player.getDeltaMovement().horizontalDistance() > 0) && !player.isInWater()) {
+                if ((player.tickCount % 5 == 0) && (player.getDeltaMovement().horizontalDistance() > 0) && canJump(player)) {
                     float k = (0.3F * 0.45F) * (0.2F + 1.0F);
                     player.level.addParticle(ModParticles.ICHOR, player.getX(), player.getY() + (double) k, player.getZ(), 0.0, 0.0, 0.0);
                 }
             }
 
             if (player.isOnGround() || player.isHandsBusy()) {
-
                 jumpCount = 3;
-
             } else if (!jumpedLastTick && jumpCount > 0) {
-
                 if (player.input.jumping && !player.getAbilities().flying) {
                     if (canJump(player)) {
                         --jumpCount;

@@ -42,6 +42,20 @@
       "peculia:armor/moldleap/flap_3"
     ]
   },
+  "item.moldvault_claw.grab": {
+    "subtitle": "item.moldvault_claw.grab",
+    "sounds": [
+      "peculia:item/moldvault_claw/grab"
+    ]
+  },
+  "item.moldvault_claw.vault": {
+    "subtitle": "item.moldvault_claw.vault",
+    "sounds": [
+      "peculia:item/moldvault_claw/vault1",
+      "peculia:item/moldvault_claw/vault2",
+      "peculia:item/moldvault_claw/vault3"
+    ]
+  },
 
   "item.echoing_mirror.use": {
     "subtitle": "item.echoing_mirror.use",

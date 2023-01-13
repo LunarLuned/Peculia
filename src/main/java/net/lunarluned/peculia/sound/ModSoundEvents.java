@@ -15,6 +15,8 @@ public class ModSoundEvents {
     public static final SoundEvent ARMOR_MOLDLEAP_EQUIP = registerSoundEvent("armor.moldleap.equip");
     public static final SoundEvent ARMOR_MOLDLEAP_FLAP = registerSoundEvent("armor.moldleap.flap");
 
+    public static final SoundEvent MOLDVAULT_CLAW_GRAB = registerSoundEvent("item.moldvault_claw.grab");
+    public static final SoundEvent MOLDVAULT_CLAW_VAULT = registerSoundEvent("item.moldvault_claw.vault");
 
     public static final SoundEvent BLOCK_MYTHRIL_BREAK = registerSoundEvent("block.mythril.break");
     public static final SoundEvent BLOCK_MYTHRIL_STEP = registerSoundEvent("block.mythril.step");
