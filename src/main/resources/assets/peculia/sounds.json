@@ -80,6 +80,18 @@
       "peculia:item/dagger/void_touch"
     ]
   },
+  "item.scythe.obtain_soul": {
+    "subtitle": "item.scythe.obtain_soul",
+    "sounds": [
+      "peculia:item/scythe/obtain_soul"
+    ]
+  },
+  "item.scythe.stun": {
+    "subtitle": "item.scythe.stun",
+    "sounds": [
+      "peculia:item/scythe/stun"
+    ]
+  },
 
   "item.echoing_mirror.use": {
     "subtitle": "item.echoing_mirror.use",

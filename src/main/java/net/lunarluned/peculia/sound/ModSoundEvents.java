@@ -23,6 +23,9 @@ public class ModSoundEvents {
     public static final SoundEvent DAGGER_CHARGE = registerSoundEvent("item.dagger.charge");
     public static final SoundEvent DAGGER_VOID_TOUCH = registerSoundEvent("item.dagger.void_touch");
 
+    public static final SoundEvent SCYTHE_OBTAIN_SOUL = registerSoundEvent("item.scythe.obtain_soul");
+    public static final SoundEvent SCYTHE_STUN = registerSoundEvent("item.scythe.stun");
+
     public static final SoundEvent BLOCK_MYTHRIL_BREAK = registerSoundEvent("block.mythril.break");
     public static final SoundEvent BLOCK_MYTHRIL_STEP = registerSoundEvent("block.mythril.step");
     public static final SoundEvent BLOCK_MYTHRIL_PLACE = registerSoundEvent("block.mythril.place");

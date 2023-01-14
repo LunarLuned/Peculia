@@ -19,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class JailorsScytheItem extends GenericScytheItem {
+
     public JailorsScytheItem(Tier material, int attackDamage, float attackSpeed, Properties settings) {
         super(material, attackDamage, attackSpeed, settings);
     }
@@ -32,7 +33,7 @@ public class JailorsScytheItem extends GenericScytheItem {
             int m;
             int l;
             int k = blockPos.getX();
-            int j = 16;
+            int j = 8;
 
             // Scans the area for nearby players
 
@@ -41,23 +42,19 @@ public class JailorsScytheItem extends GenericScytheItem {
             List<LivingEntity> nearbyEntities = level.getEntitiesOfClass(LivingEntity.class, aABB);
 
             if (player.isCrouching()) {
-
                 for (LivingEntity livingEntity : nearbyEntities) {
-                    livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 120, 100, true, true, true));
+                    livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 100, true, true, true));
                 }
-
                 for (Player players : nearbyPlayers) {
-                    players.addEffect(new MobEffectInstance(ModEffects.STUNNED, 80, 0, false, false, false));
-                    player.removeEffect(MobEffects.MOVEMENT_SLOWDOWN);
+                    players.addEffect(new MobEffectInstance(ModEffects.STUNNED, 100, 0, false, false, false));
                 }
-                level.playSound(null, player.getOnPos().getX(), player.getOnPos().getY(), player.getOnPos().getZ(), ModSoundEvents.ITEM_WATCHING_TOME_USE, SoundSource.NEUTRAL, 1, 1);
+                level.playSound(null, player.getOnPos(), ModSoundEvents.SCYTHE_STUN, SoundSource.PLAYERS, 1.0f, 0.8f + level.random.nextFloat() * 0.4F);
                 player.getItemInHand(interactionHand).hurtAndBreak(1, player, p -> p.broadcastBreakEvent(interactionHand));
                 player.removeEffect(MobEffects.MOVEMENT_SLOWDOWN);
                 player.removeEffect(ModEffects.STUNNED);
                 player.getCooldowns().addCooldown(this, 600);
             }
         }
-        return InteractionResultHolder.sidedSuccess(itemStack, level.isClientSide());
+        return InteractionResultHolder.pass(itemStack);
     }
-
-    }
+}
