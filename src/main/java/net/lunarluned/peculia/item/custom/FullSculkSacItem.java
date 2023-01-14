@@ -1,7 +1,7 @@
 package net.lunarluned.peculia.item.custom;
 
+import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -25,17 +25,17 @@ public class FullSculkSacItem extends Item {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(@NotNull Level world, Player user, @NotNull InteractionHand hand) {
+    public InteractionResultHolder<ItemStack> use(@NotNull Level level, Player user, @NotNull InteractionHand hand) {
 
         ItemStack itemStack = user.getItemInHand(hand);
 
-        if (!world.isClientSide) {
-            int i = 3 + world.random.nextInt(5) + world.random.nextInt(5);
-            ExperienceOrb.award((ServerLevel) world, Vec3.atCenterOf(user.getOnPos()), i);
+        if (!level.isClientSide) {
+            int i = 3 + level.random.nextInt(5) + level.random.nextInt(5);
+            ExperienceOrb.award((ServerLevel) level, Vec3.atCenterOf(user.getOnPos()), i);
             itemStack.shrink(1);
             user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
-            world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), SoundEvents.SCULK_BLOCK_CHARGE, SoundSource.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
+            level.playSound(null, user.getOnPos(), ModSoundEvents.SCULK_SAC_EMPTY, SoundSource.NEUTRAL, 1.0f, 0.8f + level.random.nextFloat() * 0.4F);
         }
-        return InteractionResultHolder.sidedSuccess(itemStack, world.isClientSide());
+        return InteractionResultHolder.sidedSuccess(itemStack, level.isClientSide());
     }
 }

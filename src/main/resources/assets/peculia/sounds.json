@@ -92,6 +92,18 @@
       "peculia:item/scythe/stun"
     ]
   },
+  "item.sculk_sac.fill": {
+    "subtitle": "item.sculk_sac.fill",
+    "sounds": [
+      "peculia:item/sculk_sac/fill"
+    ]
+  },
+  "item.sculk_sac.empty": {
+    "subtitle": "item.sculk_sac.empty",
+    "sounds": [
+      "peculia:item/sculk_sac/empty"
+    ]
+  },
 
   "item.echoing_mirror.use": {
     "subtitle": "item.echoing_mirror.use",

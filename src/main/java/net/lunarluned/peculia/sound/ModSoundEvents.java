@@ -26,6 +26,9 @@ public class ModSoundEvents {
     public static final SoundEvent SCYTHE_OBTAIN_SOUL = registerSoundEvent("item.scythe.obtain_soul");
     public static final SoundEvent SCYTHE_STUN = registerSoundEvent("item.scythe.stun");
 
+    public static final SoundEvent SCULK_SAC_FILL = registerSoundEvent("item.sculk_sac.fill");
+    public static final SoundEvent SCULK_SAC_EMPTY = registerSoundEvent("item.sculk_sac.empty");
+
     public static final SoundEvent BLOCK_MYTHRIL_BREAK = registerSoundEvent("block.mythril.break");
     public static final SoundEvent BLOCK_MYTHRIL_STEP = registerSoundEvent("block.mythril.step");
     public static final SoundEvent BLOCK_MYTHRIL_PLACE = registerSoundEvent("block.mythril.place");

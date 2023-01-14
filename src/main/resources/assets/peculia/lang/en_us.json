@@ -518,6 +518,8 @@
   "item.agility_tome.crowd_use": "Tome speeds up an area",
   "item.watching_tome.use": "Tome observes",
   "item.harvesting_tome.use": "Tome harvests",
+  "item.sculk_sac.fill": "Sculk Sac fills",
+  "item.sculk_sac.empty": "Sculk Sac empties",
 
   "subtitles.entity.ghost.moan": "Ghost moans",
   "subtitles.entity.ghost.hurt": "Ghost hurts",

@@ -1,7 +1,7 @@
 package net.lunarluned.peculia.item.custom;
 
 import net.lunarluned.peculia.item.ModItems;
-import net.minecraft.sounds.SoundEvents;
+import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -19,20 +19,20 @@ public class SculkSacItem extends Item {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(@NotNull Level world, Player user, @NotNull InteractionHand hand) {
+    public InteractionResultHolder<ItemStack> use(@NotNull Level level, Player user, @NotNull InteractionHand hand) {
 
         ItemStack itemStack = user.getItemInHand(hand);
 
-        if (!world.isClientSide) {
+        if (!level.isClientSide) {
 
             if (user.experienceLevel > 0) {
                 user.giveExperiencePoints(-7);
                 user.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
                 itemStack.shrink(1);
                 user.addItem(new ItemStack(ModItems.FULL_SCULK_SAC, 1));
-                world.playSound(null, user.getOnPos().getX(), user.getOnPos().getY(), user.getOnPos().getZ(), SoundEvents.SCULK_BLOCK_CHARGE, SoundSource.NEUTRAL, 1, 1 / (world.getRandom().nextFloat() * 0.4F + 0.8F));
+                level.playSound(null, user.getOnPos(), ModSoundEvents.SCULK_SAC_FILL, SoundSource.NEUTRAL, 1.0f, 0.8f + level.random.nextFloat() * 0.4F);
             }
         }
-        return InteractionResultHolder.sidedSuccess(itemStack, !user.level.isClientSide());
+        return InteractionResultHolder.sidedSuccess(itemStack, !level.isClientSide());
     }
 }
