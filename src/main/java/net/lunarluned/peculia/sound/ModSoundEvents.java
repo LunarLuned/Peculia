@@ -17,6 +17,11 @@ public class ModSoundEvents {
 
     public static final SoundEvent MOLDVAULT_CLAW_GRAB = registerSoundEvent("item.moldvault_claw.grab");
     public static final SoundEvent MOLDVAULT_CLAW_VAULT = registerSoundEvent("item.moldvault_claw.vault");
+    public static final SoundEvent MOLDVAULT_CLAW_ICHOR = registerSoundEvent("item.moldvault_claw.ichor");
+
+    public static final SoundEvent DAGGER_ICHOR = registerSoundEvent("item.dagger.ichor");
+    public static final SoundEvent DAGGER_CHARGE = registerSoundEvent("item.dagger.charge");
+    public static final SoundEvent DAGGER_VOID_TOUCH = registerSoundEvent("item.dagger.void_touch");
 
     public static final SoundEvent BLOCK_MYTHRIL_BREAK = registerSoundEvent("block.mythril.break");
     public static final SoundEvent BLOCK_MYTHRIL_STEP = registerSoundEvent("block.mythril.step");

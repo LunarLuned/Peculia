@@ -2,9 +2,11 @@ package net.lunarluned.peculia.item.custom;
 
 import net.lunarluned.peculia.Peculia;
 import net.lunarluned.peculia.effect.ModEffects;
+import net.lunarluned.peculia.sound.ModSoundEvents;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
@@ -25,6 +27,7 @@ public class ElectrocutedItem extends ModDaggerItem {
         super.hurtEnemy(stack, target, attacker);
         if (attacker.getRandom().nextInt(100) <= Peculia.getConfig().items.itemsConfig.itemChances.charged_chance) {
             target.addEffect(new MobEffectInstance(ModEffects.ELECTROCUTED, 60, 0));
+            attacker.level.playSound(null, target.getOnPos(), ModSoundEvents.DAGGER_CHARGE, SoundSource.PLAYERS, 1.0f, 0.8f + attacker.level.random.nextFloat() * 0.4F);
         }
         return true;
     }

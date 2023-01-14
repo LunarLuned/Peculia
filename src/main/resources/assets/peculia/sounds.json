@@ -56,6 +56,30 @@
       "peculia:item/moldvault_claw/vault3"
     ]
   },
+  "item.moldvault_claw.ichor": {
+    "subtitle": "item.dagger.ichor",
+    "sounds": [
+      "peculia:item/moldvault_claw/ichor"
+    ]
+  },
+  "item.dagger.ichor": {
+    "subtitle": "item.dagger.ichor",
+    "sounds": [
+      "peculia:item/dagger/ichor"
+    ]
+  },
+  "item.dagger.charge": {
+    "subtitle": "item.dagger.charge",
+    "sounds": [
+      "peculia:item/dagger/charge"
+    ]
+  },
+  "item.dagger.void_touch": {
+    "subtitle": "item.dagger.void_touch",
+    "sounds": [
+      "peculia:item/dagger/void_touch"
+    ]
+  },
 
   "item.echoing_mirror.use": {
     "subtitle": "item.echoing_mirror.use",
