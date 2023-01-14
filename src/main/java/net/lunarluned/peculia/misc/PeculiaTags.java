@@ -23,6 +23,7 @@ public class PeculiaTags {
     public static final TagKey<Item> GRIM_WOOD_LOGS_ITEM = TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation("peculia", "grim_wood_logs"));
     public static final TagKey<Item> TITANS_BLOOD_WALKABLE_ITEM = TagKey.create(Registry.ITEM_REGISTRY, new ResourceLocation("peculia", "titans_blood_walkable"));
     public static final TagKey<Block> GHOST_SPAWNABLE_ON = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation("peculia", "ghost_spawnable_on"));
+    public static final TagKey<Block> MOLDS_SPAWNABLE_ON = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation("peculia", "molds_spawnable_on"));
     public static final TagKey<Block> WISP_SPAWNABLE_ON = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation("peculia", "wisp_spawnable_on"));
     public static final TagKey<Block> MOLDSPAWN_SPAWNABLE_ON = TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation("peculia", "moldspawn_spawnable_on"));
     public static final TagKey<Structure> PERFORATED_STRUCTURES = TagKey.create(Registry.STRUCTURE_REGISTRY, new ResourceLocation("peculia", "perforated_structures"));

@@ -22,13 +22,14 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
+import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class MoldspawnEntity extends Monster {
 
     public int moldshedtick;
-
+    private int jumpEndTimer = 10;
     public MoldspawnEntity(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
         this.moldshedtick = this.random.nextInt(3000) + 1700;
@@ -76,9 +77,27 @@ public class MoldspawnEntity extends Monster {
         this.addBehaviourGoals();
     }
     protected void addBehaviourGoals() {
+        this.goalSelector.addGoal(3, new LeapAtTargetGoal(this, 0.6F));
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.0, false));
         this.goalSelector.addGoal(7, new WaterAvoidingRandomStrollGoal(this, 1.0));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, LivingEntity.class, true));
+    }
+
+    protected void jumpFromGround () {
+        Vec3 vec3d = this.getDeltaMovement();
+        LivingEntity livingEntity = this.getTarget();
+        double jumpStrength;
+        if (livingEntity == null) {
+            jumpStrength = 2D;
+        } else {
+            jumpStrength = livingEntity.getY() - this.getY();
+            jumpStrength = jumpStrength <= 0 ? 1.0D : Math.min(jumpStrength / 3.5D + 1.0D, 2.5D);
+        }
+        this.setDeltaMovement(vec3d.x, (double) this.getJumpPower() * jumpStrength, vec3d.z);
+        this.hasImpulse = true;
+        if (this.isOnGround() && this.jumpEndTimer <= 0) {
+            this.jumpEndTimer = 10;
+        }
     }
 
     public boolean canAttackType(@NotNull EntityType<?> entityType) {
