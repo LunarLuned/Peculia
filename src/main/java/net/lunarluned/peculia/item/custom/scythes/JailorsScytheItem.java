@@ -53,9 +53,12 @@ public class JailorsScytheItem extends GenericScytheItem {
                 player.removeEffect(MobEffects.MOVEMENT_SLOWDOWN);
                 player.removeEffect(ModEffects.STUNNED);
                 player.getCooldowns().addCooldown(this, 600);
-                return InteractionResultHolder.sidedSuccess(itemStack, level.isClientSide());
             }
         }
-        return InteractionResultHolder.pass(itemStack);
+        if (player.isCrouching()) {
+            return InteractionResultHolder.sidedSuccess(itemStack, level.isClientSide());
+        } else {
+            return InteractionResultHolder.pass(itemStack);
+        }
     }
 }
