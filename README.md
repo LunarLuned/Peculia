@@ -1,3 +1,6 @@
+# THIS REPO AND VERSION OF THE MOD IS OLD. A REWRITE IS BEING WORKED ON AND WILL BE PUBLIC SOON!
+
+
 # Peculia - a fabric mod that aims to add onto Minecraft's fun gameplay without making it boring.
 made by LunarLuned, major help from Ambient_ (or AmbientUnder) for texture work and composing, and Sydokiddo with assistance on coding.
 
